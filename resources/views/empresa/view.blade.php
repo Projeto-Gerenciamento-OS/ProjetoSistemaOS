@@ -35,7 +35,7 @@
         <div class="card-body ">
             <x-alert />
 
-                <div class="col-12 col-lg-4 " id="marginVisualizar-empresa">
+                <div class="col-12 col-lg-4 m-auto ">
                     <div class="visualizacaoDados row">
                         <span class="col-6">ID: </span>
                         <p class="col-6">{{ $empresa->id }}</p>

@@ -284,6 +284,7 @@ body {
             background-color: rgba(29, 71, 144, 0.468);
             border-radius: 5px 5px 0px 0px;
             gap: 20px;
+            max-height: 15vh;
                            
             .listar-texto{
                 display:inline;
@@ -328,7 +329,10 @@ body {
             border-radius: 0px 0px 5px 5px;
             width:100%;
             overflow:auto;      
-            
+            margin: auto;
+            position: relative;
+            max-height: 75vh;
+
              #form-inputs {
                 @media screen and (min-width:970px) {
                     display:flex;
@@ -365,25 +369,34 @@ body {
                 
             }
 
-            form div {
-                display:flex;
-                flex-direction: column;
-                overflow: auto;
+            form  {
                 
-                input{
-                    background-color: rgba(255,255,255, 0.20);
-                    border: 0.2px solid rgba(0, 0, 0, 0.300);
-                    padding:0.5rem 0;
-                    border-radius: 5px;
-                    padding: var(--espacoInternoBtn);
-                }
-            }
-            @media screen and (max-width: 736px) {
-                form div{
-                    padding: 20px 5%;
-                    margin-left: auto;
+                position: relative;
+                margin: auto;
+                max-height: 75vh;
+
+                div {
+                    margin: auto;
+                    display:flex;
+                    flex-direction: column;
+                    overflow: auto;
+                    
+                    input{
+                        background-color: rgba(255,255,255, 0.20);
+                        border: 0.2px solid rgba(0, 0, 0, 0.300);
+                        padding:0.5rem 0;
+                        border-radius: 5px;
+                        padding: var(--espacoInternoBtn);
+                    }
                 }
 
+                @media screen and (max-width: 736px) {
+                    form div{
+                        padding: 20px 5%;
+                        margin-left: auto;
+                    }
+    
+                }
             }
         }
     }
@@ -601,29 +614,4 @@ body {
     height:100%;
     width:90%;
     background-color: rgba(255,255,255, 0.21);
-}
-
-/* Arrumando bug do editar */
-@media screen and (max-width:600px){
-
-    #marginEditar-os1{
-        padding-top:350px;
-    }
-
-}
-
-/*  Arrumando bug do editar de empresa */
-@media screen and (max-width:440px){
-
-    #marginEditar-empresa {
-        padding-top:450px;
-    }
-}
-
-/*  Arrumando bug do visualizar de empresa */
-@media screen and (max-width:390px){
-
-    #marginVisualizar-empresa{
-        padding-top:350px;
-    }
 }
