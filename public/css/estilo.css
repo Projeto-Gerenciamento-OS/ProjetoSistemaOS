@@ -331,7 +331,6 @@ body {
             overflow:auto;      
             margin: auto;
             position: relative;
-            max-height: 75vh;
 
              #form-inputs {
                 @media screen and (min-width:970px) {
@@ -614,4 +613,33 @@ body {
     height:100%;
     width:90%;
     background-color: rgba(255,255,255, 0.21);
+}
+
+#marginVisualizar-empresa{
+    max-width: 60vh !important;
+    border: 1px solid red;
+}
+/* Arrumando bug do editar */
+@media screen and (max-width:600px){
+
+    #marginEditar-os1{
+        padding-top:350px;
+    }
+
+}
+
+/*  Arrumando bug do editar de empresa */
+@media screen and (max-width:440px){
+
+    #marginEditar-empresa {
+        padding-top:450px;
+    }
+}
+
+/*  Arrumando bug do visualizar de empresa */
+@media screen and (max-width:390px){
+
+    #marginVisualizar-empresa{
+        padding-top: 350px;
+    }
 }

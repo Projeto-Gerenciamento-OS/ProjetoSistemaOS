@@ -32,7 +32,8 @@
             </div>
             <div class="card-body ">
                 <x-alert />
-                <form action="{{ route('os1.update', ['os1' => $os1->id]) }}" method="POST" class="row g-3">
+                <form action="{{ route('os1.update', ['os1' => $os1->id]) }}" method="POST" class="row g-3" id="marginEditar-os1">
+
                     @csrf
                     @method('PUT')
               
