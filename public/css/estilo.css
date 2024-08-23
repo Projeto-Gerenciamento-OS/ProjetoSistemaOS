@@ -328,6 +328,8 @@ body {
             border-radius: 0px 0px 5px 5px;
             width:100%;
             overflow:auto;      
+            margin: auto;
+            position: relative;
             
              #form-inputs {
                 @media screen and (min-width:970px) {
@@ -601,6 +603,14 @@ body {
     height:100%;
     width:90%;
     background-color: rgba(255,255,255, 0.21);
+}
+
+#marginEditar-empresa {
+    margin-top:150px;
+}
+
+#marginVisualizar-empresa{
+    padding-top:150px;
 }
 
 /* Arrumando bug do editar */
