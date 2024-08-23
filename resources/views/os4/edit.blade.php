@@ -71,31 +71,7 @@
                             <input type="text"  name="descricao_os4" id="descricao_os4"  value="{{ old('descricao_os4', $os4->descricao_os4) }}" >
                         </div>
                     </div>
-
-    
-                       
                     
-
-
-
-
-
-
-
-
-
-
-
-
-
-               
-                
-               
-        
-                 
-
-
-
                     <a  class="btnCadastrar">
                         <button type="submit">
                             <h5>Salvar</h5>
