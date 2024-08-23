@@ -375,7 +375,6 @@ body {
                 max-height: 75vh;
 
                 div {
-                    margin: auto;
                     display:flex;
                     flex-direction: column;
                     overflow: auto;
