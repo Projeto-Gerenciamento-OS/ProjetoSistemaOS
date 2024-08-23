@@ -39,15 +39,15 @@
 
                         <li>
                             @can('index-user')
-                            <a @class(['nav-link', 'active' => isset($menu) && $menu =='user']) href="{{ route('user.index')}}">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fa-solid fa-chalkboard-user fa-2x"></i>
-                                </div>
-    
-                                <span class="nav-text">
-                                    Usuarios
-                                </span>
-                            </a>
+                                <a @class(['nav-link', 'active' => isset($menu) && $menu =='user']) href="{{ route('user.index')}}">
+                                    <div class="sb-nav-link-icon">
+                                        <i class="fa-solid fa-chalkboard-user fa-2x"></i>
+                                    </div>
+        
+                                    <span class="nav-text">
+                                        Usuarios
+                                    </span>
+                                </a>
                             @endcan
                         </li>
                         
