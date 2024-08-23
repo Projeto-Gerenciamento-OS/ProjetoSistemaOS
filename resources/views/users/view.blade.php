@@ -62,7 +62,7 @@
                 <div class='visualizacaoDados row'>
                     <span class="col-4">Nivel: </span>
                     {{-- <p class="col-5">{{ $users->nivel }}</p> --}}
-                    <dd class="col-sm-9">
+                    <p class="col-9">
                         {{--Visualizando o tipo de permissão do usurio--}}
                         @forelse($users->getRoleNames() as $role)
 
@@ -75,7 +75,7 @@
                         @endforelse
 
 
-                    </dd>
+                    </p>
                 </div>
 
                 <div class='visualizacaoDados row'>
