@@ -34,23 +34,23 @@
         <div class="card-body">
             <x-alert />
 
-            <form action="{{ route('empresa.update', ['empresa' => $empresa->id]) }}" method="POST" class="row g-3">
+            <form action="{{ route('empresa.update', ['empresa' => $empresa->id]) }}" method="POST" class="row g-3" id="marginEditar-empresa">
                 @csrf
                 @method('PUT')
 
-                
-                    <div class="col-3">
+                <div class="col-6" >
+                    <div class="">
                         <label for="empresa_id" class="form-label">Empresa 1:</label>
                         <input type="number" name="empresa_id" id="empresa_id" class="form-control" placeholder="empresa1_id" value="{{old('empresa1_id', $empresa->empresa1_id) }}">            
                     </div> 
 
-                    <div class="col-3">
+                    <div class="">
                         <label for="cnpj" class="form-label">CNPJ:</label>
                         <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="CNPJ"
                             value="{{ old('razao',$empresa->cnpj) }}">              
                     </div> 
                     
-                    <div class="col-3">
+                    <div class="">
                         <label for="razao" class="form-label">Razão:</label>
                         <input type="text" name="razao" id="razao" class="form-control" placeholder="Razão Social"
                             value="{{ old('razao',$empresa->razao) }}">              
@@ -67,10 +67,7 @@
                         <input type="text" name="cep" id="cep" class="form-control" placeholder="Cep"
                             value="{{ old('cep',$empresa->cep) }}">              
                     </div>
-        
-            
                     
-              
                     <div class="">
                         <label for="logradouro" class="form-label">Logradouro:</label>
                         <input type="text" name="logradouro" id="logradouro" class="form-control" placeholder="Endereço"
@@ -82,7 +79,9 @@
                         <input type="text" name="numero" id="numero" class="form-control" placeholder="Numero"
                             value="{{ old('numero',$empresa->numero) }}">       
                     </div>
-        
+                </div>
+                
+                <div class="col-6 form-crud" >
                     <div class="">
                         <label for="bairro" class="form-label">Bairro:</label>
                         <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Bairro"
@@ -100,8 +99,6 @@
                         <input type="text" name="uf" id="uf" class="form-control" placeholder="uf"
                             value="{{ old('uf',$empresa->uf) }}"> 
                     </div>
-             
-
                
                     <div class="">
                         <label for="fone1" class="form-label">Telefone 1:</label>
@@ -132,6 +129,8 @@
                         <input type="number" name="qtdoper" id="qtdoper" class="form-control" placeholder="Quantidade Oper"
                             value="{{ old('qtdoper',$empresa->qtdoper) }}"> 
                     </div>
+                </div>   
+                   
                 
                     
                 <a  class="btnIcons btnCadastrar">

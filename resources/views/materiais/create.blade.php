@@ -27,21 +27,21 @@
 
                     <div class="mb-3">
                         <label for="custo" class="form-label">Custo </label>
-                        <input type="number" name="custo" id="custo" 
+                        <input type="text" name="custo" id="custo" 
                             placeholder=" Digite o custo" value="{{ old('custo') }}">
                     </div>
                 </div>
                 <div class="col-6 ">
                     <div class="mb-3">
                         <label for="unidade" class="form-label">Unidade </label>
-                        <input type="number" name="unidade" id="unidade" 
+                        <input type="text" name="unidade" id="unidade" 
                             placeholder=" Digite a unidade" value="{{ old('Unidade') }}">
                     </div>
 
                     
                     <div class="mb-3">
                         <label for="valor" class="form-label">Valor </label>
-                        <input type="number"  name="valor" id="valor"   required >
+                        <input type="text"  name="valor" id="valor"   required >
                     </div>
                 </div>
        

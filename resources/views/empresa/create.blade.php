@@ -44,7 +44,7 @@
 
                             <div class="mb-3">
                                 <label for="qtdoper" class="form-label">Quant Oper:</label>
-                                <input type="text" name="qtdoper" id="qtdoper" class="form-control" placeholder="Quantidade Oper" value="{{ old('qtdoper') }}">
+                                <input type="number" name="qtdoper" id="qtdoper" class="form-control" placeholder="Quantidade Oper" value="{{ old('qtdoper') }}">
                             </div>
                         </div>
 

@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->float('id_emp1');
             $table->float('id_emp2');
-            $table->float('percentual');
+            $table->string('percentual');
             $table->text('descricao');
             $table->timestamps();
         });

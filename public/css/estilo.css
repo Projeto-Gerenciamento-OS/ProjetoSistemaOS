@@ -24,11 +24,10 @@ body {
         right:0;
         left:0;
         bottom:0;
-        /* background-image: linear-gradient(rgb(134, 171, 250), #fdd7b4); */
-        background: linear-gradient(90deg,  #aeaead, #0000006e, #aeaead) 50% 0 / 100% 50% no-repeat,
-                linear-gradient(90deg, #aeaead, #0000006e, #aeaead) 50% 100% / 100% 50% no-repeat;
+        background: linear-gradient(90deg,  rgba(2, 37, 70, 0.3), rgba(6, 66, 121, 0.3),  rgba(2, 37, 70, 0.3)) 50% 0 / 100% 50% no-repeat,
+                linear-gradient(90deg, rgba(2, 37, 70, 0.3), rgba(193, 77, 38, 0.13), rgba(2, 37, 70, 0.3)) 50% 100% / 100% 50% no-repeat;
         z-index:-1;
-        filter: blur(100px); 
+        filter:blur(100px);
     }
  }
 
@@ -272,6 +271,8 @@ body {
                 }
             }
         }
+
+     
         
         .cardHeaderAsociados{
             display: flex;
@@ -300,6 +301,8 @@ body {
                 }
                 
                 form {
+
+
                     button {
                         width:30px;
                         height:30px;
@@ -324,7 +327,8 @@ body {
             border: none;
             border-radius: 0px 0px 5px 5px;
             width:100%;
-            overflow-x:auto;        
+            overflow:auto;      
+            
              #form-inputs {
                 @media screen and (min-width:970px) {
                     display:flex;
@@ -599,6 +603,27 @@ body {
     background-color: rgba(255,255,255, 0.21);
 }
 
+/* Arrumando bug do editar */
+@media screen and (max-width:600px){
 
+    #marginEditar-os1{
+        padding-top:350px;
+    }
 
+}
 
+/*  Arrumando bug do editar de empresa */
+@media screen and (max-width:440px){
+
+    #marginEditar-empresa {
+        padding-top:450px;
+    }
+}
+
+/*  Arrumando bug do visualizar de empresa */
+@media screen and (max-width:390px){
+
+    #marginVisualizar-empresa{
+        padding-top:350px;
+    }
+}

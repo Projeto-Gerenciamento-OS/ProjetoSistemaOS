@@ -27,18 +27,18 @@
 
                     <div class="mb-3">
                         <label for="intervalo" class="form-label">Intervalo </label>
-                        <input type="number" name="intervalo" id="intervalo"   required >
+                        <input type="text" name="intervalo" id="intervalo"   required >
                     </div>
                 </div>
 
                 <div class="col-6 col-lg-6">                
                     <div class="mb-3">
                         <label for="valor" class="form-label">Valor </label>
-                        <input type="number"  name="valor" id="valor"   required>
+                        <input type="text"  name="valor" id="valor"   required>
                     </div>
                     <div class="mb-3">
                         <label for="custo_recorente" class="form-label">Custo Recorente </label>
-                        <input type="number" name="custo_recorente" id="custo_recorente" 
+                        <input type="text" name="custo_recorente" id="custo_recorente" 
                             placeholder="Digite " value="{{ old('custo_recorente') }}">
                     </div>
                 </div>

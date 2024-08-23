@@ -68,19 +68,19 @@
                     <div class="col-6 col-lg-6 mt-2">
                         <div class="mb-3">
                             <label for="valorUnitario_os3" class="form-label">Valor Unitário</label>
-                            <input type="number"  name="valorUnitario_os3" id="valorUnitario_os3"   required
+                            <input type="text"  name="valorUnitario_os3" id="valorUnitario_os3"   required
                             value="{{ old('valorUnitario_os3', $os3->valorUnitario_os3) }}">
                         </div> 
 
                         <div class="mb-3">
                             <label for="valorTotal_os3" class="form-label">Valor Total</label>
-                            <input type="number"  name="valorTotal_os3" id="valorTotal_os3"   required
+                            <input type="text"  name="valorTotal_os3" id="valorTotal_os3"   required
                             value="{{ old('valorTotal_os3', $os3->valorTotal_os3) }}">
                         </div> 
 
                         <div class="mb-3">
                             <label for="custoTotal_os3" class="form-label">Custo Total</label>
-                            <input type="number"  name="custoTotal_os3" id="custoTotal_os3"   required
+                            <input type="text"  name="custoTotal_os3" id="custoTotal_os3"   required
                             value="{{ old('custoTotal_os3', $os3->custoTotal_os3) }}">
                         </div>  
                        

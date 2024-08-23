@@ -46,13 +46,13 @@
 
                         <div class="mb-3">
                             <label for="percentual_os4" >Percentual </label>
-                            <input type="number" name="percentual_os4" id="percentual_os4" 
+                            <input type="text" name="percentual_os4" id="percentual_os4" 
                                 placeholder=" Data" value="{{ old('percentual_os4', $os4->percentual_os4) }}">
                         </div>
 
                         <div class="col-12">
                             <label for="valor_os4" >Valor </label>
-                            <input type="number" name="valor_os4" id="valor_os4"  placeholder=" valor_os4"
+                            <input type="text" name="valor_os4" id="valor_os4"  placeholder=" valor_os4"
                                 value="{{ old('valor_os4', $os4->valor_os4) }}">
                         </div>
 
@@ -61,7 +61,7 @@
                     <div class="col-6 col-lg-6">
                         <div class="col-12">
                             <label for="ativo_os4" >Ativo </label>
-                            <input type="number" name="ativo_os4" id="ativo_os4"  placeholder=" ativo_os4"
+                            <input type="text" name="ativo_os4" id="ativo_os4"  placeholder=" ativo_os4"
                                 value="{{ old('ativo_os4', $os4->ativo_os4) }}">
                         </div>
             

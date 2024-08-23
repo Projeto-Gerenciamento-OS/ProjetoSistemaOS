@@ -24,19 +24,19 @@
                     </div>
                     <div class="mb-3">
                         <label for="percentual_os4" class="form-label"> Percentual</label>
-                        <input type="number" name="percentual_os4" id="percentual_os4" 
+                        <input type="text" name="percentual_os4" id="percentual_os4" 
                             placeholder=" Digite o percentual" value="{{ old('percentual_os4') }}">
                     </div>
                     <div class="mb-3">
                         <label for="valor_os4" class="form-label">Valor </label>
-                        <input type="number" name="valor_os4" id="valor_os4" 
+                        <input type="text" name="valor_os4" id="valor_os4" 
                             placeholder=" Digite a valor_os4" value="{{ old('valor_os4') }}">
                     </div>
                 </div>
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
                         <label for="ativo_os4" class="form-label">Ativo </label>
-                        <input type="number"  name="ativo_os4" id="ativo_os4"   required >
+                        <input type="text"  name="ativo_os4" id="ativo_os4"   required >
                     </div>
                     <div class="mb-3">
                         <label for="descricao_os4" class="form-label">Descrição</label>

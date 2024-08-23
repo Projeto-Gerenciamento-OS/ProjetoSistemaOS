@@ -55,7 +55,7 @@
                 <div class="col-12 col-lg-6 ">
                     <div class="mb-2">
                         <label for="percentual" >Percentual </label>
-                        <input type="number" name="percentual" id="percentual"  placeholder=" Digite o percentual aqui"
+                        <input type="text" name="percentual" id="percentual"  placeholder=" Digite o percentual aqui"
                             value="{{ old('percentual') }}">
                     </div>
 

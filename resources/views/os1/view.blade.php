@@ -7,7 +7,7 @@
         <div class="card mb-4 cardCorLista "  >
             <div class="cardHeaderAsociados card-header">
                 <h1 class="mt-3">Visualização</h1>
-                <span class="ms-auto d-flex  flex-row gap-2">
+                <span class="ms-auto d-flex  flex-row gap-1">
                     <a href="{{ route('os1.index') }}" class="btn btn-primary">
                         <span class="listar-texto">Listar</span>
                         <i class="fa-solid fa-list-ul"></i>

@@ -36,14 +36,14 @@
 
                     <div class="mb-3">
                         <label for="valorUnitario_os2" class="form-label">Valor Unitário</label>
-                        <input type="number"  name="valorUnitario_os2" id="valorUnitario_os2"   required>
+                        <input type="text"  name="valorUnitario_os2" id="valorUnitario_os2"   required>
                     </div> 
 
                 </div>
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
                         <label for="valorTotal_os2" class="form-label">Valor Total</label>
-                        <input type="number"  name="valorTotal_os2" id="valorTotal_os2"   required>
+                        <input type="text"  name="valorTotal_os2" id="valorTotal_os2"   required>
                     </div> 
 
                     <div class="mb-3">
@@ -53,12 +53,12 @@
 
                     <div class="mb-3">
                         <label for="quantidade_os2" class="form-label">Quantidade</label>
-                        <input type="number"  name="quantidade_os2" id="quantidade_os2"   required>
+                        <input type="text"  name="quantidade_os2" id="quantidade_os2"   required>
                     </div> 
 
                     <div class="mb-3">
                         <label for="custoTotal_os2" class="form-label">Custo Total</label>
-                        <input type="number"  name="custoTotal_os2" id="custoTotal_os2"   required>
+                        <input type="text"  name="custoTotal_os2" id="custoTotal_os2"   required>
                     </div> 
                 </div>         
        

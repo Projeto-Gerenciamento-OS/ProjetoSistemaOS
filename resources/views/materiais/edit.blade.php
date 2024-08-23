@@ -46,22 +46,23 @@
 
                     <div class="col-6">
                         <label for="custo" >Custo: </label>
-                        <input type="number" name="custo" id="custo" 
+                        <input type="text" name="custo" id="custo" 
                             placeholder=" Melhor e-mail do usuário" value="{{ old('custo', $materiais->custo) }}">
                     </div>
 
     
                     <div class="col-6">
                         <label for="unidade" >Unidade: </label>
-                        <input type="number" name="unidade" id="unidade"  placeholder=" Senha com no mínimo 6 caracteres"
+                        <input type="text" name="unidade" id="unidade"  placeholder=" Digite a unidade"
                             value="{{ old('unidade') }}">
                     </div>
           
 
                     <div class="col-6">
                         <label for="valor" class="form-label">Valor: </label>
-                        <input type="number"  name="valor" id="valor"  value="{{ old('valor', $materiais->valor) }}" >
+                        <input type="text"  name="valor" id="valor"  value="{{ old('valor', $materiais->valor) }}" >
                     </div>
+
                     <div class="col-6">
                         <label for="descricao" class="form-label">Descrição: </label>
                         <input type="text"  name="descricao" id="descricao"  value="{{ old('descricao', $materiais->descricao) }}" >

@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('os1', function (Blueprint $table) {
             $table->id();
             $table->float('id_status');
-            $table->float('dataCadastrada');
+            $table->string('dataCadastrada');
             $table->float('dhi');
             $table->float('dhf');
             $table->float('valorTotal');

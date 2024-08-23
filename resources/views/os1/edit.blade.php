@@ -32,11 +32,11 @@
             </div>
             <div class="card-body ">
                 <x-alert />
-                <form action="{{ route('os1.update', ['os1' => $os1->id]) }}" method="POST" class="row g-3">
+                <form action="{{ route('os1.update', ['os1' => $os1->id]) }}" method="POST" class="row g-3" id="marginEditar-os1">
                     @csrf
                     @method('PUT')
               
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6" >
                         <div class="mb-3">
                             <label for="id_status" >ID STATUS: </label>
                             <input type="number" name="id_status" id="id_status"  placeholder="Digite aqui "
@@ -44,14 +44,14 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="dataCadastrada" >Data cadastrada </label>
-                            <input type="number" name="dataCadastrada" id="dataCadastrada" 
+                            <label  for="dataCadastrada" >Data cadastrada </label>
+                            <input type="date" name="dataCadastrada" id="dataCadastrada" 
                                 placeholder=" Data" value="{{ old('dataCadastrada', $os1->dataCadastrada) }}">
                         </div>
 
                         <div class="mb-3">
                             <label for="valorTotal" class="form-label">Valor Total: </label>
-                            <input type="number"  name="valorTotal" id="valorTotal"  value="{{ old('valorTotal', $os1->valorTotal) }}" >
+                            <input type="text"  name="valorTotal" id="valorTotal"  value="{{ old('valorTotal', $os1->valorTotal) }}" >
                         </div>
 
                     </div>
@@ -59,19 +59,19 @@
                     <div class="col-12 col-lg-6">
                         <div class="mb-3">
                             <label for="dhi" >DHI: </label>
-                            <input type="number" name="dhi" id="dhi"  placeholder=" dhi"
+                            <input type="text" name="dhi" id="dhi"  placeholder=" dhi"
                                 value="{{ old('dhi', $os1->dhi) }}">
                         </div>
 
                         <div class="mb-3">
                             <label for="dhf" >DHF: </label>
-                            <input type="number" name="dhf" id="dhf"  placeholder=" dhf"
+                            <input type="text" name="dhf" id="dhf"  placeholder=" dhf"
                                 value="{{ old('dhf', $os1->dhf) }}">
                         </div>
 
                         <div class="mb-3">
                             <label for="custoTotal" class="form-label">Custo Total: </label>
-                            <input type="number"  name="custoTotal" id="custoTotal"  value="{{ old('custoTotal', $os1->custoTotal) }}" >
+                            <input type="text"  name="custoTotal" id="custoTotal"  value="{{ old('custoTotal', $os1->custoTotal) }}" >
                         </div>
                     </div>
 

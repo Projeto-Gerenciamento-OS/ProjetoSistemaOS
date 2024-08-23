@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
     <title>Sistema OS</title>
 </head>
 <body>
@@ -189,6 +190,8 @@
 <script src="{{ asset('js/scripts.js') }}" ></script>
 <script src="{{ asset('js/script2.js') }}" ></script>
 <script src="{{ asset('js/all.min.js') }}" ></script>
+
+
 
     
 </body>

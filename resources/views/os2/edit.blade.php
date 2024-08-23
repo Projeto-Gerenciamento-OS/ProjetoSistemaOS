@@ -54,7 +54,7 @@
 
                             <div class="mb-3">
                                 <label for="quantidade_os2" >Quantidade</label>
-                                <input type="number" name="quantidade_os2" id="quantidade_os2"  placeholder=" quantidade_os2"
+                                <input type="text" name="quantidade_os2" id="quantidade_os2"  placeholder=" quantidade_os2"
                                     value="{{ old('quantidade_os2', $os2->quantidade_os2) }}">
                             </div>
                            
@@ -75,7 +75,7 @@
                            
                             <div class="mb-3">
                                 <label for="valorUnitario_os2" >Valor Unitário</label>
-                                <input type="number" name="valorUnitario_os2" id="valorUnitario_os2"  placeholder=" valorUnitario_os2"
+                                <input type="text" name="valorUnitario_os2" id="valorUnitario_os2"  placeholder=" valorUnitario_os2"
                                     value="{{ old('valorUnitario_os2', $os2->valorUnitario_os2) }}">
                             </div>
                         </div>
@@ -85,12 +85,12 @@
 
                         <div class="col-lg-6">
                                 <label for="valorTotal_os2" class="form-label">Valor Total </label>
-                                <input type="number"  name="valorTotal_os2" id="valorTotal_os2"  value="{{ old('valorTotal_os2', $os2->valorTotal_os2) }}" >
+                                <input type="text"  name="valorTotal_os2" id="valorTotal_os2"  value="{{ old('valorTotal_os2', $os2->valorTotal_os2) }}" >
                         </div>
 
                         <div class="col-lg-6">
                                 <label for="custoTotal_os2" class="form-label">Custo Total </label>
-                                <input type="number"  name="custoTotal_os2" id="custoTotal_os2"  value="{{ old('custoTotal_os2', $os2->custoTotal_os2) }}" >
+                                <input type="text"  name="custoTotal_os2" id="custoTotal_os2"  value="{{ old('custoTotal_os2', $os2->custoTotal_os2) }}" >
             
                             </div>
                            

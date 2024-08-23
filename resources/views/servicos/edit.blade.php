@@ -48,20 +48,20 @@
 
                     <div class="mb-3">
                         <label for="custo_recorente" class="form-label">Custo Recorente </label>
-                        <input type="number" name="custo_recorente" id="custo_recorente" 
+                        <input type="text" name="custo_recorente" id="custo_recorente" 
                         placeholder="Melhor e-mail do usuário" value="{{ old('email', $servicos->custo_recorente) }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="valor" class="form-label">Valor </label>
-                        <input type="number" min="1" max="30" name="valor" id="valor" value="{{ old('email', $servicos->valor) }}" >
+                        <input type="text" min="1" max="30" name="valor" id="valor" value="{{ old('email', $servicos->valor) }}" >
                     </div>
                 </div>
 
                 <div class="col-6 col-lg-6 mt-2">
                     <div class="mb-3">
                         <label for="intervalo" class="form-label">Intervalo </label>
-                        <input type="number" min="1" max="30" name="intervalo" id="intervalo"  value="{{ old('email', $servicos->intervalo) }}" >
+                        <input type="text" min="1" max="30" name="intervalo" id="intervalo"  value="{{ old('email', $servicos->intervalo) }}" >
                     </div>
 
                     <div class="mb-3">

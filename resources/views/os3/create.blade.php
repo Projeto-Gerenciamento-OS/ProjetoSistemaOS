@@ -45,17 +45,17 @@
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
                         <label for="valorUnitario_os3" class="form-label">Valor Unitário</label>
-                        <input type="number"  name="valorUnitario_os3" id="valorUnitario_os3"   required>
+                        <input type="text"  name="valorUnitario_os3" id="valorUnitario_os3"   required>
                     </div> 
 
                     <div class="mb-3">
                         <label for="valorTotal_os3" class="form-label">Valor Total</label>
-                        <input type="number"  name="valorTotal_os3" id="valorTotal_os3"   required>
+                        <input type="text"  name="valorTotal_os3" id="valorTotal_os3"   required>
                     </div> 
 
                     <div class="mb-3">
                         <label for="custoTotal_os3" class="form-label">Custo Total</label>
-                        <input type="number"  name="custoTotal_os3" id="custoTotal_os3"   required>
+                        <input type="text"  name="custoTotal_os3" id="custoTotal_os3"   required>
                     </div>  
                 </div>         
 

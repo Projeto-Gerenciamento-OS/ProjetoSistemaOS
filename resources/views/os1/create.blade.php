@@ -28,30 +28,30 @@
 
                     <div class="mb-3">
                         <label for="dhi" class="form-label">DHI </label>
-                        <input type="number" name="dhi" id="dhi" 
+                        <input type="text" name="dhi" id="dhi" 
                             placeholder=" Digite a dhi" value="{{ old('dhi') }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="custoTotal" class="form-label">Custo Total: </label>
-                        <input type="number"  name="custoTotal" id="custoTotal"  value="{{ old('custoTotal') }}" >
+                        <input type="text"  name="custoTotal" id="custoTotal"  value="{{ old('custoTotal') }}" >
                     </div>
                 </div>
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
                         <label for="dataCadastrada" class="form-label"> Data Cadastrada</label>
-                        <input type="number" name="dataCadastrada" id="dataCadastrada" 
+                        <input type="date" name="dataCadastrada" id="dataCadastrada" 
                             placeholder=" Digite a data cadastrada" value="{{ old('dataCadastrada') }}">
                     </div>
                     
                     <div class="mb-3">
                         <label for="dhf" class="form-label">DHF </label>
-                        <input type="number"  name="dhf" id="dhf"   required >
+                        <input type="text"  name="dhf" id="dhf"   required >
                     </div>
 
                     <div class="mb-3">
                         <label for="valorTotal" class="form-label">Valor Total: </label>
-                        <input type="number"  name="valorTotal" id="valorTotal"  value="{{ old('valorTotal') }}" >
+                        <input type="text"  name="valorTotal" id="valorTotal"  value="{{ old('valorTotal') }}" >
                     </div>
                 </div>
             <a  class="btnCadastrar">

@@ -11,3 +11,4 @@ const trs = document.querySelectorAll(".linhaComCoresDiferentes");
         tr.style.backgroundColor = "rgba(255,255,255,10%)";
     }
 });
+

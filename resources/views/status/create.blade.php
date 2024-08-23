@@ -42,6 +42,7 @@
                         <label for="cor" class="form-label">Cor</label>
                         <input type="text" name="cor" id="cor"  placeholder="Digite aqui..."
                         value="{{ old('cor') }}">
+                        <div id="color-picker"></div>
                     </div>
 
 
@@ -62,4 +63,7 @@
         </div>
     </div>
 </div>
+
+
+
 @endsection

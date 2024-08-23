@@ -32,14 +32,10 @@
             </span>
         </div>
 
-        <div class="card-body">
-
+        <div class="card-body ">
             <x-alert />
 
-            <div class="row">
-
-                <div class="col-12 col-lg-4 ">
-
+                <div class="col-12 col-lg-4 " id="marginVisualizar-empresa">
                     <div class="visualizacaoDados row">
                         <span class="col-6">ID: </span>
                         <p class="col-6">{{ $empresa->id }}</p>
@@ -71,14 +67,27 @@
                     </div>
 
                     <div class="visualizacaoDados row">
+                        <span class="col-6">Telefone 2: </span>
+                        <p class="col-6">{{ $empresa->fone2 }}</p>
+                    </div>
+
+                    <div class="visualizacaoDados row">
+                        <span class="col-6">Plano: </span>
+                        <p class="col-6">{{ $empresa->plano }}</p>
+                    </div>
+
+                    <div class="visualizacaoDados row">
+                        <span class="col-6">Quant Admin: </span>
+                        <p class="col-6">{{ $empresa->qtdadm }}</p>
+                    </div>
+
+                    <div class="visualizacaoDados row">
                     <span class="col-6">Editado: </span>
                     <p class="col-6">
                         {{ \Carbon\Carbon::parse($empresa->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>
                     </div>
-                </div>
 
-                <div class="col-12 col-lg-4">
                     <div class="visualizacaoDados row">
                         <span class="col-6">Número: </span>
                         <p class="col-6">{{ $empresa->numero }}</p>
@@ -104,24 +113,6 @@
                         <span class="col-6">Telefone 1: </span>
                         <p class="col-6">{{ $empresa->fone1 }}</p>
                     </div>
-                </div>
-
-                
-                <div class="col-12 col-lg-4">
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Telefone 2: </span>
-                        <p class="col-6">{{ $empresa->fone2 }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Plano: </span>
-                        <p class="col-6">{{ $empresa->plano }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Quant Admin: </span>
-                        <p class="col-6">{{ $empresa->qtdadm }}</p>
-                    </div>
 
                     <div class="visualizacaoDados row">
                         <span class="col-6">Quant Oper: </span>
@@ -135,7 +126,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>
