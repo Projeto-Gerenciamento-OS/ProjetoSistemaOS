@@ -6,18 +6,6 @@
 
 body {
    min-height: 100vh;
-   &::before {
-       content:'';
-       position:absolute;
-       top:0;
-       right:0;
-       left:0;
-       bottom:0;
-       background: linear-gradient(90deg,  rgba(2, 37, 70, 0.3), rgba(6, 66, 121, 0.3),  rgba(2, 37, 70, 0.3)) 50% 0 / 100% 50% no-repeat,
-               linear-gradient(90deg, rgba(2, 37, 70, 0.3), rgba(193, 77, 38, 0.13), rgba(2, 37, 70, 0.3)) 50% 100% / 100% 50% no-repeat;
-       z-index:-1;
-       filter:blur(100px);
-   }
 }
 
 
@@ -40,7 +28,7 @@ form {
          top:0.5rem;
          
          li {
-            color:#FFFF;
+            color:#0a0a0a;
             font-weight: 500;
          }
       }
@@ -67,7 +55,7 @@ form {
          flex-direction: column;
          
          h1 {
-            color:#FFFF;
+            color:#000000;
          }
          
          .dados-usuario {
@@ -79,7 +67,7 @@ form {
             min-width: 230px;
             height:50%;
             gap:10px;
-            color:#FFFF;
+            color:#000000;
          
             label {
                width: 70%;
