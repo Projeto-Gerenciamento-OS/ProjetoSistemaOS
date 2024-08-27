@@ -13,23 +13,12 @@
     --font-color-menu-nav:rgba(36, 59, 122);
     --font-color-menu-footer:rgb(255, 255, 255);
     --font-family-menu:"Open Sans", sans-serif;
+    --cor-cinza-claro: rgba(219, 218, 218, 0.911);
 }
 
 body {
     min-height: 100vh;
-    &::before {
-        content:'';
-        position:absolute;
-        top:0;
-        right:0;
-        left:0;
-        bottom:0;
-        background: linear-gradient(90deg,  rgba(2, 37, 70, 0.3), rgba(6, 66, 121, 0.3),  rgba(2, 37, 70, 0.3)) 50% 0 / 100% 50% no-repeat,
-                linear-gradient(90deg, rgba(2, 37, 70, 0.3), rgba(193, 77, 38, 0.13), rgba(2, 37, 70, 0.3)) 50% 100% / 100% 50% no-repeat;
-        z-index:-1;
-        filter:blur(100px);
-    }
- }
+}
 
 
 .layoutAdmin {
@@ -41,7 +30,7 @@ body {
     
     /* Estilizacao do menu lateral -- revisado  */
     .layoutSidenav_nav {
-        background-color: rgba(29, 71, 144, 0.370);
+        background-color: var(--cor-cinza-claro);
         min-height: 90vh;
         border-radius: 0 5px 5px 0;
         position: relative;
@@ -106,12 +95,12 @@ body {
                         margin: 0;
                         
                         a {
-                            color: var(--font-color-menu-nav);
+                            color: black;
                             font-family: var(--font-family-menu);
                             font-size: 15px;
                             
                             &:hover {
-                                color:#FFFF;
+                                color: black;
                             }
                         }
 
@@ -159,16 +148,16 @@ body {
                     }
                     a {
                         font-weight: bold;
-                        color: rgba(36, 59, 122);
+                        color: black;
 
                         &:hover {
-                            color:#FFFF;
+                            color: black;
                         }
                     }
                     
                     .fundo-nav-cadastros-gerais {
                         display:inline-block;
-                        background-color: rgba(0, 46, 132, 0.116);
+                        background-color: var(--cor-cinza-claro);
                         border-radius: 5px;
                     }
                 }
@@ -183,7 +172,7 @@ body {
                 width: 100%;
                 
                 .small {
-                    color:var(--font-color-menu-footer);
+                    color: black;
                     font-family: var(--font-family-menu);
                 }    
             }
@@ -227,10 +216,10 @@ body {
         min-width: 200px;
         position: relative;
         width: auto;
-        background-color: transparent;
+        background-color: var(--cor-cinza-claro);
         
         .card-header {
-            background-color: rgba(29, 71, 144, 0.468);
+            background-color: var(--cor-cinza-claro);
             display:flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -241,7 +230,7 @@ body {
             h1 {
                 font-size: 2.8rem;
                 margin-top: 20px;
-                color:#FFFF;
+                color: black;
             }
             
             .pesquisar {
@@ -251,14 +240,14 @@ body {
                 gap:10px;
                 
                 .input-pesquisar {
-                    background-color: rgba(209, 218, 237, 0.801);
+                    background-color: rgb(207, 207, 207);
                     border: none;
                     border-radius:5px;
                     padding: var(--espacoInternoBtn);
                 }
                 
                 .btn-pesquisar {
-                    background-color: rgba(209, 218, 237, 0.801);
+                    background-color: rgb(255, 255, 255);
                     border: none;
                     border-radius:5px;
                     padding: var(--espacoInternoBtn);
@@ -271,8 +260,6 @@ body {
                 }
             }
         }
-
-     
         
         .cardHeaderAsociados{
             display: flex;
@@ -281,10 +268,9 @@ body {
             align-items: center;
             justify-content: space-between ;
             padding: .8rem 2rem;
-            background-color: rgba(29, 71, 144, 0.468);
+            background-color: var(--cor-cinza-claro);
             border-radius: 5px 5px 0px 0px;
-            gap: 20px;
-                           
+            gap: 20px; 
             .listar-texto{
                 display:inline;
             }
@@ -318,12 +304,11 @@ body {
 
         .card-body {
             display: flex;
-            background-color: rgba(255, 255, 255, 0.21) !important;
+            background-color: var(--cor-cinza-claro);
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 20px 15px;
-            background-color: transparent;
             border: none;
             border-radius: 0px 0px 5px 5px;
             width:100%;
@@ -331,7 +316,7 @@ body {
             margin: auto;
             position: relative;
             
-             #form-inputs {
+            #form-inputs {
                 @media screen and (min-width:970px) {
                     display:flex;
                     flex-direction: column;
@@ -362,8 +347,8 @@ body {
             nav{
                 padding-top:15px;
                 div:nth-child(2){
-                display:none;                
-               }
+                    display:none;                
+                }
                 
             }
 
@@ -373,7 +358,6 @@ body {
                 overflow: auto;
                 
                 input{
-                    background-color: rgba(255,255,255, 0.20);
                     border: 0.2px solid rgba(0, 0, 0, 0.300);
                     padding:0.5rem 0;
                     border-radius: 5px;
@@ -417,12 +401,12 @@ body {
         }
     }
     h5 {
-        color:black;
+        color: black;
     }
     
     svg {
         font-size: 1.5rem;
-        color:black;
+        color: black;
     }
 }
 
@@ -457,7 +441,8 @@ body {
         .card-header {
             display:flex;
             flex-direction: row !important;
-            background-color: transparent;
+            background-color: rgb(255, 250, 250);
+
             justify-content: space-between;
             align-items: center;
             width: 100%;
@@ -469,16 +454,16 @@ body {
                 flex-direction: row;
                 width:270px;
                 height:40px;
-                background-color: rgba(29, 71, 144, 0.468);
+                background-color: var(--cor-cinza-claro);
                 border-radius:5px  18px 0px 0px;
     
                     
                 a {
-                    color:black;
+                    color: black;
                     font-size: 1rem;
     
                     &:hover {
-                        color:#FFFF;
+                        color: rgb(25, 28, 197);
                     }
                     &:first-child {
                         margin-left: 10px;
@@ -491,33 +476,6 @@ body {
                         height:40%;
                     }
                 }       
-                
-                .pesquisar {
-                    display:flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap:10px;
-                    
-                    .input-pesquisar {
-                        background-color: rgba(209, 218, 237, 0.801);
-                        border: none;
-                        border-radius:5px;
-                        padding: var(--espacoInternoBtn);
-                    }
-                    
-                    .btn-pesquisar {
-                        background-color: rgba(209, 218, 237, 0.801);
-                        border: none;
-                        border-radius:5px;
-                        padding: var(--espacoInternoBtn);
-                    }
-                    
-                    @media screen and (max-width:450px){
-                        .input-pesquisar{
-                            width:120px;
-                        }
-                    }
-                }
     
             }
     
@@ -531,11 +489,11 @@ body {
                     height:40px;    
                         
                     a {
-                        color:black;
+                        color: black;
                         font-size: .9rem;
         
                         &:hover {
-                            color:#FFFF;
+                            color: black;
                         }
                         &:first-child {
                             margin-left: 8px;
@@ -560,17 +518,18 @@ body {
             gap:10px;
             
             .input-pesquisar {
-                background-color: rgba(209, 218, 237, 0.801);
+                background-color: rgb(255, 255, 255);
                 border: none;
                 border-radius:5px;
                 padding: var(--espacoInternoBtn);
             }
             
             .btn-pesquisar {
-                background-color: rgba(209, 218, 237, 0.801);
+                background-color: rgb(248, 245, 245);
                 border: none;
                 border-radius:5px;
                 padding: var(--espacoInternoBtn);
+                margin-bottom: 30px;
             }
             
             @media screen and (max-width:450px){
@@ -595,14 +554,22 @@ body {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border: none;
     transition: linear .1s;
-    color:black;
+    color: black;
 
 } 
 
 #timeline {
     height:100%;
     width:90%;
-    background-color: rgba(255,255,255, 0.21);
+    background-color: black;
+}
+
+#marginEditar-empresa {
+    margin-top:150px;
+}
+
+#marginVisualizar-empresa{
+    padding-top:150px;
 }
 
 #marginEditar-empresa {

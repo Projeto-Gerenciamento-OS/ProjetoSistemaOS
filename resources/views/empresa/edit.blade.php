@@ -35,6 +35,7 @@
             <x-alert />
 
             <form action="{{ route('empresa.update', ['empresa' => $empresa->id]) }}" method="POST" class="row g-3" id="marginEditar-empresa">
+
                 @csrf
                 @method('PUT')
 
