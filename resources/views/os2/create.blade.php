@@ -7,7 +7,7 @@
     <div class="card mb-4  cardCorLista " >
         <div  class="cardHeaderAsociados card-header">
             <h1>Cadastro da Ordem de Serviço 2</h1>
-            <a href="{{ route('os2.index') }}" class="btn btn-primary">
+            <a href="{{ route('os2.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span></a>
         </div> 

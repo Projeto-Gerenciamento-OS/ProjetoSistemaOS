@@ -6,11 +6,12 @@
     <div class="card mb-4 cardCorLista" >
         <div class="card-header">
             <h1>Usuários</h1>
+           
 
             <form action="{{ route('user.index') }}">
                 <div class="pesquisar">
                     
-                    <input type="text" name="nome" id="nome" class="form-control btn-pesquisar" value="{{ $nome }}" placeholder="Nome da conta" />
+                    <input type="text" name="nome" id="nome" class=" btn-pesquisar" value="{{ $nome }}" placeholder="Nome da conta" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>

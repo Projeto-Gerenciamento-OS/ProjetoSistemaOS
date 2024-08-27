@@ -7,7 +7,7 @@
         <div class="cardHeaderAsociados card-header">
             <h1 class="mt-3">Nova Empresa Afiliada</h1>
 
-            <a href="{{ route('empresa.index') }}" class="btn btn-primary btnIcons"><i class="fa-solid fa-list"></i>
+            <a href="{{ route('empresa.index') }}" class="btn "><i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span>
             </a>
 

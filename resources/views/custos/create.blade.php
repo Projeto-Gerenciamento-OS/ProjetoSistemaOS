@@ -9,7 +9,7 @@
 
         <div class="cardHeaderAsociados card-header">
             <h1>Cadastro de Custos</h1>
-            <a href="{{ route('custos.index') }}" class="btn btn-primary">
+            <a href="{{ route('custos.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span></a>
         </div> 

@@ -13,7 +13,11 @@
     --font-color-menu-nav:rgba(36, 59, 122);
     --font-color-menu-footer:rgb(255, 255, 255);
     --font-family-menu:"Open Sans", sans-serif;
-    --cor-cinza-claro: rgba(219, 218, 218, 0.911);
+    --cor-cinza-claro: rgb(255, 255, 255);
+    --cor-azul-1:#2a7cb8;
+    --cor-azul-1-hover:#2a7db8d1;
+    --cor-border-line:rgba(0, 0, 0, 0.563);
+    --cor-fundo:rgba(233, 233, 233, 0.293);
 }
 
 body {
@@ -30,7 +34,7 @@ body {
     
     /* Estilizacao do menu lateral -- revisado  */
     .layoutSidenav_nav {
-        background-color: var(--cor-cinza-claro);
+        background-color: var(--cor-fundo);
         min-height: 90vh;
         border-radius: 0 5px 5px 0;
         position: relative;
@@ -44,6 +48,7 @@ body {
         transition: all ease-in;
         transition-duration: .1s;
         z-index:1000;
+        box-shadow:0px 6px 15px 5px rgba(0, 0, 0, 0.171);
 
         &:hover, .layoutAdmin.layoutSidenav_nav.expanded {
             width:300px;
@@ -95,12 +100,12 @@ body {
                         margin: 0;
                         
                         a {
-                            color: black;
+                            color: #2a7cb8;
                             font-family: var(--font-family-menu);
                             font-size: 15px;
                             
                             &:hover {
-                                color: black;
+                                color: #0095ff;
                             }
                         }
 
@@ -148,10 +153,10 @@ body {
                     }
                     a {
                         font-weight: bold;
-                        color: black;
+                        color: var(--cor-azul-1);
 
                         &:hover {
-                            color: black;
+                            color: #0095ff;
                         }
                     }
                     
@@ -217,40 +222,48 @@ body {
         position: relative;
         width: auto;
         background-color: var(--cor-cinza-claro);
+
+        
         
         .card-header {
-            background-color: var(--cor-cinza-claro);
             display:flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: start;
             border: none;  
             gap:1rem;
+            box-shadow:0px 0px 15px 5px rgba(0, 0, 0, 0.105);
+            background-color: var(--cor-azul-1);
+            
             
             h1 {
                 font-size: 2.8rem;
                 margin-top: 20px;
-                color: black;
+                color: #FFFF;
+                text-align: center;
             }
-            
+       
             .pesquisar {
                 display:flex;
                 justify-content: center;
                 align-items: center;
                 gap:10px;
+    
+                border-radius: 5px;
+              
                 
                 .input-pesquisar {
-                    background-color: rgb(207, 207, 207);
+                    background-color: var(--cor-fundo);
                     border: none;
                     border-radius:5px;
                     padding: var(--espacoInternoBtn);
+                   
                 }
                 
                 .btn-pesquisar {
-                    background-color: rgb(255, 255, 255);
-                    border: none;
                     border-radius:5px;
                     padding: var(--espacoInternoBtn);
+                    border: none;
                 }
                 
                 @media screen and (max-width:450px){
@@ -268,9 +281,14 @@ body {
             align-items: center;
             justify-content: space-between ;
             padding: .8rem 2rem;
-            background-color: var(--cor-cinza-claro);
+            background-color: var(--cor-azul-1);
             border-radius: 5px 5px 0px 0px;
             gap: 20px; 
+
+            h2{
+                color:#FFFF;
+            }
+            
             .listar-texto{
                 display:inline;
             }
@@ -304,7 +322,7 @@ body {
 
         .card-body {
             display: flex;
-            background-color: var(--cor-cinza-claro);
+            background-color: rgba(233, 233, 233, 0.293);
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -315,6 +333,7 @@ body {
             overflow:auto;      
             margin: auto;
             position: relative;
+            
             
             #form-inputs {
                 @media screen and (min-width:970px) {
@@ -334,6 +353,7 @@ body {
                     text-align: left;
                     min-width: 130px;
                     padding: .6rem .4rem;
+                    
                 }
 
                 td {
@@ -386,33 +406,33 @@ body {
         justify-content: center;
         align-items: center;
         gap: 1rem ;
-        background: rgba(38, 177, 35, 0.25);
+        background: var(--cor-azul-1);
         padding: 1rem 3.5rem;
         border-radius: 5px;
         font-weight: 600;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.358);
         border: none;
         transition: linear .1s;
         
         &:hover  {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            background: rgba(37, 177, 35, 0.314);
+            background: var(--cor-azul-1-hover);
             transition: linear .1s;
         }
     }
     h5 {
-        color: black;
+        color:#FFFF;
     }
     
     svg {
         font-size: 1.5rem;
-        color: black;
+        color:#FFFF;
     }
 }
 
 .btnIcons {
     border:none;
-    background: none;
+    background: transparent;
     padding: 0px;
     
     svg {
@@ -433,7 +453,6 @@ body {
     flex-direction: column;
     gap:10px;
     background: none;
-
     background: none;
 
     .cardCorLista {
@@ -441,12 +460,11 @@ body {
         .card-header {
             display:flex;
             flex-direction: row !important;
-            background-color: rgb(255, 250, 250);
-
             justify-content: space-between;
             align-items: center;
             width: 100%;
             padding: 10px 0 ;
+         
     
             .abas{
                 display: flex;
@@ -454,7 +472,6 @@ body {
                 flex-direction: row;
                 width:270px;
                 height:40px;
-                background-color: var(--cor-cinza-claro);
                 border-radius:5px  18px 0px 0px;
     
                     
@@ -547,7 +564,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background: rgba(255, 255, 255, 0.21);
+    background: var(--cor-fundo);
     padding: 1rem 1rem;
     border-radius: 5px;
     font-weight: 600;
@@ -555,6 +572,10 @@ body {
     border: none;
     transition: linear .1s;
     color: black;
+
+    span, svg {
+        color:#FFFF;
+    }
 
 } 
 

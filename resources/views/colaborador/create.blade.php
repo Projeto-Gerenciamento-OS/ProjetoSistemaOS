@@ -8,7 +8,7 @@
         <div class="cardHeaderAsociados card-header">
             <h1 class="mt-3">Novo Colaborador</h1>
 
-            <a href="{{ route('colaborador.index') }}" class="btn btn-primary btnIcons btn-custom-sm"><i class="fa-solid fa-list"></i>
+            <a href="{{ route('colaborador.index') }}" class="btn  btn-custom-sm"><i class="fa-solid fa-list"></i>
             <span class="listar-texto">Listar</span></a>
            
         </div>

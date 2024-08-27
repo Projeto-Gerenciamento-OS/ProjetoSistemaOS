@@ -10,12 +10,12 @@
             <h1 class="mt-3">Visualização</h1>
             
             <span class="ms-auto d-flex  flex-row gap-2">
-                <a href="{{ route('user.index') }}" class="btn btn-primary">
+                <a href="{{ route('user.index') }}" class="btn ">
                     <span class="listar-texto">Listar</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
     
-                <a href="{{ route('user.edit', ['user' => $users->id]) }}" class="btn btn-warning btn-sm me-1">
+                <a href="{{ route('user.edit', ['user' => $users->id]) }}" class="btn  btn-sm me-1">
                     <span class="listar-texto">Editar</span>
                     <i class="fa-solid fa-pen"></i>
                 </a>
@@ -23,7 +23,7 @@
                 <form method="POST" action="{{ route('user.delete', ['user' => $users->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger btn-sm me-1"
+                    <button type="submit" class="btn  btn-sm me-1"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">Apagar</span>
                         <i class="fa-solid fa-trash"></i>

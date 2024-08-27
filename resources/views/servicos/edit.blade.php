@@ -9,12 +9,12 @@
             <h2 class="mt-3">Edição</h2>
 
             <span class="ms-auto d-flex  flex-row gap-2">
-                <a href="{{ route('servicos.index') }}" class="btn btnIcons btn-primary ">
+                <a href="{{ route('servicos.index') }}" class="btn ">
                     <span class="listar-texto">Listar</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
 
-                <a href="{{ route('servicos.view', ['servicos' => $servicos->id]) }}" class="btnIcons btn btn-light ">
+                <a href="{{ route('servicos.view', ['servicos' => $servicos->id]) }}" class="btn ">
                     <span class="listar-texto">Visualizar</span>
                     <i class="fa-regular fa-eye"></i>
                 </a>
@@ -22,7 +22,7 @@
                 <form method="POST" action="{{ route('servicos.delete', ['servicos' => $servicos->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger btnIcons btn-sm me-1 "
+                    <button type="submit" class="btn  btn-sm me-1 "
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">Apagar</span>
                         <i class="fa-solid fa-trash"></i>
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 
-                <a  class=" btnIcons btnCadastrar">
+                <a  class=" btnCadastrar">
                     <button type="submit">
                         <h5>Salvar</h5>
                         <i class="fa-solid fa-bookmark"></i>

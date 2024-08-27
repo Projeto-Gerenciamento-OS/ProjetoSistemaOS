@@ -8,12 +8,12 @@
         <div class="cardHeaderAsociados card-header"  >
                 <h2 class="mt-3">Visualização</h2>
                 <span class="ms-auto d-flex  flex-row gap-2">
-                    <a href="{{ route('custos.index') }}" class="btn btn-primary">
+                    <a href="{{ route('custos.index') }}" class="btn ">
                         <span class="listar-texto">Listar</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('custos.edit', ['custos' => $custos->id]) }}" class="btn btn-warning btn-sm me-1">
+                    <a href="{{ route('custos.edit', ['custos' => $custos->id]) }}" class="btn btn-sm me-1">
                         <span class="listar-texto">Editar</span>
                         <i class="fa-solid fa-pen"></i>
                     </a>
@@ -21,7 +21,7 @@
                     <form method="POST" action="{{ route('custos.delete', ['custos' => $custos->id]) }}">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn btn-danger btn-sm me-1"
+                        <button type="submit" class="btn  btn-sm me-1"
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                             <span class="listar-texto">Apagar</span>
                             <i class="fa-solid fa-trash"></i>
