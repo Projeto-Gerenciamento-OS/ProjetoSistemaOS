@@ -61,13 +61,15 @@ class Os1Controller extends Controller
         //Carregar a View
         return view('os1.index', [
             'os1' => $os1,
-            'id_status' => $request->id_status,
-            'os2' => $os2,
-            'id_servico' => $request->id_servico,
-            'os3' => $os3,
-            'id_os1_os3' => $request->id_os1_os3,
-            'os4' => $os4,
-            'id_emp1_os4' => $request->id_emp1_os4,
+            'id_emp1' => $request->id_emp1,
+            'datacad' => $datacad,
+            'dhi' => $request->dhi,
+            'dhf' => $dhf,
+            'obs' => $request->obs,
+            'vtotal' => $vtotal,
+            'ctotal' => $request->ctotal,
+            'cindireto' => $request->cindireto,
+            'vresultado' => $request->vresultado,
         ]);
     }
     
@@ -93,12 +95,16 @@ class Os1Controller extends Controller
  
              // Cadastrar no banco de dados na tabela usuários
              $os1 = Os1::create([
-                 'id_status' => $request->id_status,
-                 'dataCadastrada' => $request->dataCadastrada,
-                 'dhi' => $request->dhi,
-                 'dhf' => $request->dhf,
-                 'valorTotal' => $request->valorTotal,
-                 'custoTotal' => $request->custoTotal,
+                'os1' => $os1,
+                'id_emp1' => $request->id_emp1,
+                'datacad' => $datacad,
+                'dhi' => $request->dhi,
+                'dhf' => $dhf,
+                'obs' => $request->obs,
+                'vtotal' => $vtotal,
+                'ctotal' => $request->ctotal,
+                'cindireto' => $request->cindireto,
+                'vresultado' => $request->vresultado,
              ]);
  
              // Salvar log
@@ -151,12 +157,16 @@ class Os1Controller extends Controller
 
             // Editar as informações do registro no banco de dados
             $os1->update([
-                 'id_status' => $request->id_status,
-                 'dataCadastrada' => $request->dataCadastrada,
-                 'dhi' => $request->dhi,
-                 'dhf' => $request->dhf,
-                 'valorTotal' => $request->valorTotal,
-                 'custoTotal' => $request->custoTotal,
+                'os1' => $os1,
+                'id_emp1' => $request->id_emp1,
+                'datacad' => $datacad,
+                'dhi' => $request->dhi,
+                'dhf' => $dhf,
+                'obs' => $request->obs,
+                'vtotal' => $vtotal,
+                'ctotal' => $request->ctotal,
+                'cindireto' => $request->cindireto,
+                'vresultado' => $request->vresultado,
             ]);
 
             // Salvar log

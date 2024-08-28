@@ -30,19 +30,19 @@
                                 </button>
                             </div>
                         </form>
-
                         
-                        
-
                         <thead>
                             <tr class="titulos"> 
                                 <th>ID</th>
-                                <th>ID STATUS</th>
+                                <th>ID EMP1</th>
                                 <th>Data Cadastrada</th>
                                 <th>DHI</th>
                                 <th>DHF</th>
+                                <th>Obs</th>
                                 <th>Valor Total</th>
                                 <th>Custo Total</th>
+                                <th>Custo Indireto</th>
+                                <th>Valor Resultado</th>
                                 <th class="text-center">Ações</th>
                             </tr>
                         </thead>
@@ -51,12 +51,15 @@
                             @forelse ($os1 as $item)
                                 <tr class='linhaComCoresDiferentes' id='linhaCores_{{ $item->id }}'>
                                     <th>{{ $item->id }}</th>
-                                    <th>{{ $item->id_status }}</th>
-                                    <td>{{ $item->dataCadastrada }}</td>
+                                    <th>{{ $item->id_emp1 }}</th>
+                                    <td>{{ $item->datacad}}</td>
                                     <th>{{ $item->dhi }}</th>
                                     <th>{{ $item->dhf }}</th>
-                                    <th>{{ $item->valorTotal }}</th>
-                                    <th>{{ $item->custoTotal }}</th>
+                                    <th>{{ $item->obs }}</th>
+                                    <th>{{ $item->vtotal }}</th>
+                                    <th>{{ $item->ctotal }}</th>
+                                    <th>{{ $item->cindireto }}</th>
+                                    <th>{{ $item->vresultado }}</th>
                                     
                                     <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
                                         <a href="{{ route('os1.view', ['os1' => $item->id]) }}" class="btnIcons">
