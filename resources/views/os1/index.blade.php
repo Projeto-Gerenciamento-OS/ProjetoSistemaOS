@@ -20,16 +20,19 @@
                     
                     <table>
                         
-                    <form action="{{ route('os1.index') }}">
-                        <div class="pesquisar">
-                            
-                            <input type="text" name="id_status" id="id_status" class="form-control btn-pesquisar" value="{{ $id_status }}" placeholder="Nome da conta" />
+                        <form action="{{ route('os1.index') }}">
+                            <div class="pesquisar">
+                                
+                                <input type="text" name="id_status" id="id_status" class="form-control btn-pesquisar" value="{{ $id_status }}" placeholder="Nome da conta" />
 
-                            <button  type="submit" class="btn-pesquisar">
-                                <i class="fa-solid fa-magnifying-glass "></i>
-                            </button>
-                        </div>
-                    </form>
+                                <button  type="submit" class="btn-pesquisar">
+                                    <i class="fa-solid fa-magnifying-glass "></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        
+                        
 
                         <thead>
                             <tr class="titulos"> 
@@ -74,13 +77,15 @@
                                     </td>
                                 </tr>
                             @empty
-                                <tr>
-                                    <td colspan="7">
-                                        <div class="alert alert-danger" role="alert">Nenhuma OS encontrada!</div>
-                                    </td>
-                                </tr>
+                             <div class="alert alert-danger" role="alert">Nenhuma OS encontrada!</div>
                             @endforelse
                         </tbody>
+                        <a href="{{ route('os1.create') }}" class="btnCadastrar-os">
+                            <button>
+                                <h5>Cadastrar</h5>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>  
+                        </a>   
                     </table>
                 </div>
                 {{ $os1->onEachSide(0)->links() }} 
@@ -102,8 +107,6 @@
                     <x-alert />
 
                     <table>
-                        
-                        
                         <form action="{{ route('os2.index') }}">
                             <div class="pesquisar">
                                 
@@ -163,21 +166,22 @@
                                 </tr>
                             
                             @empty
-                                <div class="alert alert-danger" role="alert">Nenhuma OS encontrada!</div>
+                                <div class="alert alert-danger " role="alert">Nenhuma OS encontrada!</div>
+                              
                             @endforelse
                 
                         </tbody>
+                        <a href="{{ route('os2.create') }}" class="btnCadastrar-os">
+                            <button>
+                                <h5>Cadastrar</h5>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>  
+                        </a>  
                     </table>
                     {{ $os2->onEachSide(0)->links() }}
                 </div>
             </div>
 
-            <a href="{{ route('os2.create') }}" class="btnCadastrar">
-                <button>
-                    <h5>Cadastrar</h5>
-                    <i class="fa-solid fa-angle-right"></i>
-                </button>  
-            </a> 
         </div>
     </div>
 
@@ -254,20 +258,23 @@
                                 </tr>
                             @empty
                                 <div class="alert alert-danger" role="alert">Nenhuma OS encontrada!</div>
+                               
                             @endforelse
                 
                         </tbody>
+
+                        <a href="{{ route('os3.create') }}" class="btnCadastrar-os">
+                            <button>
+                                <h5>Cadastrar</h5>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>  
+                        </a> 
                     </table>
                     {{ $os3->onEachSide(0)->links() }}
                 </div>
             </div>
                 
-            <a href="{{ route('os3.create') }}" class="btnCadastrar">
-                <button>
-                    <h5>Cadastrar</h5>
-                    <i class="fa-solid fa-angle-right"></i>
-                </button>  
-            </a> 
+            
         </div>
     </div>
 
@@ -337,30 +344,26 @@
                                 </tr>
                             @empty
                                 <div class="alert alert-danger" role="alert">Nenhuma OS encontrada!</div>
+
+                              
                             @endforelse
                     
                         </tbody>
+
+                        <a href="{{ route('os4.create') }}" class="btnCadastrar-os">
+                            <button>
+                                <h5>Cadastrar</h5>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>  
+                        </a> 
                     </table>
                     {{ $os4->onEachSide(0)->links() }} 
                 </div>
             </div>
-                
-            <a href="{{ route('os4.create') }}" class="btnCadastrar">
-                <button>
-                    <h5>Cadastrar</h5>
-                    <i class="fa-solid fa-angle-right"></i>
-                </button>  
-            </a> 
         </div>
     </div>
 </div>  
 </div>
 
-<a href="{{ route('os1.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a>    
     
 @endsection
