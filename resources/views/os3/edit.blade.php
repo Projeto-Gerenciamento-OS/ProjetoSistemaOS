@@ -8,12 +8,12 @@
             <div  class="cardHeaderAsociados card-header">
                 <h2 class="mt-3">Edição</h2>
                 <span class="ms-auto d-flex  flex-row gap-2">
-                    <a href="{{ route('os3.index') }}" class="btn btn-outline-primary ">
+                    <a href="{{ route('os3.index') }}" class="btn  ">
                         <span class="listar-texto">Listar</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('os3.view', ['os3' => $os3->id]) }}" class="btn btn-light ">
+                    <a href="{{ route('os3.view', ['os3' => $os3->id]) }}" class="btn  ">
                         <span class="listar-texto">Visualizar</span>
                         <i class="fa-regular fa-eye"></i>
                     </a>
@@ -21,7 +21,7 @@
                     <form method="POST" action="{{ route('os3.delete', ['os3' => $os3->id]) }}">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn btn-danger "
+                        <button type="submit" class="btn  "
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                             <span class="listar-texto">Apagar</span>
                             <i class="fa-solid fa-trash"></i>

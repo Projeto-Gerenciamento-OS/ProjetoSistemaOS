@@ -8,7 +8,7 @@
         <div class="cardHeaderAsociados card-header">
             <h1 class="mt-3">Nova Empresa</h1>
 
-            <a href="{{ route('empresas.index') }}" class="btn btnIcons"><i class="fa-solid fa-list"></i>
+            <a href="{{ route('empresas.index') }}" class="btn "><i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span>
             </a>
         </div>

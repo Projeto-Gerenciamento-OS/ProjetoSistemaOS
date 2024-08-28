@@ -7,7 +7,7 @@
 
         <div class="cardHeaderAsociados card-header">
             <h1>Usuários</h1>
-            <a href="{{ route('user.index') }}" class="btn btn-primary btnIcons"><i class="fa-solid fa-list"></i>
+            <a href="{{ route('user.index') }}" class="btn"><i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span>
             </a>
         </div> 
@@ -59,7 +59,7 @@
                         </select>
                 </div> 
                 
-                <a  class="btnCadastrar ">
+                <a  class="btnCadastrar">
                     <button type="submit">
                         <h5>Concluir</h5>
                         <i class="fa-solid fa-angle-right"></i>

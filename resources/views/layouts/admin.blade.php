@@ -16,7 +16,6 @@
 
     <main class="layoutAdmin">
         <div class="layoutSidenav_nav">
-
             <nav id='navContainerGeral' class="sb-sidenav accordion sb-sidenav-five " id="sidenavAccordion">
                 <a href="{{('dashboard')}}" class="nav-logo">
                     <img src="{{ asset('img/logo.png') }}" alt="Logo da empresa">

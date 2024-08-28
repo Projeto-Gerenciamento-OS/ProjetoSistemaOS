@@ -7,7 +7,7 @@
 
         <div class="cardHeaderAsociados card-header">
             <h1>Status</h1>
-            <a href="{{ route('status.index') }}" class="btn btn-primary btnIcons">
+            <a href="{{ route('status.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span>
             </a>

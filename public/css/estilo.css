@@ -13,23 +13,16 @@
     --font-color-menu-nav:rgba(36, 59, 122);
     --font-color-menu-footer:rgb(255, 255, 255);
     --font-family-menu:"Open Sans", sans-serif;
+    --cor-cinza-claro: rgb(255, 255, 255);
+    --cor-azul-1:#2a7cb8;
+    --cor-azul-1-hover:#2a7db8d1;
+    --cor-border-line:rgba(0, 0, 0, 0.563);
+    --cor-fundo:rgba(233, 233, 233, 0.293);
 }
 
 body {
     min-height: 100vh;
-    &::before {
-        content:'';
-        position:absolute;
-        top:0;
-        right:0;
-        left:0;
-        bottom:0;
-        background: linear-gradient(90deg,  rgba(2, 37, 70, 0.3), rgba(6, 66, 121, 0.3),  rgba(2, 37, 70, 0.3)) 50% 0 / 100% 50% no-repeat,
-                linear-gradient(90deg, rgba(2, 37, 70, 0.3), rgba(193, 77, 38, 0.13), rgba(2, 37, 70, 0.3)) 50% 100% / 100% 50% no-repeat;
-        z-index:-1;
-        filter:blur(100px);
-    }
- }
+}
 
 
 .layoutAdmin {
@@ -41,7 +34,7 @@ body {
     
     /* Estilizacao do menu lateral -- revisado  */
     .layoutSidenav_nav {
-        background-color: rgba(29, 71, 144, 0.370);
+        background-color: var(--cor-fundo);
         min-height: 90vh;
         border-radius: 0 5px 5px 0;
         position: relative;
@@ -55,6 +48,7 @@ body {
         transition: all ease-in;
         transition-duration: .1s;
         z-index:1000;
+        box-shadow:0px 6px 15px 5px rgba(0, 0, 0, 0.171);
 
         &:hover, .layoutAdmin.layoutSidenav_nav.expanded {
             width:300px;
@@ -106,12 +100,12 @@ body {
                         margin: 0;
                         
                         a {
-                            color: var(--font-color-menu-nav);
+                            color: #2a7cb8;
                             font-family: var(--font-family-menu);
                             font-size: 15px;
                             
                             &:hover {
-                                color:#FFFF;
+                                color: #0095ff;
                             }
                         }
 
@@ -159,16 +153,16 @@ body {
                     }
                     a {
                         font-weight: bold;
-                        color: rgba(36, 59, 122);
+                        color: var(--cor-azul-1);
 
                         &:hover {
-                            color:#FFFF;
+                            color: #0095ff;
                         }
                     }
                     
                     .fundo-nav-cadastros-gerais {
                         display:inline-block;
-                        background-color: rgba(0, 46, 132, 0.116);
+                        background-color: var(--cor-cinza-claro);
                         border-radius: 5px;
                     }
                 }
@@ -183,7 +177,7 @@ body {
                 width: 100%;
                 
                 .small {
-                    color:var(--font-color-menu-footer);
+                    color: black;
                     font-family: var(--font-family-menu);
                 }    
             }
@@ -227,41 +221,49 @@ body {
         min-width: 200px;
         position: relative;
         width: auto;
-        background-color: transparent;
+        background-color: var(--cor-cinza-claro);
+
+        
         
         .card-header {
-            background-color: rgba(29, 71, 144, 0.468);
             display:flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: start;
             border: none;  
             gap:1rem;
+            box-shadow:0px 0px 15px 5px rgba(0, 0, 0, 0.105);
+            background-color: var(--cor-azul-1);
+            
             
             h1 {
                 font-size: 2.8rem;
                 margin-top: 20px;
-                color:#FFFF;
+                color: #FFFF;
+                text-align: center;
             }
-            
+       
             .pesquisar {
                 display:flex;
                 justify-content: center;
                 align-items: center;
                 gap:10px;
+    
+                border-radius: 5px;
+              
                 
                 .input-pesquisar {
-                    background-color: rgba(209, 218, 237, 0.801);
+                    background-color: var(--cor-fundo);
                     border: none;
                     border-radius:5px;
                     padding: var(--espacoInternoBtn);
+                   
                 }
                 
                 .btn-pesquisar {
-                    background-color: rgba(209, 218, 237, 0.801);
-                    border: none;
                     border-radius:5px;
                     padding: var(--espacoInternoBtn);
+                    border: none;
                 }
                 
                 @media screen and (max-width:450px){
@@ -271,8 +273,6 @@ body {
                 }
             }
         }
-
-     
         
         .cardHeaderAsociados{
             display: flex;
@@ -281,10 +281,14 @@ body {
             align-items: center;
             justify-content: space-between ;
             padding: .8rem 2rem;
-            background-color: rgba(29, 71, 144, 0.468);
+            background-color: var(--cor-azul-1);
             border-radius: 5px 5px 0px 0px;
-            gap: 20px;
-                           
+            gap: 20px; 
+
+            h2{
+                color:#FFFF;
+            }
+            
             .listar-texto{
                 display:inline;
             }
@@ -318,12 +322,11 @@ body {
 
         .card-body {
             display: flex;
-            background-color: rgba(255, 255, 255, 0.21) !important;
+            background-color: rgba(233, 233, 233, 0.293);
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 20px 15px;
-            background-color: transparent;
             border: none;
             border-radius: 0px 0px 5px 5px;
             width:100%;
@@ -331,7 +334,8 @@ body {
             margin: auto;
             position: relative;
             
-             #form-inputs {
+            
+            #form-inputs {
                 @media screen and (min-width:970px) {
                     display:flex;
                     flex-direction: column;
@@ -349,6 +353,7 @@ body {
                     text-align: left;
                     min-width: 130px;
                     padding: .6rem .4rem;
+                    
                 }
 
                 td {
@@ -362,8 +367,8 @@ body {
             nav{
                 padding-top:15px;
                 div:nth-child(2){
-                display:none;                
-               }
+                    display:none;                
+                }
                 
             }
 
@@ -373,7 +378,6 @@ body {
                 overflow: auto;
                 
                 input{
-                    background-color: rgba(255,255,255, 0.20);
                     border: 0.2px solid rgba(0, 0, 0, 0.300);
                     padding:0.5rem 0;
                     border-radius: 5px;
@@ -402,33 +406,33 @@ body {
         justify-content: center;
         align-items: center;
         gap: 1rem ;
-        background: rgba(38, 177, 35, 0.25);
+        background: var(--cor-azul-1);
         padding: 1rem 3.5rem;
         border-radius: 5px;
         font-weight: 600;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.358);
         border: none;
         transition: linear .1s;
         
         &:hover  {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            background: rgba(37, 177, 35, 0.314);
+            background: var(--cor-azul-1-hover);
             transition: linear .1s;
         }
     }
     h5 {
-        color:black;
+        color:#FFFF;
     }
     
     svg {
         font-size: 1.5rem;
-        color:black;
+        color:#FFFF;
     }
 }
 
 .btnIcons {
     border:none;
-    background: none;
+    background: transparent;
     padding: 0px;
     
     svg {
@@ -449,7 +453,6 @@ body {
     flex-direction: column;
     gap:10px;
     background: none;
-
     background: none;
 
     .cardCorLista {
@@ -457,11 +460,11 @@ body {
         .card-header {
             display:flex;
             flex-direction: row !important;
-            background-color: transparent;
             justify-content: space-between;
             align-items: center;
             width: 100%;
             padding: 10px 0 ;
+         
     
             .abas{
                 display: flex;
@@ -469,16 +472,15 @@ body {
                 flex-direction: row;
                 width:270px;
                 height:40px;
-                background-color: rgba(29, 71, 144, 0.468);
                 border-radius:5px  18px 0px 0px;
     
                     
                 a {
-                    color:black;
+                    color: black;
                     font-size: 1rem;
     
                     &:hover {
-                        color:#FFFF;
+                        color: rgb(25, 28, 197);
                     }
                     &:first-child {
                         margin-left: 10px;
@@ -491,33 +493,6 @@ body {
                         height:40%;
                     }
                 }       
-                
-                .pesquisar {
-                    display:flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap:10px;
-                    
-                    .input-pesquisar {
-                        background-color: rgba(209, 218, 237, 0.801);
-                        border: none;
-                        border-radius:5px;
-                        padding: var(--espacoInternoBtn);
-                    }
-                    
-                    .btn-pesquisar {
-                        background-color: rgba(209, 218, 237, 0.801);
-                        border: none;
-                        border-radius:5px;
-                        padding: var(--espacoInternoBtn);
-                    }
-                    
-                    @media screen and (max-width:450px){
-                        .input-pesquisar{
-                            width:120px;
-                        }
-                    }
-                }
     
             }
     
@@ -531,11 +506,11 @@ body {
                     height:40px;    
                         
                     a {
-                        color:black;
+                        color: black;
                         font-size: .9rem;
         
                         &:hover {
-                            color:#FFFF;
+                            color: black;
                         }
                         &:first-child {
                             margin-left: 8px;
@@ -560,17 +535,18 @@ body {
             gap:10px;
             
             .input-pesquisar {
-                background-color: rgba(209, 218, 237, 0.801);
+                background-color: rgb(255, 255, 255);
                 border: none;
                 border-radius:5px;
                 padding: var(--espacoInternoBtn);
             }
             
             .btn-pesquisar {
-                background-color: rgba(209, 218, 237, 0.801);
+                background-color: rgb(248, 245, 245);
                 border: none;
                 border-radius:5px;
                 padding: var(--espacoInternoBtn);
+                margin-bottom: 30px;
             }
             
             @media screen and (max-width:450px){
@@ -588,21 +564,34 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background: rgba(255, 255, 255, 0.21);
+    background: var(--cor-fundo);
     padding: 1rem 1rem;
     border-radius: 5px;
     font-weight: 600;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border: none;
     transition: linear .1s;
-    color:black;
+    color: black;
+
+    span, svg {
+        color:#FFFF;
+    }
 
 } 
 
 #timeline {
     height:100%;
     width:90%;
-    background-color: rgba(255,255,255, 0.21);
+    background-color: black;
+}
+
+#marginEditar-empresa {
+    margin-top:150px;
+    
+}
+
+#marginVisualizar-empresa{
+    padding-top:150px;
 }
 
 #marginEditar-empresa {
