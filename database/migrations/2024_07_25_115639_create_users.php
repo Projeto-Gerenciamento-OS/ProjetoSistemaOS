@@ -10,12 +10,11 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_emp1')->nullable(); // Tornando a coluna opcional
-            $table->integer('id_emp2')->nullable();
             $table->string('nome'); // Alterado de 'name' para 'nome'
             $table->string('email')->unique();         
             $table->string('password');
             $table->integer('tipo');
+            $table->integer('nivel');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

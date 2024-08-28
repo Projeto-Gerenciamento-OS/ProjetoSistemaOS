@@ -6,7 +6,6 @@
     <div class="card mb-4 cardCorLista" >
         <div class="card-header">
             <h1>Usuários</h1>
-           
 
             <form action="{{ route('user.index') }}">
                 <div class="pesquisar">

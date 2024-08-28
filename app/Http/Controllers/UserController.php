@@ -42,7 +42,7 @@ class UserController extends Controller
 
 
         //recupera os papeis
-         $roles = Role::pluck('name')->all();
+        $roles = Role::pluck('name')->all();
 
         // Carregar a VIEW
         return view('users.create', ['menu' => 'users','roles'=>$roles]);
@@ -67,6 +67,8 @@ class UserController extends Controller
                 'password' => $request->password,
                 'tipo' => $request->tipo,
                 'nivel' => $request->nivel,
+                'id_emp1' => $request->id_emp1,
+                'id_emp2' => $request->id_emp2,
             ]);
 
             //cadastrar um papel para o usuario
@@ -128,6 +130,8 @@ class UserController extends Controller
                 'password' => $request->password,
                 'tipo' => $request->tipo,
                 'nivel' => $request->nivel,
+                'id_emp1' => $request->id_emp1,
+                'id_emp2' => $request->id_emp2,
             ]);
 
             //Editar um papel para o usuario
@@ -140,7 +144,6 @@ class UserController extends Controller
             DB::commit();
 
             // dd($user);
-       
 
             // Redirecionar o usuário, enviar a mensagem de sucesso
             return redirect()->route('user.view', ['user' => $request->user])->with('success', 'Usuário editado com sucesso!');
@@ -163,7 +166,7 @@ class UserController extends Controller
         // Carregar a VIEW
         return view('users.editPassword', ['menu' => 'users', 'user' => $user]);
     }
-     
+    
     // Editar no banco de dados a senha do usuário 
     public function updatePassword(Request $request, User $user){
 
@@ -214,7 +217,7 @@ class UserController extends Controller
 
 
              //Remover todos os papeis atribuidos ao usuario
-             $user->syncRoles([]);
+            $user->syncRoles([]);
 
             // Salvar log
             Log::info('Usuário excluído.', ['id' => $user->id]);

@@ -6,23 +6,25 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
- 
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::create('os4', function (Blueprint $table) {
+        Schema::create('custo_geral', function (Blueprint $table) {
             $table->id();
-            $table->float('id_emp1_os4');
-            $table->float('percentual_os4');
-            $table->float('valor_os4');
-            $table->float('ativo_os4');
-            $table->text('descricao_os4');
+            $table->integer('id_emp1');
+			$table->string('descricao');
+            $table->float('percentual');         
             $table->timestamps();
         });
     }
 
-  
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::dropIfExists('os4');
+        Schema::dropIfExists('custo_geral');
     }
 };
