@@ -30,11 +30,6 @@ Route::post('/login', [LoginController::class, 'loginAcesso'])->name('login.aces
 Route::get('/logout', [LoginController::class, 'delete'])->name('login.delete');
 
 
-
-
-
-
-
 //criando um grupo de rotas privadas
 Route::group(['middleware' => 'auth'], function () {
 

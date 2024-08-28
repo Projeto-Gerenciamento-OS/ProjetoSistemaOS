@@ -60,7 +60,6 @@
                     <i class="fa-solid fa-angle-right"></i>
                 </button>  
             </a>
-               
         </form>
         
         </div>
