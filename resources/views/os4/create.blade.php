@@ -43,14 +43,6 @@
                     </div> 
                 </div>
         
-               
-
-               
-            
-               
-                
-                
-                
                 <a  class="btnCadastrar">
                     <button type="submit">
                         <h5>Concluir</h5>
