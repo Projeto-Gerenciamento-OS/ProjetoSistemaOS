@@ -4,11 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Os1;
-use App\Models\Os2;
-use App\Models\Os3;
-use App\Models\Os4;
-
-
 use App\Http\Requests\Os1Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -20,55 +15,19 @@ class Os1Controller extends Controller
 {
     //listar os usuarios
 
-    public function index(Request $request )
+    public function index(Request $request)
     {
         // Recuperar os registros do banco dados
-        $os1 = Os1::when($request->has('id_status'), function ($query) use ($request) {
-            $query->where('id_status', 'like', '%' . $request->id_status . '%');
-        })
-        ->paginate(5)
-        ->withQueryString();
-
-        $os2= Os2::when($request->has('id_servico'), function ($Query) use ($request){
-            $Query->where('id_servico', 'like', '%' . $request->id_servico . '%');
+        $os1= Os1::when($request->has('id_status'), function ($Query) use ($request){
+            $Query->where('id_status', 'like', '%' . $request->id_status . '%');
         })
         
         ->orderBy('created_at')
         ->paginate(5)
         ->withQueryString();
-
-        $os3= Os3::when($request->has('id_os1_os3'), function ($Query) use ($request){
-            $Query->where('id_os1_os3', 'like', '%' . $request->id_os1_os3 . '%');
-        })
-        
-        ->orderBy('created_at')
-        ->paginate(5)
-        ->withQueryString();
-
-        $os4 = Os4::when($request->has('id_emp1_os4'), function ($query) use ($request) {
-            $query->where('id_emp1_os4', 'like', '%' . $request->id_emp1_os4 . '%');
-        })
-        ->orderBy('created_at')
-        ->paginate(5)
-        ->withQueryString();
-
-
-        $os1->onEachSide(1);
-        $os2->onEachSide(1);
-        $os3->onEachSide(1);
-        $os4->onEachSide(1);
 
         //Carregar a View
-        return view('os1.index', [
-            'os1' => $os1,
-            'id_status' => $request->id_status,
-            'os2' => $os2,
-            'id_servico' => $request->id_servico,
-            'os3' => $os3,
-            'id_os1_os3' => $request->id_os1_os3,
-            'os4' => $os4,
-            'id_emp1_os4' => $request->id_emp1_os4,
-        ]);
+        return view('os1.index', ['os1', 'os1'=> $os1,'id_status'=>$request->id_status]);
     }
     
     // Carregar o formulário cadastrar novo usuário

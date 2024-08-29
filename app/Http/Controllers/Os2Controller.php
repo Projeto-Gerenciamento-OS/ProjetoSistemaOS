@@ -39,27 +39,27 @@ class Os2Controller extends Controller
     }
 
      // Cadastrar no banco de dados o novo curso
-    public function store(Os2Request $request)
-    {
-
-        // Validar o formulário
-        $request->validated();
-
-        // Marca o ponto inicial de uma transação
-        DB::beginTransaction();
-
-        try {
+     public function store(Os2Request $request)
+     {
+ 
+         // Validar o formulário
+         $request->validated();
+ 
+         // Marca o ponto inicial de uma transação
+         DB::beginTransaction();
+ 
+         try {
  
              // Cadastrar no banco de dados na tabela usuários
-            $os2 = Os2::create([
-                'id_servico' => $request->id_servico,
-                'id_emp1_os2' => $request->id_emp1_os2,
-                'id_emp2_os2' => $request->id_emp2_os2,
-                'id_colaborador' => $request->id_colaborador,
-                'quantidade_os2' => $request->quantidade_os2,
-                'valorUnitario_os2' => $request->valorUnitario_os2,
-                'valorTotal_os2' => $request->valorTotal_os2,
-                'custoTotal_os2' => $request->custoTotal_os2,
+             $os2 = Os2::create([
+                 'id_servico' => $request->id_servico,
+                 'id_emp1_os2' => $request->id_emp1_os2,
+                 'id_emp2_os2' => $request->id_emp2_os2,
+                 'id_colaborador' => $request->id_colaborador,
+                 'quantidade_os2' => $request->quantidade_os2,
+                 'valorUnitario_os2' => $request->valorUnitario_os2,
+                 'valorTotal_os2' => $request->valorTotal_os2,
+                 'custoTotal_os2' => $request->custoTotal_os2,
              ]);
  
              // Salvar log
@@ -69,7 +69,7 @@ class Os2Controller extends Controller
              DB::commit();
  
              // Redirecionar o Os2, enviar a mensagem de sucesso
-             return redirect()->route('os1.index', ['os2' => $os2->id])->with('success', 'Os2 cadastrado com sucesso!');
+             return redirect()->route('os2.index', ['os2' => $os2->id])->with('success', 'Os2 cadastrado com sucesso!');
          } catch (Exception $e) {
  
              // Salvar log
