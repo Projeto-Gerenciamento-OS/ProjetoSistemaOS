@@ -2,21 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\EmpresasRequest;
+use App\Http\Requests\Emp1Request;
 
-use App\Models\Empresas;
+use App\Models\Emp1;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 
-class EmpresasController extends Controller
+
+
+class Emp1Controller extends Controller
 {
     public function index(Request $request)
     {
         // Recuperar os registros do banco dados
-        $empresas= Empresas::when($request->has('descricao'), function ($Query) use ($request){
+        $emp1= Emp1::when($request->has('descricao'), function ($Query) use ($request){
             $Query->where('descricao', 'like', '%' . $request->descricao . '%');
         })
         
@@ -25,15 +27,15 @@ class EmpresasController extends Controller
         ->withQueryString();
 
         //Carregar a View
-        return view('empresas.index', ['empresas', 'empresas'=> $empresas,'descricao'=>$request->descricao]);
+        return view('emp1.index', ['emp1', 'emp1'=> $emp1,'descricao'=>$request->descricao]);
     }
 
     //mostrar detalhes do usuario(view)
 
-    public function view(Empresas $empresas)
+    public function view(Emp1 $emp1)
     {
         //Carrega a View
-        return view( 'empresas.view', ['menu'=>'empresas', 'empresas' => $empresas]);
+        return view( 'emp1.view', ['emp1', 'emp1' => $emp1]);
     }
 
 
@@ -42,12 +44,12 @@ class EmpresasController extends Controller
     {
 
         // Carregar a VIEW
-        return view('empresas.create', ['menu' => 'empresas']);
+        return view('emp1.create', ['emp1']);
     }
 
 
      // Cadastrar no banco de dados o novo curso
-     public function store(EmpresasRequest $request)
+     public function store(Emp1Request $request)
      {
  
          // Validar o formulário
@@ -59,19 +61,19 @@ class EmpresasController extends Controller
          try {
  
              // Cadastrar no banco de dados na tabela usuários
-             $empresas = Empresas::create([
+             $emp1 = Emp1::create([
                  'descricao' => $request->descricao,
 
              ]);
  
              // Salvar log
-             Log::info('Usuário cadastrado.', ['id' => $empresas->id]);
+             Log::info('Usuário cadastrado.', ['id' => $emp1->id]);
  
              // Operação é concluída com êxito
              DB::commit();
  
              // Redirecionar o usuário, enviar a mensagem de sucesso
-             return redirect()->route('empresas.view', ['empresas' => $empresas->id])->with('success', 'Usuário cadastrado com sucesso!');
+             return redirect()->route('emp1.view', ['emp1' => $emp1->id])->with('success', 'Usuário cadastrado com sucesso!');
          } catch (Exception $e) {
  
              // Salvar log
@@ -86,16 +88,16 @@ class EmpresasController extends Controller
      }
 
      // Carregar o formulário editar usuário
-    public function edit(Empresas $empresas)
+    public function edit(Emp1 $emp1)
     {
         // dd($empresas);
         // Carregar a VIEW
         // return view('empresas.edit', ['menu' => 'empresas', 'empresas' => $empresas]);
-        return view('empresas.edit',['empresas'=> $empresas]);
+        return view('emp1.edit',['emp1'=> $emp1]);
     }
 
    
-    public function update(Request $request, Empresas $empresas)
+    public function update(Request $request, Emp1 $emp1)
     {
         //  dd("editar no banco dados");
 
@@ -110,13 +112,13 @@ class EmpresasController extends Controller
          try {
      
              // Editar as informações do registro no banco de dados
-             $empresas->update([
+             $emp1->update([
                  'descricao' => $request->descricao,
  
              ]);
  
              // Salvar log
-             Log::info('Usuário editado.', ['empresas' => $empresas->id]);
+             Log::info('Usuário editado.', ['emp1' => $emp1->id]);
  
              // Operação é concluída com êxito
              DB::commit();
@@ -125,7 +127,7 @@ class EmpresasController extends Controller
  
              // Redirecionar o usuário, enviar a mensagem de sucesso
 
-            return redirect()->route('empresas.view',['empresas'=>$empresas->id])->with('sucsess', 'empresas editada com sucesso!');
+            return redirect()->route('emp1.view',['emp1'=>$emp1->id])->with('sucsess', 'empresas editada com sucesso!');
          } catch (Exception $e) {
  
              // Salvar log
@@ -145,24 +147,24 @@ class EmpresasController extends Controller
 
 
        // Excluir o usuário do banco de dados
-       public function delete(Empresas $empresas)
+       public function delete(Emp1 $emp1)
        {
            try {
                // Excluir o registro do banco de dados
-               $empresas->delete();
+               $emp1->delete();
    
                // Salvar log
-               Log::info('Usuário excluído.', ['id' => $empresas->id]);
+               Log::info('Usuário excluído.', ['id' => $emp1->id]);
    
                // Redirecionar o usuário, enviar a mensagem de sucesso
-               return redirect()->route('empresas.index')->with('success', 'Usuário excluído com sucesso!');
+               return redirect()->route('emp1.index')->with('success', 'Usuário excluído com sucesso!');
            } catch (Exception $e) {
    
                // Salvar log
                Log::info('Usuário não excluído.', ['error' => $e->getMessage()]);
    
                // Redirecionar o usuário, enviar a mensagem de erro
-               return redirect()->route('empresas.index')->with('error', 'Usuário não excluído!');
+               return redirect()->route('emp1.index')->with('error', 'Usuário não excluído!');
            }
        }
 

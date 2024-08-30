@@ -4,16 +4,17 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Empresas;
+use App\Models\Emp1;
 
-class EmpresasSeeder extends Seeder
+class Emp1Seeder extends Seeder
 {
-
+    /**
+     * Run the database seeds.
+     */
     public function run(): void
     {
-        Empresas::create([
+        Emp1::create([
             'descricao'=>'teste',
-    
         ]);
     }
 }

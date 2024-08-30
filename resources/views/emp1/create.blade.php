@@ -6,9 +6,9 @@
     <div class="card mb-4 cardCorLista " >
 
         <div class="cardHeaderAsociados card-header">
-            <h1 class="mt-3">Nova Empresa</h1>
+            <h1 class="mt-3">Nova Empresa 1</h1>
 
-            <a href="{{ route('empresas.index') }}" class="btn "><i class="fa-solid fa-list"></i>
+            <a href="{{ route('emp1.index') }}" class="btn "><i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span>
             </a>
         </div>
@@ -17,7 +17,7 @@
         <div class="card-body">
             <x-alert />
 
-            <form action="{{ route('empresas.store') }}" method="POST" class="row g-3">
+            <form action="{{ route('emp1.store') }}" method="POST" class="row g-3">
                 @csrf
                 @method('POST')
         

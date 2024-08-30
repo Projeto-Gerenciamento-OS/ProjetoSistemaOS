@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Empresa;
-use App\Http\Requests\EmpresaRequest;
+use App\Models\Emp2;
+use App\Http\Requests\Emp2Request;
 
 use Exception;
 use Illuminate\Http\Request;
@@ -11,12 +11,12 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 
-class EmpresaController extends Controller
+class Emp2Controller extends Controller
 {
     public function index(Request $request)
     {
         // Recuperar os registros do banco dados
-        $empresa= Empresa::when($request->has('razao'), function ($Query) use ($request){
+        $emp2= Emp2::when($request->has('razao'), function ($Query) use ($request){
             $Query->where('razao', 'like', '%' . $request->razao . '%');
         })
         
@@ -25,26 +25,26 @@ class EmpresaController extends Controller
         ->withQueryString();
 
         //Carregar a View
-        return view('empresa.index', ['empresa', 'empresa'=> $empresa,'razao'=>$request->razao]);
+        return view('emp2.index', ['emp2', 'emp2'=> $emp2,'razao'=>$request->razao]);
     }
 
     // Detalhes da empresa
-    public function view(Empresa $empresa) {
+    public function view(Emp2 $emp2) {
         // Carregar a VIEW
         //SALVAR LOG
-        Log::info('Visualizar Empresas',['empresa'=>$empresa->id]);
+        Log::info('Visualizar Empresas',['emp2'=>$emp2->id]);
 
-        return view('empresa.view', ['menu' => 'empresa', 'empresa' => $empresa]);
+        return view('emp2.view', ['emp2', 'emp2' => $emp2]);
     }
 
     // Carregar o formulário cadastrar nova empresa
-    public function create(Empresa $empresa) {
+    public function create(Emp2 $emp2) {
         // Carregar a VIEW
-        return view('empresa.create', ['empresa'=> $empresa]);
+        return view('emp2.create', ['emp2'=> $emp2]);
     }
 
     // Cadastrar no banco de dados o nova Empresa
-    public function store(EmpresaRequest $request) {
+    public function store(Emp2Request $request) {
         // Validar o formulário
         $request->validated();
 
@@ -53,22 +53,23 @@ class EmpresaController extends Controller
 
         try {
             // Cadastrar no banco de dados na tabela empresa
-            $empresa = Empresa::create([
-                'empresa1_id' => $request->empresa1_id,
-                'cnpj' => $request->cnpj,
+            $emp2 = Emp2::create([
                 'razao' => $request->razao,
                 'fantasia' => $request->fantasia,
-                'cep' => $request->cep,
-                'logradouro' => $request->logradouro,
+                'cnpj' => $request->cnpj,
+                'endereco' => $request->endereco,
                 'numero' => $request->numero,
+                'complemento' => $request->complemento,
                 'bairro' => $request->bairro,
                 'cidade' => $request->cidade,
+                'cep' => $request->cep,
                 'uf' => $request->uf,
                 'fone1' => $request->fone1,
                 'fone2' => $request->fone2,
                 'plano' => $request->plano,
-                'qtdadm' => $request->qtdadm,
-                'qtdoper' => $request->qtdoper,
+                'qtdeadm' => $request->qtdeadm,
+                'qtdeoper' => $request->qtdeoper,
+                'id_emp1'=>$request->id_emp1,
             ]);
 
             // // Salvar log
@@ -77,10 +78,10 @@ class EmpresaController extends Controller
             // Operação é concluída com êxito
             DB::commit();
                 // Salvar log
-            Log::info('Empresa cadastrada.', [ 'id' => $empresa->id]);
+            Log::info('Empresa cadastrada.', [ 'id' => $emp2->id]);
 
             // Redirecionar para empresa, enviar a mensagem de sucesso
-            return redirect()->route('empresa.index', ['empresa'=>$empresa->id])->with("success","Empresa cadastrada com sucesso");
+            return redirect()->route('emp2.index', ['emp2'=>$emp2->id])->with("success","Empresa cadastrada com sucesso");
         } catch (Exception $e) {
 
             // Salvar log
@@ -95,15 +96,15 @@ class EmpresaController extends Controller
     }
 
     // Carregar o formulário editar empresa
-    public function edit(Empresa $empresa)
+    public function edit(Emp2 $emp2)
     {
         // Carregar a VIEW
         // return view('empresa.edit', ['empresa' => $empresa]);
-        return view('empresa.edit', ['menu' => 'empresa', 'empresa' => $empresa]);
+        return view('emp2.edit', ['emp2', 'emp2' => $emp2]);
     }
 
     //Realizar a alteração no banco de dados da empresa
-    public function update(EmpresaRequest $request, Empresa $empresa)
+    public function update(Emp2Request $request, Emp2 $emp2)
     {
 
         // Validar o formulário
@@ -115,37 +116,38 @@ class EmpresaController extends Controller
         try {
 
             // Editar as informações do registro no banco de dados
-            $empresa->update([
-                // 'empresa1_id' => $request->empresa1_id,
-                'cnpj' => $request->cnpj,
+            $emp2->update([
                 'razao' => $request->razao,
                 'fantasia' => $request->fantasia,
-                'cep' => $request->cep,
-                'logradouro' => $request->logradouro,
+                'cnpj' => $request->cnpj,
+                'endereco' => $request->endereco,
                 'numero' => $request->numero,
+                'complemento' => $request->complemento,
                 'bairro' => $request->bairro,
                 'cidade' => $request->cidade,
+                'cep' => $request->cep,
                 'uf' => $request->uf,
                 'fone1' => $request->fone1,
                 'fone2' => $request->fone2,
                 'plano' => $request->plano,
-                'qtdadm' => $request->qtdadm,
-                'qtdoper' => $request->qtdoper,
+                'qtdeadm' => $request->qtdeadm,
+                'qtdeoper' => $request->qtdeoper,
+                'id_emp1'=>$request->id_emp1,
             ]);
 
             // Salvar log
-            Log::info('Empresa editado.', ['id' => $empresa->id]);
+            Log::info('Empresa editado.', ['id' => $emp2->id]);
     
 
             // Operação é concluída com êxito
             DB::commit();
 
              // Salvar log
-             Log::info('Empresa editada.', [ 'empresa' => $empresa->id]);
+             Log::info('Empresa editada.', [ 'emp2' => $emp2->id]);
 
 
             // Redirecionar o usuário, enviar a mensagem de sucesso
-            return redirect()->route('empresa.index', ['empresa'=>$request->id])->with('success', 'Empresa editado com sucesso!');
+            return redirect()->route('emp2.index', ['emp2'=>$request->id])->with('success', 'Empresa editado com sucesso!');
 
         } catch (Exception $e) {
 
@@ -161,24 +163,24 @@ class EmpresaController extends Controller
     }
 
      // Excluir o empresa do banco de dados
-     public function delete(Empresa $empresa)
+     public function delete(Emp2 $emp2)
      {
          try {
              // Excluir o registro do banco de dados
-             $empresa->delete();
+             $emp2->delete();
  
              // Salvar log
-             Log::info('Empresa excluído.', ['id' => $empresa->id]);
+             Log::info('Empresa excluído.', ['id' => $emp2->id]);
  
              // Redirecionar o usuário, enviar a mensagem de sucesso
-             return redirect()->route('empresa.index')->with('success', 'Empresa excluído com sucesso!');
+             return redirect()->route('emp2.index')->with('success', 'Empresa excluído com sucesso!');
          } catch (Exception $e) {
  
              // Salvar log
              Log::info('Empresa não excluído.', ['error' => $e->getMessage()]);
  
              // Redirecionar o usuário, enviar a mensagem de erro
-             return redirect()->route('empresa.index')->with('error', 'Empresa não excluído!');
+             return redirect()->route('emp2.index')->with('error', 'Empresa não excluído!');
          }
      }
 

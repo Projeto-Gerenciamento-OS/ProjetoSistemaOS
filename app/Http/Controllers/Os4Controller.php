@@ -66,7 +66,7 @@ class Os4Controller extends Controller
              DB::commit();
  
              // Redirecionar o Os4, enviar a mensagem de sucesso
-             return redirect()->route('os1.index', ['os4' => $os4->id])->with('success', 'Os4 cadastrado com sucesso!');
+             return redirect()->route('os4.index', ['os4' => $os4->id])->with('success', 'Os4 cadastrado com sucesso!');
          } catch (Exception $e) {
  
              // Salvar log

@@ -15,10 +15,10 @@ class Colaborador extends Model
 
      protected $fillable = ['empresa1_id','empresa2_id','setor_id','turno_id','login_id','nome','telefone'];
  
-    //  //um pai pode ter varios filhos
-    //  public function empresa()
-    //  {
-    //      //cardinalidades
-    //      return $this->hasMany(Empresa::class);
-    //  }
+     //um pai pode ter varios filhos
+     public function empresa()
+     {
+         //cardinalidades
+         return $this->hasMany(Empresa::class);
+     }
 }

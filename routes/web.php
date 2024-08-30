@@ -5,8 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TimelineController;
-use App\Http\Controllers\EmpresaController;
-use App\Http\Controllers\EmpresasController;
+use App\Http\Controllers\Emp2Controller;
+use App\Http\Controllers\Emp1Controller;
 use App\Http\Controllers\ColaboradorController;
 use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\MateriaisController;
@@ -58,36 +58,36 @@ Route::delete('/delete-user/{user}', [UserController::class, 'delete'])->name('u
 
 
 //Empresa
-Route::get('/empresa',[EmpresaController::class, 'index'])->name('empresa.index');
+Route::get('/emp2',[Emp2Controller::class, 'index'])->name('emp2.index');
 //Visualizar empresa
-Route::get('/view-empresa/{empresa}', [EmpresaController::class, 'view'])->name('empresa.view');
+Route::get('/view-emp2/{emp2}', [Emp2Controller::class, 'view'])->name('emp2.view');
 //carrega o cadastrar empresa
-Route::get('/create-empresa', [EmpresaController::class, 'create'])->name('empresa.create');
+Route::get('/create-emp2', [Emp2Controller::class, 'create'])->name('emp2.create');
 //recebe o cadastrar empresa
-Route::post('/store-empresa', [EmpresaController::class, 'store'])->name('empresa.store');
+Route::post('/store-emp2', [Emp2Controller::class, 'store'])->name('emp2.store');
 //carrega o editar  empresa
-Route::get('/edit-empresa/{empresa}', [EmpresaController::class, 'edit'])->name('empresa.edit');
+Route::get('/edit-emp2/{emp2}', [Emp2Controller::class, 'edit'])->name('emp2.edit');
 //recebe o editar empresa
-Route::put('/update-empresa/{empresa}', [EmpresaController::class, 'update'])->name('empresa.update');
+Route::put('/update-emp2/{emp2}', [Emp2Controller::class, 'update'])->name('emp2.update');
 //deleta empresa
-Route::delete('/delete-empresa/{empresa}', [EmpresaController::class, 'delete'])->name('empresa.delete');
+Route::delete('/delete-emp2/{emp2}', [Emp2Controller::class, 'delete'])->name('emp2.delete');
 
 
 
 //Empresa1
-Route::get('/empresas', [EmpresasController::class, 'index'])->name('empresas.index');
+Route::get('/emp1', [Emp1Controller::class, 'index'])->name('emp1.index');
 //Visualizar empresa
-Route::get('/view-empresas/{empresas}', [EmpresasController::class, 'view'])->name('empresas.view');
+Route::get('/view-emp1/{emp1}', [Emp1Controller::class, 'view'])->name('emp1.view');
 //carrega o cadastrar empresa
-Route::get('/create-empresas', [EmpresasController::class, 'create'])->name('empresas.create');
+Route::get('/create-emp1', [Emp1Controller::class, 'create'])->name('emp1.create');
 //recebe o cadastrar empresa
-Route::post('/store-empresas', [EmpresasController::class, 'store'])->name('empresas.store');
+Route::post('/store-emp1', [Emp1Controller::class, 'store'])->name('emp1.store');
 //carrega o editar  empresa
-Route::get('/edit-empresas/{empresas}', [EmpresasController::class, 'edit'])->name('empresas.edit');
+Route::get('/edit-emp1/{emp1}', [Emp1Controller::class, 'edit'])->name('emp1.edit');
 //recebe o editar empresa
-Route::put('/update-empresas/{empresas}', [EmpresasController::class, 'update'])->name('empresas.update');
+Route::put('/update-emp1/{emp1}', [Emp1Controller::class, 'update'])->name('emp1.update');
 //deleta empresa
-Route::delete('/delete-empresas/{empresas}', [EmpresasController::class, 'delete'])->name('empresas.delete');
+Route::delete('/delete-emp1/{emp1}', [Emp1Controller::class, 'delete'])->name('emp1.delete');
 
 
 
@@ -255,6 +255,20 @@ Route::delete('/delete-os4/{os4}', [Os4Controller::class, 'delete'])->name('os4.
 
 
 //Agenda
+
+Route::get('/agenda',[AgendaController::class, 'index'])->name('agenda.index');
+
+Route::get('/view-agenda/{agenda}',[AgendaController::class, 'view'])->name('agenda.view');
+
+Route::get('/create-agenda',[AgendaController::class, 'create'])->name('agenda.create');
+
+Route::post('/store-agenda',[AgendaController::class, 'store'])->name('agenda.store');
+
+Route::get('/edit-agenda/{agenda}',[AgendaController::class, 'edit'])->name('agenda.edit');
+
+Route::put('/update-agenda/{agenda}',[AgendaController::class, 'update'])->name('agenda.update');
+
+Route::delete('/delete-agenda/{agenda}', [AgendaController::class, 'delete'])->name('agenda.delete');
 
 
 
