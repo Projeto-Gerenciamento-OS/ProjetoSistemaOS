@@ -93,11 +93,11 @@ fazer:
 
 * colaborador
   * seed (talvez) - 
-  * migrate - 
-  * models - 
-  * controller - 
-  * request - 
-  * views- 
+  * migrate - ok
+  * models - ok
+  * controller - ok
+  * request - ok
+  * views- ok
 
 * custo
   * seed (talvez) - 

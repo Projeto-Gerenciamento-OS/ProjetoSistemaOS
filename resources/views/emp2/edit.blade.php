@@ -42,7 +42,7 @@
                 <div class="col-6" >
                     <div class="">
                         <label for="id_emp1" class="form-label">Empresa 1:</label>
-                        <input type="number" name="id_emp1" id="id_emp1" class="form-control" placeholder="empresa1_id" value="{{old('id_emp1', $emp2->id_emp1) }}">            
+                        <input type="number" name="id_emp1" id="id_emp1" class="form-control" placeholder="emp1" value="{{old('id_emp1', $emp2->id_emp1) }}">            
                     </div> 
 
                     <div class="">

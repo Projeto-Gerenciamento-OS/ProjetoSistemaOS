@@ -24,7 +24,7 @@ class UserRequest extends FormRequest
             'email' => 'required|email|unique:users,email,' . ($userId ? $userId->id : null),
             'password' => 'required_if:password,!=,null|min:6',
             'tipo'=>'required',
-            'roles'=>'required',
+            'roles'=>'required',    
             
         ];
     }

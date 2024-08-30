@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Log;
 class ColaboradorController extends Controller
 {
      // Colaborador
-     public function index(Request $request)
-     {
+    public function index(Request $request)
+    {
         // Recuperar os registros do banco dados
         $colaborador= Colaborador::when($request->has('nome'), function ($Query) use ($request){
             $Query->where('nome', 'like', '%' . $request->nome . '%');
@@ -24,16 +24,16 @@ class ColaboradorController extends Controller
 
         //Carregar a View
         return view('colaborador.index', ['colaborador', 'colaborador'=> $colaborador,'nome'=>$request->nome]);
-     }
+    }
 
 
     // Detalhes do colaborador
     public function view(Colaborador $colaborador)
     {
-       
-         //SALVAR LOG
+    
+        //SALVAR LOG
 
-         Log::info('Visualizar Colaborador',['colaborador'=>$colaborador->id]);
+        Log::info('Visualizar Colaborador',['colaborador'=>$colaborador->id]);
 
         // Carregar a VIEW
 
@@ -43,9 +43,9 @@ class ColaboradorController extends Controller
     // Carregar o formulário cadastrar novo colaborador
     public function create(Colaborador $colaborador)
     {
-     
-        // Carregar a VIEW
-         return view('colaborador.create', ['colaborador'=> $colaborador]);
+    
+    // Carregar a VIEW
+        return view('colaborador.create', ['colaborador'=> $colaborador]);
     }
 
 
@@ -53,55 +53,55 @@ class ColaboradorController extends Controller
     // Cadastrar no banco de dados o novo colaborador
     public function store(ColaboradorRequest $request)
     {
-       // Validar o formulário
-       $request->validated();
+        // Validar o formulário
+        $request->validated();
 
-       // Marca o ponto inicial de uma transação
-       DB::beginTransaction();
+        // Marca o ponto inicial de uma transação
+        DB::beginTransaction();
 
-       try {
+        try {
 
-           // Cadastrar no banco de dados na tabela colaborador
-           $colaborador = Colaborador::create([
-               'empresa1_id' => $request->empresa1_id,
-               'empresa2_id' => $request->empresa2_id,
-               'setor_id' => $request->setor_id,
-               'turno_id' => $request->turno_id,
-               'login_id' => $request->login_id,
-               'nome' => $request->nome,
-               'telefone' => $request->telefone,                
-           ]);
+            // Cadastrar no banco de dados na tabela colaborador
+            $colaborador = Colaborador::create([
+                'id_emp1' => $request->id_emp1,
+                'nome' => $request->nome,
+                'fone' => $request->fone,                
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
+                'id_turno' => $request->id_turno,
+                'id_setor' => $request->id_setor,
+            ]);
 
-           // Operação é concluída com êxito
-           DB::commit();
+            // Operação é concluída com êxito
+            DB::commit();
+                // Salvar log
+            Log::info('Colaborador cadastrado.', [ 'id' => $colaborador->id]);
+
+            // Redirecionar para colaborador, enviar a mensagem de sucesso
+            return redirect()->route('colaborador.index', ['colaborador'=>$colaborador->id])->with("success","Colaborador cadastrado com sucesso");
+
+        } catch (Exception $e) {
+
             // Salvar log
-           Log::info('Colaborador cadastrado.', [ 'id' => $colaborador->id]);
+            Log::info('Colaborador não cadastrado.', ['error' => $e->getMessage()]);
 
-           // Redirecionar para colaborador, enviar a mensagem de sucesso
-           return redirect()->route('colaborador.index', ['colaborador'=>$colaborador->id])->with("success","Colaborador cadastrado com sucesso");
+            // Operação não é concluída com êxito
+            DB::rollBack();
 
-       } catch (Exception $e) {
+            // Redirecionar para Colaborador , enviar a mensagem de erro
+            return back()->withInput()->with('error', 'Colaborador não cadastrado!');
 
-           // Salvar log
-           Log::info('Colaborador não cadastrado.', ['error' => $e->getMessage()]);
-
-           // Operação não é concluída com êxito
-           DB::rollBack();
-
-           // Redirecionar para Colaborador , enviar a mensagem de erro
-           return back()->withInput()->with('error', 'Colaborador não cadastrado!');
-
+        }
+        
     }
-    
-   }
 
        // Carregar o formulário editar Colaborador
-       public function edit(Colaborador $colaborador)
-       {
+        public function edit(Colaborador $colaborador)
+        {
            // Carregar a VIEW
-           
-           return view('colaborador.edit', ['menu' => 'colaborador', 'colaborador' => $colaborador]);
-       }
+            
+            return view('colaborador.edit', ['menu' => 'colaborador', 'colaborador' => $colaborador]);
+        }
 
 
        //Realizar a alteração no banco de dados da Colaborador
@@ -117,14 +117,14 @@ class ColaboradorController extends Controller
         try {
 
               // Editar as informações do registro no banco de dados
-              $colaborador->update([
-                'empresa1_id' => $request->empresa1_id,
-               'empresa2_id' => $request->empresa2_id,
-               'setor_id' => $request->setor_id,
-               'turno_id' => $request->turno_id,
-               'login_id' => $request->login_id,
-               'nome' => $request->nome,
-               'telefone' => $request->telefone,      
+            $colaborador->update([
+                'id_emp1' => $request->id_emp1,
+                'nome' => $request->nome,
+                'fone' => $request->fone,                
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
+                'id_turno' => $request->id_turno,
+                'id_setor' => $request->id_setor,    
             ]);
         // Salvar log
         Log::info('Colaborador editado.', ['id' => $colaborador->id]);

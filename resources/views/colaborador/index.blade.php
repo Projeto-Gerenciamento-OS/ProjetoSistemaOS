@@ -25,12 +25,11 @@
             <table>
                 <thead>
                     <tr class="titulos">    
-                        <th  >ID</th>
-                        <th>Empresa1</th>
-                        <th>Empresa2</th>
+                        <th>ID</th>
+                        <th>Empresa 1</th>
+                        <th>Empresa 2</th>
                         <th>Setor</th>
                         <th>Turno</th>
-                        <th>Login</th>
                         <th>Nome</th>
                         <th>Telefone</th>
 
@@ -40,18 +39,17 @@
 
                 <tbody>
 
-                     
+                    
                     @forelse ($colaborador as $colab)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             
                             <th>{{ $colab->id }}</th>   
-                            <th>{{ $colab->empresa1_id}}</th>           
-                            <th>{{ $colab->empresa2_id}}</th>  
-                            <th>{{ $colab->setor_id}}</th>  
-                            <th>{{ $colab->turno_id}}</th>  
-                            <th>{{ $colab->login_id}}</th>  
+                            <th>{{ $colab->id_emp1}}</th>           
+                            <th>{{ $colab->id_emp2}}</th>  
+                            <th>{{ $colab->id_setor}}</th>  
+                            <th>{{ $colab->id_turno}}</th>  
                             <th>{{ $colab->nome}}</th>  
-                            <th>{{ $colab->telefone}}</th>  
+                            <th>{{ $colab->fone}}</th>  
                             
                             <td class="acoes d-md-flex flex-row gap-2 justify-content-center pt-8">
 
