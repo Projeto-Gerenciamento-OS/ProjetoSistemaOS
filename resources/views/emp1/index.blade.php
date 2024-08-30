@@ -5,10 +5,10 @@
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista" >
         <div class="card-header">
-            <h1>Empresa (grupo)</h1>
+            <h1>Empresa 1</h1>
 
             
-            <form action="{{ route('empresas.index') }}">
+            <form action="{{ route('emp1.index') }}">
                 <div class="pesquisar">
                     
                     <input type="text" name="descricao" id="descricao" class="form-control btn-pesquisar" value="{{ $descricao }}" placeholder="Nome da conta" />
@@ -33,7 +33,7 @@
 
                 
                 <tbody>
-                    @forelse ($empresas as $empres)
+                    @forelse ($emp1 as $empres)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th  >{{ $empres->id }}</th>   
                             
@@ -41,17 +41,17 @@
                             
                                 <td class="d-md-flex flex-row gap-2 justify-content-center pt-8"> 
 
-                                <a href="{{ route('empresas.view', ['empresas' => $empres->id]) }}"
+                                <a href="{{ route('emp1.view', ['emp1' => $empres->id]) }}"
                                     class="btnIcons">
                                     <i class="fa-regular fa-eye"></i> 
                                 </a>
 
-                                <a href="{{ route('empresas.edit', ['empresas' => $empres->id]) }}"
+                                <a href="{{ route('emp1.edit', ['emp1' => $empres->id]) }}"
                                     class="btnIcons">
                                     <i class="fa-solid fa-pen"></i> 
                                 </a>
 
-                                <form action="{{ route('empresas.delete', ['empresas' => $empres->id])}}" method="POST">
+                                <form action="{{ route('emp1.delete', ['emp1' => $empres->id])}}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn-apagar btnIcons"
@@ -69,12 +69,12 @@
 
                 </tbody>
             </table>
-            {{ $empresas->onEachSide(0)->links() }} 
+            {{ $emp1->onEachSide(0)->links() }} 
         </div>
     </div>
 </div>
 
-<a href="{{ route('empresas.create') }}" class="btnCadastrar">
+<a href="{{ route('emp1.create') }}" class="btnCadastrar">
     <button>
         <h5>Cadastrar</h5>
         <i class="fa-solid fa-angle-right"></i>

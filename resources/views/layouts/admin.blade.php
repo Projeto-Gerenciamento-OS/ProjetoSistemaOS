@@ -37,7 +37,7 @@
                         
 
                         <li>
-                            @can('index-user')
+                            {{-- @can('index-user') --}}
                                 <a @class(['nav-link', 'active' => isset($menu) && $menu =='user']) href="{{ route('user.index')}}">
                                     <div class="sb-nav-link-icon">
                                         <i class="fa-solid fa-chalkboard-user fa-2x"></i>
@@ -47,11 +47,11 @@
                                         Usuarios
                                     </span>
                                 </a>
-                            @endcan
+                            {{-- @endcan --}}
                         </li>
                         
                         <li>
-                            @can('empresas','empresa')
+                            {{-- @can('empresas','empresa') --}}
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsEmp" aria-expanded="false" aria-controls="collapseLayoutsEmp">
                                 <div class="sb-nav-link-icon">
                                     <i class="fa-solid fa-chalkboard-user fa-2x"></i>
@@ -67,12 +67,12 @@
                             </a>
                             <div class="collapse" id="collapseLayoutsEmp" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">
-                                    <a class="nav-link" href="{{route('empresas.index') }}">Empresa</a>
-                                    <a class="nav-link" href="{{route('empresa.index') }}">Empresas Afiliadas</a>
+                                    <a class="nav-link" href="{{route('emp1.index') }}">Empresa</a>
+                                    <a class="nav-link" href="{{route('emp2.index') }}">Empresas Afiliadas</a>
     
                                 </nav>
                             </div>
-                            @endcan
+                            {{-- @endcan --}}
                         </li>
                         
                         

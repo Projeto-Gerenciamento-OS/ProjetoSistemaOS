@@ -15,7 +15,24 @@ class emp2 extends Model
 
     protected $table ='emp2';
 
-    protected $fillable=['id_emp2','cnpj','razao','fantasia','cep','logradouro','numero','bairro','cidade','uf','fone1','fone2','plano','qtdadm','qtdoper'];
+    protected $fillable=[
+        'razao',
+        'fantasia',
+        'cnpj',
+        'endereco',
+        'numero',
+        'complemento',
+        'bairro',
+        'cidade',
+        'cep',
+        'uf',
+        'fone1',
+        'fone2',
+        'plano',
+        'qtdeadm',
+        'qtdeoper',
+        'id_emp1',
+    ];
 
 
     // // o filho pode acessar o pai

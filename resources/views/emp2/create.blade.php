@@ -5,9 +5,9 @@
 <div class="container-fluid data-container">
     <div class="card mb-3 cardCorLista "  >
         <div class="cardHeaderAsociados card-header">
-            <h1 class="mt-3">Nova Empresa Afiliada</h1>
+            <h1 class="mt-3">Nova Empresa 2</h1>
 
-            <a href="{{ route('empresa.index') }}" class="btn "><i class="fa-solid fa-list"></i>
+            <a href="{{ route('emp2.index') }}" class="btn "><i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span>
             </a>
 
@@ -16,15 +16,15 @@
         <div class="card-body"> 
             <x-alert />
 
-            <form action="{{ route('empresa.store') }}" method="POST" class="row g-3">
+            <form action="{{ route('emp2.store') }}" method="POST" class="row g-3">
                 @csrf
                 @method('POST')
 
                         <!-- Coluna 1 -->
                         <div class="col-lg-4">
                             <div class="mb-3">
-                                <label for="empresa1_id" class="form-label">ID EMP1:</label>
-                                <input type="number" name="empresa1_id" id="empresa1_id" class="form-control" placeholder="Código Empresa 1" value="{{ old('empresa1_id') }}">
+                                <label for="id_emp1" class="form-label">ID EMP1:</label>
+                                <input type="number" name="id_emp1" id="id_emp1" class="form-control" placeholder="Código Empresa 1" value="{{ old('id_emp1') }}">
                             </div>
 
                             <div class="mb-3">
@@ -43,8 +43,8 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="qtdoper" class="form-label">Quant Oper:</label>
-                                <input type="number" name="qtdoper" id="qtdoper" class="form-control" placeholder="Quantidade Oper" value="{{ old('qtdoper') }}">
+                                <label for="qtdeoper" class="form-label">Quant Oper:</label>
+                                <input type="number" name="qtdeoper" id="qtdeoper" class="form-control" placeholder="Quantidade Oper" value="{{ old('qtdeoper') }}">
                             </div>
                         </div>
 
@@ -97,8 +97,8 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="qtdadm" class="form-label">Quant Adm:</label>
-                                <input type="number" name="qtdadm" id="qtdadm" class="form-control" placeholder="Quantidade Adm" value="{{ old('qtdadm') }}">
+                                <label for="qtdeadm" class="form-label">Quant Adm:</label>
+                                <input type="number" name="qtdeadm" id="qtdeadm" class="form-control" placeholder="Quantidade Adm" value="{{ old('qtdeadm') }}">
                             </div>
 
                             <div class="mb-3">

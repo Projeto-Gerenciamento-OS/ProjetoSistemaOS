@@ -79,7 +79,6 @@ class RoleSeeder extends Seeder
 
         ]);
 
-
         if(!Role::where('name', 'Colaborador')->first())
         {
                 $colaborador =Role::create([
