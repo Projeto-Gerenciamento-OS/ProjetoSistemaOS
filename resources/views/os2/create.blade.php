@@ -23,27 +23,31 @@
                             value="{{ old('id_servico') }}">
                     </div>
                     <div class="mb-3">
-                        <label for="id_emp1_os2" class="form-label">ID EMP1</label>
-                        <input type="number" name="id_emp1_os2" id="id_emp1_os2" 
-                            placeholder=" Digite a data cadastrada" value="{{ old('id_emp1_os2') }}">
+                        <label for="id_emp1" class="form-label">ID EMP1</label>
+                        <input type="number" name="id_emp1" id="id_emp1" 
+                            placeholder=" Digite a data cadastrada" value="{{ old('id_emp1') }}">
                     </div>
                      
                     <div class="mb-3">
-                        <label for="id_emp2_os2" class="form-label">ID EMP2 </label>
-                        <input type="number" name="id_emp2_os2" id="id_emp2_os2" 
-                            placeholder=" Digite a id_emp2_os2" value="{{ old('id_emp2_os2') }}">
+                        <label for="id_emp2" class="form-label">ID EMP2 </label>
+                        <input type="number" name="id_emp2" id="id_emp2" 
+                            placeholder=" Digite a id_emp2" value="{{ old('id_emp2') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="valorUnitario_os2" class="form-label">Valor Unitário</label>
-                        <input type="text"  name="valorUnitario_os2" id="valorUnitario_os2"   required>
+                        <label for="vunit" class="form-label">Valor Unitário</label>
+                        <input type="text"  name="vunit" id="vunit"   required>
                     </div> 
 
                 </div>
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="valorTotal_os2" class="form-label">Valor Total</label>
-                        <input type="text"  name="valorTotal_os2" id="valorTotal_os2"   required>
+                        <label for="vtotal" class="form-label">Valor Total</label>
+                        <input type="text"  name="vtotal" id="vtotal"   required>
+                    </div> 
+                    <div class="mb-3">
+                        <label for="cunit" class="form-label">Custo unitário</label>
+                        <input type="text"  name="cunit" id="cunit"   required>
                     </div> 
 
                     <div class="mb-3">
@@ -52,13 +56,13 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="quantidade_os2" class="form-label">Quantidade</label>
-                        <input type="text"  name="quantidade_os2" id="quantidade_os2"   required>
+                        <label for="qtde" class="form-label">Quantidade</label>
+                        <input type="text"  name="qtde" id="qtde"   required>
                     </div> 
 
                     <div class="mb-3">
-                        <label for="custoTotal_os2" class="form-label">Custo Total</label>
-                        <input type="text"  name="custoTotal_os2" id="custoTotal_os2"   required>
+                        <label for="ctotal" class="form-label">Custo Total</label>
+                        <input type="text"  name="ctotal" id="ctotal"   required>
                     </div> 
                 </div>         
        

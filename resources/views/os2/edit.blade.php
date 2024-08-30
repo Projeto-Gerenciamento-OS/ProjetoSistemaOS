@@ -47,24 +47,24 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="id_emp1_os2" >ID EMP1 </label>
-                                <input type="number" name="id_emp1_os2" id="id_emp1_os2" 
-                                    placeholder=" Digite aqui" value="{{ old('id_emp1_os2', $os2->id_emp1_os2) }}">
+                                <label for="id_emp1" >ID EMP1 </label>
+                                <input type="number" name="id_emp1" id="id_emp1" 
+                                    placeholder=" Digite aqui" value="{{ old('id_emp1', $os2->id_emp1) }}">
                             </div>
 
                             <div class="mb-3">
-                                <label for="quantidade_os2" >Quantidade</label>
-                                <input type="text" name="quantidade_os2" id="quantidade_os2"  placeholder=" quantidade_os2"
-                                    value="{{ old('quantidade_os2', $os2->quantidade_os2) }}">
+                                <label for="qtde" >Quantidade</label>
+                                <input type="text" name="qtde" id="qtde"  placeholder=" qtde"
+                                    value="{{ old('qtde', $os2->qtde) }}">
                             </div>
                            
                         </div>
 
                         <div class="col-6 col-lg-6">
                             <div class="mb-3">
-                                <label for="id_emp2_os2" >ID EMP2 </label>
-                                <input type="number" name="id_emp2_os2" id="id_emp2_os2" 
-                                    placeholder=" Digite aqui" value="{{ old('id_emp2_os2', $os2->id_emp2_os2) }}">
+                                <label for="id_emp2" >ID EMP2 </label>
+                                <input type="number" name="id_emp2" id="id_emp2" 
+                                    placeholder=" Digite aqui" value="{{ old('id_emp2', $os2->id_emp2) }}">
                             </div>
 
                             <div class="mb-3">
@@ -74,9 +74,9 @@
                             </div>
                            
                             <div class="mb-3">
-                                <label for="valorUnitario_os2" >Valor Unitário</label>
-                                <input type="text" name="valorUnitario_os2" id="valorUnitario_os2"  placeholder=" valorUnitario_os2"
-                                    value="{{ old('valorUnitario_os2', $os2->valorUnitario_os2) }}">
+                                <label for="vunit" >Valor Unitário</label>
+                                <input type="text" name="vunit" id="vunit"  placeholder=" vunit"
+                                    value="{{ old('vunit', $os2->vunit) }}">
                             </div>
                         </div>
                      
@@ -84,14 +84,13 @@
                        
 
                         <div class="col-lg-6">
-                                <label for="valorTotal_os2" class="form-label">Valor Total </label>
-                                <input type="text"  name="valorTotal_os2" id="valorTotal_os2"  value="{{ old('valorTotal_os2', $os2->valorTotal_os2) }}" >
+                                <label for="vtotal" class="form-label">Valor Total </label>
+                                <input type="text"  name="vtotal" id="vtotal"  value="{{ old('vtotal', $os2->vtotal) }}" >
                         </div>
 
                         <div class="col-lg-6">
-                                <label for="custoTotal_os2" class="form-label">Custo Total </label>
-                                <input type="text"  name="custoTotal_os2" id="custoTotal_os2"  value="{{ old('custoTotal_os2', $os2->custoTotal_os2) }}" >
-            
+                                <label for="ctotal" class="form-label">Custo Total </label>
+                                <input type="text"  name="ctotal" id="ctotal"  value="{{ old('ctotal', $os2->ctotal) }}" >
                             </div>
                            
 

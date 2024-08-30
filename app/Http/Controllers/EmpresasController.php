@@ -11,8 +11,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 
-
-
 class EmpresasController extends Controller
 {
     public function index(Request $request)

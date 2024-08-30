@@ -36,6 +36,17 @@
                         <label for="ctotal" class="form-label">Custo Total </label>
                         <input type="text"  name="ctotal" id="ctotal"  value="{{ old('ctotal') }}" >
                     </div>
+
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">ID EMP2 </label>
+                        <input type="text"  name="id_emp2" id="id_emp2"  value="{{ old('id_emp2') }}" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="id_status" class="form-label">ID STATUS </label>
+                        <input type="text"  name="id_status" id="id_status"  value="{{ old('id_status') }}" >
+                    </div>
+
                     <div class="mb-3">
                         <label for="obs" class="form-label">Observação </label>
                         <input type="text"  name="obs" id="obs"  value="{{ old('obs') }}" >
@@ -47,6 +58,12 @@
                         <input type="date" name="datacad" id="datacad" 
                             placeholder=" Digite a data cadastrada" value="{{ old('datacad') }}">
                     </div>
+                    <div class="mb-3">
+                        <label for="id_users" class="form-label"> ID USERS</label>
+                        <input type="date" name="id_users" id="id_users" 
+                            placeholder=" Digite a data cadastrada" value="{{ old('id_users') }}">
+                    </div>
+                
                     
                     <div class="mb-3">
                         <label for="dhf" class="form-label">DHF </label>

@@ -10,6 +10,6 @@ class Os2 extends Model
 
     protected $table ='os2';
 
-    protected $fillable=[ 'id_servico','id_emp1_os2','id_emp2_os2', 'id_colaborador', 'quantidade_os2', 
-                        'valorUnitario_os2', 'valorTotal_os2', 'custoTotal_os2'];
+    protected $fillable=[ 'id_servico','id_emp1','qtde', 'vunit', 'vtotal', 
+                        'cunit', 'ctotal', 'id_emp2','id_os2', 'id_servico', 'id_colaborador'];
 }

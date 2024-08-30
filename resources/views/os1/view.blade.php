@@ -42,6 +42,15 @@
                     <dt class="col-6 col-lg-4">ID EMP1 </dt>
                     <dd class="col-6">{{ $os1->id_emp1}}</dd>
 
+                    <dt class="col-6 col-lg-4">ID EMP2 </dt>
+                    <dd class="col-6">{{ $os1->id_emp2}}</dd>
+
+                    <dt class="col-6 col-lg-4">ID STATUS </dt>
+                    <dd class="col-6">{{ $os1->id_status}}</dd>
+
+                    <dt class="col-6 col-lg-4">ID USERS </dt>
+                    <dd class="col-6">{{ $os1->id_users}}</dd>
+
                     <dt class="col-6 col-lg-4">Data Cadastrada </dt>
                     <dd class="col-6">{{ $os1->datacad }}</dd>
 

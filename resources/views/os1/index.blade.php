@@ -52,6 +52,9 @@
                                 <tr class='linhaComCoresDiferentes' id='linhaCores_{{ $item->id }}'>
                                     <th>{{ $item->id }}</th>
                                     <th>{{ $item->id_emp1 }}</th>
+                                    <th>{{ $item->id_emp2 }}</th>
+                                    <th>{{ $item->id_status }}</th>
+                                    <th>{{ $item->id_users }}</th>
                                     <td>{{ $item->datacad}}</td>
                                     <th>{{ $item->dhi }}</th>
                                     <th>{{ $item->dhf }}</th>
