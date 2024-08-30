@@ -60,7 +60,7 @@
                     </div>
                     <div class="mb-2">
                         <label for="id_users" >Usuarios</label>
-                        <input type="text" name="id_users" id="id_users"  placeholder=" Digite o id_users aqui"
+                        <input type="text" name="id_users" id="id_users"  placeholder=" Digite o usuario aqui"
                             value="{{ old('id_users') }}">
                     </div>
 

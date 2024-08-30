@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
          // Alterando a tabela do Custo Geral.
-         Schema::table("custos", function (Blueprint $table) {
+        Schema::table("custos", function (Blueprint $table) {
             $table->unique('id_emp1','id_emp2');
             $table->foreignId('id_emp2')->constrained('emp2');
             $table->foreignId('id_users')->constrained('users');
