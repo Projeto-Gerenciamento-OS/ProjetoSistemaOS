@@ -29,6 +29,7 @@
                         <th>ID EMP1</th>
                         <th>ID EMP2</th>
                         <th>Percentual</th>
+                        <th>Usuarios</th>
                         <th>Descrição</th>
                         <th class="text-center">Ações</th>
                     </tr>
@@ -41,6 +42,7 @@
                         <th>{{ $custo->id_emp1 }}</th>
                         <td >{{ $custo->id_emp2 }}</td>
                         <th>{{ $custo->percentual }}</th>
+                        <th>{{ $custo->id_users }}</th>
                         <th>{{ $custo->descricao }}</th>
                         <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 

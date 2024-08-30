@@ -38,6 +38,11 @@
                         <input type="text" name="percentual" id="percentual" 
                             placeholder=" Digite o percentual" value="{{ old('percentual') }}">
                     </div>
+                    <div class="mb-3">
+                        <label for="id_users" class="form-label">Usuarios</label>
+                        <input type="text" name="id_users" id="id_users" 
+                            placeholder=" Digite o id_users" value="{{ old('id_users') }}">
+                    </div>
 
                     <div class="mb-3">
                         <label for="descricao" class="form-label">Descrição</label>

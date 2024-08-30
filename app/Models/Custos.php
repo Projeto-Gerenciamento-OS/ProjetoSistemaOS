@@ -11,5 +11,11 @@ class Custos extends Model
 
     protected $table ='custos';
 
-    protected $fillable=['id_emp1', 'id_emp2', 'percentual', 'descricao'];
+    protected $fillable=[
+        'id_emp1',
+        'descricao',
+        'percentual',
+        'id_emp2',
+        'id_users'
+    ];
 }

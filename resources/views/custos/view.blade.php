@@ -48,6 +48,9 @@
                     <dt class="col-6 col-lg-4">Percentual: </dt>
                     <dd class="col-6">{{ $custos->percentual }}</dd>
 
+                    <dt class="col-6 col-lg-4">Usuarios: </dt>
+                    <dd class="col-6">{{ $custos->id_users }}</dd>
+
                     <dt class="col-6 col-lg-4">Descrição: </dt>
                     <dd class="col-6">{{ $custos->descricao }}</dd>
 

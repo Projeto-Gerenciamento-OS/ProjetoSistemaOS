@@ -101,10 +101,10 @@ fazer:
 
 * custo
   * seed (talvez) - 
-  * migrate - 
-  * models - 
-  * controller - 
-  * request - 
+  * migrate - ok
+  * models - ok
+  * controller - ok 
+  * request - ok
   * views- 
 
 * materiais
