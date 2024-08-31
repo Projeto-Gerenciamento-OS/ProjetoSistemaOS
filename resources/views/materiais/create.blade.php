@@ -20,9 +20,15 @@
            
                 <div class="col-6 ">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Nome </label>
-                        <input type="text" name="nome" id="nome"  placeholder=" Digite o nome"
-                            value="{{ old('nome') }}">
+                        <label for="id_emp1" class="form-label">Empresa 1 </label>
+                        <input type="text" name="id_emp1" id="id_emp1"  placeholder=" Digite o id_emp1"
+                            value="{{ old('id_emp1') }}">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">Empresa 2 </label>
+                        <input type="text" name="id_emp2" id="id_emp2"  placeholder=" Digite o id_emp2"
+                            value="{{ old('id_emp2') }}">
                     </div>
 
                     <div class="mb-3">
@@ -31,6 +37,7 @@
                             placeholder=" Digite o custo" value="{{ old('custo') }}">
                     </div>
                 </div>
+
                 <div class="col-6 ">
                     <div class="mb-3">
                         <label for="unidade" class="form-label">Unidade </label>
@@ -42,6 +49,11 @@
                     <div class="mb-3">
                         <label for="valor" class="form-label">Valor </label>
                         <input type="text"  name="valor" id="valor"   required >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="id_users" class="form-label">Usuario </label>
+                        <input type="text"  name="id_users" id="id_users"   required >
                     </div>
                 </div>
        

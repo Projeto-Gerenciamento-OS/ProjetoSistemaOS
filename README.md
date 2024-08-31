@@ -112,8 +112,8 @@ fazer:
   * migrate - ok
   * models - ok
   * controller - ok
-  * request - 
-  * views- 
+  * request - ok
+  * views- ok
 
 * os1
   * seed (talvez) - 
