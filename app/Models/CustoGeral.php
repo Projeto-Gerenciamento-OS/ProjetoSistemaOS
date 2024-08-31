@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Custos extends Model
+class CustoGeral extends Model
 {
     use HasFactory;
 
-    protected $table ='custos';
+    protected $table = 'setor';
 
-    protected $fillable=['id_emp1', 'id_emp2', 'percentual', 'descricao'];
+    protected $fillable = ['descricao','percentual','id_emp2','id_users'];
 }

@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('servicos', function (Blueprint $table) {
-            $table->id();
-			$table->integer('id_emp1');
+        Schema::create('servico', function (Blueprint $table) {
+            $table->bigIncrements('id_servico'); 
             $table->string('nome');
 			$table->integer('tempo');
 			$table->float('valor');
 			$table->string('obs');
-            $table->integer('recorente');
+            $table->integer('recorrente');
 			$table->float('custo');       
             $table->float('intervalo');      
             $table->timestamps();
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('servicos');
+        Schema::dropIfExists('servico');
     }
 };

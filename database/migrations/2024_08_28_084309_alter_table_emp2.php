@@ -13,7 +13,6 @@ return new class extends Migration
     {
           // Alterando a tabela do emp2.
           Schema::table("emp2", function (Blueprint $table) {
-            // $table->unique('id_emp1','id_emp2');  
             $table->foreignId('id_emp1')->constrained('emp1');       
         });
     }

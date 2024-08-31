@@ -13,7 +13,6 @@ return new class extends Migration
     {
        // Alterando a tabela do colaborador.
        Schema::table("colaborador", function (Blueprint $table) {
-        $table->unique('id_emp1','id_emp2');
         $table->foreignId('id_emp2')->constrained('emp2');
         $table->foreignId('id_users')->constrained('users');
         $table->foreignId('id_turno')->constrained('turno');

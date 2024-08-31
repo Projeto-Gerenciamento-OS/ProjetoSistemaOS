@@ -17,8 +17,7 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('123456', ['rounds' => 12]),
                 'tipo' => 1,  
                 'nivel' =>1,
-                'id_emp1'=>1,
-                'id_emp2'=>1,        
+                       
             ]);
 
              //Atribuir o papel para o usuario
