@@ -13,7 +13,6 @@ return new class extends Migration
     {
        // Alterando a tabela do turno.
        Schema::table("turno", function (Blueprint $table) {
-        $table->unique('id_emp1','id_emp2');
         $table->foreignId('id_emp2')->constrained('emp2');
         $table->foreignId('id_users_turno')->constrained('turno');        
     });

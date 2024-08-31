@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('os4', function (Blueprint $table) {
-            $table->id();
-            $table->integer('id_emp1');
+            $table->bigIncrements('id_os4'); 
             $table->string('descricao');
 			$table->float('percentual');
             $table->float('valor');

@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         // Alterando a tabela do cliente.
-        Schema::table("cliente", function (Blueprint $table) {
-            $table->unique('id_emp1','id_emp2');
+        Schema::table("cli", function (Blueprint $table) {
             $table->foreignId('id_emp2')->constrained('emp2');
             $table->foreignId('id_users')->constrained('users');
         });
