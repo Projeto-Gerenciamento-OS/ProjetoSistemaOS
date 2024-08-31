@@ -109,9 +109,9 @@ fazer:
 
 * materiais
   * seed (talvez) - 
-  * migrate - 
-  * models - 
-  * controller - 
+  * migrate - ok
+  * models - ok
+  * controller - ok
   * request - 
   * views- 
 

@@ -42,11 +42,13 @@ class MateriaisController extends Controller
 
           
             $materiais = Materiais::create([
-                'nome' => $request->nome,
-                'custo' => $request->custo,
-                'unidade' => $request->unidade,
-                'valor' => $request->valor,
+                'id_emp1' => $request->id_emp1,
                 'descricao' => $request->descricao,
+                'unidade' => $request->unidade,
+                'custo' => $request->custo,
+                'valor' => $request->valor,
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
             ]);
 
            
@@ -90,13 +92,13 @@ class MateriaisController extends Controller
 
         try {
             $materiais->update([
-
-                'nome' => $request->nome,
-                'custo' => $request->custo,
+                'id_emp1' => $request->id_emp1,
+                'descricao' => $request->descricao,
                 'unidade' => $request->unidade,
+                'custo' => $request->custo,
                 'valor' => $request->valor,
-                'descricao' => $request->descricao, 
-
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
             ]);
 
         

@@ -24,7 +24,7 @@ class MateriaisRequest extends FormRequest
     public function messages():array
     {
         return[
-            'nome.required'=>'Campo nome é Obrigatório',
+            'unidade.required'=>'Campo nome é Obrigatório',
             // 'tipo.required'=>'Campo tipo é Obrigatório',
             // 'nivel.required'=>'Campo nivel é Obrigatório',
         ];
