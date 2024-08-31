@@ -6,7 +6,7 @@
     <div class="card mb-4 cardCorLista ">
         <div class="card-header">
             <div class='abas'>
-                <a href="{{route('os1.index')}}" class="bold os1-titulo" >OS1</a>
+                <a href="{{route('os.index')}}" class="bold os1-titulo" >OS1</a>
                 <a href="{{route('os2.index')}}" class="bold">OS2</a>
                 <a href="{{route('os3.index')}}" class="light">OS3</a>
                 <a href="{{route('os4.index')}}" class="light">OS4</a>

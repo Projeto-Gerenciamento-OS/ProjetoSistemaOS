@@ -7,7 +7,7 @@
         <div class="card-header">
             <div class='abas'>
 
-                <a  href="{{route('os1.index')}}" class="bold" >OS1</a>
+                <a  href="{{route('os.index')}}" class="bold" >OS1</a>
                 
                 <a href="{{route('os2.index')}}" class="bold">OS2</a>
                 

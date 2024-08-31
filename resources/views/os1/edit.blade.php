@@ -8,7 +8,7 @@
             <div  class="cardHeaderAsociados card-header">
                 <h1 class="">Edição</h1>
                 <span class="ms-auto d-flex  flex-row gap-2">
-                    <a href="{{ route('os1.index') }}" class="btn ">
+                    <a href="{{ route('os.index') }}" class="btn ">
                         <span class="listar-texto">Listar</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>

@@ -27,7 +27,7 @@ class Os3Controller extends Controller
         ->withQueryString();
 
         //Carregar a View
-        return view('os3.index', ['os3', 'os3'=> $os3,'id_os1_os3'=>$request->id_os1_os3]);
+        return view('os.index', ['os3', 'os3'=> $os3,'id_os1_os3'=>$request->id_os1_os3]);
     }
     
     // Carregar o formulário cadastrar novo usuário
@@ -68,7 +68,7 @@ class Os3Controller extends Controller
              DB::commit();
  
              // Redirecionar o Os3, enviar a mensagem de sucesso
-             return redirect()->route('os3.index', ['os3' => $os3->id])->with('success', 'Os3 cadastrado com sucesso!');
+             return redirect()->route('os.index', ['os3' => $os3->id])->with('success', 'Os3 cadastrado com sucesso!');
          } catch (Exception $e) {
  
              // Salvar log
@@ -151,7 +151,7 @@ class Os3Controller extends Controller
             Log::info('Os3 excluído.', ['id' => $os3->id]);
 
         
-            return redirect()->route('os3.index')->with('success', 'Os3 excluído com sucesso!');
+            return redirect()->route('os.index')->with('success', 'Os3 excluído com sucesso!');
 
         } catch (Exception $e) {
 

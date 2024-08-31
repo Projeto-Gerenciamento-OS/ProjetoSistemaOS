@@ -117,11 +117,11 @@ fazer:
 
 * os1
   * seed (talvez) - 
-  * migrate - 
-  * models - 
-  * controller - 
-  * request - 
-  * views- 
+  * migrate - ok
+  * models - ok
+  * controller - ok 
+  * request - ok
+  * views- ok
 
 * os2
   * seed (talvez) - 

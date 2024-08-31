@@ -20,7 +20,7 @@
                     
                     <table>
                         
-                        <form action="{{ route('os1.index') }}">
+                        <form action="{{ route('os.index') }}">
                             <div class="pesquisar">
                                 
                                 <input type="text" name="id_status" id="id_status" class="form-control btn-pesquisar" value="{{ $id_status }}" placeholder="Nome da conta" />

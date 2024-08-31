@@ -114,7 +114,7 @@
                         </li>
 
                         <li>
-                            <a class="nav-link" href="{{route('os1.index')}}">
+                            <a class="nav-link" href="{{route('os.index')}}">
                                 <div class="sb-nav-link-icon">  <i class="fa-solid fa-box-open"></i></div>
                                         
                                 Ordem de Serviço

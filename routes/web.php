@@ -13,6 +13,7 @@ use App\Http\Controllers\MateriaisController;
 use App\Http\Controllers\CustosController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\Os1Controller;
+use App\Http\Controllers\OSsController;
 use App\Http\Controllers\Os2Controller;
 use App\Http\Controllers\Os3Controller;
 use App\Http\Controllers\Os4Controller;
@@ -188,6 +189,10 @@ Route::put('/update-status/{status}',[StatusController::class, 'update'])->name(
 //deleta empresa
 Route::delete('/delete-status/{status}', [StatusController::class, 'delete'])->name('status.delete');
 
+
+// OS geral
+
+Route::get('/os',[OSsController::class, 'index'])->name('os.index');
 
 //OS 1
 
