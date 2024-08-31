@@ -13,7 +13,7 @@ class cli extends Model
     //proteger a tabela para não deixar no plural
     protected $table = 'cli';
 
-    protected $fillable = ['tipo','cpf_cnpj','razao','fantasia','cep','endereco','numero','complemento','bairro','cidade','uf','fone1','fone2','obs'];
+    protected $fillable = ['tipo','cpf_cnpj','razao','fantasia','cep','endereco','numero','complemento','bairro','cidade','uf','fone1','fone2','obs','id_emp2','id_users'];
 }
 
 

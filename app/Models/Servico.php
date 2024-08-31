@@ -13,8 +13,10 @@ class Servicos extends Model
 
     protected $fillable=['nome', 
                         'tempo', 
-                        'custo_recorente', 
                         'valor', 
+                        'obs', 
                         'intervalo', 
-                        'descricao'];
+                        'recorrente',
+                        'custo',
+                        'intervalo','id_emp2','id_os3','id_users_servico'];
 }
