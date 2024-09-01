@@ -36,13 +36,15 @@
                     <tr class="titulos">
                         <th>ID</th>
                         <th>ID Serviço</th>
+                        <th>ID OS2</th>
+                        <th>ID Colaborador</th>
                         <th>ID EMP1</th>
                         <th>ID EMP2</th>
-                        <th>ID Colaborador</th>
                         <th>Quantidade</th>
                         <th>Valor Unitário</th>
                         <th>Valor Total</th>
                         <th>Custo Total</th>
+                        <th>Custo Unitário</th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -52,13 +54,15 @@
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th>{{ $os02->id }}</th>
                             <th>{{ $os02->id_servico }}</th>
-                            <td >{{ $os02->id_emp1_os2 }}</td>
-                            <th>{{ $os02->id_emp2_os2 }}</th>
+                            <th>{{ $os02->id_os2 }}</th>
                             <th>{{ $os02->id_colaborador }}</th>
-                            <th>{{ $os02->quantidade_os2 }}</th>
-                            <th>{{ $os02->valorUnitario_os2 }}</th>
-                            <th>{{ $os02->valorTotal_os2 }}</th>
-                            <th>{{ $os02->custoTotal_os2 }}</th>
+                            <td >{{ $os02->id_emp1 }}</td>
+                            <th>{{ $os02->id_emp2 }}</th>
+                            <th>{{ $os02->qtde }}</th>
+                            <th>{{ $os02->vunit }}</th>
+                            <th>{{ $os02->vtotal }}</th>
+                            <th>{{ $os02->ctotal }}</th>
+                            <th>{{ $os02->cunit}}</th>
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 
                                 <a href="{{ route('os2.view', ['os2' => $os02->id]) }}" class="btnIcons">

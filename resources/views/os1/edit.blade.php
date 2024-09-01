@@ -39,20 +39,44 @@
               
                     <div class="col-12 col-lg-6" >
                         <div class="mb-3">
-                            <label for="id_status" >ID STATUS: </label>
-                            <input type="number" name="id_status" id="id_status"  placeholder="Digite aqui "
-                                value="{{ old('id_status', $os1->id_status) }}">
+                            <label for="id_emp1" >ID EMP1 </label>
+                            <input type="number" name="id_emp1" id="id_emp1"  placeholder="Digite aqui "
+                                value="{{ old('id_emp1', $os1->id_emp1) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label  for="dataCadastrada" >Data cadastrada </label>
-                            <input type="date" name="dataCadastrada" id="dataCadastrada" 
-                                placeholder=" Data" value="{{ old('dataCadastrada', $os1->dataCadastrada) }}">
+                            <label  for="datacad" >Data cadastrada </label>
+                            <input type="date" name="datacad" id="datacad" 
+                                placeholder=" Data" value="{{ old('datacad', $os1->datacad) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="valorTotal" class="form-label">Valor Total: </label>
-                            <input type="text"  name="valorTotal" id="valorTotal"  value="{{ old('valorTotal', $os1->valorTotal) }}" >
+                            <label for="vtotal" class="form-label">Valor Total </label>
+                            <input type="text"  name="vtotal" id="vtotal"  value="{{ old('vtotal', $os1->vtotal) }}" >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cindireto" class="form-label">Custo indireto </label>
+                            <input type="text"  name="cindireto" id="cindireto"  value="{{ old('cindireto', $os1->cindireto) }}" >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="id_emp2" class="form-label">ID EMP2</label>
+                            <input type="text"  name="id_emp2" id="id_emp2"  value="{{ old('id_emp2', $os1->id_emp2) }}" >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="id_status" class="form-label">ID STATUS </label>
+                            <input type="text"  name="id_status" id="id_status"  value="{{ old('id_status', $os1->id_status) }}" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_users" class="form-label">ID USERS </label>
+                            <input type="text"  name="id_users" id="id_users"  value="{{ old('id_users', $os1->id_users) }}" >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="obs" class="form-label">Observação </label>
+                            <input type="text"  name="obs" id="obs"  value="{{ old('obs', $os1->obs) }}" >
                         </div>
 
                     </div>
@@ -71,8 +95,13 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="custoTotal" class="form-label">Custo Total: </label>
-                            <input type="text"  name="custoTotal" id="custoTotal"  value="{{ old('custoTotal', $os1->custoTotal) }}" >
+                            <label for="ctotal" class="form-label">Custo Total </label>
+                            <input type="text"  name="ctotal" id="ctotal"  value="{{ old('ctotal', $os1->ctotal) }}" >
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="vresultado" class="form-label">Valor resultado </label>
+                            <input type="text"  name="vresultado" id="vresultado"  value="{{ old('vresultado', $os1->vresultado) }}" >
                         </div>
                     </div>
 

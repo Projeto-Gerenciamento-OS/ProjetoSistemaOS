@@ -39,23 +39,38 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $os1->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">IS STATUS: </dt>
+                    <dt class="col-6 col-lg-4">ID EMP1 </dt>
+                    <dd class="col-6">{{ $os1->id_emp1}}</dd>
+
+                    <dt class="col-6 col-lg-4">ID EMP2 </dt>
+                    <dd class="col-6">{{ $os1->id_emp2}}</dd>
+
+                    <dt class="col-6 col-lg-4">ID STATUS </dt>
                     <dd class="col-6">{{ $os1->id_status}}</dd>
 
-                    <dt class="col-6 col-lg-4">Data Cadastrada: </dt>
-                    <dd class="col-6">{{ $os1->dataCadastrada }}</dd>
+                    <dt class="col-6 col-lg-4">ID USERS </dt>
+                    <dd class="col-6">{{ $os1->id_users}}</dd>
 
-                    <dt class="col-6 col-lg-4">DHI: </dt>
+                    <dt class="col-6 col-lg-4">Data Cadastrada </dt>
+                    <dd class="col-6">{{ $os1->datacad }}</dd>
+
+                    <dt class="col-6 col-lg-4">DHI </dt>
                     <dd class="col-6">{{ $os1->dhi }}</dd>
 
-                    <dt class="col-6 col-lg-4">DHF: </dt>
+                    <dt class="col-6 col-lg-4">DHF </dt>
                     <dd class="col-6">{{ $os1->dhf }}</dd>
 
-                    <dt class="col-6 col-lg-4">Valor Total: </dt>
-                    <dd class="col-6">{{ $os1->valorTotal }}</dd>
+                    <dt class="col-6 col-lg-4">Valor Total </dt>
+                    <dd class="col-6">{{ $os1->vtotal }}</dd>
 
-                    <dt class="col-6 col-lg-4">Custo Total: </dt>
-                    <dd class="col-6">{{ $os1->custoTotal }}</dd>
+                    <dt class="col-6 col-lg-4">Custo Total </dt>
+                    <dd class="col-6">{{ $os1->ctotal }}</dd>
+
+                    <dt class="col-6 col-lg-4">Custo Indireto </dt>
+                    <dd class="col-6">{{ $os1->cindireto }}</dd>
+
+                    <dt class="col-6 col-lg-4">Valor resultado </dt>
+                    <dd class="col-6">{{ $os1->vresultado }}</dd>
 
                     <dt class="col-6 col-lg-4">Cadastrado: </dt>
                     <dd class="col-6">

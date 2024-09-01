@@ -21,9 +21,9 @@
     
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="id_status" class="form-label">ID Status</label>
-                        <input type="number" name="id_status" id="id_status"  placeholder=" Digite o id_status"
-                            value="{{ old('id_status') }}">
+                        <label for="id_emp1" class="form-label">ID EMP1</label>
+                        <input type="number" name="id_emp1" id="id_emp1"  placeholder=" Digite o id_emp1"
+                            value="{{ old('id_emp1') }}">
                     </div>
 
                     <div class="mb-3">
@@ -33,16 +33,37 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="custoTotal" class="form-label">Custo Total: </label>
-                        <input type="text"  name="custoTotal" id="custoTotal"  value="{{ old('custoTotal') }}" >
+                        <label for="ctotal" class="form-label">Custo Total </label>
+                        <input type="text"  name="ctotal" id="ctotal"  value="{{ old('ctotal') }}" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">ID EMP2 </label>
+                        <input type="text"  name="id_emp2" id="id_emp2"  value="{{ old('id_emp2') }}" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="id_status" class="form-label">ID STATUS </label>
+                        <input type="text"  name="id_status" id="id_status"  value="{{ old('id_status') }}" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="obs" class="form-label">Observação </label>
+                        <input type="text"  name="obs" id="obs"  value="{{ old('obs') }}" >
                     </div>
                 </div>
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="dataCadastrada" class="form-label"> Data Cadastrada</label>
-                        <input type="date" name="dataCadastrada" id="dataCadastrada" 
-                            placeholder=" Digite a data cadastrada" value="{{ old('dataCadastrada') }}">
+                        <label for="datacad" class="form-label"> Data Cadastrada</label>
+                        <input type="date" name="datacad" id="datacad" 
+                            placeholder=" Digite a data cadastrada" value="{{ old('datacad') }}">
                     </div>
+                    <div class="mb-3">
+                        <label for="id_users" class="form-label"> ID USERS</label>
+                        <input type="date" name="id_users" id="id_users" 
+                            placeholder=" Digite a data cadastrada" value="{{ old('id_users') }}">
+                    </div>
+                
                     
                     <div class="mb-3">
                         <label for="dhf" class="form-label">DHF </label>
@@ -50,8 +71,18 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="valorTotal" class="form-label">Valor Total: </label>
-                        <input type="text"  name="valorTotal" id="valorTotal"  value="{{ old('valorTotal') }}" >
+                        <label for="vtotal" class="form-label">Valor Total </label>
+                        <input type="text"  name="vtotal" id="vtotal"  value="{{ old('vtotal') }}" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cindireto" class="form-label">Custo indireto </label>
+                        <input type="text"  name="cindireto" id="cindireto"  value="{{ old('cindireto') }}" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="vresultado" class="form-label">Valor resultado </label>
+                        <input type="text"  name="vresultado" id="vresultado"  value="{{ old('vresultado') }}" >
                     </div>
                 </div>
             <a  class="btnCadastrar">

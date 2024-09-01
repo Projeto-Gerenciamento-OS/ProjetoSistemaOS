@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Servicos;
-use App\Http\Requests\ServicosRequest;
+use App\Models\Servico;
+use App\Http\Requests\ServicoRequest;
 
 use Illuminate\Http\Request;
 use Exception;
@@ -11,13 +11,13 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 
-class ServicosController extends Controller
+class ServicoController extends Controller
 {
     // Serviços
     public function index(Request $request)
     {
         // Recuperar os registros do banco dados
-        $servicos= Servicos::when($request->has('nome'), function ($Query) use ($request){
+        $servicos= Servico::when($request->has('nome'), function ($Query) use ($request){
             $Query->where('nome', 'like', '%' . $request->nome . '%');
         })
         
@@ -33,7 +33,7 @@ class ServicosController extends Controller
         return view('servicos.create', ['menu' => 'servicos']);
     }
 
-    public function store(ServicosRequest $request){
+    public function store(ServicoRequest $request){
 
         // Validar o formulário
         $request->validated();
@@ -43,13 +43,15 @@ class ServicosController extends Controller
 
         try {
 
-            // Cadastrar no banco de dados na tabela servicoss
-            $servicos = Servicos::create([
+            // Cadastrar no banco de dados na tabela servicos
+            $servicos = Servico::create([
                 'nome' => $request->nome,
-                'custo_recorente' => $request->custo_recorente,
+                'nome' => $request->tempo,
                 'valor' => $request->valor,
+                'obs' => $request->obs,
+                'recorrente' => $request->recorrente,
+                'custo' => $request->custo,
                 'intervalo' => $request->intervalo,
-                'descricao' => $request->descricao,
             ]);
 
             // Salvar log
@@ -73,16 +75,16 @@ class ServicosController extends Controller
         }
     }
 
-    public function view(Servicos $servicos){
+    public function view(Servico $servicos){
         //Carrega a View
         return view( 'servicos.view', ['menu'=>'servicos', 'servicos' => $servicos]);
     }
     
-    public function edit(Servicos $servicos){
+    public function edit(Servico $servicos){
         return view('servicos.edit', ['menu' => 'servicos', 'servicos' => $servicos]);
     }
 
-    public function update(ServicosRequest $request, Servicos $servicos){
+    public function update(ServicoRequest $request, Servico $servicos){
         // Validar o formulário
         $request->validated();
 
@@ -94,10 +96,12 @@ class ServicosController extends Controller
             // Editar as informações do registro no banco de dados
             $servicos->update([
                 'nome' => $request->nome,
-                'custo_recorente' => $request->custo_recorente,
+                'nome' => $request->tempo,
                 'valor' => $request->valor,
+                'obs' => $request->obs,
+                'recorrente' => $request->recorrente,
+                'custo' => $request->custo,
                 'intervalo' => $request->intervalo,
-                'descricao' => $request->descricao,
             ]);
 
             // Salvar log
@@ -121,13 +125,13 @@ class ServicosController extends Controller
         }
     }
 
-    public function delete(Servicos $servicos){
+    public function delete(Servico $servicos){
         try {
             // Excluir o registro do banco de dados
             $servicos->delete();
 
             // Salvar log
-            Log::info('servico excluído.', ['id' => $servicos->id]);
+            Log::info('servicos excluído.', ['id' => $servicos->id]);
 
             // Redirecionar o usuário, enviar a mensagem de sucesso
             return redirect()->route('servicos.index')->with('success', 'serviço excluído com sucesso!');
