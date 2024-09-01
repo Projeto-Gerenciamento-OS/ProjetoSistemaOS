@@ -14,8 +14,7 @@ class cli extends Model
     protected $table = 'cli';
 
     protected $fillable = [
-                    'id_users',
-                    'id_emp2',
+                    'id_cli',
                     'tipo',	
                     'cpf_cnpj',
                     'razao',
