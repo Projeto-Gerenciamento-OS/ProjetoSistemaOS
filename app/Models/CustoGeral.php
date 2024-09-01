@@ -11,5 +11,11 @@ class CustoGeral extends Model
 
     protected $table = 'setor';
 
-    protected $fillable = ['descricao','percentual','id_emp2','id_users'];
+    protected $fillable = [
+        'id_users',
+        'id_emp2',
+        'descricao',
+        'percentual',
+       
+        ];
 }

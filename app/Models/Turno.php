@@ -12,6 +12,15 @@ class Turno extends Model
     //proteger a tabela para não deixar no plural
     protected $table = 'turno';
 
-    protected $fillable = ['nome','inicio','pausa','retorno','termino','id_emp2','id_users_turno'];
+    protected $fillable = [
+        'id_emp2',
+        'id_users',
+        'nome',
+        'inicio',
+        'pausa',
+        'retorno',
+        'termino',
+        
+        ];
 }
 
