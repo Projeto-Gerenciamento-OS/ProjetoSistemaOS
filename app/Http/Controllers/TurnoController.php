@@ -43,10 +43,12 @@ class TurnoController extends Controller
           
             $turno = Turno::create([
                 'nome' => $request->nome,
-                'custo' => $request->custo,
-                'unidade' => $request->unidade,
-                'valor' => $request->valor,
-                'descricao' => $request->descricao,
+                'inicio' => $request->inicio,
+                'pausa' => $request->pausa,
+                'retorno' => $request->retorno,
+                'termino' => $request->termino,
+                'id_emp2' => $request->id_emp2,
+                'id_users_turno' => $request->id_users_turno,
             ]);
 
            
@@ -90,13 +92,13 @@ class TurnoController extends Controller
 
         try {
             $turno->update([
-
                 'nome' => $request->nome,
-                'custo' => $request->custo,
-                'unidade' => $request->unidade,
-                'valor' => $request->valor,
-                'descricao' => $request->descricao, 
-
+                'inicio' => $request->inicio,
+                'pausa' => $request->pausa,
+                'retorno' => $request->retorno,
+                'termino' => $request->termino,
+                'id_emp2' => $request->id_emp2,
+                'id_users_turno' => $request->id_users_turno,
             ]);
 
         
