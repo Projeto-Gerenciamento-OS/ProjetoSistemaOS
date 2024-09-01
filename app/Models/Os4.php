@@ -10,6 +10,11 @@ class Os4 extends Model
 
     protected $table ='os4';
 
-    protected $fillable=['descricao', 'percentual', 
-                        'valor', 'ativo','id_emp2'];
+    protected $fillable=[
+        'id_emp2',
+        'descricao', 
+        'percentual', 
+        'valor', 
+        'ativo',
+        ];
 }

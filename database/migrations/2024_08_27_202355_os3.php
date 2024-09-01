@@ -16,6 +16,7 @@ return new class extends Migration
 			$table->integer('qtde');
             $table->float('vunit');
             $table->float('vtotal');
+            $table->float('cunit');
             $table->float('ctotal');
             $table->timestamps();
         });

@@ -12,5 +12,10 @@ class Status extends Model
 
     protected $table ='status';
 
-    protected $fillable=['descricao', 'cor', 'id_emp2', 'id_users_status'];
+    protected $fillable=[
+        'id_emp2', 
+        'id_users',
+        'descricao', 
+        'cor', 
+       ];
 }
