@@ -13,10 +13,10 @@ return new class extends Migration
     {
        // Alterando a tabela do Os3.
        Schema::table("os3", function (Blueprint $table) {
-        $table->unique('id_emp1','id_emp2');
-        $table->foreignId('id_emp2')->constrained('emp2');
-        $table->foreignId('id_os3')->constrained('os1');
-        $table->foreignId('id_materiais')->constrained('materiais');
+
+        $table->foreignId('id_emp2')->constrained('emp2','id_emp2');
+        $table->foreignId('id_os1')->constrained('os1','id_os1');
+        $table->foreignId('id_materiais')->constrained('materiais','id_materiais');
        
     });
 }

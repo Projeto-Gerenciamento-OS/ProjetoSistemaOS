@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('nome');
 			$table->integer('tempo');
 			$table->float('valor');
+            $table->float('custo'); 
 			$table->string('obs');
-            $table->integer('recorente');
-			$table->float('custo');       
+            $table->integer('recorrente');		      
             $table->float('intervalo');      
             $table->timestamps();
         });

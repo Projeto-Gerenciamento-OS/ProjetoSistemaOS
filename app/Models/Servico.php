@@ -1,20 +1,25 @@
 <?php
 
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Os4 extends Model
+class Servicos extends Model
 {
     use HasFactory;
 
-    protected $table ='os4';
+    protected $table ='servico';
 
     protected $fillable=[
         'id_emp2',
-        'descricao', 
-        'percentual', 
+        'id_users',
+        'nome', 
+        'tempo', 
         'valor', 
-        'ativo',
+        'custo',
+        'obs', 
+        'recorrente',
+        'intervalo',     
         ];
 }

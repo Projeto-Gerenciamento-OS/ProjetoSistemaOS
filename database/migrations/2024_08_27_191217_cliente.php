@@ -18,13 +18,14 @@ return new class extends Migration
             $table->string('cpf_cnpj');
             $table->string('razao');
             $table->string('fantasia');
-            $table->string('cep');
             $table->string('endereco');
             $table->string('numero');
 			$table->string('complemento');
             $table->string('bairro');
             $table->string('cidade');
-            $table->string('uf');       
+            $table->string('uf');    
+            $table->string('email');
+            $table->string('cep');   
             $table->string('fone1');
             $table->string('fone2');
             $table->string('obs');

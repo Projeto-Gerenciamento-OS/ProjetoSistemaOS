@@ -13,9 +13,7 @@ return new class extends Migration
     {
         // Alterando a tabela do Custo Geral.
         Schema::table("users", function (Blueprint $table) {
-            // $table->unique('id_emp1','id_emp2');
-            $table->foreignId('id_emp1')->constrained('emp1');
-            $table->foreignId('id_emp2')->constrained('emp2');
+            $table->foreignId('id_emp2')->constrained('emp2','id_emp2');
         });
     }
 

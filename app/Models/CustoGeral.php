@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class CustoGeral extends Model
 {
     use HasFactory;
 
-    protected $table ='status';
+    protected $table = 'setor';
 
-    protected $fillable=[
-        'id_emp2', 
+    protected $fillable = [
         'id_users',
-        'descricao', 
-        'cor', 
-       ];
+        'id_emp2',
+        'descricao',
+        'percentual',
+       
+        ];
 }

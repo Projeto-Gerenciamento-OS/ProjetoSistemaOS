@@ -10,15 +10,17 @@ class Os1 extends Model
 
     protected $table ='os1';
 
-    protected $fillable=[ 
-        'id_emp1',
-        'datacad',
-        'dhi',
-        'dhf',
+    protected $fillable=[  
+        'id_emp2',
+        'id_status',
+        'id_users',
+        'datacad', 
+        'dhi', 
+        'dhf', 
         'obs',
-        'vtotal',
+        'vtotal', 
         'ctotal',
         'cindireto',
         'vresultado',
-    ];
+        ];
 }

@@ -16,21 +16,22 @@ class emp2 extends Model
     protected $table ='emp2';
 
     protected $fillable=[
+        'id_emp1',
         'razao',
         'fantasia',
         'cnpj',
         'endereco',
         'numero',
-        'complemento',
         'bairro',
         'cidade',
-        'cep',
         'uf',
+        'cep',
         'fone1',
         'fone2',
         'plano',
         'qtdeadm',
-        'qtdeoper'
+        'qtdeoper',
+        
     ];
 
 

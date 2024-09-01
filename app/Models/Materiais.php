@@ -11,11 +11,13 @@ class Materiais extends Model
 
     protected $table ='materiais';
 
-    protected $fillable=[
-        'id_emp1',
-        'descricao',
-        'unidade',
-        'custo',
+    protected $fillable=[ 
+        'id_emp2',
+        'id_users',
+        'descricao', 
+        'unidade', 
+        'custo', 
         'valor',
-    ];
+        
+        ];
 }

@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class Setor extends Model
 {
     use HasFactory;
 
-    protected $table ='status';
+    protected $table = 'setor';
 
-    protected $fillable=[
-        'id_emp2', 
+    protected $fillable = [
+        'id_emp2',
         'id_users',
-        'descricao', 
-        'cor', 
-       ];
+        'descricao',
+    
+        ];
+    
 }
