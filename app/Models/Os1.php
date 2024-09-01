@@ -20,8 +20,5 @@ class Os1 extends Model
         'ctotal',
         'cindireto',
         'vresultado',
-        'id_emp2',
-        'id_status',
-        'id_users',
     ];
 }

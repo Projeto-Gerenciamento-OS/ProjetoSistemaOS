@@ -17,7 +17,5 @@ class Materiais extends Model
         'unidade',
         'custo',
         'valor',
-        'id_emp2',
-        'id_users',
     ];
 }

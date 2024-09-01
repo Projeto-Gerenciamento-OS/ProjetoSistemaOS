@@ -15,7 +15,5 @@ class Custos extends Model
         'id_emp1',
         'descricao',
         'percentual',
-        'id_emp2',
-        'id_users'
     ];
 }

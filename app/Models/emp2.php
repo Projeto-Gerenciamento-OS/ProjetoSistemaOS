@@ -30,8 +30,7 @@ class emp2 extends Model
         'fone2',
         'plano',
         'qtdeadm',
-        'qtdeoper',
-        'id_emp1',
+        'qtdeoper'
     ];
 
 

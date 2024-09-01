@@ -17,9 +17,5 @@ class Os2 extends Model
         'vtotal',
         'cunit',
         'ctotal',
-        'id_emp2',
-        'id_os2',
-        'id_servico',
-        'id_colaborador'
 ];
 }
