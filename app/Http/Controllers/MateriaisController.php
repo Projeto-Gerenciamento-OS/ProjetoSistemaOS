@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Setor;
+use App\Models\Materiais;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Exception;
 use Illuminate\Http\Request;
-use App\Http\Requests\SetorRequest;
+use App\Http\Requests\MateriaisRequest;
 
 class MateriaisController extends Controller
 {
@@ -15,7 +15,7 @@ class MateriaisController extends Controller
     public function index(Request $request)
     {
         // Recuperar os registros do banco dados
-        $materiais= Setor::when($request->has('nome'), function ($Query) use ($request){
+        $materiais= Materiais::when($request->has('nome'), function ($Query) use ($request){
             $Query->where('nome', 'like', '%' . $request->nome . '%');
         })
         
@@ -32,7 +32,7 @@ class MateriaisController extends Controller
         return view('materiais.create', ['menu' => 'materiais']);
      }
 
-     public function store(SetorRequest $request) {
+     public function store(MateriaisRequest $request) {
 
         $request->validated();
 
@@ -41,7 +41,7 @@ class MateriaisController extends Controller
         try {
 
           
-            $materiais = Setor::create([
+            $materiais = Materiais::create([
                 'nome' => $request->nome,
                 'custo' => $request->custo,
                 'unidade' => $request->unidade,
@@ -72,16 +72,16 @@ class MateriaisController extends Controller
 
      }
 
-     public function view(Setor $materiais){
+     public function view(Materiais $materiais){
       
         return view( 'materiais.view', ['menu'=>'materiais', 'materiais' => $materiais]);
     }
     
-    public function edit(Setor $materiais){
+    public function edit(Materiais $materiais){
         return view('materiais.edit', ['menu' => 'materiais', 'materiais' => $materiais]);
     }
 
-    public function update(SetorRequest $request, Setor $materiais){
+    public function update(MateriaisRequest $request, Materiais $materiais){
    
         $request->validated();
 
@@ -121,7 +121,7 @@ class MateriaisController extends Controller
         }
     }
 
-    public function delete(Setor $materiais){
+    public function delete(Materiais $materiais){
         try {
         
             $materiais->delete();
