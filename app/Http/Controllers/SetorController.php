@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Materiais;
+use App\Models\Setor;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Exception;
 use Illuminate\Http\Request;
-use App\Http\Requests\MateriaisRequest;
+use App\Http\Requests\SetorRequest;
 
-class MateriaisController extends Controller
+class SetorController extends Controller
 {
     
     public function index(Request $request)
     {
         // Recuperar os registros do banco dados
-        $materiais= Materiais::when($request->has('nome'), function ($Query) use ($request){
+        $setor= Setor::when($request->has('nome'), function ($Query) use ($request){
             $Query->where('nome', 'like', '%' . $request->nome . '%');
         })
         
@@ -24,15 +24,15 @@ class MateriaisController extends Controller
         ->withQueryString();
 
         //Carregar a View
-        return view('materiais.index', ['materiais', 'materiais'=> $materiais,'nome'=>$request->nome]);
+        return view('setor.index', ['setor', 'setor'=> $setor,'nome'=>$request->nome]);
     }
 
 
      public function create() {
-        return view('materiais.create', ['menu' => 'materiais']);
+        return view('setor.create', ['menu' => 'setor']);
      }
 
-     public function store(MateriaisRequest $request) {
+     public function store(SetorRequest $request) {
 
         $request->validated();
 
@@ -41,47 +41,45 @@ class MateriaisController extends Controller
         try {
 
           
-            $materiais = Materiais::create([
-                'nome' => $request->nome,
-                'custo' => $request->custo,
-                'unidade' => $request->unidade,
-                'valor' => $request->valor,
+            $setor =Setor::create([
                 'descricao' => $request->descricao,
+                'id_emp2' => $request->id_emp2,
+                'id_users_setor' => $request->id_users_setor,
             ]);
 
            
-            Log::info('Material cadastrado', ['id' => $materiais->id, $materiais]);
+            Log::info('Setor cadastrado', ['id' => $setor->id, $setor]);
 
           
             DB::commit();
 
          
-            return redirect()->route('materiais.index', ['materiais' => $materiais->id])->with('success', 'Material cadastrado com sucesso!');
+            return redirect()->route('setor.index', ['setor' => $setor->id])->with('success', 'Setor cadastrado com sucesso!');
 
         } catch (Exception $e) {
 
         
-            Log::info('Material não cadastrado.', ['error' => $e->getMessage()]);
+            Log::info('Setor não cadastrado.', ['error' => $e->getMessage()]);
 
           
             DB::rollBack();
 
          
-            return back()->withInput()->with('error', 'Material não cadastrado!');
+            return back()->withInput()->with('error', 'Setor não cadastrado!');
         }
 
      }
 
-     public function view(Materiais $materiais){
+     public function view(Setor $setor){
       
-        return view( 'materiais.view', ['menu'=>'materiais', 'materiais' => $materiais]);
+        return view( 'setor.view', ['menu'=>'setor', 'setor' => $setor]);
     }
     
-    public function edit(Materiais $materiais){
-        return view('materiais.edit', ['menu' => 'materiais', 'materiais' => $materiais]);
+    public function edit(Setor $setor){
+        return view('setor.edit', ['menu' => 'setor', 'setor' => $setor]);
     }
 
-    public function update(MateriaisRequest $request, Materiais $materiais){
+    public function update(SetorRequest $request, Setor $setor){
    
         $request->validated();
 
@@ -89,53 +87,51 @@ class MateriaisController extends Controller
         DB::beginTransaction();
 
         try {
-            $materiais->update([
+            $setor->update([
 
-                'nome' => $request->nome,
-                'custo' => $request->custo,
-                'unidade' => $request->unidade,
-                'valor' => $request->valor,
-                'descricao' => $request->descricao, 
+                'descricao' => $request->descricao,
+                'id_emp2' => $request->id_emp2,
+                'id_users_setor' => $request->id_users_setor,
 
             ]);
 
         
-            Log::info('Material editado.', ['id' => $materiais->id]);
+            Log::info('Setor editado.', ['id' => $setor->id]);
 
 
             DB::commit();
 
          
-            return redirect()->route('materiais.view', ['materiais' => $materiais->id])->with('success', 'Material editado com sucesso!');
+            return redirect()->route('setor.view', ['setor' => $setor->id])->with('success', 'Setor editado com sucesso!');
 
         } catch (Exception $e) {
 
         
-            Log::info('Material não editado.', ['error' => $e->getMessage()]);
+            Log::info('Setor não editado.', ['error' => $e->getMessage()]);
 
             // Operação não é concluída com êxito
             DB::rollBack();
 
      
-            return back()->withInput()->with('error', 'Material não editado!');
+            return back()->withInput()->with('error', 'Setor não editado!');
         }
     }
 
-    public function delete(Materiais $materiais){
+    public function delete(Setor $setor){
         try {
         
-            $materiais->delete();
+            $setor->delete();
 
             // Salvar log
-            Log::info('Material excluído.', ['id' => $materiais->id]);
+            Log::info('Setor excluído.', ['id' => $setor->id]);
 
         
-            return redirect()->route('materiais.index')->with('success', 'Material excluído com sucesso!');
+            return redirect()->route('setor.index')->with('success', 'Setor excluído com sucesso!');
 
         } catch (Exception $e) {
 
             // Salvar log
-            Log::info('Material não excluído.', ['error' => $e->getMessage()]);
+            Log::info('Setor não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
             return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
