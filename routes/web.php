@@ -12,6 +12,7 @@ use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\MateriaisController;
 use App\Http\Controllers\CustosController;
 use App\Http\Controllers\StatusController;
+use App\Http\Controllers\TurnoController;
 use App\Http\Controllers\Os1Controller;
 use App\Http\Controllers\Os2Controller;
 use App\Http\Controllers\Os3Controller;
@@ -188,6 +189,24 @@ Route::put('/update-status/{status}',[StatusController::class, 'update'])->name(
 //deleta empresa
 Route::delete('/delete-status/{status}', [StatusController::class, 'delete'])->name('status.delete');
 
+//Turno
+
+Route::get('/turno',[TurnoController::class, 'index'])->name('turno.index');
+//Visualizar empresa
+Route::get('/view-turno/{turno}',[TurnoController::class, 'view'])->name('turno.view');
+Route::get('/view-turno/{turno}',[TurnoController::class, 'view'])->name('turno.view');
+//carrega o cadastrar empresa
+Route::get('/create-turno',[TurnoController::class, 'create'])->name('turno.create');
+//recebe o cadastrar empresa
+Route::post('/store-turno',[TurnoController::class, 'store'])->name('turno.store');
+//carrega o editar  empresa
+Route::get('/edit-turno/{turno}',[TurnoController::class, 'edit'])->name('turno.edit');
+Route::get('/edit-turno/{turno}',[TurnoController::class, 'edit'])->name('turno.edit');
+//recebe o editar empresa
+Route::put('/update-turno/{turno}',[TurnoController::class, 'update'])->name('turno.update');
+Route::put('/update-turno/{turno}',[TurnoController::class, 'update'])->name('turno.update');
+//deleta empresa
+Route::delete('/delete-turno/{turno}', [TurnoController::class, 'delete'])->name('turno.delete');
 
 //OS 1
 
