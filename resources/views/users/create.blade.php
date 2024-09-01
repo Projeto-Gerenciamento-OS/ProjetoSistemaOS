@@ -41,6 +41,11 @@
                 </div>
 
                 <div class="col-6 col-lg-4">
+                    <label for="id_emp2" class="form-label">id_emp2 </label>
+                    <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('id_emp2') }}" required >
+                </div>
+
+                <div class="col-6 col-lg-4">
                     <label for="roles" class="form-label">Nível </label>
                     {{-- <input type="number" min="1" max="3" name="nivel" id="nivel"   required> --}}
                     <select name="roles" class="form-select" id="roles">

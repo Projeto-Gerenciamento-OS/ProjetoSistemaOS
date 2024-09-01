@@ -8,7 +8,7 @@ use App\Http\Controllers\TimelineController;
 use App\Http\Controllers\Emp2Controller;
 use App\Http\Controllers\Emp1Controller;
 use App\Http\Controllers\ColaboradorController;
-use App\Http\Controllers\ServicosController;
+use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\MateriaisController;
 use App\Http\Controllers\CustosController;
 use App\Http\Controllers\StatusController;
@@ -112,22 +112,22 @@ Route::delete('/delete-colaborador/{colaborador}', [ColaboradorController::class
 
 
 //Serviços Gerais
-Route::get('/servicos', [ServicosController::class, 'index'])->name('servicos.index');
+Route::get('/servico', [ServicoController::class, 'index'])->name('servico.index');
 //Visualizar empresa
-Route::get('/view-servicos/{servicos}',[ServicosController::class, 'view'])->name('servicos.view');
-Route::get('/view-servicos/{servicos}',[ServicosController::class, 'view'])->name('servicos.view');
+Route::get('/view-servico/{servico}',[ServicoController::class, 'view'])->name('servico.view');
+Route::get('/view-servico/{servico}',[ServicoController::class, 'view'])->name('servico.view');
 //carrega o cadastrar empresa
-Route::get('/create-servicos',[ServicosController::class, 'create'])->name('servicos.create');
+Route::get('/create-servico',[ServicoController::class, 'create'])->name('servico.create');
 //recebe o cadastrar empresa
-Route::post('/store-servicos',[ServicosController::class, 'store'])->name('servicos.store');
+Route::post('/store-servico',[ServicoController::class, 'store'])->name('servico.store');
 //carrega o editar  empresa
-Route::get('/edit-servicos/{servicos}',[ServicosController::class, 'edit'])->name('servicos.edit');
-Route::get('/edit-servicos/{servicos}',[ServicosController::class, 'edit'])->name('servicos.edit');
+Route::get('/edit-servico/{servico}',[ServicoController::class, 'edit'])->name('servico.edit');
+Route::get('/edit-servico/{servico}',[ServicoController::class, 'edit'])->name('servico.edit');
 //recebe o editar empresa
-Route::put('/update-servicos/{servicos}',[ServicosController::class, 'update'])->name('servicos.update');
-Route::put('/update-servicos/{servicos}',[ServicosController::class, 'update'])->name('servicos.update');
+Route::put('/update-servico/{servico}',[ServicoController::class, 'update'])->name('servico.update');
+Route::put('/update-servico/{servico}',[ServicoController::class, 'update'])->name('servico.update');
 //deleta empresa
-Route::delete('/delete-servicos/{servicos}', [ServicosController::class, 'delete'])->name('servicos.delete');
+Route::delete('/delete-servico/{servico}', [ServicoController::class, 'delete'])->name('servico.delete');
 
 
 //Materiais
