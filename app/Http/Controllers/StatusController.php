@@ -43,11 +43,8 @@ class StatusController extends Controller
 
             // Cadastrar no banco de dados na tabela servicoss
             $status = Status::create([
-                'nome' => $request->nome,
-                'emp1' => $request->emp1,
-                'emp2' => $request->emp2,
-                'cor' => $request->cor,
                 'descricao' => $request->descricao,
+                'cor' => $request->cor,
             ]);
 
             // Salvar log
@@ -91,11 +88,8 @@ class StatusController extends Controller
 
             // Editar as informações do registro no banco de dados
             $status->update([
-                'nome' => $request->nome,
-                'emp1' => $request->emp1,
-                'emp2' => $request->emp2,
-                'cor' => $request->cor,
                 'descricao' => $request->descricao,
+                'cor' => $request->cor,
             ]);
 
             // Salvar log

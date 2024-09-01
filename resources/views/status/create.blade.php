@@ -20,25 +20,6 @@
 
                 <div class="col-6">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Nome </label>
-                        <input type="text" name="nome" id="nome"  placeholder="Nome completo"
-                        value="{{ old('nome') }}">
-                    </div>
-            
-                    <div class="mb-3">
-                        <label for="emp1" class="form-label">Empresa 1 </label>
-                        <input type="number" name="emp1" id="emp1"  placeholder="Digite aqui..."
-                        value="{{ old('emp1') }}">
-                    </div>
-            
-                    <div class="mb-3">
-                        <label for="emp2" class="form-label">Empresa 2 </label>
-                        <input type="number" name="emp2" id="emp2"  placeholder="Digite aqui..."
-                        value="{{ old('emp2') }}">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="mb-3">
                         <label for="cor" class="form-label">Cor</label>
                         <input type="text" name="cor" id="cor"  placeholder="Digite aqui..."
                         value="{{ old('cor') }}">

@@ -43,13 +43,15 @@ class ServicoController extends Controller
 
         try {
 
-            // Cadastrar no banco de dados na tabela servicoss
+            // Cadastrar no banco de dados na tabela servicos
             $servicos = Servico::create([
                 'nome' => $request->nome,
-                'custo_recorente' => $request->custo_recorente,
+                'nome' => $request->tempo,
                 'valor' => $request->valor,
+                'obs' => $request->obs,
+                'recorrente' => $request->recorrente,
+                'custo' => $request->custo,
                 'intervalo' => $request->intervalo,
-                'descricao' => $request->descricao,
             ]);
 
             // Salvar log
@@ -94,10 +96,12 @@ class ServicoController extends Controller
             // Editar as informações do registro no banco de dados
             $servicos->update([
                 'nome' => $request->nome,
-                'custo_recorente' => $request->custo_recorente,
+                'nome' => $request->tempo,
                 'valor' => $request->valor,
+                'obs' => $request->obs,
+                'recorrente' => $request->recorrente,
+                'custo' => $request->custo,
                 'intervalo' => $request->intervalo,
-                'descricao' => $request->descricao,
             ]);
 
             // Salvar log
@@ -127,7 +131,7 @@ class ServicoController extends Controller
             $servicos->delete();
 
             // Salvar log
-            Log::info('servico excluído.', ['id' => $servicos->id]);
+            Log::info('servicos excluído.', ['id' => $servicos->id]);
 
             // Redirecionar o usuário, enviar a mensagem de sucesso
             return redirect()->route('servicos.index')->with('success', 'serviço excluído com sucesso!');
