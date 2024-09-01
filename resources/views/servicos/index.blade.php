@@ -7,7 +7,7 @@
         <div class="card-header">
             <h1>Serviços Gerais</h1>
             
-            <form action="{{ route('servicos.index') }}">
+            <form action="{{ route('servico.index') }}">
                 <div class="pesquisar">
                     
                     <input type="text" name="nome" id="nome" class="form-control btn-pesquisar" value="{{ $nome }}" placeholder="Nome da conta" />
@@ -46,15 +46,15 @@
 
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
 
-                                <a href="{{ route('servicos.view', ['servicos' => $servico->id]) }}" class='btnIcons'>
+                                <a href="{{ route('servico.view', ['servicos' => $servico->id]) }}" class='btnIcons'>
                                     <i class="fa-regular fa-eye "></i>
                                 </a>
 
-                                <a href="{{ route('servicos.edit', ['servicos' => $servico->id]) }}" class='btnIcons'>
+                                <a href="{{ route('servico.edit', ['servico' => $servico->id]) }}" class='btnIcons'>
                                     <i class="fa-solid fa-pen"></i>
                                 </a>
 
-                                <form method="POST" action="{{ route('servicos.delete', ['servicos' => $servico->id]) }}">
+                                <form method="POST" action="{{ route('servico.delete', ['servico' => $servico->id]) }}">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class=" btnIcons"
@@ -75,7 +75,7 @@
     </div>
 </div>
 
-<a href="{{ route('servicos.create') }}" class="btnCadastrar">
+<a href="{{ route('servico.create') }}" class="btnCadastrar">
     <button>
         <h5>Cadastrar</h5>
         <i class="fa-solid fa-angle-right"></i>

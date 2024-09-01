@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Custos;
+use App\Models\CustoGeral;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Exception;
@@ -15,7 +15,7 @@ class CustosController extends Controller
     public function index(Request $request)
     {
         // Recuperar os registros do banco dados
-        $custos= Custos::when($request->has('id_emp2'), function ($Query) use ($request){
+        $custos= CustoGeral::when($request->has('id_emp2'), function ($Query) use ($request){
             $Query->where('id_emp2', 'like', '%' . $request->id_emp2 . '%');
         })
         
@@ -40,7 +40,7 @@ class CustosController extends Controller
         try {
 
           
-            $custos = Custos::create([
+            $custos = CustoGeral::create([
                 'id_emp1' => $request->id_emp1,
                 'id_emp2' => $request->id_emp2,
                 'percentual' => $request->percentual,
@@ -70,16 +70,16 @@ class CustosController extends Controller
 
      }
 
-     public function view(Custos $custos){
+     public function view(CustoGeral $custos){
       
         return view( 'custos.view', ['menu'=>'custos', 'custos' => $custos]);
     }
     
-    public function edit(Custos $custos){
+    public function edit(CustoGeral $custos){
         return view('custos.edit', ['menu' => 'custos', 'custos' => $custos]);
     }
 
-    public function update(CustosRequest $request, Custos $custos){
+    public function update(CustosRequest $request, CustoGeral $custos){
    
         $request->validated();
 
@@ -116,7 +116,7 @@ class CustosController extends Controller
         }
     }
 
-    public function delete(Custos $custos){
+    public function delete(CustoGeral $custos){
         try {
         
             $custos->delete();
