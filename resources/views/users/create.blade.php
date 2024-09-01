@@ -22,6 +22,18 @@
                     <input type="text" name="nome" id="nome"  placeholder="Nome completo"
                     value="{{ old('nome') }}">
                 </div>
+        
+                <div class=" col-6 col-lg-4">
+                    <label for="id_emp2" class="form-label">id_emp2 </label>
+                    <input type="text" name="id_emp2" id="id_emp2"  placeholder="Nome completo"
+                    value="{{ old('id_emp2') }}">
+                </div>
+        
+                <div class=" col-6 col-lg-4">
+                    <label for="nivel" class="form-label">nivel </label>
+                    <input type="text" name="nivel" id="nivel"  placeholder="Nome completo"
+                    value="{{ old('nivel') }}">
+                </div>
 
                 <div class="col-6 col-lg-4">
                     <label for="email" class="form-label">E-mail </label>
@@ -40,9 +52,9 @@
                     <input type="number" min="1" max="3" name="tipo" id="tipo"   required >
                 </div>
 
-                <div class="col-6 col-lg-4">
+                {{--
+                    <div class="col-6 col-lg-4">
                     <label for="roles" class="form-label">Nível </label>
-                    {{-- <input type="number" min="1" max="3" name="nivel" id="nivel"   required> --}}
                     <select name="roles" class="form-select" id="roles">
                         <option value="">Selecione</option>
                          @forelse($roles as $role)  
@@ -50,14 +62,14 @@
                                 <option {{old('roles') == $role ? 'selected' : '' }} value="{{ $role }}">{{ $role }}</option>
                             @else
                                 @if (Auth::user()->hasRole(' Super Admin'))
-                                <option {{old('roles') == $role ? 'selected' : '' }} value="{{ $role }}">{{ $role }}</option>
-                            @endif
+                                    <option {{old('roles') == $role ? 'selected' : '' }} value="{{ $role }}">{{ $role }}</option>
+                                @endif
                                 
                             @endif
                          @empty 
                          @endforelse
                         </select>
-                </div> 
+                </div> --}}
                 
                 <a  class="btnCadastrar">
                     <button type="submit">

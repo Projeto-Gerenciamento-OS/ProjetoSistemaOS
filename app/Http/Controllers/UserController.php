@@ -42,7 +42,7 @@ class UserController extends Controller
 
 
         //recupera os papeis
-         $roles = Role::pluck('name')->all();
+        $roles = Role::pluck('name')->all();
 
         // Carregar a VIEW
         return view('users.create', ['menu' => 'users','roles'=>$roles]);
@@ -67,6 +67,7 @@ class UserController extends Controller
                 'password' => $request->password,
                 'tipo' => $request->tipo,
                 'nivel' => $request->nivel,
+                'id_emp2' => $request->id_emp2,
             ]);
 
             //cadastrar um papel para o usuario
@@ -128,6 +129,7 @@ class UserController extends Controller
                 'password' => $request->password,
                 'tipo' => $request->tipo,
                 'nivel' => $request->nivel,
+                'id_emp2' => $request->id_emp2,
             ]);
 
             //Editar um papel para o usuario
