@@ -52,12 +52,19 @@ class Os1Controller extends Controller
  
              // Cadastrar no banco de dados na tabela usuários
              $os1 = Os1::create([
-                 'id_status' => $request->id_status,
-                 'dataCadastrada' => $request->dataCadastrada,
-                 'dhi' => $request->dhi,
-                 'dhf' => $request->dhf,
-                 'valorTotal' => $request->valorTotal,
-                 'custoTotal' => $request->custoTotal,
+                'os1' => $os1,
+                'id_status' => $request->id_status,
+                'id_users' => $request->id_users,
+                'id_emp1' => $request->id_emp1,
+                'id_emp2' => $request->id_emp2,
+                'datacad' => $datacad,
+                'dhi' => $request->dhi,
+                'dhf' => $dhf,
+                'obs' => $request->obs,
+                'vtotal' => $vtotal,
+                'ctotal' => $request->ctotal,
+                'cindireto' => $request->cindireto,
+                'vresultado' => $request->vresultado,
              ]);
  
              // Salvar log
@@ -110,12 +117,19 @@ class Os1Controller extends Controller
 
             // Editar as informações do registro no banco de dados
             $os1->update([
-                 'id_status' => $request->id_status,
-                 'dataCadastrada' => $request->dataCadastrada,
-                 'dhi' => $request->dhi,
-                 'dhf' => $request->dhf,
-                 'valorTotal' => $request->valorTotal,
-                 'custoTotal' => $request->custoTotal,
+                'os1' => $os1,
+                'id_status' => $request->id_status,
+                'id_users' => $request->id_users,
+                'id_emp1' => $request->id_emp1,
+                'id_emp2' => $request->id_emp2,
+                'datacad' => $datacad,
+                'dhi' => $request->dhi,
+                'dhf' => $dhf,
+                'obs' => $request->obs,
+                'vtotal' => $vtotal,
+                'ctotal' => $request->ctotal,
+                'cindireto' => $request->cindireto,
+                'vresultado' => $request->vresultado,
             ]);
 
             // Salvar log

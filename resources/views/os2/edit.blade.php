@@ -58,15 +58,15 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="vtotal" >vtotal</label>
-                                <input type="text" name="vtotal" id="vtotal"  placeholder=" vtotal"
-                                    value="{{ old('vtotal', $os2->vtotal) }}">
+                                <label for="id_emp1" >ID EMP1 </label>
+                                <input type="number" name="id_emp1" id="id_emp1" 
+                                    placeholder=" Digite aqui" value="{{ old('id_emp1', $os2->id_emp1) }}">
                             </div>
 
                             <div class="mb-3">
-                                <label for="cunit" >cunit</label>
-                                <input type="text" name="cunit" id="cunit"  placeholder=" cunit"
-                                    value="{{ old('cunit', $os2->cunit) }}">
+                                <label for="qtde" >Quantidade</label>
+                                <input type="text" name="qtde" id="qtde"  placeholder=" qtde"
+                                    value="{{ old('qtde', $os2->qtde) }}">
                             </div>
 
                             <div class="mb-3">
@@ -78,15 +78,9 @@
 
                         <div class="col-6 col-lg-6">
                             <div class="mb-3">
-                                <label for="id_emp2" >id_emp2 </label>
+                                <label for="id_emp2" >ID EMP2 </label>
                                 <input type="number" name="id_emp2" id="id_emp2" 
                                     placeholder=" Digite aqui" value="{{ old('id_emp2', $os2->id_emp2) }}">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="id_os2" >id_os2 </label>
-                                <input type="number" name="id_os2" id="id_os2"  placeholder=" id_os2"
-                                    value="{{ old('id_os2', $os2->id_os2) }}">
                             </div>
                         
                             <div class="mb-3">
@@ -96,11 +90,25 @@
                             </div>
                         
                             <div class="mb-3">
-                                <label for="id_colaborador" >id_colaborador</label>
-                                <input type="text" name="id_colaborador" id="id_colaborador"  placeholder=" id_colaborador"
-                                    value="{{ old('id_colaborador', $os2->id_colaborador) }}">
+                                <label for="vunit" >Valor Unitário</label>
+                                <input type="text" name="vunit" id="vunit"  placeholder=" vunit"
+                                    value="{{ old('vunit', $os2->vunit) }}">
                             </div>
                         </div>
+                     
+                
+                       
+
+                        <div class="col-lg-6">
+                                <label for="vtotal" class="form-label">Valor Total </label>
+                                <input type="text"  name="vtotal" id="vtotal"  value="{{ old('vtotal', $os2->vtotal) }}" >
+                        </div>
+
+                        <div class="col-lg-6">
+                                <label for="ctotal" class="form-label">Custo Total </label>
+                                <input type="text"  name="ctotal" id="ctotal"  value="{{ old('ctotal', $os2->ctotal) }}" >
+                            </div>
+                           
 
                     <a  class="btnCadastrar">
                         <button type="submit">

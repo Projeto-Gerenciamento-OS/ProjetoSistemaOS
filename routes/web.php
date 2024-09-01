@@ -8,10 +8,12 @@ use App\Http\Controllers\TimelineController;
 use App\Http\Controllers\Emp2Controller;
 use App\Http\Controllers\Emp1Controller;
 use App\Http\Controllers\ColaboradorController;
-use App\Http\Controllers\ServicosController;
+use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\MateriaisController;
 use App\Http\Controllers\CustosController;
 use App\Http\Controllers\StatusController;
+use App\Http\Controllers\TurnoController;
+use App\Http\Controllers\SetorController;
 use App\Http\Controllers\Os1Controller;
 use App\Http\Controllers\OSsController;
 use App\Http\Controllers\Os2Controller;
@@ -113,22 +115,22 @@ Route::delete('/delete-colaborador/{colaborador}', [ColaboradorController::class
 
 
 //Serviços Gerais
-Route::get('/servicos', [ServicosController::class, 'index'])->name('servicos.index');
+Route::get('/servico', [ServicoController::class, 'index'])->name('servico.index');
 //Visualizar empresa
-Route::get('/view-servicos/{servicos}',[ServicosController::class, 'view'])->name('servicos.view');
-Route::get('/view-servicos/{servicos}',[ServicosController::class, 'view'])->name('servicos.view');
+Route::get('/view-servico/{servico}',[ServicoController::class, 'view'])->name('servico.view');
+Route::get('/view-servico/{servico}',[ServicoController::class, 'view'])->name('servico.view');
 //carrega o cadastrar empresa
-Route::get('/create-servicos',[ServicosController::class, 'create'])->name('servicos.create');
+Route::get('/create-servico',[ServicoController::class, 'create'])->name('servico.create');
 //recebe o cadastrar empresa
-Route::post('/store-servicos',[ServicosController::class, 'store'])->name('servicos.store');
+Route::post('/store-servico',[ServicoController::class, 'store'])->name('servico.store');
 //carrega o editar  empresa
-Route::get('/edit-servicos/{servicos}',[ServicosController::class, 'edit'])->name('servicos.edit');
-Route::get('/edit-servicos/{servicos}',[ServicosController::class, 'edit'])->name('servicos.edit');
+Route::get('/edit-servico/{servico}',[ServicoController::class, 'edit'])->name('servico.edit');
+Route::get('/edit-servico/{servico}',[ServicoController::class, 'edit'])->name('servico.edit');
 //recebe o editar empresa
-Route::put('/update-servicos/{servicos}',[ServicosController::class, 'update'])->name('servicos.update');
-Route::put('/update-servicos/{servicos}',[ServicosController::class, 'update'])->name('servicos.update');
+Route::put('/update-servico/{servico}',[ServicoController::class, 'update'])->name('servico.update');
+Route::put('/update-servico/{servico}',[ServicoController::class, 'update'])->name('servico.update');
 //deleta empresa
-Route::delete('/delete-servicos/{servicos}', [ServicosController::class, 'delete'])->name('servicos.delete');
+Route::delete('/delete-servico/{servico}', [ServicoController::class, 'delete'])->name('servico.delete');
 
 
 //Materiais
@@ -189,6 +191,43 @@ Route::put('/update-status/{status}',[StatusController::class, 'update'])->name(
 //deleta empresa
 Route::delete('/delete-status/{status}', [StatusController::class, 'delete'])->name('status.delete');
 
+//Turno
+
+Route::get('/turno',[TurnoController::class, 'index'])->name('turno.index');
+//Visualizar empresa
+Route::get('/view-turno/{turno}',[TurnoController::class, 'view'])->name('turno.view');
+Route::get('/view-turno/{turno}',[TurnoController::class, 'view'])->name('turno.view');
+//carrega o cadastrar empresa
+Route::get('/create-turno',[TurnoController::class, 'create'])->name('turno.create');
+//recebe o cadastrar empresa
+Route::post('/store-turno',[TurnoController::class, 'store'])->name('turno.store');
+//carrega o editar  empresa
+Route::get('/edit-turno/{turno}',[TurnoController::class, 'edit'])->name('turno.edit');
+Route::get('/edit-turno/{turno}',[TurnoController::class, 'edit'])->name('turno.edit');
+//recebe o editar empresa
+Route::put('/update-turno/{turno}',[TurnoController::class, 'update'])->name('turno.update');
+Route::put('/update-turno/{turno}',[TurnoController::class, 'update'])->name('turno.update');
+//deleta empresa
+Route::delete('/delete-turno/{turno}', [TurnoController::class, 'delete'])->name('turno.delete');
+
+//Turno
+
+Route::get('/setor',[SetorController::class, 'index'])->name('setor.index');
+//Visualizar empresa
+Route::get('/view-setor/{setor}',[SetorController::class, 'view'])->name('setor.view');
+Route::get('/view-setor/{setor}',[SetorController::class, 'view'])->name('setor.view');
+//carrega o cadastrar empresa
+Route::get('/create-setor',[SetorController::class, 'create'])->name('setor.create');
+//recebe o cadastrar empresa
+Route::post('/store-setor',[SetorController::class, 'store'])->name('setor.store');
+//carrega o editar  empresa
+Route::get('/edit-setor/{setor}',[SetorController::class, 'edit'])->name('setor.edit');
+Route::get('/edit-setor/{setor}',[SetorController::class, 'edit'])->name('setor.edit');
+//recebe o editar empresa
+Route::put('/update-setor/{setor}',[SetorController::class, 'update'])->name('setor.update');
+Route::put('/update-setor/{setor}',[SetorController::class, 'update'])->name('setor.update');
+//deleta empresa
+Route::delete('/delete-setor/{setor}', [SetorController::class, 'delete'])->name('setor.delete');
 
 // OS geral
 

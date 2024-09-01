@@ -112,14 +112,16 @@ class Os2Controller extends Controller
 
             // Editar as informações do registro no banco de dados
             $os2->update([
-                 'id_servico' => $request->id_servico,
-                 'id_emp1_os2' => $request->id_emp1_os2,
-                 'id_emp2_os2' => $request->id_emp2_os2,
-                 'id_colaborador' => $request->id_colaborador,
-                 'quantidade_os2' => $request->quantidade_os2,
-                 'valorUnitario_os2' => $request->valorUnitario_os2,
-                 'valorTotal_os2' => $request->valorTotal_os2,
-                 'custoTotal_os2' => $request->custoTotal_os2,
+                'id_servico' => $request->id_servico,
+                'id_emp1' => $request->id_emp1,
+                'id_emp2' => $request->id_emp2,
+                'qtde' => $request->qtde,
+                'vunit' => $request->vunit,
+                'vtotal' => $request->vtotal,
+                'cunit' => $request->cunit,
+                'ctotal' => $request->ctotal,
+                'id_os2' => $request->id_os2,
+                'id_colaborador' => $request->id_colaborador,
             ]);
 
             // Salvar log

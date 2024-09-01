@@ -30,25 +30,19 @@
                                 </button>
                             </div>
                         </form>
-
                         
-                        
-
                         <thead>
                             <tr class="titulos"> 
                                 <th>ID</th>
-                                <th>id_emp1</th>
-                                <th>datacad</th>
-                                <th>dhi</th>
-                                <th>dhf</th>
-                                <th>obs</th>
-                                <th>vtotal</th>
-                                <th>ctotal</th>
-                                <th>cindireto</th>
-                                <th>vresultado</th>
-                                <th>id_emp2</th>
-                                <th>id_status</th>
-                                <th>id_users</th>
+                                <th>ID EMP1</th>
+                                <th>Data Cadastrada</th>
+                                <th>DHI</th>
+                                <th>DHF</th>
+                                <th>Obs</th>
+                                <th>Valor Total</th>
+                                <th>Custo Total</th>
+                                <th>Custo Indireto</th>
+                                <th>Valor Resultado</th>
                                 <th class="text-center">Ações</th>
                             </tr>
                         </thead>
@@ -58,7 +52,10 @@
                                 <tr class='linhaComCoresDiferentes' id='linhaCores_{{ $item->id }}'>
                                     <th>{{ $item->id }}</th>
                                     <th>{{ $item->id_emp1 }}</th>
-                                    <td>{{ $item->datacad }}</td>
+                                    <th>{{ $item->id_emp2 }}</th>
+                                    <th>{{ $item->id_status }}</th>
+                                    <th>{{ $item->id_users }}</th>
+                                    <td>{{ $item->datacad}}</td>
                                     <th>{{ $item->dhi }}</th>
                                     <th>{{ $item->dhf }}</th>
                                     <th>{{ $item->obs }}</th>
@@ -66,9 +63,6 @@
                                     <th>{{ $item->ctotal }}</th>
                                     <th>{{ $item->cindireto }}</th>
                                     <th>{{ $item->vresultado }}</th>
-                                    <th>{{ $item->id_emp2 }}</th>
-                                    <th>{{ $item->id_status }}</th>
-                                    <th>{{ $item->id_users }}</th>
                                     
                                     <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
                                         <a href="{{ route('os1.view', ['os1' => $item->id]) }}" class="btnIcons">
