@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Status;
 use App\Http\Requests\StatusRequest;
-
 use Illuminate\Http\Request;
 use Exception;
 use Illuminate\Support\Facades\DB;
@@ -45,6 +44,8 @@ class StatusController extends Controller
             $status = Status::create([
                 'descricao' => $request->descricao,
                 'cor' => $request->cor,
+                'id_emp2' => $request->id_emp2,
+                'id_users_status' => $request->id_users_status,
             ]);
 
             // Salvar log
@@ -90,6 +91,8 @@ class StatusController extends Controller
             $status->update([
                 'descricao' => $request->descricao,
                 'cor' => $request->cor,
+                'id_emp2' => $request->id_emp2,
+                'id_users_status' => $request->id_users_status,
             ]);
 
             // Salvar log

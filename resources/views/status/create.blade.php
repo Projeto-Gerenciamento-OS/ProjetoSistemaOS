@@ -32,6 +32,8 @@
                         <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
                         value="{{ old('descricao') }}">
                     </div>
+
+                    
                 </div>
 
                 <a  class="btnCadastrar ">
