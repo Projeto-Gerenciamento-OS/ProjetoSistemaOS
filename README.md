@@ -120,16 +120,16 @@ fazer:
   * migrate - ok
   * models - ok
   * controller - ok 
-  * request - ok
+  * request - 
   * views- ok
 
 * os2
   * seed (talvez) - 
-  * migrate - 
-  * models - 
-  * controller - 
+  * migrate - ok
+  * models - ok
+  * controller - ok
   * request - 
-  * views- 
+  * views- ok
 
 seed -> migrate -> models -> controller -> request -> views
  

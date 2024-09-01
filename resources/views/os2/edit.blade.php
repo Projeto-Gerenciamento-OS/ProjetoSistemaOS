@@ -8,7 +8,7 @@
             <div  class="cardHeaderAsociados card-header">
                 <h2 class="mt-3">Edição</h2>
                 <span class="ms-auto d-flex flex-row gap-2">
-                    <a href="{{ route('os2.index') }}" class="btn ">
+                    <a href="{{ route('os.index') }}" class="btn ">
                         <span class="listar-texto">Listar</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
@@ -25,7 +25,7 @@
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                             <span class="listar-texto">Apagar</span>
                             <i class="fa-solid fa-trash"></i>
-                     </button>
+                    </button>
                     </form>
 
                 </span>
@@ -37,63 +37,70 @@
                 <form  action="{{ route('os2.update', ['os2' => $os2->id]) }}" method="POST" class="row g-3">
                     @csrf
                     @method('PUT')
-
-                  
+                
                         <div class="col-6 col-lg-6">
                             <div class="mb-3">
-                                <label for="id_servico" >ID SERVIÇO </label>
-                                <input type="number" name="id_servico" id="id_servico"  placeholder="Digite aqui "
+                                <label for="id_emp1" >id_emp1 </label>
+                                <input type="number" name="id_emp1" id="id_emp1"  placeholder="Digite aqui "
+                                    value="{{ old('id_emp1', $os2->id_emp1) }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="qtde" >qtde</label>
+                                <input type="number" name="qtde" id="qtde" 
+                                    placeholder=" Digite aqui" value="{{ old('qtde', $os2->qtde) }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="vunit" >vunit</label>
+                                <input type="text" name="vunit" id="vunit"  placeholder=" vunit"
+                                    value="{{ old('vunit', $os2->vunit) }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="vtotal" >vtotal</label>
+                                <input type="text" name="vtotal" id="vtotal"  placeholder=" vtotal"
+                                    value="{{ old('vtotal', $os2->vtotal) }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cunit" >cunit</label>
+                                <input type="text" name="cunit" id="cunit"  placeholder=" cunit"
+                                    value="{{ old('cunit', $os2->cunit) }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="ctotal" >ctotal</label>
+                                <input type="text" name="ctotal" id="ctotal"  placeholder=" ctotal"
+                                    value="{{ old('ctotal', $os2->ctotal) }}">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-lg-6">
+                            <div class="mb-3">
+                                <label for="id_emp2" >id_emp2 </label>
+                                <input type="number" name="id_emp2" id="id_emp2" 
+                                    placeholder=" Digite aqui" value="{{ old('id_emp2', $os2->id_emp2) }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="id_os2" >id_os2 </label>
+                                <input type="number" name="id_os2" id="id_os2"  placeholder=" id_os2"
+                                    value="{{ old('id_os2', $os2->id_os2) }}">
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="id_servico" >id_servico</label>
+                                <input type="text" name="id_servico" id="id_servico"  placeholder=" id_servico"
                                     value="{{ old('id_servico', $os2->id_servico) }}">
                             </div>
-
+                        
                             <div class="mb-3">
-                                <label for="id_emp1_os2" >ID EMP1 </label>
-                                <input type="number" name="id_emp1_os2" id="id_emp1_os2" 
-                                    placeholder=" Digite aqui" value="{{ old('id_emp1_os2', $os2->id_emp1_os2) }}">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="quantidade_os2" >Quantidade</label>
-                                <input type="text" name="quantidade_os2" id="quantidade_os2"  placeholder=" quantidade_os2"
-                                    value="{{ old('quantidade_os2', $os2->quantidade_os2) }}">
-                            </div>
-                           
-                        </div>
-
-                        <div class="col-6 col-lg-6">
-                            <div class="mb-3">
-                                <label for="id_emp2_os2" >ID EMP2 </label>
-                                <input type="number" name="id_emp2_os2" id="id_emp2_os2" 
-                                    placeholder=" Digite aqui" value="{{ old('id_emp2_os2', $os2->id_emp2_os2) }}">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="id_colaborador" >ID Colaborador </label>
-                                <input type="number" name="id_colaborador" id="id_colaborador"  placeholder=" id_colaborador"
+                                <label for="id_colaborador" >id_colaborador</label>
+                                <input type="text" name="id_colaborador" id="id_colaborador"  placeholder=" id_colaborador"
                                     value="{{ old('id_colaborador', $os2->id_colaborador) }}">
                             </div>
-                           
-                            <div class="mb-3">
-                                <label for="valorUnitario_os2" >Valor Unitário</label>
-                                <input type="text" name="valorUnitario_os2" id="valorUnitario_os2"  placeholder=" valorUnitario_os2"
-                                    value="{{ old('valorUnitario_os2', $os2->valorUnitario_os2) }}">
-                            </div>
                         </div>
-                     
-                
-                       
-
-                        <div class="col-lg-6">
-                                <label for="valorTotal_os2" class="form-label">Valor Total </label>
-                                <input type="text"  name="valorTotal_os2" id="valorTotal_os2"  value="{{ old('valorTotal_os2', $os2->valorTotal_os2) }}" >
-                        </div>
-
-                        <div class="col-lg-6">
-                                <label for="custoTotal_os2" class="form-label">Custo Total </label>
-                                <input type="text"  name="custoTotal_os2" id="custoTotal_os2"  value="{{ old('custoTotal_os2', $os2->custoTotal_os2) }}" >
-            
-                            </div>
-                           
 
                     <a  class="btnCadastrar">
                         <button type="submit">

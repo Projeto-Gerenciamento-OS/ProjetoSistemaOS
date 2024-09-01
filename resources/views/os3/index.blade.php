@@ -9,7 +9,7 @@
 
                 <a  href="{{route('os.index')}}" class="bold" >OS1</a>
                 
-                <a href="{{route('os2.index')}}" class="bold">OS2</a>
+                <a href="{{route('os.index')}}" class="bold">OS2</a>
                 
                 <a  class="light">OS3</a>
                 
