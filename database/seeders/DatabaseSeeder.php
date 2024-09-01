@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
            
             PermissionSeeder::class, 
             RoleSeeder::class,  
-            Emp1Seeder::class,
-            Emp2Seeder::class,
+            // Emp1Seeder::class,
+            // Emp2Seeder::class,
             UserSeeder::class, 
            
  

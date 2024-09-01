@@ -11,7 +11,7 @@ class Colaborador extends Model
 
 
      //proteger a tabela para não deixar no plural
-    protected $table = 'colaborador';
+     protected $table = 'colaborador';
 
      protected $fillable = [
      

@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('custos', function (Blueprint $table) {
-            $table->id();
-            $table->integer('id_emp1');
+        Schema::create('custo_geral', function (Blueprint $table) {
+            $table->bigIncrements('id_custo_geral');  
 			$table->string('descricao');
             $table->float('percentual');         
             $table->timestamps();
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('custos');
+        Schema::dropIfExists('custo_geral');
     }
 };

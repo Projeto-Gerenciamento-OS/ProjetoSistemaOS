@@ -22,26 +22,7 @@ class ColaboradorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id_emp1' => 'required',
-            'nome' => 'required',
-            'fone' => 'required' ,
-            'id_emp2' => 'required',
-            'id_users' => 'required',
-            'id_turno' => 'required',
-            'id_setor' => 'required',
+            //
         ];
     }
-    
-    public function messages():array
-        {
-            return[
-                'id_emp1.required' => 'O Campo é Obrigatório',
-                'nome.required' => 'O Campo é Obrigatório',
-                'fone.required' => 'O Campo é Obrigatório' ,
-                'id_emp2.required' => 'O Campo é Obrigatório',
-                'id_users.required' => 'O Campo é Obrigatório',
-                'id_turno.required' => 'O Campo é Obrigatório',
-                'id_setor.required' => 'O Campo é Obrigatório',
-        ];
-        }
 }

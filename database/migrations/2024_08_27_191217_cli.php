@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cliente', function (Blueprint $table) {
-            $table->id();
-            $table->integer('id_emp1'); 
+        Schema::create('cli', function (Blueprint $table) {
+            $table->bigIncrements('id_cli');        
 			$table->integer('tipo');		
             $table->string('cpf_cnpj');
             $table->string('razao');
@@ -33,12 +32,11 @@ return new class extends Migration
         });
     }
 
-
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('cliente');
+        Schema::dropIfExists('cli');
     }
 };
