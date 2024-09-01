@@ -13,7 +13,7 @@ return new class extends Migration
     {
           // Alterando a tabela do emp2.
           Schema::table("emp2", function (Blueprint $table) {
-            $table->foreignId('id_emp1')->constrained('emp1');       
+            $table->foreignId('id_emp1')->constrained('emp1','id_emp1');       
         });
     }
 

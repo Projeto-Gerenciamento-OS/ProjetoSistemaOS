@@ -17,6 +17,8 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('123456', ['rounds' => 12]),
                 'tipo' => 1,  
                 'nivel' =>1,
+                'id_emp2' =>2,
+                
                        
             ]);
 

@@ -10,6 +10,16 @@ class Os3 extends Model
 
     protected $table ='os3';
 
-    protected $fillable=[ 'qtde' ,'id_emp2_os3', 'vunit','vtotal', 
-                        'ctotal', 'id_emp2','id_os3','id_materiais'];
+    protected $fillable=[ 
+     
+        'id_emp2',
+        'id_os1',
+        'id_materiais',
+        'qtde',
+        'vunit',
+        'vtotal', 
+        'cunit',
+        'ctotal', 
+
+        ];
 }
