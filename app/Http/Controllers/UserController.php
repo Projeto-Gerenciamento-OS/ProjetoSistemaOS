@@ -66,7 +66,7 @@ class UserController extends Controller
                 'email' => $request->email,
                 'password' => $request->password,
                 'tipo' => $request->tipo,
-                'nivel' => $request->nivel,
+                'id_emp2' => $request->id_emp2,
             ]);
 
             //cadastrar um papel para o usuario
@@ -127,7 +127,7 @@ class UserController extends Controller
                 'email' => $request->email,
                 'password' => $request->password,
                 'tipo' => $request->tipo,
-                'nivel' => $request->nivel,
+                'id_emp2' => $request->id_emp2,
             ]);
 
             //Editar um papel para o usuario
