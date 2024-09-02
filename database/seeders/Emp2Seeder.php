@@ -19,7 +19,6 @@ class Emp2Seeder extends Seeder
             'cnpj'=>'teste',
             'endereco'=>'teste',
             'numero'=>'teste',
-            'complemento'=>'teste',
             'bairro'=>'teste',
             'cidade'=>'teste',
             'cep'=>'teste',

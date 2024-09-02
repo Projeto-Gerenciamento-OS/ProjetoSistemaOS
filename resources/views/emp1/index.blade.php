@@ -18,6 +18,13 @@
                     </button>
                 </div>
             </form>
+
+            <a href="{{ route('emp1.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>Cadastrar</h5>
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>  
+            </a>
         </div>
 
         <div class="card-body"> 
@@ -74,12 +81,7 @@
     </div>
 </div>
 
-<a href="{{ route('emp1.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a>
+
 
 
 @endsection
