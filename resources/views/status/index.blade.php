@@ -17,6 +17,13 @@
                     </button>
                 </div>
             </form>
+
+            <a href="{{ route('status.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>Cadastrar</h5>
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>  
+            </a>
         </div> 
 
         <div class="card-body"> 
@@ -24,9 +31,8 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>nome</th>
-                        <th>Empresa 1</th>
                         <th>Empresa 2</th>
+                        <th>Usuario</th>
                         <th>Cor</th>
                         <th>Descrição</th>
                         <th class="text-center">Ações</th>
@@ -37,9 +43,8 @@
                     @forelse ($status as $statu)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th  >{{ $statu->id }}</th>
-                            <th>{{ $statu->nome }}</th>
-                            <td >{{ $statu->emp1 }}</td>
-                            <th>{{ $statu->emp2 }}</th>
+                            <th>{{ $statu->id_emp2 }}</th>
+                            <th>{{ $statu->id_users }}</th>
                             <th>{{ $statu->cor }}</th>
                             <th>{{ $statu->descricao }}</th>
 
@@ -74,12 +79,7 @@
     </div>
 </div>
 
-<a href="{{ route('status.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a>
+
 
 @endsection
 

@@ -41,21 +41,15 @@
 
                 <div class="col-6 gap-3">
                     <div class="col-12">
-                        <label for="nome" >Nome: </label>
-                        <input type="text" name="nome" id="nome"  placeholder="Nome completo"
-                            value="{{ old('nome', $status->nome) }}">
+                        <label for="id_emp2" >id_emp2: </label>
+                        <input type="text" name="id_emp2" id="id_emp2"  placeholder="Nome completo"
+                            value="{{ old('id_emp2', $status->id_emp2) }}">
                     </div>
 
                     <div class="col-12">
-                        <label for="emp1" class="form-label">Empresa 1</label>
-                        <input type="number" name="emp1" id="emp1" 
-                            placeholder="Digite aqui..." value="{{ old('emp1', $status->emp1) }}">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="emp2" class="form-label">Empresa 2 </label>
-                        <input type="number" name="emp2" id="emp2" 
-                            placeholder="Digite aqui..." value="{{ old('emp2', $status->emp2) }}">
+                        <label for="id_users" class="form-label">id_users</label>
+                        <input type="number" name="id_users" id="id_users" 
+                            placeholder="Digite aqui..." value="{{ old('id_users', $status->id_users) }}">
                     </div>
                 </div>
 
@@ -69,7 +63,7 @@
                     <div class="col-12">
                         <label for="descricao" class="form-label">Descricao </label>
                         <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
-                            value="{{ old('nome', $status->descricao) }}">
+                            value="{{ old('descricao', $status->descricao) }}">
                     </div>
                 </div>
                 
