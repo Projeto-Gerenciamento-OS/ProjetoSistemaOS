@@ -13,7 +13,7 @@
                     <input type="text" name="nome" id="nome" class="form-control btn-pesquisar" value="{{ $nome }}" placeholder="Nome da conta" />
 
                     <button  type="submit" class="btn-pesquisar">
-                        <i class="fa-solid fa-magnifying-glass "></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
             </form>

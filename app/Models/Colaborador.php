@@ -16,7 +16,11 @@ class Colaborador extends Model
      protected $fillable = [
      
         'nome',
-        'fone'
+        'fone',
+        'id_emp2',
+        'id_users',
+        'id_turno',
+        'id_setor'
     ];
  
      //um pai pode ter varios filhos

@@ -42,21 +42,22 @@ class MateriaisController extends Controller
 
           
             $materiais = Materiais::create([
-                'nome' => $request->nome,
-                'custo' => $request->custo,
-                'unidade' => $request->unidade,
-                'valor' => $request->valor,
                 'descricao' => $request->descricao,
+                'unidade' => $request->unidade,
+                'custo' => $request->custo,
+                'valor' => $request->valor,
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
             ]);
 
            
-            Log::info('Material cadastrado', ['id' => $materiais->id, $materiais]);
+            Log::info('Material cadastrado', ['id' => $materiais->id_materiais, $materiais]);
 
           
             DB::commit();
 
          
-            return redirect()->route('materiais.index', ['materiais' => $materiais->id])->with('success', 'Material cadastrado com sucesso!');
+            return redirect()->route('materiais.index', ['materiais' => $materiais->id_materiais])->with('success', 'Material cadastrado com sucesso!');
 
         } catch (Exception $e) {
 
@@ -91,22 +92,23 @@ class MateriaisController extends Controller
         try {
             $materiais->update([
 
-                'nome' => $request->nome,
-                'custo' => $request->custo,
+                'descricao' => $request->descricao,
                 'unidade' => $request->unidade,
+                'custo' => $request->custo,
                 'valor' => $request->valor,
-                'descricao' => $request->descricao, 
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
 
             ]);
 
         
-            Log::info('Material editado.', ['id' => $materiais->id]);
+            Log::info('Material editado.', ['id' => $materiais->id_materiais]);
 
 
             DB::commit();
 
          
-            return redirect()->route('materiais.view', ['materiais' => $materiais->id])->with('success', 'Material editado com sucesso!');
+            return redirect()->route('materiais.view', ['materiais' => $materiais->id_materiais])->with('success', 'Material editado com sucesso!');
 
         } catch (Exception $e) {
 
@@ -127,7 +129,7 @@ class MateriaisController extends Controller
             $materiais->delete();
 
             // Salvar log
-            Log::info('Material excluído.', ['id' => $materiais->id]);
+            Log::info('Material excluído.', ['id' => $materiais->id_materiais]);
 
         
             return redirect()->route('materiais.index')->with('success', 'Material excluído com sucesso!');

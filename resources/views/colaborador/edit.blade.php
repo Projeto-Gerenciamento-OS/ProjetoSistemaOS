@@ -42,24 +42,19 @@
                 <div class="col-6 col-lg-6">
                    
                     <div class="mb-3">
-                        <label for="id" class="form-label">ID:</label>
-                        <input type="number" name="id" id="id" class="form-control" placeholder="id" value="{{ old('ido',$colaborador->id) }}">              
+                        <label for="id" class="form-label">ID Colaborador:</label>
+                        <input type="text" name="id" id="id" class="form-control" placeholder="id" value="{{ old('id',$colaborador->id) }}" readonly>              
                     </div>
-            
+    
                     <div class="mb-3">
-                        <label for="empresa1_id" class="form-label">Empresa1:</label>
-                        <input type="number" name="empresa1_id" id="empresa1_id" class="form-control" placeholder="Empresa1" value="{{ old('id',$colaborador->empresa1_id) }}">              
-                    </div>
-        
-                    <div class="mb-3">
-                        <label for="empresa2_id" class="form-label">Empresa2:</label>
-                        <input type="number" name="empresa2_id" id="empresa2_id" class="form-control" placeholder="Empresa2" value="{{ old('id',$colaborador->empresa2_id) }}">              
+                        <label for="id_emp2" class="form-label">Empresa2:</label>
+                        <input type="number" name="id_emp2" id="id_emp2" class="form-control" placeholder="Empresa2" value="{{ old('id',$colaborador->id_emp2) }}">              
                     </div>
         
         
                     <div class="mb-3">
-                        <label for="setor_id" class="form-label">Setor:</label>
-                        <input type="text" name="setor_id" id="setor_id" class="form-control" placeholder="setor" value="{{ old('id',$colaborador->setor_id) }}">              
+                        <label for="id_setor" class="form-label">Setor:</label>
+                        <input type="text" name="id_setor" id="id_setor" class="form-control" placeholder="setor" value="{{ old('id',$colaborador->id_setor) }}">              
                     </div>
     
                 </div>
@@ -68,14 +63,14 @@
                 <div class="col-6 col-lg-6">
                    
                     <div class="mb-3">
-                        <label for="turno_id" class="form-label">Turno:</label>
-                        <input type="text" name="turno_id" id="turno_id" class="form-control" placeholder="Turno" value="{{ old('id',$colaborador->turno_id) }}">              
+                        <label for="id_turno" class="form-label">Turno:</label>
+                        <input type="text" name="id_turno" id="id_turno" class="form-control" placeholder="Turno" value="{{ old('id',$colaborador->id_turno) }}">              
                     </div>
         
         
                     <div class="mb-3">
-                        <label for="login_id" class="form-label">Login:</label>
-                        <input type="text" name="login_id" id="login_id" class="form-control" placeholder="Login_id" value="{{ old('id',$colaborador->login_id) }}">              
+                        <label for="id_users" class="form-label">ID Users:</label>
+                        <input type="text" name="id_users" id="id_users" class="form-control" placeholder="id_users" value="{{ old('id',$colaborador->id_users) }}">              
                     </div>
         
                     <div class="mb-3">
@@ -84,13 +79,13 @@
                     </div>
         
                     <div class="mb-3">
-                        <label for="telefone" class="form-label">Telefone:</label>
-                        <input type="number" name="telefone" id="telefone" class="form-control" placeholder="Telfone" value="{{ old('id',$colaborador->telefone) }}">              
+                        <label for="fone" class="form-label">fone:</label>
+                        <input type="number" name="fone" id="fone" class="form-control" placeholder="Telfone" value="{{ old('id',$colaborador->fone) }}">              
                     </div>
 
                 </div>
                 
-                <a  class="  btnCadastrar">
+                <a  class="btnCadastrar">
                     <button type="submit">
                         <h5>Salvar</h5>
                         <i class="fa-solid fa-bookmark"></i>

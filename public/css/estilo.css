@@ -39,24 +39,8 @@ body {
         border-radius: 0 5px 5px 0;
         position: relative;
         transition: .1s;
-        width:60px;
-        overflow:hidden;
-        -webkit-transition:width .05s linear;
-        transition:width .05s linear;
-        transform: translateZ(0) scale(1,1);
-        transition: .1s;
-        transition: all ease-in;
-        transition-duration: .1s;
-        z-index:1000;
+        width:300px;
         box-shadow:0px 6px 15px 5px rgba(0, 0, 0, 0.171);
-
-        &:hover, .layoutAdmin.layoutSidenav_nav.expanded {
-            width:300px;
-            overflow:visible;
-            transition: all ease-in;
-            transition-duration: .1s;
-        }
-
         
         #navContainerGeral {
             display: flex;
@@ -227,9 +211,9 @@ body {
         
         .card-header {
             display:flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: start;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             border: none;  
             gap:1rem;
             box-shadow:0px 0px 15px 5px rgba(0, 0, 0, 0.105);
@@ -405,7 +389,8 @@ body {
         justify-content: center;
         align-items: center;
         gap: 1rem ;
-        background: var(--cor-azul-1);
+        background: rgb(242, 242, 242);
+       
         padding: 1rem 3.5rem;
         border-radius: 5px;
         font-weight: 600;
@@ -415,17 +400,17 @@ body {
         
         &:hover  {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            background: var(--cor-azul-1-hover);
+            background:white;
             transition: linear .1s;
         }
     }
     h5 {
-        color:#FFFF;
+        color:black;
     }
     
     svg {
         font-size: 1.5rem;
-        color:#FFFF;
+        color:black;
     }
 }
 

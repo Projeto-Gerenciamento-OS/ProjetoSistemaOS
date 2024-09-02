@@ -39,17 +39,17 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $custos->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">ID EMP1: </dt>
-                    <dd class="col-6">{{ $custos->id_emp1}}</dd>
-
-                    <dt class="col-6 col-lg-4">ID EMP2: </dt>
-                    <dd class="col-6">{{ $custos->id_emp2 }}</dd>
+                    <dt class="col-6 col-lg-4">Descrição: </dt>
+                    <dd class="col-6">{{ $custos->descricao }}</dd>
 
                     <dt class="col-6 col-lg-4">Percentual: </dt>
                     <dd class="col-6">{{ $custos->percentual }}</dd>
 
-                    <dt class="col-6 col-lg-4">Descrição: </dt>
-                    <dd class="col-6">{{ $custos->descricao }}</dd>
+                    <dt class="col-6 col-lg-4">ID EMP2: </dt>
+                    <dd class="col-6">{{ $custos->id_emp2 }}</dd>
+
+                    <dt class="col-6 col-lg-4">ID Users: </dt>
+                    <dd class="col-6">{{ $custos->id_users }}</dd>
 
                     <dt class="col-6 col-lg-4">Cadastrado: </dt>
                     <dd class="col-6">
