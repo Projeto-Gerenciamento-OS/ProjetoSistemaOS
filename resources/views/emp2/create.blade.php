@@ -55,6 +55,10 @@
                                 <label for="razao" class="form-label">Razão:</label>
                                 <input type="text" name="razao" id="razao" class="form-control" placeholder="Razão Social" value="{{ old('razao') }}">
                             </div>
+                            <div class="mb-3">
+                                <label for="endereco" class="form-label">Endereço:</label>
+                                <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Razão Social" value="{{ old('razao') }}">
+                            </div>
 
                             <div class="mb-3">
                                     <label for="fantasia" class="form-label">Fantasia:</label>
@@ -84,11 +88,6 @@
                             <div class="mb-3">
                                 <label for="cnpj" class="form-label">CNPJ:</label>
                                 <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="CNPJ" value="{{ old('cnpj') }}">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="logradouro" class="form-label">Logradouro:</label>
-                                <input type="text" name="logradouro" id="logradouro" class="form-control" placeholder="Logradouro" value="{{ old('logradouro') }}">
                             </div>
 
                             <div class="mb-3">

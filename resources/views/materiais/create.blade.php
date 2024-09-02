@@ -19,7 +19,6 @@
 
            
                 <div class="col-6 ">
-
                     <div class="col-12">
                         <label for="descricao" class="form-label">Descrição</label>
                         <input type="text"  name="descricao" id="descricao"   required>

@@ -77,7 +77,7 @@ class Emp1Controller extends Controller
              DB::commit();
  
              // Redirecionar o usuário, enviar a mensagem de sucesso
-             return redirect()->route('emp1.view', ['id_emp1' => $emp1->id])->with('success', 'Usuário cadastrado com sucesso!');
+             return redirect()->route('emp1.index', ['emp1' => $emp1->id])->with('success', 'Usuário cadastrado com sucesso!');
          } catch (Exception $e) {
  
              // Salvar log

@@ -44,7 +44,7 @@
                 <tbody>
                     @forelse ($materiais as $material)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
-                            <th>{{ $material->id_materiais }}</th>
+                            <th>{{ $material->id }}</th>
                             <th>{{ $material->descricao }}</th>
                             <th>{{ $material->unidade }}</th>
                             <td >{{ $material->custo }}</td>
@@ -53,15 +53,15 @@
                             <th>{{ $material->id_users }}</th>
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" id="acoes">
 
-                                <a href="{{ route('materiais.view', ['materiais' => $material->id_materiais]) }}" class="btnIcons">
+                                <a href="{{ route('materiais.view', ['materiais' => $material->id]) }}" class="btnIcons">
                                     <i class="fa-regular fa-eye"></i>
                                 </a>
 
-                                <a href="{{ route('materiais.edit', ['materiais' => $material->id_materiais]) }}" class="btnIcons">
+                                <a href="{{ route('materiais.edit', ['materiais' => $material->id]) }}" class="btnIcons">
                                     <i class="fa-solid fa-pen"></i>
                                 </a>
 
-                                <form method="POST" action="{{ route('materiais.delete', ['materiais' => $material->id_materiais]) }}">
+                                <form method="POST" action="{{ route('materiais.delete', ['materiais' => $material->id]) }}">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn-apagar btnIcons"

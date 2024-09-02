@@ -26,7 +26,6 @@
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">Apagar</span>
                         <i class="fa-solid fa-trash"></i>
-                    
                     </button>
                 </form>
             </span>
@@ -55,7 +54,6 @@
                     </p>
                 </div>
                 
-
                 <div class='visualizacaoDados row'>
                     <span class="col-4">Editado: </span>
                     <p class="col-5">

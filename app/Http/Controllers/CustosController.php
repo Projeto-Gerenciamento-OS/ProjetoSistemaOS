@@ -133,7 +133,7 @@ class CustosController extends Controller
             Log::info('Custo não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Custo não excluído!');
+            return redirect()->route('custos.index')->with('error', 'Custo não excluído!');
         }
     }
 }

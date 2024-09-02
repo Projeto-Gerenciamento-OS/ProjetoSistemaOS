@@ -13,12 +13,12 @@
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('materiais.view', ['materiais' => $materiais->id_materiais]) }}" class="btn ">
+                    <a href="{{ route('materiais.view', ['materiais' => $materiais->id]) }}" class="btn ">
                         <span class="listar-texto">Visualizar</span>
                         <i class="fa-regular fa-eye"></i>
                     </a>
 
-                    <form method="POST" action="{{ route('materiais.delete', ['materiais' => $materiais->id_materiais]) }}">
+                    <form method="POST" action="{{ route('materiais.delete', ['materiais' => $materiais->id]) }}">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn "
@@ -34,7 +34,7 @@
 
                 <x-alert />
 
-                <form action="{{ route('materiais.update', ['materiais' => $materiais->id_materiais]) }}" method="POST" class="row g-3">
+                <form action="{{ route('materiais.update', ['materiais' => $materiais->id]) }}" method="POST" class="row g-3">
                     @csrf
                     @method('PUT')
 

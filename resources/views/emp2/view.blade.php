@@ -45,6 +45,10 @@
                         <span class="col-6">CNPJ: </span>
                         <p class="col-6">{{ $emp2->cnpj }}</p>
                     </div>
+                    <div class="visualizacaoDados row">
+                        <span class="col-6">Endereço: </span>
+                        <p class="col-6">{{ $emp2->endereco }}</p>
+                    </div>
 
                     <div class="visualizacaoDados row">
                         <span class="col-6">Razão Social: </span>
@@ -61,10 +65,7 @@
                         <p class="col-6">{{ $emp2->cep }}</p>
                     </div>
 
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Logradouro: </span>
-                        <p class="col-6">{{ $emp2->logradouro }}</p>
-                    </div>
+                   
 
                     <div class="visualizacaoDados row">
                         <span class="col-6">Telefone 2: </span>

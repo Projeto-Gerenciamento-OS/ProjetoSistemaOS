@@ -51,13 +51,13 @@ class MateriaisController extends Controller
             ]);
 
            
-            Log::info('Material cadastrado', ['id' => $materiais->id_materiais, $materiais]);
+            Log::info('Material cadastrado', ['id' => $materiais->id, $materiais]);
 
           
             DB::commit();
 
          
-            return redirect()->route('materiais.index', ['materiais' => $materiais->id_materiais])->with('success', 'Material cadastrado com sucesso!');
+            return redirect()->route('materiais.index', ['materiais' => $materiais->id])->with('success', 'Material cadastrado com sucesso!');
 
         } catch (Exception $e) {
 
@@ -102,13 +102,13 @@ class MateriaisController extends Controller
             ]);
 
         
-            Log::info('Material editado.', ['id' => $materiais->id_materiais]);
+            Log::info('Material editado.', ['id' => $materiais->id]);
 
 
             DB::commit();
 
          
-            return redirect()->route('materiais.view', ['materiais' => $materiais->id_materiais])->with('success', 'Material editado com sucesso!');
+            return redirect()->route('materiais.view', ['materiais' => $materiais->id])->with('success', 'Material editado com sucesso!');
 
         } catch (Exception $e) {
 
@@ -129,7 +129,7 @@ class MateriaisController extends Controller
             $materiais->delete();
 
             // Salvar log
-            Log::info('Material excluído.', ['id' => $materiais->id_materiais]);
+            Log::info('Material excluído.', ['id' => $materiais->id]);
 
         
             return redirect()->route('materiais.index')->with('success', 'Material excluído com sucesso!');
@@ -140,7 +140,7 @@ class MateriaisController extends Controller
             Log::info('Material não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
+            return redirect()->route('materiais.index')->with('error', 'Usuário não excluído!');
         }
     }
 }
