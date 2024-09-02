@@ -24,6 +24,20 @@ class UserSeeder extends Seeder
              $superAdmin->assignRole('Super Admin');
         }
 
+        if (!User::where('email', 'gustavo@gmail.com')->first()) {
+            $superAdmin= User::create([
+                'nome' => 'gustavo',
+                'email' => 'gustavo@gmail.com',
+                'password' => Hash::make('gustavo@gmail.com', ['rounds' => 12]),
+                'tipo' => 1,  
+                'id_emp2' =>1,
+                
+            ]);
+
+             //Atribuir o papel para o usuario
+             $superAdmin->assignRole('Super Admin');
+        }
+
         
         if (!User::where('email', 'admin@gmail.com')->first()) {
             $admin=User::create([
