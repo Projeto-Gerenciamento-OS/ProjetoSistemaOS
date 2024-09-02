@@ -41,6 +41,9 @@ class CustosController extends Controller
 
           
             $custos = Custos::create([
+                'id_emp1' => $request->id_emp1,
+                'id_emp2' => $request->id_emp2,
+                'percentual' => $request->percentual,
                 'descricao' => $request->descricao,
                 'percentual' => $request->percentual,
                 'id_emp2' => $request->id_emp2,
