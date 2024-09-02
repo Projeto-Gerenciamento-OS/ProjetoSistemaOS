@@ -35,7 +35,7 @@
 
                 <tbody>
 
-                    @forelse ($servicos as $servico)
+                    @forelse ($servico as $servico)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th  >{{ $servico->id }}</th>
                             <th>{{ $servico->nome }}</th>
@@ -70,7 +70,7 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $servicos->onEachSide(0)->links() }} 
+            {{ $servico->onEachSide(0)->links() }} 
         </div>
     </div>
 </div>

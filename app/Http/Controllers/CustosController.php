@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CustoGeral;
+use App\Models\Custos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Exception;
@@ -15,7 +15,7 @@ class CustosController extends Controller
     public function index(Request $request)
     {
         // Recuperar os registros do banco dados
-        $custos= CustoGeral::when($request->has('id_emp2'), function ($Query) use ($request){
+        $custos= Custos::when($request->has('id_emp2'), function ($Query) use ($request){
             $Query->where('id_emp2', 'like', '%' . $request->id_emp2 . '%');
         })
         
@@ -40,14 +40,10 @@ class CustosController extends Controller
         try {
 
           
-<<<<<<< HEAD
-            $custos = CustoGeral::create([
+            $custos = Custos::create([
                 'id_emp1' => $request->id_emp1,
                 'id_emp2' => $request->id_emp2,
                 'percentual' => $request->percentual,
-=======
-            $custos = Custos::create([
->>>>>>> felipe
                 'descricao' => $request->descricao,
                 'percentual' => $request->percentual,
                 'id_emp2' => $request->id_emp2,
@@ -77,16 +73,16 @@ class CustosController extends Controller
 
      }
 
-     public function view(CustoGeral $custos){
+     public function view(Custos $custos){
       
         return view( 'custos.view', ['menu'=>'custos', 'custos' => $custos]);
     }
     
-    public function edit(CustoGeral $custos){
+    public function edit(Custos $custos){
         return view('custos.edit', ['menu' => 'custos', 'custos' => $custos]);
     }
 
-    public function update(CustosRequest $request, CustoGeral $custos){
+    public function update(CustosRequest $request, Custos $custos){
    
         $request->validated();
 
@@ -123,7 +119,7 @@ class CustosController extends Controller
         }
     }
 
-    public function delete(CustoGeral $custos){
+    public function delete(Custos $custos){
         try {
         
             $custos->delete();

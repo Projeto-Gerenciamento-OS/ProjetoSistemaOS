@@ -23,7 +23,7 @@
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
                         <label for="id" class="form-label">ID Colaborador</label>
-                        <input type="text" name="id" id="id" class="form-control" placeholder="id" value="{{ old('id') }}">              
+                        <input type="text" name="id" id="id" class="form-control" placeholder="id" value="{{ old('id') }}" readonly>              
                     </div>
 
                     <div class="mb-3">
