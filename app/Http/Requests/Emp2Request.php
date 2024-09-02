@@ -20,7 +20,6 @@ class Emp2Request extends FormRequest
             'cnpj' => 'required',
             'endereco' => 'required',
             'numero' => 'required',
-            'complemento' => 'required',
             'bairro' => 'required',
             'cidade' => 'required',
             'cep' => 'required',

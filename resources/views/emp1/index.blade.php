@@ -76,8 +76,8 @@
 
                 </tbody>
             </table>
-            {{ $emp1->onEachSide(0)->links() }} 
         </div>
+        {{ $emp1->onEachSide(0)->links() }} 
     </div>
 </div>
 

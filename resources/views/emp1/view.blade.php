@@ -54,7 +54,6 @@
                     </p>
                 </div>
                 
-
                 <div class='visualizacaoDados row'>
                     <span class="col-4">Editado: </span>
                     <p class="col-5">
