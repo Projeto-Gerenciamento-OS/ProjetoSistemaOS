@@ -18,7 +18,6 @@ class UserSeeder extends Seeder
                 'tipo' => 1,  
                 'id_emp2' =>1,
                 
-                       
             ]);
 
              //Atribuir o papel para o usuario
