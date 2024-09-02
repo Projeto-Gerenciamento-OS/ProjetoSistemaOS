@@ -41,23 +41,20 @@ class CustosController extends Controller
 
           
             $custos = Custos::create([
-                'id_emp1' => $request->id_emp1,
-                'id_emp2' => $request->id_emp2,
-                'percentual' => $request->percentual,
                 'descricao' => $request->descricao,
                 'percentual' => $request->percentual,
                 'id_emp2' => $request->id_emp2,
-                'id_users' => $request->id_users
+                'id_users' => $request->id_users,
             ]);
 
            
-            Log::info('Custo cadastrado', ['id' => $custos->id_custo_geral, $custos]);
+            Log::info('Custo cadastrado', ['id' => $custos->id, $custos]);
 
           
             DB::commit();
 
          
-            return redirect()->route('custos.index', ['custos' => $custos->id_custo_geral])->with('success', 'Custo cadastrado com sucesso!');
+            return redirect()->route('custos.index', ['custos' => $custos->id])->with('success', 'Custo cadastrado com sucesso!');
 
         } catch (Exception $e) {
 
@@ -94,17 +91,17 @@ class CustosController extends Controller
                 'descricao' => $request->descricao,
                 'percentual' => $request->percentual,
                 'id_emp2' => $request->id_emp2,
-                'id_users' => $request->id_users
+                'id_users' => $request->id_users,
             ]);
 
         
-            Log::info('Custo editado.', ['id' => $custos->id_custo_geral]);
+            Log::info('Custo editado.', ['id' => $custos->id]);
 
 
             DB::commit();
 
          
-            return redirect()->route('custos.view', ['custos' => $custos->id_custo_geral])->with('success', 'Custo editado com sucesso!');
+            return redirect()->route('custos.view', ['custos' => $custos->id])->with('success', 'Custo editado com sucesso!');
 
         } catch (Exception $e) {
 
@@ -125,7 +122,7 @@ class CustosController extends Controller
             $custos->delete();
 
             // Salvar log
-            Log::info('Custo excluído.', ['id' => $custos->id_custo_geral]);
+            Log::info('Custo excluído.', ['id' => $custos->id]);
 
         
             return redirect()->route('custos.index')->with('success', 'Custo excluído com sucesso!');

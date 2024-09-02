@@ -38,36 +38,37 @@
                 @csrf
                 @method('PUT')
 
-                <div class="col-12 col-lg-6">
-                    <div class="mb-3">
-
-                        <div class="">
-                            <label for="descricao" class="form-label">Descrição</label>
-                            <input type="text"  name="descricao" id="descricao"  value="{{ old('descricao', $custos->descricao) }}" >
-                        </div> 
-
-                        <div class="mb-2">
-                            <label for="percentual" >Percentual </label>
-                            <input type="text" name="percentual" id="percentual"  placeholder=" Digite o percentual aqui"
-                                value="{{ old('percentual') }}">
-                        </div>
+                    <div class="col-6 gap-3">
+                    <div class="col-12">
+                        <label for="id_emp2" >id_emp2: </label>
+                        <input type="text" name="id_emp2" id="id_emp2"  placeholder="Nome completo"
+                            value="{{ old('id_emp2', $custos->id_emp2) }}">
                     </div>
 
-                    <div class="mb-3">
-                        <label for="id_emp2" >ID_EMP2 </label>
-                        <input type="number" name="id_emp2" id="id_emp2" 
-                            placeholder=" Melhor e-mail do usuário" value="{{ old('id_emp2', $custos->id_emp2) }}">
-
-                        <label for="id_users" >ID Users </label>
+                    <div class="col-12">
+                        <label for="id_users" class="form-label">id_users</label>
                         <input type="number" name="id_users" id="id_users" 
-                            placeholder=" Melhor e-mail do usuário" value="{{ old('id_users', $custos->id_users) }}">
+                            placeholder="Digite aqui..." value="{{ old('id_users', $custos->id_users) }}">
+                    </div>
+                </div>
+
+                <div class="col-6 mt-2 gap-3">
+                    <div class="col-12">
+                        <label for="percentual" class="form-label">percentual</label>
+                        <input type="text" name="percentual" id="percentual" 
+                            placeholder="Digite aqui..." value="{{ old('percentual', $custos->percentual) }}">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="descricao" class="form-label">Descricao </label>
+                        <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
+                            value="{{ old('descricao', $custos->descricao) }}">
                     </div>
                 </div>
                 
                 <a  class="  btnCadastrar">
                     <button type="submit">
-                        <h5>Salvar</h5>
-                        <i class="fa-solid fa-bookmark"></i>
+                        <h5>Salvar</h5> 
                     </button>  
                 </a>
 

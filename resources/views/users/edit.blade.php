@@ -99,7 +99,7 @@
                 <a  class="btnCadastrar">
                     <button type="submit">
                         <h5>Salvar</h5>
-                        <i class="fa-solid fa-bookmark"></i>
+                         
                     </button>  
                 </a>
 
