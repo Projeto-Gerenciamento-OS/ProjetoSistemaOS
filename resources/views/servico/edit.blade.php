@@ -9,17 +9,17 @@
             <h2 class="mt-3">Edição</h2>
 
             <span class="ms-auto d-flex  flex-row gap-2">
-                <a href="{{ route('servicos.index') }}" class="btn ">
+                <a href="{{ route('servico.index') }}" class="btn ">
                     <span class="listar-texto">Listar</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
 
-                <a href="{{ route('servicos.view', ['servicos' => $servicos->id]) }}" class="btn ">
+                <a href="{{ route('servico.view', ['servico' => $servico->id]) }}" class="btn ">
                     <span class="listar-texto">Visualizar</span>
                     <i class="fa-regular fa-eye"></i>
                 </a>
 
-                <form method="POST" action="{{ route('servicos.delete', ['servicos' => $servicos->id]) }}">
+                <form method="POST" action="{{ route('servico.delete', ['servico' => $servico->id]) }}">
                     @csrf
                     @method('delete')
                     <button type="submit" class="btn  btn-sm me-1 "
@@ -35,7 +35,7 @@
         <div class="card-body">
             <x-alert />
 
-            <form action="{{ route('servicos.update', ['servicos' => $servicos->id]) }}" method="POST" class="row g-3">
+            <form action="{{ route('servico.update', ['servico' => $servico->id]) }}" method="POST" class="row g-3">
                 @csrf
                 @method('PUT')
 
@@ -43,31 +43,31 @@
                     <div class="mb-3">
                         <label for="nome" >Nome: </label>
                         <input type="text" name="nome" id="nome"  placeholder="Nome completo"
-                        value="{{ old('nome', $servicos->nome) }}">
+                        value="{{ old('nome', $servico->nome) }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="custo_recorente" class="form-label">Custo Recorente </label>
                         <input type="text" name="custo_recorente" id="custo_recorente" 
-                        placeholder="Melhor e-mail do usuário" value="{{ old('email', $servicos->custo_recorente) }}">
+                        placeholder="Melhor e-mail do usuário" value="{{ old('email', $servico->custo_recorente) }}">
                     </div>
 
                     <div class="mb-3">
                         <label for="valor" class="form-label">Valor </label>
-                        <input type="text" min="1" max="30" name="valor" id="valor" value="{{ old('email', $servicos->valor) }}" >
+                        <input type="text" min="1" max="30" name="valor" id="valor" value="{{ old('email', $servico->valor) }}" >
                     </div>
                 </div>
 
                 <div class="col-6 col-lg-6 mt-2">
                     <div class="mb-3">
                         <label for="intervalo" class="form-label">Intervalo </label>
-                        <input type="text" min="1" max="30" name="intervalo" id="intervalo"  value="{{ old('email', $servicos->intervalo) }}" >
+                        <input type="text" min="1" max="30" name="intervalo" id="intervalo"  value="{{ old('email', $servico->intervalo) }}" >
                     </div>
 
                     <div class="mb-3">
                         <label for="descricao" class="form-label">Descricao </label>
                         <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
-                            value="{{ old('nome', $servicos->descricao) }}">
+                            value="{{ old('nome', $servico->descricao) }}">
                     </div>
                 </div>
                 

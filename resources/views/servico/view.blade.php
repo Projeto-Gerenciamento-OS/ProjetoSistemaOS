@@ -9,17 +9,17 @@
             <h1 class="mt-3">Visualização</h1>
             
             <span class="ms-auto d-flex  flex-row gap-2">
-                <a href="{{ route('servicos.index') }}" class="btn ">
+                <a href="{{ route('servico.index') }}" class="btn ">
                     <span class="listar-texto">Listar</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
     
-                <a href="{{ route('servicos.edit', ['servicos' => $servicos->id]) }}" class="btn  btn-sm me-1">
+                <a href="{{ route('servico.edit', ['servico' => $servico->id]) }}" class="btn  btn-sm me-1">
                     <span class="listar-texto">Editar</span>
                     <i class="fa-solid fa-pen"></i>
                 </a>
     
-                <form method="POST" action="{{ route('servicos.delete', ['servicos' => $servicos->id]) }}">
+                <form method="POST" action="{{ route('servico.delete', ['servico' => $servico->id]) }}">
                     @csrf
                     @method('delete')
                     <button type="submit" class="btn  btn-sm me-1"
@@ -40,45 +40,45 @@
 
                 <div class='visualizacaoDados row'>
                     <span class="col-6 col-lg-4">ID: </span>
-                    <p class="col-6">{{ $servicos->id }}</p>
+                    <p class="col-6">{{ $servico->id }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
                     <span class="col-6 col-lg-4">Nome: </span>
-                    <p class="col-6">{{ $servicos->nome}}</p>
+                    <p class="col-6">{{ $servico->nome}}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
                     <span class="col-6 col-lg-4">Custo Recorente: </span>
-                    <p class="col-6">{{ $servicos->custo_recorente }}</p>
+                    <p class="col-6">{{ $servico->custo_recorente }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
                     <span class="col-6 col-lg-4">Valor: </span>
-                    <p class="col-6">{{ $servicos->valor }}</p>
+                    <p class="col-6">{{ $servico->valor }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
                     <span class="col-6 col-lg-4">Intervalo: </span>
-                    <p class="col-6">{{ $servicos->intervalo }}</p>
+                    <p class="col-6">{{ $servico->intervalo }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
                     <span class="col-6 col-lg-4">Nome: </span>
-                    <p class="col-6">{{ $servicos->descricao}}</p>
+                    <p class="col-6">{{ $servico->descricao}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
                     <span class="col-6 col-lg-4">Cadastrado: </span>
                     <p class="col-6">
-                        {{ \Carbon\Carbon::parse($servicos->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
+                        {{ \Carbon\Carbon::parse($servico->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>
                 </div>
 
                 <div class='visualizacaoDados row'>
                     <span class="col-6 col-lg-4">Editado: </span>
                     <p class="col-6">
-                        {{ \Carbon\Carbon::parse($servicos->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
+                        {{ \Carbon\Carbon::parse($servico->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>
                 </div>
             </div>

@@ -7,13 +7,13 @@
 
         <div class="cardHeaderAsociados card-header">
             <h1>Serviços Gerais</h1>
-            <a href="{{ route('servicos.index') }}" class="btn ">
+            <a href="{{ route('servico.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span></a>
         </div> 
         
         <div class="card-body"> 
-            <form action="{{ route('servicos.store') }}" method="POST" class="row g-3">
+            <form action="{{ route('servico.store') }}" method="POST" class="row g-3">
                 @csrf
                 @method('POST')
              
@@ -28,6 +28,10 @@
                     <div class="mb-3">
                         <label for="intervalo" class="form-label">Intervalo </label>
                         <input type="text" name="intervalo" id="intervalo"   required >
+                    </div>
+                    <div class="mb-3">
+                        <label for="tempo" class="form-label">tempo </label>
+                        <input type="number" name="tempo" id="tempo"   required >
                     </div>
                 </div>
 

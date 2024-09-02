@@ -9,7 +9,7 @@ class Custos extends Model
 {
     use HasFactory;
 
-    protected $table = 'setor';
+    protected $table = 'custo_geral';
 
     protected $fillable = [
         'descricao',
