@@ -76,8 +76,8 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $materiais->onEachSide(0)->links() }} 
         </div>
+        {{ $materiais->onEachSide(0)->links() }} 
     </div>
 </div>
 

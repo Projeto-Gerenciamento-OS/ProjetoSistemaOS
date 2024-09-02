@@ -187,8 +187,8 @@
                             </button>  
                         </a>  
                     </table>
-                    {{ $os2->onEachSide(0)->links() }}
                 </div>
+                {{ $os2->onEachSide(0)->links() }}
             </div>
 
         </div>

@@ -74,8 +74,8 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $status->onEachSide(0)->links() }} 
         </div>
+        {{ $status->onEachSide(0)->links() }} 
     </div>
 </div>
 

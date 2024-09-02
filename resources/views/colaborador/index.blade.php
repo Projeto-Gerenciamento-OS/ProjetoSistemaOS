@@ -83,8 +83,8 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $colaborador->onEachSide(0)->links() }} 
         </div>
+        {{ $colaborador->onEachSide(0)->links() }} 
     </div>
 </div>
 

@@ -87,8 +87,8 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $servico->onEachSide(0)->links() }} 
         </div>
+        {{ $servico->onEachSide(0)->links() }} 
     </div>
 </div>
 

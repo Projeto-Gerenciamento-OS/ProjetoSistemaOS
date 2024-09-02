@@ -75,6 +75,7 @@
             </table>
             {{ $custos->onEachSide(0)->links() }} 
         </div>
+        {{ $custos->onEachSide(0)->links() }} 
     </div>
 </div>
 
