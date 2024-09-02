@@ -44,28 +44,53 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Nome: </span>
+                    <span class="col-6 col-lg-4">nome: </span>
                     <p class="col-6">{{ $servico->nome}}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Custo Recorente: </span>
-                    <p class="col-6">{{ $servico->custo_recorente }}</p>
+                    <span class="col-6 col-lg-4">tempo: </span>
+                    <p class="col-6">{{ $servico->tempo }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Valor: </span>
+                    <span class="col-6 col-lg-4">valor: </span>
                     <p class="col-6">{{ $servico->valor }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Intervalo: </span>
-                    <p class="col-6">{{ $servico->intervalo }}</p>
+                    <span class="col-6 col-lg-4">custo: </span>
+                    <p class="col-6">{{ $servico->custo }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Nome: </span>
-                    <p class="col-6">{{ $servico->descricao}}</p>
+                    <span class="col-6 col-lg-4">obs: </span>
+                    <p class="col-6">{{ $servico->obs}}</p>
+                </div>
+                
+                <div class='visualizacaoDados row'>
+                    <span class="col-6 col-lg-4">recorrente: </span>
+                    <p class="col-6">{{ $servico->recorrente}}</p>
+                </div>
+                
+                <div class='visualizacaoDados row'>
+                    <span class="col-6 col-lg-4">intervalo: </span>
+                    <p class="col-6">{{ $servico->intervalo}}</p>
+                </div>
+                
+                <div class='visualizacaoDados row'>
+                    <span class="col-6 col-lg-4">id_emp2: </span>
+                    <p class="col-6">{{ $servico->id_emp2}}</p>
+                </div>
+                
+                <div class='visualizacaoDados row'>
+                    <span class="col-6 col-lg-4">id_os1: </span>
+                    <p class="col-6">{{ $servico->id_os1}}</p>
+                </div>
+                
+                <div class='visualizacaoDados row'>
+                    <span class="col-6 col-lg-4">id_users: </span>
+                    <p class="col-6">{{ $servico->id_users}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>

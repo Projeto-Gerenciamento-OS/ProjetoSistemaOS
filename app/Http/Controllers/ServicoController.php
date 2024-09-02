@@ -45,12 +45,15 @@ class ServicoController extends Controller
             // Cadastrar no banco de dados na tabela servicos
             $servico = Servico::create([
                 'nome' => $request->nome,
-                'nome' => $request->tempo,
+                'tempo' => $request->tempo,
                 'valor' => $request->valor,
+                'custo' => $request->custo,
                 'obs' => $request->obs,
                 'recorrente' => $request->recorrente,
-                'custo' => $request->custo,
                 'intervalo' => $request->intervalo,
+                'id_emp2' => $request->id_emp2,
+                'id_os1' => $request->id_os1,
+                'id_users' => $request->id_users,
             ]);
 
             // Salvar log
@@ -95,12 +98,15 @@ class ServicoController extends Controller
             // Editar as informações do registro no banco de dados
             $servico->update([
                 'nome' => $request->nome,
-                'nome' => $request->tempo,
+                'tempo' => $request->tempo,
                 'valor' => $request->valor,
+                'custo' => $request->custo,
                 'obs' => $request->obs,
                 'recorrente' => $request->recorrente,
-                'custo' => $request->custo,
                 'intervalo' => $request->intervalo,
+                'id_emp2' => $request->id_emp2,
+                'id_os1' => $request->id_os1,
+                'id_users' => $request->id_users,
             ]);
 
             // Salvar log

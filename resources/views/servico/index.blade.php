@@ -17,6 +17,13 @@
                     </button>
                 </div>
             </form>
+            
+            <a href="{{ route('servico.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>Cadastrar</h5>
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>  
+            </a>
         </div> 
 
         <div class="card-body"> 
@@ -25,10 +32,15 @@
                     <tr class="titulos">
                         <th>ID</th>
                         <th>nome</th>
-                        <th>Custo Recorrente</th>
+                        <th>tempo</th>
                         <th>valor</th>
-                        <th>Intervalo</th>
-                        <th>Descrição</th>
+                        <th>custo</th>
+                        <th>obs</th>
+                        <th>recorrente</th>
+                        <th>intervalo</th>
+                        <th>id_emp2</th>
+                        <th>id_os1</th>
+                        <th>id_users</th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -39,10 +51,15 @@
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th  >{{ $servico->id }}</th>
                             <th>{{ $servico->nome }}</th>
-                            <td >{{ $servico->custo_recorente }}</td>
+                            <td >{{ $servico->tempo }}</td>
                             <th>{{ $servico->valor }}</th>
+                            <th>{{ $servico->custo }}</th>
+                            <th>{{ $servico->obs }}</th>
+                            <th>{{ $servico->recorrente }}</th>
                             <th>{{ $servico->intervalo }}</th>
-                            <th>{{ $servico->descricao }}</th>
+                            <th>{{ $servico->id_emp2 }}</th>
+                            <th>{{ $servico->id_os1 }}</th>
+                            <th>{{ $servico->id_users }}</th>
 
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
 
@@ -75,12 +92,6 @@
     </div>
 </div>
 
-<a href="{{ route('servico.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a>
 
 @endsection
 
