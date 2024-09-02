@@ -20,29 +20,32 @@
         
           
                 <div class="col-12 col-lg-6">
+                 
                     <div class="mb-3">
-                        <label for="id_emp1" class="form-label">ID EMP1</label>
-                        <input type="number" name="id_emp1" id="id_emp1"  placeholder=" Digite "
-                            value="{{ old('id_emp1') }}">
-                    </div>
-                    <div class="mb-3">
-                        <label for="id_emp2" class="form-label">ID EMP2 </label>
-                        <input type="number" name="id_emp2" id="id_emp2" 
-                            placeholder=" Digite " value="{{ old('id_emp2') }}">
-                    </div>
-                </div>
+                        <label for="descricao" class="form-label">Descrição</label>
+                        <input type="text"  name="descricao" id="descricao"   required>
+                    </div> 
 
-                <div class="col-12 col-lg-6">
                     <div class="mb-3">
                         <label for="percentual" class="form-label">Percentual</label>
                         <input type="text" name="percentual" id="percentual" 
                             placeholder=" Digite o percentual" value="{{ old('percentual') }}">
                     </div>
+                </div>
+                    
+                <div class="col-12 col-lg-6">
+                        
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">ID EMP2 </label>
+                        <input type="number" name="id_emp2" id="id_emp2" 
+                            placeholder=" Digite " value="{{ old('id_emp2') }}">
+                    </div>
 
                     <div class="mb-3">
-                        <label for="descricao" class="form-label">Descrição</label>
-                        <input type="text"  name="descricao" id="descricao"   required>
-                    </div> 
+                        <label for="id_users" class="form-label">ID Users </label>
+                        <input type="number" name="id_users" id="id_users" 
+                            placeholder=" Digite " value="{{ old('id_users') }}">
+                    </div>
                 </div>
         
                 

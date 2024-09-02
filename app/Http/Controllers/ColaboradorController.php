@@ -33,7 +33,7 @@ class ColaboradorController extends Controller
        
          //SALVAR LOG
 
-         Log::info('Visualizar Colaborador',['colaborador'=>$colaborador->id]);
+         Log::info('Visualizar Colaborador',['colaborador'=>$colaborador->id_colaborador]);
 
         // Carregar a VIEW
 
@@ -63,22 +63,21 @@ class ColaboradorController extends Controller
 
            // Cadastrar no banco de dados na tabela colaborador
            $colaborador = Colaborador::create([
-               'empresa1_id' => $request->empresa1_id,
-               'empresa2_id' => $request->empresa2_id,
-               'setor_id' => $request->setor_id,
-               'turno_id' => $request->turno_id,
-               'login_id' => $request->login_id,
                'nome' => $request->nome,
-               'telefone' => $request->telefone,                
+               'fone' => $request->fone,
+               'id_emp2' => $request->id_emp2,
+               'id_users' => $request->id_users,
+               'id_turno' => $request->id_turno,
+               'id_setor' => $request->id_setor,              
            ]);
 
            // Operação é concluída com êxito
            DB::commit();
             // Salvar log
-           Log::info('Colaborador cadastrado.', [ 'id' => $colaborador->id]);
+           Log::info('Colaborador cadastrado.', [ 'id' => $colaborador->id_colaborador]);
 
            // Redirecionar para colaborador, enviar a mensagem de sucesso
-           return redirect()->route('colaborador.index', ['colaborador'=>$colaborador->id])->with("success","Colaborador cadastrado com sucesso");
+           return redirect()->route('colaborador.index', ['colaborador'=>$colaborador->id_colaborador])->with("success","Colaborador cadastrado com sucesso");
 
        } catch (Exception $e) {
 
@@ -118,27 +117,26 @@ class ColaboradorController extends Controller
 
               // Editar as informações do registro no banco de dados
               $colaborador->update([
-                'empresa1_id' => $request->empresa1_id,
-               'empresa2_id' => $request->empresa2_id,
-               'setor_id' => $request->setor_id,
-               'turno_id' => $request->turno_id,
-               'login_id' => $request->login_id,
                'nome' => $request->nome,
-               'telefone' => $request->telefone,      
+               'fone' => $request->fone,
+               'id_emp2' => $request->id_emp2,
+               'id_users' => $request->id_users,
+               'id_turno' => $request->id_turno,
+               'id_setor' => $request->id_setor,       
             ]);
         // Salvar log
-        Log::info('Colaborador editado.', ['id' => $colaborador->id]);
+        Log::info('Colaborador editado.', ['id' => $colaborador->id_colaborador]);
             
 
         // Operação é concluída com êxito
         DB::commit();
 
         // Salvar log
-        Log::info('Colaborador editada.', [ 'colaborador' => $colaborador->id]);
+        Log::info('Colaborador editada.', [ 'colaborador' => $colaborador->id_colaborador]);
 
 
         // Redirecionar o usuário, enviar a mensagem de sucesso
-        return redirect()->route('colaborador.index', ['colaborador'=>$request->id])->with('success', 'Colaborador editado com sucesso!');
+        return redirect()->route('colaborador.index', ['colaborador'=>$request->id_colaborador])->with('success', 'Colaborador editado com sucesso!');
 
         } catch (Exception $e) {
 
@@ -161,7 +159,7 @@ class ColaboradorController extends Controller
                 $colaborador->delete();
     
                 // Salvar log
-                Log::info('Colaborador excluído.', ['id' => $colaborador->id]);
+                Log::info('Colaborador excluído.', ['id' => $colaborador->id_colaborador]);
     
                 // Redirecionar o usuário, enviar a mensagem de sucesso
                 return redirect()->route('colaborador.index')->with('success', 'Colaborador excluído com sucesso!');

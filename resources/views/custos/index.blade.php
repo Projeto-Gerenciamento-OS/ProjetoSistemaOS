@@ -26,10 +26,10 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>ID EMP1</th>
-                        <th>ID EMP2</th>
-                        <th>Percentual</th>
                         <th>Descrição</th>
+                        <th>Percentual</th>
+                        <th>ID EMP2</th>
+                        <th>ID Users</th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -37,22 +37,22 @@
                         
                 @forelse ($custos as $custo)
                     <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
-                        <th>{{ $custo->id }}</th>
-                        <th>{{ $custo->id_emp1 }}</th>
-                        <td >{{ $custo->id_emp2 }}</td>
-                        <th>{{ $custo->percentual }}</th>
+                        <th>{{ $custo->id_custo_geral }}</th>
                         <th>{{ $custo->descricao }}</th>
+                        <th>{{ $custo->percentual }}</th>
+                        <td >{{ $custo->id_emp2 }}</td>
+                        <td >{{ $custo->id_users }}</td>
                         <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 
-                            <a href="{{ route('custos.view', ['custos' => $custo->id]) }}" class="btnIcons">
+                            <a href="{{ route('custos.view', ['custos' => $custo->id_custo_geral]) }}" class="btnIcons">
                                 <i class="fa-regular fa-eye"></i>
                             </a>
 
-                            <a href="{{ route('custos.edit', ['custos' => $custo->id]) }}" class="btnIcons">
+                            <a href="{{ route('custos.edit', ['custos' => $custo->id_custo_geral]) }}" class="btnIcons">
                                 <i class="fa-solid fa-pen"></i>
                             </a>
 
-                            <form method="POST" action="{{ route('custos.delete', ['custos' => $custo->id]) }}">
+                            <form method="POST" action="{{ route('custos.delete', ['custos' => $custo->id_custo_geral]) }}">
                                 @csrf
                                 @method('delete')
                                 <button type="submit" class="btn-apagar btnIcons"

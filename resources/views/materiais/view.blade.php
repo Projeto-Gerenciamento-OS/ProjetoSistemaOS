@@ -37,22 +37,30 @@
                 <dl class="row">
 
                     <dt class="col-6 col-lg-4">ID: </dt>
-                    <dd class="col-6">{{ $materiais->id }}</dd>
-
-                    <dt class="col-6 col-lg-4">Nome: </dt>
-                    <dd class="col-6">{{ $materiais->nome}}</dd>
-
-                    <dt class="col-6 col-lg-4">Custo: </dt>
-                    <dd class="col-6">{{ $materiais->custo }}</dd>
+                    <dd class="col-6">{{ $materiais->id_materiais }}</dd>
+                    
+                    <dt class="col-6 col-lg-4">Descrição: </dt>
+                    <dd class="col-6">{{ $materiais->descricao }}</dd>
 
                     <dt class="col-6 col-lg-4">Unidade: </dt>
                     <dd class="col-6">{{ $materiais->unidade }}</dd>
 
+                    <dt class="col-6 col-lg-4">Custo: </dt>
+                    <dd class="col-6">{{ $materiais->custo }}</dd>
+
                     <dt class="col-6 col-lg-4">Valor: </dt>
                     <dd class="col-6">{{ $materiais->valor }}</dd>
 
-                    <dt class="col-6 col-lg-4">Descrição: </dt>
-                    <dd class="col-6">{{ $materiais->descricao }}</dd>
+                    <dt class="col-6 col-lg-4">ID EMP2: </dt>
+                    <dd class="col-6">{{ $materiais->id_emp2}}</dd>
+
+                    <dt class="col-6 col-lg-4">ID Users: </dt>
+                    <dd class="col-6">{{ $materiais->id_users}}</dd>
+
+
+
+
+
 
                     <dt class="col-6 col-lg-4">Cadastrado: </dt>
                     <dd class="col-6">

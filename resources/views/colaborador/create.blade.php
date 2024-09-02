@@ -25,7 +25,12 @@
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
                         <label for="id_colaborador" class="form-label">ID Colaborador</label>
-                        <input type="number" name="id_colaborador" id_colaborador="id_colaborador" class="form-control" placeholder="id_colaborador" value="{{ old('id_colaborador') }}">              
+                        <input type="text" name="id_colaborador" id_colaborador="id_colaborador" class="form-control" placeholder="id_colaborador" value="{{ old('id_colaborador') }}">              
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" name="nome" id_colaborador="id_colaborador" class="form-control" placeholder="id_colaborador" value="{{ old('nome') }}">              
                     </div>
             
                     <div class="mb-3">
@@ -40,19 +45,19 @@
                     
                     <div class="mb-3">
                         <label for="id_users" class="form-label">ID Users</label>
-                        <input type="number" name="id_users" id="id_users" class="form-control" placeholder="id_users" value="{{ old('login_id') }}">              
+                        <input type="text" name="id_users" id="id_users" class="form-control" placeholder="id_users" value="{{ old('login_id') }}">              
                     </div>
                 </div>
                 <div class="col-6 col-lg-6">
                     
                     <div class="mb-3">
                         <label for="id_turno" class="form-label">ID Turno</label>
-                        <input type="number" name="id_turno" id="id_turno" class="form-control" placeholder="Empresa1" value="{{ old('id_turno') }}">              
+                        <input type="text" name="id_turno" id="id_turno" class="form-control" placeholder="Empresa1" value="{{ old('id_turno') }}">              
                     </div>
 
                     <div class="mb-3">
                         <label for="id_setor" class="form-label">ID Setor</label>
-                        <input type="number" name="id_setor" id="id_setor" class="form-control" placeholder="Empresa2" value="{{ old('id_setor') }}">              
+                        <input type="text" name="id_setor" id="id_setor" class="form-control" placeholder="Empresa2" value="{{ old('id_setor') }}">              
                     </div>
 
                 </div>

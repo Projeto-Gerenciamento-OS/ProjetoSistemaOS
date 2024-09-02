@@ -40,31 +40,30 @@
 
                 <div class="col-12 col-lg-6">
                     <div class="mb-3">
-                        <label for="id_emp1" >ID EMP1</label>
-                        <input type="number" name="id_emp1" id="id_emp1"  placeholder=" Digite aqui"
-                            value="{{ old('id_emp1', $custos->id_emp1) }}">
+
+                        <div class="">
+                            <label for="descricao" class="form-label">Descrição</label>
+                            <input type="text"  name="descricao" id="descricao"  value="{{ old('descricao', $custos->descricao) }}" >
+                        </div> 
+
+                        <div class="mb-2">
+                            <label for="percentual" >Percentual </label>
+                            <input type="text" name="percentual" id="percentual"  placeholder=" Digite o percentual aqui"
+                                value="{{ old('percentual') }}">
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label for="id_emp2" >ID_EMP2 </label>
                         <input type="number" name="id_emp2" id="id_emp2" 
                             placeholder=" Melhor e-mail do usuário" value="{{ old('id_emp2', $custos->id_emp2) }}">
+
+                        <label for="id_users" >ID Users </label>
+                        <input type="number" name="id_users" id="id_users" 
+                            placeholder=" Melhor e-mail do usuário" value="{{ old('id_users', $custos->id_users) }}">
                     </div>
                 </div>
-
-                <div class="col-12 col-lg-6 ">
-                    <div class="mb-2">
-                        <label for="percentual" >Percentual </label>
-                        <input type="text" name="percentual" id="percentual"  placeholder=" Digite o percentual aqui"
-                            value="{{ old('percentual') }}">
-                    </div>
-
-                    <div class="">
-                        <label for="descricao" class="form-label">Descrição</label>
-                        <input type="text"  name="descricao" id="descricao"  value="{{ old('descricao', $custos->descricao) }}" >
-                    </div> 
-                </div>
-
+                
                 <a  class="  btnCadastrar">
                     <button type="submit">
                         <h5>Salvar</h5>
