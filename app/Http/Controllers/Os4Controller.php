@@ -157,7 +157,7 @@ class Os4Controller extends Controller
             Log::info('Os4 não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Os4 não excluído!');
+            return redirect()->route('os4.index')->with('error', 'Os4 não excluído!');
         }
     }
 }

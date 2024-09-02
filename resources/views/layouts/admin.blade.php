@@ -109,6 +109,7 @@
                                         <a class="nav-link" href="{{route('materiais.index') }}">Materiais</a>
                                         <a class="nav-link" href="{{route('custos.index') }}">Custo Geral</a>
                                         <a class="nav-link" href="{{route('status.index') }}">Status</a>
+                                        <a class="nav-link" href="{{route('turno.index') }}">Turno</a>
                                     </nav>
                                 </div>
                         </li>

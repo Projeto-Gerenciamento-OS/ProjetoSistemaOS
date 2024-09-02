@@ -26,7 +26,6 @@
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">Apagar</span>
                         <i class="fa-solid fa-trash"></i>
-                    
                     </button>
                 </form>
             </span>

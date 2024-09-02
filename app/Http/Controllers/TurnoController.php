@@ -140,7 +140,7 @@ class TurnoController extends Controller
             Log::info('Turno não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
+            return redirect()->route('turno.index')->with('error', 'Usuário não excluído!');
         }
     }
 }

@@ -140,7 +140,7 @@ class MateriaisController extends Controller
             Log::info('Material não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
+            return redirect()->route('materiais.index')->with('error', 'Usuário não excluído!');
         }
     }
 }
