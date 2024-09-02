@@ -46,7 +46,7 @@
 
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
 
-                                <a href="{{ route('servico.view', ['servico' => $servico->id]) }}" class='btnIcons'>
+                                <a href="{{ route('servico.view', ['servicos' => $servico->id]) }}" class='btnIcons'>
                                     <i class="fa-regular fa-eye "></i>
                                 </a>
 

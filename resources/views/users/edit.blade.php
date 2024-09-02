@@ -69,6 +69,12 @@
                         <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('email', $user->id_emp2) }}" >
                     </div>
 
+                    <div class="col-6 mt-2 ">
+                        <div class="mb-1">
+                            <label for="id_emp2" class="form-label">id_emp2: </label>
+                            <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('id_emp2', $user->id_emp2) }}" >
+                        </div>
+
                     <div class="mb-3">
                         <label for="roles" class="form-label">Nível: </label>
                         {{-- <input type="number" min="1" max="3" name="nivel" id="nivel"  value="{{ old('email', $user->nivel) }}" > --}}

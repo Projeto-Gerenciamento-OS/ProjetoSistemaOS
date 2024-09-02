@@ -31,13 +31,11 @@ Route::get('/', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [LoginController::class, 'loginAcesso'])->name('login.acesso');
 Route::get('/logout', [LoginController::class, 'delete'])->name('login.delete');
 
-
 //criando um grupo de rotas privadas
 Route::group(['middleware' => 'auth'], function () {
 
 //Rota Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-
 
 // Usuários
 Route::get('/index-user', [UserController::class, 'index'])->name('user.index');
@@ -75,7 +73,6 @@ Route::put('/update-emp2/{emp2}', [Emp2Controller::class, 'update'])->name('emp2
 Route::delete('/delete-emp2/{emp2}', [Emp2Controller::class, 'delete'])->name('emp2.delete');
 
 
-
 //Empresa1
 Route::get('/emp1', [Emp1Controller::class, 'index'])->name('emp1.index');
 //Visualizar empresa
@@ -97,18 +94,17 @@ Route::delete('/delete-emp1/{emp1}', [Emp1Controller::class, 'delete'])->name('e
 //Colaborador
 Route::get('/colaborador',[ColaboradorController::class, 'index'])->name('colaborador.index');
 //Visualizar empresa
-
 Route::get('/view-colaborador/{colaborador}',[ColaboradorController::class, 'view'])->name('colaborador.view');
 //carrega o cadastrar empresa
 Route::get('/create-colaborador',[ColaboradorController::class, 'create'])->name('colaborador.create');
 //recebe o cadastrar empresa
 Route::post('/store-colaborador',[ColaboradorController::class, 'store'])->name('colaborador.store');
 //carrega o editar  empresa
-
 Route::get('/edit-colaborador/{colaborador}',[ColaboradorController::class, 'edit'])->name('colaborador.edit');
-//recebe o editar empresa
 
+//recebe o editar empresa
 Route::put('/update-colaborador/{colaborador}',[ColaboradorController::class, 'update'])->name('colaborador.update');
+
 //deleta empresa
 Route::delete('/delete-colaborador/{colaborador}', [ColaboradorController::class, 'delete'])->name('colaborador.delete');
 
@@ -116,18 +112,18 @@ Route::delete('/delete-colaborador/{colaborador}', [ColaboradorController::class
 //Serviços Gerais
 Route::get('/servico', [ServicoController::class, 'index'])->name('servico.index');
 //Visualizar empresa
-
 Route::get('/view-servico/{servico}',[ServicoController::class, 'view'])->name('servico.view');
+
 //carrega o cadastrar empresa
 Route::get('/create-servico',[ServicoController::class, 'create'])->name('servico.create');
 //recebe o cadastrar empresa
 Route::post('/store-servico',[ServicoController::class, 'store'])->name('servico.store');
 //carrega o editar  empresa
-
 Route::get('/edit-servico/{servico}',[ServicoController::class, 'edit'])->name('servico.edit');
-//recebe o editar empresa
 
+//recebe o editar empresa
 Route::put('/update-servico/{servico}',[ServicoController::class, 'update'])->name('servico.update');
+
 //deleta empresa
 Route::delete('/delete-servico/{servico}', [ServicoController::class, 'delete'])->name('servico.delete');
 
@@ -135,8 +131,8 @@ Route::delete('/delete-servico/{servico}', [ServicoController::class, 'delete'])
 //Materiais
 Route::get('/materiais',[MateriaisController::class, 'index'])->name('materiais.index');
 //Visualizar empresa
-
 Route::get('/view-materiais/{materiais}',[MateriaisController::class, 'view'])->name('materiais.view');
+
 //carrega o cadastrar empresa
 Route::get('/create-materiais',[MateriaisController::class, 'create'])->name('materiais.create');
 //recebe o cadastrar empresa
@@ -145,8 +141,8 @@ Route::post('/store-materiais',[MateriaisController::class, 'store'])->name('mat
 
 Route::get('/edit-materiais/{materiais}',[MateriaisController::class, 'edit'])->name('materiais.edit');
 //recebe o editar empresa
-
 Route::put('/update-materiais/{materiais}',[MateriaisController::class, 'update'])->name('materiais.update');
+
 //deleta empresa
 Route::delete('/delete-materiais/{materiais}', [MateriaisController::class, 'delete'])->name('materiais.delete');
 
@@ -155,18 +151,18 @@ Route::delete('/delete-materiais/{materiais}', [MateriaisController::class, 'del
 
 Route::get('/custos',[CustosController::class, 'index'])->name('custos.index');
 //Visualizar empresa
-
 Route::get('/view-custos/{custos}',[CustosController::class, 'view'])->name('custos.view');
+
 //carrega o cadastrar empresa
 Route::get('/create-custos',[CustosController::class, 'create'])->name('custos.create');
 //recebe o cadastrar empresa
 Route::post('/store-custos',[CustosController::class, 'store'])->name('custos.store');
 //carrega o editar  empresa
-
 Route::get('/edit-custos/{custos}',[CustosController::class, 'edit'])->name('custos.edit');
-//recebe o editar empresa
 
+//recebe o editar empresa
 Route::put('/update-custos/{custos}',[CustosController::class, 'update'])->name('custos.update');
+
 //deleta empresa
 Route::delete('/delete-custos/{custos}', [CustosController::class, 'delete'])->name('custos.delete');
 
@@ -175,18 +171,18 @@ Route::delete('/delete-custos/{custos}', [CustosController::class, 'delete'])->n
 
 Route::get('/status',[StatusController::class, 'index'])->name('status.index');
 //Visualizar empresa
-
 Route::get('/view-status/{status}',[StatusController::class, 'view'])->name('status.view');
+
 //carrega o cadastrar empresa
 Route::get('/create-status',[StatusController::class, 'create'])->name('status.create');
 //recebe o cadastrar empresa
 Route::post('/store-status',[StatusController::class, 'store'])->name('status.store');
 //carrega o editar  empresa
-
 Route::get('/edit-status/{status}',[StatusController::class, 'edit'])->name('status.edit');
-//recebe o editar empresa
 
+//recebe o editar empresa
 Route::put('/update-status/{status}',[StatusController::class, 'update'])->name('status.update');
+
 //deleta empresa
 Route::delete('/delete-status/{status}', [StatusController::class, 'delete'])->name('status.delete');
 
@@ -194,18 +190,18 @@ Route::delete('/delete-status/{status}', [StatusController::class, 'delete'])->n
 
 Route::get('/turno',[TurnoController::class, 'index'])->name('turno.index');
 //Visualizar empresa
-
 Route::get('/view-turno/{turno}',[TurnoController::class, 'view'])->name('turno.view');
+
 //carrega o cadastrar empresa
 Route::get('/create-turno',[TurnoController::class, 'create'])->name('turno.create');
 //recebe o cadastrar empresa
 Route::post('/store-turno',[TurnoController::class, 'store'])->name('turno.store');
 //carrega o editar  empresa
-
 Route::get('/edit-turno/{turno}',[TurnoController::class, 'edit'])->name('turno.edit');
-//recebe o editar empresa
 
+//recebe o editar empresa
 Route::put('/update-turno/{turno}',[TurnoController::class, 'update'])->name('turno.update');
+
 //deleta empresa
 Route::delete('/delete-turno/{turno}', [TurnoController::class, 'delete'])->name('turno.delete');
 
@@ -213,8 +209,8 @@ Route::delete('/delete-turno/{turno}', [TurnoController::class, 'delete'])->name
 
 Route::get('/setor',[SetorController::class, 'index'])->name('setor.index');
 //Visualizar empresa
-
 Route::get('/view-setor/{setor}',[SetorController::class, 'view'])->name('setor.view');
+
 //carrega o cadastrar empresa
 Route::get('/create-setor',[SetorController::class, 'create'])->name('setor.create');
 //recebe o cadastrar empresa
@@ -289,8 +285,6 @@ Route::get('/edit-os4/{os4}',[Os4Controller::class, 'edit'])->name('os4.edit');
 Route::put('/update-os4/{os4}',[Os4Controller::class, 'update'])->name('os4.update');
 
 Route::delete('/delete-os4/{os4}', [Os4Controller::class, 'delete'])->name('os4.delete');
-
-
 
 
 //Agenda

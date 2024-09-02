@@ -35,7 +35,9 @@ class Emp1Controller extends Controller
     public function view(Emp1 $emp1)
     {
         //Carrega a View
-        return view( 'emp1.view', ['emp1', 'emp1' => $emp1]);
+        return view( 'emp1.view', ['menu' => 'emp1','emp1'=> $emp1]);
+
+        
     }
 
 

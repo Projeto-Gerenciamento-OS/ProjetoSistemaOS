@@ -14,7 +14,7 @@ class Emp1Seeder extends Seeder
     public function run(): void
     {
         Emp1::create([
-            'descricao'=>'teste',
+            'descricao'=>'Empresa1',
         ]);
     }
 }
