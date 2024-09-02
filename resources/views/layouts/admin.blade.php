@@ -66,9 +66,9 @@
                                 </div>
                             </a>
                             <div class="collapse" id="collapseLayoutsEmp" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">
-                                    <a class="nav-link" href="{{route('emp1.index') }}">Empresa</a>
-                                    <a class="nav-link" href="{{route('emp2.index') }}">Empresas Afiliadas</a>
+                                <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">                         
+                                    <a class="nav-link" href="{{ route('emp1.index') }}">Empresa 1</a>
+                                    <a class="nav-link" href="{{ route('emp2.index') }}">Empresa 2</a>
     
                                 </nav>
                             </div>

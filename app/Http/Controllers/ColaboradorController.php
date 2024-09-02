@@ -63,8 +63,7 @@ class ColaboradorController extends Controller
 
            // Cadastrar no banco de dados na tabela colaborador
            $colaborador = Colaborador::create([
-               'empresa1_id' => $request->empresa1_id,
-               'empresa2_id' => $request->empresa2_id,
+               'id_emp2' => $request->id_emp2,
                'setor_id' => $request->setor_id,
                'turno_id' => $request->turno_id,
                'login_id' => $request->login_id,

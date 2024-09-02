@@ -5,9 +5,8 @@
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista" >
         <div class="card-header">
-            <h1>Empresa 1</h1>
+            <h1>Empresa 1</h1>    
 
-            
             <form action="{{ route('emp1.index') }}">
                 <div class="pesquisar">
                     
@@ -18,10 +17,19 @@
                     </button>
                 </div>
             </form>
-        </div>
 
+        </div>
         <div class="card-body"> 
-            <table >
+            
+            <a href="{{ route('emp1.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>Cadastrar</h5>
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>  
+            </a>
+
+            <table>
+
                 <thead>
                     <tr class="titulos">
                         <th  >ID</th>
@@ -31,21 +39,20 @@
                     </tr>
                 </thead>
 
-                
                 <tbody>
                     @forelse ($emp1 as $empres)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
-                            <th  >{{ $empres->id }}</th>   
+                            <th  >{{ $empres->id}}</th>   
                             
-                            <th>{{ $empres->descricao}}</th>           
+                            <th>{{ $empres->descricao}}</th>     
                             
-                                <td class="d-md-flex flex-row gap-2 justify-content-center pt-8"> 
+                            <td class="d-md-flex flex-row gap-2 justify-content-center pt-8"> 
 
-                                <a href="{{ route('emp1.view', ['emp1' => $empres->id]) }}"
-                                    class="btnIcons">
+                         
+                                <a href="{{ route('emp1.view', ['emp1' => $empres->id]) }}" class="btnIcons">
+                                    {{-- {{ dd($emp1)}} --}}
                                     <i class="fa-regular fa-eye"></i> 
                                 </a>
-
                                 <a href="{{ route('emp1.edit', ['emp1' => $empres->id]) }}"
                                     class="btnIcons">
                                     <i class="fa-solid fa-pen"></i> 
@@ -59,7 +66,10 @@
                                         <i class="fa-regular fa-trash-can"></i> 
                                     </button>
                                 </form>
+
                             </td>
+                            
+                             
                         </tr>
                     @empty
                         <div class="alert alert-danger" role="alert">
@@ -68,18 +78,13 @@
                     @endforelse
 
                 </tbody>
+
             </table>
             {{ $emp1->onEachSide(0)->links() }} 
         </div>
-    </div>
-</div>
+ </div>
 
-<a href="{{ route('emp1.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a>
+     
 
 
 @endsection

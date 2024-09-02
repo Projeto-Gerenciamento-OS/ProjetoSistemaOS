@@ -9,10 +9,11 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
     public function up(): void
     {
         Schema::create('cli', function (Blueprint $table) {
-            $table->bigIncrements('id_cli');        
+            $table->id();        
 			$table->integer('tipo');		
             $table->string('cpf_cnpj');
             $table->string('razao');
