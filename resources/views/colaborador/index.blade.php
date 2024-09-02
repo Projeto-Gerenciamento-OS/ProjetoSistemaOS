@@ -36,9 +36,9 @@
                         <th>Nome</th>
                         <th>Telefone</th>
                         <th>Empresa2</th>
-                        <th>Setor</th>
+                        <th>Usuario</th>
                         <th>Turno</th>
-                        <th>ID Usuários</th>
+                        <th>Setor</th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -52,9 +52,9 @@
                             <th>{{ $colab->nome}}</th>           
                             <th>{{ $colab->fone}}</th>  
                             <th>{{ $colab->id_emp2}}</th>  
-                            <th>{{ $colab->id_setor}}</th>   
+                            <th>{{ $colab->id_users}}</th>   
                             <th>{{ $colab->id_turno}}</th>  
-                            <th>{{ $colab->id_users}}</th>  
+                            <th>{{ $colab->id_setor}}</th>  
                             <td class="acoes d-md-flex flex-row gap-2 justify-content-center pt-8">
 
                                 <a href="{{ route('colaborador.view', ['colaborador' => $colab->id]) }}" class='btnIcons'>
