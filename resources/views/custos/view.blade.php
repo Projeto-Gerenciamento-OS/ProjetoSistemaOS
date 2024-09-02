@@ -37,7 +37,7 @@
                 <dl class="row">
 
                     <dt class="col-6 col-lg-4">ID: </dt>
-                    <dd class="col-6">{{ $custos->id_custo_geral }}</dd>
+                    <dd class="col-6">{{ $custos->id }}</dd>
 
                     <dt class="col-6 col-lg-4">Descrição: </dt>
                     <dd class="col-6">{{ $custos->descricao }}</dd>

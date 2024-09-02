@@ -20,17 +20,15 @@
                 @csrf
                 @method('POST')
 
-
-
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="id_colaborador" class="form-label">ID Colaborador</label>
-                        <input type="text" name="id_colaborador" id_colaborador="id_colaborador" class="form-control" placeholder="id_colaborador" value="{{ old('id_colaborador') }}">              
+                        <label for="id" class="form-label">ID Colaborador</label>
+                        <input type="text" name="id" id="id" class="form-control" placeholder="id" value="{{ old('id') }}">              
                     </div>
 
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome</label>
-                        <input type="text" name="nome" id_colaborador="id_colaborador" class="form-control" placeholder="id_colaborador" value="{{ old('nome') }}">              
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="nome" value="{{ old('nome') }}">              
                     </div>
             
                     <div class="mb-3">

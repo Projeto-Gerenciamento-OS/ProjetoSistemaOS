@@ -14,12 +14,12 @@
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
     
-                <a href="{{ route('colaborador.edit', ['colaborador' => $colaborador->id_colaborador]) }}" class="btn  btn-sm me-1">
+                <a href="{{ route('colaborador.edit', ['colaborador' => $colaborador->id]) }}" class="btn  btn-sm me-1">
                     <span class="listar-texto">Editar</span>
                     <i class="fa-solid fa-pen"></i>
                 </a>
     
-                <form method="POST" action="{{ route('colaborador.delete', ['colaborador' => $colaborador->id_colaborador]) }}">
+                <form method="POST" action="{{ route('colaborador.delete', ['colaborador' => $colaborador->id]) }}">
                     @csrf
                     @method('delete')
                     <button type="submit" class="btn  btn-sm me-1"
@@ -39,7 +39,7 @@
 
                 <div class='visualizacaoDados row'>
                     <span class='col-6 col-lg-4'> ID: </span>
-                    <p class="col-6">{{ $colaborador->id_colaborador }}</p>
+                    <p class="col-6">{{ $colaborador->id }}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>

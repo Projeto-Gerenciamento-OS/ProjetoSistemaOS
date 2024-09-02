@@ -39,24 +39,8 @@ body {
         border-radius: 0 5px 5px 0;
         position: relative;
         transition: .1s;
-        width:60px;
-        overflow:hidden;
-        -webkit-transition:width .05s linear;
-        transition:width .05s linear;
-        transform: translateZ(0) scale(1,1);
-        transition: .1s;
-        transition: all ease-in;
-        transition-duration: .1s;
-        z-index:1000;
+        width:300px;
         box-shadow:0px 6px 15px 5px rgba(0, 0, 0, 0.171);
-
-        &:hover, .layoutAdmin.layoutSidenav_nav.expanded {
-            width:300px;
-            overflow:visible;
-            transition: all ease-in;
-            transition-duration: .1s;
-        }
-
         
         #navContainerGeral {
             display: flex;

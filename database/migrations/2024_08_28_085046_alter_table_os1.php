@@ -14,8 +14,8 @@ return new class extends Migration
       // Alterando a tabela do Os1.
       Schema::table("os1", function (Blueprint $table) {
 
-        $table->foreignId('id_emp2')->constrained('emp2','id_emp2');
-        $table->foreignId('id_status')->constrained('status','id_status');
+        $table->foreignId('id_emp2')->constrained('emp2');
+        $table->foreignId('id_status')->constrained('status');
         $table->foreignId('id_users')->constrained('users');
     });
 }

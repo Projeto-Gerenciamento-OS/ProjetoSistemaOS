@@ -42,19 +42,19 @@
                 <div class="col-6 col-lg-6">
                    
                     <div class="mb-3">
-                        <label for="id_colaborador" class="form-label">ID Colaborador:</label>
-                        <input type="number" name="id_colaborador" id="id_colaborador" class="form-control" placeholder="id" value="{{ old('id_colaborador',$colaborador->id_colaborador) }}">              
+                        <label for="id" class="form-label">ID Colaborador:</label>
+                        <input type="text" name="id" id="id" class="form-control" placeholder="id" value="{{ old('id',$colaborador->id) }}" readonly>              
                     </div>
     
                     <div class="mb-3">
                         <label for="id_emp2" class="form-label">Empresa2:</label>
-                        <input type="number" name="id_emp2" id="id_emp2" class="form-control" placeholder="Empresa2" value="{{ old('id_colaborador',$colaborador->id_emp2) }}">              
+                        <input type="number" name="id_emp2" id="id_emp2" class="form-control" placeholder="Empresa2" value="{{ old('id',$colaborador->id_emp2) }}">              
                     </div>
         
         
                     <div class="mb-3">
                         <label for="id_setor" class="form-label">Setor:</label>
-                        <input type="text" name="id_setor" id="id_setor" class="form-control" placeholder="setor" value="{{ old('id_colaborador',$colaborador->id_setor) }}">              
+                        <input type="text" name="id_setor" id="id_setor" class="form-control" placeholder="setor" value="{{ old('id',$colaborador->id_setor) }}">              
                     </div>
     
                 </div>
@@ -64,23 +64,23 @@
                    
                     <div class="mb-3">
                         <label for="id_turno" class="form-label">Turno:</label>
-                        <input type="text" name="id_turno" id="id_turno" class="form-control" placeholder="Turno" value="{{ old('id_colaborador',$colaborador->id_turno) }}">              
+                        <input type="text" name="id_turno" id="id_turno" class="form-control" placeholder="Turno" value="{{ old('id',$colaborador->id_turno) }}">              
                     </div>
         
         
                     <div class="mb-3">
                         <label for="id_users" class="form-label">ID Users:</label>
-                        <input type="text" name="id_users" id="id_users" class="form-control" placeholder="id_users" value="{{ old('id_colaborador',$colaborador->id_users) }}">              
+                        <input type="text" name="id_users" id="id_users" class="form-control" placeholder="id_users" value="{{ old('id',$colaborador->id_users) }}">              
                     </div>
         
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome:</label>
-                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" value="{{ old('id_colaborador',$colaborador->nome) }}">              
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" value="{{ old('id',$colaborador->nome) }}">              
                     </div>
         
                     <div class="mb-3">
                         <label for="fone" class="form-label">fone:</label>
-                        <input type="number" name="fone" id="fone" class="form-control" placeholder="Telfone" value="{{ old('id_colaborador',$colaborador->fone) }}">              
+                        <input type="number" name="fone" id="fone" class="form-control" placeholder="Telfone" value="{{ old('id',$colaborador->fone) }}">              
                     </div>
 
                 </div>

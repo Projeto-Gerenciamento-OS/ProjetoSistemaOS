@@ -33,7 +33,7 @@ class ColaboradorController extends Controller
        
          //SALVAR LOG
 
-         Log::info('Visualizar Colaborador',['colaborador'=>$colaborador->id_colaborador]);
+         Log::info('Visualizar Colaborador',['colaborador'=>$colaborador->id]);
 
         // Carregar a VIEW
 
@@ -74,10 +74,10 @@ class ColaboradorController extends Controller
            // Operação é concluída com êxito
            DB::commit();
             // Salvar log
-           Log::info('Colaborador cadastrado.', [ 'id' => $colaborador->id_colaborador]);
+           Log::info('Colaborador cadastrado.', [ 'id' => $colaborador->id]);
 
            // Redirecionar para colaborador, enviar a mensagem de sucesso
-           return redirect()->route('colaborador.index', ['colaborador'=>$colaborador->id_colaborador])->with("success","Colaborador cadastrado com sucesso");
+           return redirect()->route('colaborador.index', ['colaborador'=>$colaborador->id])->with("success","Colaborador cadastrado com sucesso");
 
        } catch (Exception $e) {
 
@@ -125,18 +125,18 @@ class ColaboradorController extends Controller
                'id_setor' => $request->id_setor,       
             ]);
         // Salvar log
-        Log::info('Colaborador editado.', ['id' => $colaborador->id_colaborador]);
+        Log::info('Colaborador editado.', ['id' => $colaborador->id]);
             
 
         // Operação é concluída com êxito
         DB::commit();
 
         // Salvar log
-        Log::info('Colaborador editada.', [ 'colaborador' => $colaborador->id_colaborador]);
+        Log::info('Colaborador editada.', [ 'colaborador' => $colaborador->id]);
 
 
         // Redirecionar o usuário, enviar a mensagem de sucesso
-        return redirect()->route('colaborador.index', ['colaborador'=>$request->id_colaborador])->with('success', 'Colaborador editado com sucesso!');
+        return redirect()->route('colaborador.index', ['colaborador'=>$request->id])->with('success', 'Colaborador editado com sucesso!');
 
         } catch (Exception $e) {
 
@@ -159,7 +159,7 @@ class ColaboradorController extends Controller
                 $colaborador->delete();
     
                 // Salvar log
-                Log::info('Colaborador excluído.', ['id' => $colaborador->id_colaborador]);
+                Log::info('Colaborador excluído.', ['id' => $colaborador->id]);
     
                 // Redirecionar o usuário, enviar a mensagem de sucesso
                 return redirect()->route('colaborador.index')->with('success', 'Colaborador excluído com sucesso!');

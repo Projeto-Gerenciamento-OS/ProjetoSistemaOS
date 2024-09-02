@@ -48,7 +48,7 @@
                      
                     @forelse ($colaborador as $colab)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
-                            <th>{{ $colab->id_colaborador }}</th>   
+                            <th>{{ $colab->id }}</th>   
                             <th>{{ $colab->nome}}</th>           
                             <th>{{ $colab->fone}}</th>  
                             <th>{{ $colab->id_emp2}}</th>  
@@ -57,15 +57,15 @@
                             <th>{{ $colab->id_users}}</th>  
                             <td class="acoes d-md-flex flex-row gap-2 justify-content-center pt-8">
 
-                                <a href="{{ route('colaborador.view', ['colaborador' => $colab->id_colaborador]) }}" class='btnIcons'>
+                                <a href="{{ route('colaborador.view', ['colaborador' => $colab->id]) }}" class='btnIcons'>
                                     <i class="fa-regular fa-eye"></i>
                                 </a>
 
-                                <a href="{{ route('colaborador.edit', ['colaborador' => $colab->id_colaborador]) }}" class='btnIcons'>
+                                <a href="{{ route('colaborador.edit', ['colaborador' => $colab->id]) }}" class='btnIcons'>
                                     <i class="fa-solid fa-pen"></i>
                                 </a>
 
-                                <form action="{{ route('colaborador.delete', ['colaborador' => $colab->id_colaborador])}}" method="POST">
+                                <form action="{{ route('colaborador.delete', ['colaborador' => $colab->id])}}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn-apagar btnIcons"
