@@ -154,7 +154,7 @@
                                     <th>{{ $item->vunit }}</th>
                                     <th>{{ $item->vtotal }}</th>
                                     <th>{{ $item->cunit }}</th>
-                                    <th>{{ $item->cunit }}</th>
+                                    <th>{{ $item->ctotal }}</th>
                                     
                                     <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 
