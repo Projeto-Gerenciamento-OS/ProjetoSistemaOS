@@ -1,10 +1,10 @@
 @extends ('layouts.admin')
 
-@section('content')
+@section('content') 
 
 <div class="container-fluid data-container os-container">
 
-<div class="accordion" id="accordionOSs">
+ <div class="accordion" id="accordionOSs">
 
     <div class="accordion-item">
         <h2 class="accordion-header">
@@ -371,21 +371,19 @@
             </div>
         </div>
     </div>
-</div>  
-</div>
+</div>   
+</div> 
 
     
 @endsection
 
-@extends('layouts.admin')
+{{-- @extends('layouts.admin')
 
 @section('content')
 
 <div class="container-fluid data-container os-container">
 
-    {{-- <a href="{{ route('os.view', ['os' => $os->id]) }}" class='btnIcons'>
-        <i class="fa-regular fa-eye "></i>
-    </a> --}}
+
 <div class="accordion" id="accordionOSs">
 
     <div class="accordion-item">
@@ -753,6 +751,5 @@
     </div>
 </div>  
 </div>
-
-    
-@endsection
+  
+@endsection --}}
