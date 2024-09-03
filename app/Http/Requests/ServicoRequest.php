@@ -21,7 +21,7 @@ class ServicoRequest extends FormRequest
     public function messages():array
     {
         return[
-            'nome.required'=>'Campo nome é Obrigatório',
+            // 'nome.required'=>'Campo nome é Obrigatório',
             // 'tipo.required'=>'Campo tipo é Obrigatório',
             // 'nivel.required'=>'Campo nivel é Obrigatório',
         ];
