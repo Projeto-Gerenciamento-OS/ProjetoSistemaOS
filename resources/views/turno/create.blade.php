@@ -27,12 +27,12 @@
 
                     <div class="mb-3">
                         <label for="inicio" class="form-label">inicio </label>
-                        <input type="text" name="inicio" id="inicio"   required >
+                        <input type="time" name="inicio" id="inicio"   required >
                     </div>
 
                     <div class="mb-3">
                         <label for="pausa" class="form-label">pausa </label>
-                        <input type="text" name="pausa" id="pausa"   required >
+                        <input type="time" name="pausa" id="pausa"   required >
                     </div>
                 </div>
 
@@ -40,12 +40,12 @@
                       
                     <div class="mb-3">
                         <label for="retorno" class="form-label">retorno </label>
-                        <input type="text"  name="retorno" id="retorno"   required>
+                        <input type="time"  name="retorno" id="retorno"   required>
                     </div>
 
                     <div class="mb-3">
                         <label for="termino" class="form-label">termino </label>
-                        <input type="text" name="termino" id="termino" 
+                        <input type="time" name="termino" id="termino" 
                             placeholder="Digite " value="{{ old('termino') }}">
                     </div>
 
