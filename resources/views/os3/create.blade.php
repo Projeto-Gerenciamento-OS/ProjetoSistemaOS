@@ -18,50 +18,61 @@
                 @method('POST')
 
                 <div class="col-6 col-lg-6">
+
                     <div class="mb-3">
-                        <label for="id_os1_os3" class="form-label">ID OS1 </label>
-                        <input type="number" name="id_os1_os3" id="id_os1_os3"  placeholder=" Digite o id_os1_os3"
-                            value="{{ old('id_os1_os3') }}">
-                    </div>
-                    <div class="mb-3">
-                        <label for="id_emp1_os3" class="form-label"> ID EMP1</label>
-                        <input type="number" name="id_emp1_os3" id="id_emp1_os3" 
-                            placeholder=" Digite a data cadastrada" value="{{ old('id_emp1_os3') }}">
-                    </div>
-                     
-                    <div class="mb-3">
-                        <label for="id_emp2_os3" class="form-label">ID EMP2 </label>
-                        <input type="number" name="id_emp2_os3" id="id_emp2_os3" 
-                            placeholder=" Digite a id_emp2_os3" value="{{ old('id_emp2_os3') }}">
+                        <label for="qtde" class="form-label">qtde </label>
+                        <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                            value="{{ old('qtde') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_material" class="form-label">ID Material </label>
-                        <input type="number"  name="id_material" id="id_material"   required
-                        value="{{ old('id_emp2_os3') }}" >
+                        <label for="qtde" class="form-label">qtde </label>
+                        <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                            value="{{ old('qtde') }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="qtde" class="form-label">qtde </label>
+                        <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                            value="{{ old('qtde') }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="qtde" class="form-label">qtde </label>
+                        <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                            value="{{ old('qtde') }}">
                     </div>
 
                 </div>
+
                 <div class="col-6 col-lg-6">
-                    <div class="mb-3">
-                        <label for="valorUnitario_os3" class="form-label">Valor Unitário</label>
-                        <input type="text"  name="valorUnitario_os3" id="valorUnitario_os3"   required>
-                    </div> 
 
                     <div class="mb-3">
-                        <label for="valorTotal_os3" class="form-label">Valor Total</label>
-                        <input type="text"  name="valorTotal_os3" id="valorTotal_os3"   required>
-                    </div> 
+                        <label for="qtde" class="form-label">qtde </label>
+                        <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                            value="{{ old('qtde') }}">
+                    </div>
 
                     <div class="mb-3">
-                        <label for="custoTotal_os3" class="form-label">Custo Total</label>
-                        <input type="text"  name="custoTotal_os3" id="custoTotal_os3"   required>
-                    </div>  
-                </div>         
+                        <label for="qtde" class="form-label">qtde </label>
+                        <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                            value="{{ old('qtde') }}">
+                    </div>
 
-          
-        
-                
+                    <div class="mb-3">
+                        <label for="qtde" class="form-label">qtde </label>
+                        <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                            value="{{ old('qtde') }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="qtde" class="form-label">qtde </label>
+                        <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                            value="{{ old('qtde') }}">
+                    </div>
+
+                </div>      
+
                 <a  class="btnCadastrar">
                     <button type="submit">
                         <h5>Concluir</h5>
