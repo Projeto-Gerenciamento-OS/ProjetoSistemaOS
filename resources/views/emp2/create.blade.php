@@ -21,7 +21,7 @@
                 @method('POST')
 
                         <!-- Coluna 1 -->
-                        <div class="col-6 col-lg-6">   
+                        <div class="col-lg-4">
                             <div class="mb-3">
                                 <label for="id_emp1" class="form-label">ID EMP1:</label>
                                 <input type="number" name="id_emp1" id="id_emp1" class="form-control" placeholder="Código Empresa 1" value="{{ old('id_emp1') }}">
@@ -50,7 +50,7 @@
 
                         <!-- Coluna 2 -->
 
-                        <div class="col-6 col-lg-6">   
+                        <div class="col-lg-4">
                             <div class="mb-3">
                                 <label for="razao" class="form-label">Razão:</label>
                                 <input type="text" name="razao" id="razao" class="form-control" placeholder="Razão Social" value="{{ old('razao') }}">
@@ -79,7 +79,7 @@
                         </div>
                         
                         <!-- Coluna 3 -->
-                        <div class="col-6 col-lg-6">   
+                        <div class="col-lg-4">
 
                             <div class="mb-3">
                                 <label for="uf" class="form-label">UF:</label>

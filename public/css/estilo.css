@@ -308,11 +308,8 @@ body {
 
         .card-body {
             margin: auto;
-            display: flex;
             background-color: rgba(233, 233, 233, 0.293);
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+    
             padding: 20px 15px;
             border: none;
             border-radius: 0px 0px 5px 5px;
@@ -358,24 +355,27 @@ body {
                 
             }
 
-            form div {
-                display:flex;
-                flex-direction: column;
-                overflow: auto;
-                margin: auto;
-                input{
-                    border: 0.2px solid rgba(0, 0, 0, 0.300);
-                    padding:0.5rem 0;
-                    border-radius: 5px;
-                    padding: var(--espacoInternoBtn);
+            form {
+                div {
+                    align-items: start;
+                    display:flex;
+                    flex-direction: column;
+                    overflow: auto;
+                    margin: 0 auto;
+                    input{
+                        border: 0.2px solid rgba(0, 0, 0, 0.300);
+                        padding:0.5rem 0;
+                        border-radius: 5px;
+                        padding: var(--espacoInternoBtn);
+                    }
                 }
-            }
-            @media screen and (max-width: 736px) {
-                form div{
-                    padding: 20px 5%;
-                    margin-left: auto;
-                }
+                @media screen and (max-width: 736px) {
+                    form div{
+                        padding: 20px 5%;
+                        margin-left: auto;
+                    }
 
+                }
             }
         }
     }

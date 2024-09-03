@@ -50,7 +50,7 @@
 
                         <!-- Coluna 2 -->
 
-                        <div class="col-lg-4">
+                        <div class="col-lg-2">
                             <div class="mb-3">
                                 <label for="numero" class="form-label">numero:</label>
                                 <input type="text" name="numero" id="numero" class="form-control" placeholder="numero" value="{{ old('numero') }}">
