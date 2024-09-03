@@ -8,7 +8,7 @@
             <div class="cardHeaderAsociados card-header">
                 <h1 class="mt-3">Visualização</h1>
                 <span class="ms-auto d-flex  flex-row gap-2">
-                    <a href="{{ route('os4.index') }}" class="btn ">
+                    <a href="{{ route('os.index') }}" class="btn ">
                         <span class="listar-texto">Listar</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
@@ -40,20 +40,20 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $os4->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">ID EMP1: </dt>
-                    <dd class="col-6">{{ $os4->id_emp1_os4}}</dd>
+                    <dt class="col-6 col-lg-4">descricao: </dt>
+                    <dd class="col-6">{{ $os4->descricao}}</dd>
 
-                    <dt class="col-6 col-lg-4">Percentual: </dt>
-                    <dd class="col-6">{{ $os4->percentual_os4 }}</dd>
+                    <dt class="col-6 col-lg-4">percentual: </dt>
+                    <dd class="col-6">{{ $os4->percentual }}</dd>
 
-                    <dt class="col-6 col-lg-4">Valor: </dt>
-                    <dd class="col-6">{{ $os4->valor_os4 }}</dd>
+                    <dt class="col-6 col-lg-4">valor: </dt>
+                    <dd class="col-6">{{ $os4->valor }}</dd>
 
-                    <dt class="col-6 col-lg-4">Ativo: </dt>
-                    <dd class="col-6">{{ $os4->ativo_os4 }}</dd>
+                    <dt class="col-6 col-lg-4">ativo: </dt>
+                    <dd class="col-6">{{ $os4->ativo }}</dd>
 
-                    <dt class="col-6 col-lg-4">Descrição: </dt>
-                    <dd class="col-6">{{ $os4->descricao_os4 }}</dd>
+                    <dt class="col-6 col-lg-4">id_emp2: </dt>
+                    <dd class="col-6">{{ $os4->id_emp2 }}</dd>
 
 
                     <dt class="col-6 col-lg-4">Cadastrado: </dt>

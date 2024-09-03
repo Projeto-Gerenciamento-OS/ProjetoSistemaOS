@@ -7,7 +7,7 @@
     <div class="card mb-4 cardCorLista " >
         <div  class="cardHeaderAsociados card-header">
             <h1>Cadastro da OS 3</h1>
-            <a href="{{ route('os3.index') }}" class="btn ">
+            <a href="{{ route('os.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span></a>
         </div> 

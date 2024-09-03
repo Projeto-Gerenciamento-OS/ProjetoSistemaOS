@@ -316,11 +316,11 @@
                         <thead>
                             <tr class="titulos">
                                 <th>ID</th>
-                                <th>ID EMP1</th>
-                                <th>Percentual</th>
-                                <th>Valor</th>
-                                <th>Ativo</th>
-                                <th>Descrição</th>
+                                <th>descricao</th>
+                                <th>percentual</th>
+                                <th>valor</th>
+                                <th>ativo</th>
+                                <th>id_emp2</th>
                                 <th class="text-center">Ações</th>
                             </tr>
                         </thead>
@@ -328,11 +328,11 @@
                             @forelse ($os4 as $item)
                                 <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                                     <th>{{ $item->id }}</th>
-                                    <th>{{ $item->id_emp1_os4 }}</th>
-                                    <td>{{ $item->percentual_os4 }}</td>
-                                    <th>{{ $item->valor_os4 }}</th>
-                                    <th>{{ $item->ativo_os4 }}</th>
-                                    <th>{{ $item->descricao_os4 }}</th>
+                                    <th>{{ $item->descricao }}</th>
+                                    <td>{{ $item->percentual }}</td>
+                                    <th>{{ $item->valor }}</th>
+                                    <th>{{ $item->ativo }}</th>
+                                    <th>{{ $item->id_emp2 }}</th>
                                     
                                     <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 
@@ -355,8 +355,6 @@
                                 </tr>
                             @empty
                                 <div class="alert alert-danger" role="alert">Nenhuma OS encontrada!</div>
-
-                              
                             @endforelse
                     
                         </tbody>
@@ -590,7 +588,7 @@
 
                     <table>
 
-                        <form action="{{ route('os3.index') }}">
+                        <form action="{{ route('os.index') }}">
                             <div class="pesquisar">
                                 
                                 <input type="text" name="id_os1_os3" id="id_os1_os3" class="form-control btn-pesquisar" value="{{ $id_os1_os3 }}" placeholder="Nome da OS 3" />
@@ -681,7 +679,7 @@
                 <div class="card-body" > 
                     <table>
                         
-                        <form action="{{ route('os4.index') }}">
+                        <form action="{{ route('os.index') }}">
                             <div class="pesquisar">
                                 
                                 <input type="text" name="id_emp1_os4" id="id_emp1_os4" class="form-control btn-pesquisar" value="{{ $id_emp1_os4 }}" placeholder="Nome da OS 4" />
