@@ -43,12 +43,12 @@
 
                     <div class="mb-3">
                         <label for="dhi" class="form-label">dhi </label>
-                        <input type="text"  name="dhi" id="dhi"  value="{{ old('dhi') }}" >
+                        <input type="time"  name="dhi" id="dhi"  value="{{ old('dhi') }}" >
                     </div>
 
                     <div class="mb-3">
                         <label for="dhf" class="form-label">dhf </label>
-                        <input type="text"  name="dhf" id="dhf"  value="{{ old('dhf') }}" >
+                        <input type="time"  name="dhf" id="dhf"  value="{{ old('dhf') }}" >
                     </div>
                 </div>
 
