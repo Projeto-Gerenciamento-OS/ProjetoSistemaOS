@@ -4,7 +4,7 @@
 
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista" >
-        <div class="card-header">
+        {{-- <div class="card-header">
             <h1>Serviços Gerais</h1>
             
             <form action="{{ route('servico.index') }}">
@@ -24,7 +24,7 @@
                     <i class="fa-solid fa-angle-right"></i>
                 </button>  
             </a>
-        </div> 
+        </div>  --}}
 
         <div class="card-body"> 
             <table >
@@ -47,31 +47,31 @@
 
                 <tbody>
 
-                    @forelse ($servico as $servico)
+                    @forelse ($servico as $serv)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
-                            <th  >{{ $servico->id }}</th>
-                            <th>{{ $servico->nome }}</th>
-                            <td >{{ $servico->tempo }}</td>
-                            <th>{{ $servico->valor }}</th>
-                            <th>{{ $servico->custo }}</th>
-                            <th>{{ $servico->obs }}</th>
-                            <th>{{ $servico->recorrente }}</th>
-                            <th>{{ $servico->intervalo }}</th>
-                            <th>{{ $servico->id_emp2 }}</th>
-                            <th>{{ $servico->id_os1 }}</th>
-                            <th>{{ $servico->id_users }}</th>
+                            <th>{{ $serv->id }}</th>
+                            <th>{{ $serv->nome }}</th>
+                            <td >{{ $serv->tempo }}</td>
+                            <th>{{ $serv->valor }}</th>
+                            <th>{{ $serv->custo }}</th>
+                            <th>{{ $serv->obs }}</th>
+                            <th>{{ $serv->recorrente }}</th>
+                            <th>{{ $serv->intervalo }}</th>
+                            <th>{{ $serv->id_emp2 }}</th>
+                            <th>{{ $serv->id_os1 }}</th>
+                            <th>{{ $serv->id_users }}</th>
 
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
 
-                                <a href="{{ route('servico.view', ['servicos' => $servico->id]) }}" class='btnIcons'>
+                                <a href="{{ route('servico.view', ['servico' => $serv->id]) }}" class='btnIcons'>
                                     <i class="fa-regular fa-eye "></i>
                                 </a>
 
-                                <a href="{{ route('servico.edit', ['servico' => $servico->id]) }}" class='btnIcons'>
+                                <a href="{{ route('servico.edit', ['servico' => $serv->id]) }}" class='btnIcons'>
                                     <i class="fa-solid fa-pen"></i>
                                 </a>
 
-                                <form method="POST" action="{{ route('servico.delete', ['servico' => $servico->id]) }}">
+                                <form method="POST" action="{{ route('servico.delete', ['servico' => $serv->id]) }}">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class=" btnIcons"
@@ -86,7 +86,7 @@
                         <div class="alert alert-danger" role="alert">Nenhum serviço encontrado!</div>
                     @endforelse
                 </tbody>
-            </table>
+            </table>     
         </div>
         {{ $servico->onEachSide(0)->links() }} 
     </div>
