@@ -38,36 +38,31 @@
                 @csrf
                 @method('PUT')
 
-                    <div class="col-6 gap-3">
-                    <div class="col-12">
-                        <label for="id_emp2" >id_emp2: </label>
-                        <input type="text" name="id_emp2" id="id_emp2"  placeholder="Nome completo"
-                            value="{{ old('id_emp2', $custos->id_emp2) }}">
+                <div class="col-6 col-lg-6">
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label" >descricao: </label>
+                        <input type="text" name="descricao" id="descricao"  placeholder="descricao"
+                            value="{{ old('descricao', $custos->descricao) }}">
                     </div>
 
-                    <div class="col-12">
-                        <label for="id_users" class="form-label">id_users</label>
-                        <input type="number" name="id_users" id="id_users" 
-                            placeholder="Digite aqui..." value="{{ old('id_users', $custos->id_users) }}">
+                    <div class="mb-3">
+                        <label for="percentual" class="form-label">percentual</label>
+                        <input type="number" name="percentual" id="percentual" 
+                            placeholder="Digite aqui o numero..." value="{{ old('percentual', $custos->percentual) }}">
                     </div>
                 </div>
 
-                <div class="col-6 mt-2 gap-3">
-                    <div class="col-12">
-                        <label for="percentual" class="form-label">percentual</label>
-                        <input type="text" name="percentual" id="percentual" 
-                            placeholder="Digite aqui..." value="{{ old('percentual', $custos->percentual) }}">
-                    </div>
-                    <div class="mb-2">
-                        <label for="id_users" >Usuarios</label>
-                        <input type="text" name="id_users" id="id_users"  placeholder=" Digite o usuario aqui"
-                            value="{{ old('id_users') }}">
+                <div class="col-6 col-lg-6">
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">id_emp2</label>
+                        <input type="text" name="id_emp2" id="id_emp2" 
+                            placeholder="Digite aqui..." value="{{ old('id_emp2', $custos->id_emp2) }}">
                     </div>
 
-                    <div class="col-12">
-                        <label for="descricao" class="form-label">Descricao </label>
-                        <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
-                            value="{{ old('descricao', $custos->descricao) }}">
+                    <div class="mb-3">
+                        <label for="id_users"  class="form-label">id_users</label>
+                        <input type="text" name="id_users" id="id_users"  placeholder=" Digite o usuario aqui"
+                            value="{{ old('id_users', $custos->id_users) }}">
                     </div>
                 </div>
                 

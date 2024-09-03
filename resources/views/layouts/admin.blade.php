@@ -69,7 +69,7 @@
                                 <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">                         
                                     <a class="nav-link" href="{{ route('emp1.index') }}">Empresa 1</a>
                                     <a class="nav-link" href="{{ route('emp2.index') }}">Empresa 2</a>
-    
+                                    <a class="nav-link" href="{{route('cli.index') }}">Cliente</a>
                                 </nav>
                             </div>
                             {{-- @endcan --}}
@@ -111,7 +111,6 @@
                                         <a class="nav-link" href="{{route('status.index') }}">Status</a>
                                         <a class="nav-link" href="{{route('turno.index') }}">Turno</a>
                                         <a class="nav-link" href="{{route('setor.index') }}">Setor</a>
-                                        <a class="nav-link" href="{{route('cli.index') }}">Cliente</a>
                                     </nav>
                                 </div>
                         </li>
