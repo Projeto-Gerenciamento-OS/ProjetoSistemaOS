@@ -47,7 +47,7 @@
                             <th>{{ $material->id }}</th>
                             <th>{{ $material->descricao }}</th>
                             <th>{{ $material->unidade }}</th>
-                            <td >{{ $material->custo }}</td>
+                            <th>{{ $material->custo }}</th>
                             <th>{{ $material->valor }}</th>
                             <th>{{ $material->id_emp2 }}</th>
                             <th>{{ $material->id_users }}</th>

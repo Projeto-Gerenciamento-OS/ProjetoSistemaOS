@@ -18,37 +18,39 @@
                 @method('POST')
 
            
-                <div class="col-6 ">
-                    <div class="col-12">
-                        <label for="descricao" class="form-label">Descrição</label>
-                        <input type="text"  name="descricao" id="descricao"   required>
+                <div class="col-6 col-lg-6">
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">id_emp2</label>
+                        <input type="text"  name="id_emp2" id="id_emp2"   required>
                     </div> 
 
                     <div class="mb-3">
-                        <label for="unidade" class="form-label">Unidade </label>
-                        <input type="text" name="unidade" id="unidade" 
-                            placeholder=" Digite a unidade" value="{{ old('Unidade') }}">
+                        <label for="id_users" class="form-label">id_users </label>
+                        <input type="text" name="id_users" id="id_users" 
+                            placeholder=" Digite a id_users">
                     </div>
 
                     <div class="mb-3">
-                        <label for="custo" class="form-label">Custo </label>
-                        <input type="text" name="custo" id="custo" 
-                            placeholder=" Digite o custo" value="{{ old('custo') }}">
+                        <label for="descricao" class="form-label">descricao </label>
+                        <input type="text" name="descricao" id="descricao" 
+                            placeholder=" Digite o descricao">
+                    </div>
+                </div>  
+
+                <div class="col-6 col-lg-6">
+                    <div class="mb-3">
+                        <label for="unidade" class="form-label">unidade </label>
+                        <input type="text"  name="unidade" id="unidade"   required >
                     </div>
 
                     <div class="mb-3">
-                        <label for="valor" class="form-label">Valor </label>
+                        <label for="custo" class="form-label">custo </label>
+                        <input type="text"  name="custo" id="custo"   required >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="valor" class="form-label">valor </label>
                         <input type="text"  name="valor" id="valor"   required >
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="id_emp2" class="form-label">ID EMP2 </label>
-                        <input type="text"  name="id_emp2" id="id_emp2"   required >
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="id_users" class="form-label">ID Users </label>
-                        <input type="text"  name="id_users" id="id_users"   required >
                     </div>
                 </div>
              

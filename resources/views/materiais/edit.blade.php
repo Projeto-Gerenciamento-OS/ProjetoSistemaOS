@@ -38,44 +38,47 @@
                     @csrf
                     @method('PUT')
 
-                    <div class="col-6">
-                        <label for="descricao" class="form-label">Descrição: </label>
-                        <input type="text"  name="descricao" id="descricao"  value="{{ old('descricao', $materiais->descricao) }}" >
-                    </div> 
-                    <div class="col-6">
-                        <label for="unidade" >Unidade: </label>
-                        <input type="text" name="unidade" id="unidade"  placeholder=" Digite a unidade"
-                            value="{{ old('unidade') }}">
-                    </div>
-                    <div class="col-6">
-                        <label for="custo" >Custo: </label>
-                        <input type="text" name="custo" id="custo" 
-                            placeholder=" Melhor e-mail do usuário" value="{{ old('custo', $materiais->custo) }}">
+                    <div class="col-6 col-lg-6">
+                        <div class="mb-3">
+                            <label for="descricao" class="form-label">Descrição: </label>
+                            <input type="text"  name="descricao" id="descricao"  value="{{ old('descricao', $materiais->descricao) }}" >
+                        </div> 
+
+                        <div class="mb-3">
+                            <label for="unidade" >Unidade: </label>
+                            <input type="text" name="unidade" id="unidade"  placeholder=" Digite a unidade"
+                                value="{{ old('unidade', $materiais->unidade) }}">
                         </div>
 
-                        <div class="col-6">
+                        <div class="mb-3">
+                            <label for="custo" >Custo: </label>
+                            <input type="text" name="custo" id="custo" 
+                                placeholder=" Melhor e-mail do usuário" value="{{ old('custo', $materiais->custo) }}">
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-6">
+                        <div class="mb-3">
                             <label for="valor" class="form-label">Valor: </label>
                             <input type="text"  name="valor" id="valor"  value="{{ old('valor', $materiais->valor) }}" >
                         </div>
 
-                        <div class="col-12">
+                        <div class="mb-3">
                             <label for="id_emp2" >id_emp2: </label>
                             <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 "
                                 value="{{ old('id_emp2', $materiais->id_emp2) }}">
                         </div>
                         
-                        <div class="col-12">
+                        <div class="mb-3">
                             <label for="id_users" >ID Users: </label>
                             <input type="text" name="id_users" id="id_users"  placeholder="id_users "
                                 value="{{ old('id_users', $materiais->id_users) }}">
                         </div>
-
                     </div>
 
                     <a  class="btnCadastrar">
                         <button type="submit">
                             <h5>Salvar</h5>
-                             
                         </button>  
                     </a>
 
