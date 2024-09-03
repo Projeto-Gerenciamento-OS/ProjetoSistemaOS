@@ -13,14 +13,13 @@ class Turno extends Model
     protected $table = 'turno';
 
     protected $fillable = [
-        'id_emp2',
-        'id_users',
         'nome',
         'inicio',
         'pausa',
         'retorno',
         'termino',
-        
+        'id_emp2',
+        'id_users',
         ];
 }
 

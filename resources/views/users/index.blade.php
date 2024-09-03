@@ -17,6 +17,13 @@
                     </button>
                 </div>
             </form>
+
+            <a href="{{ route('user.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>Cadastrar</h5>
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>  
+            </a>
         </div> 
 
         <div class="card-body"> 
@@ -27,7 +34,8 @@
                         <th>Nome</th>
                         <th>E-mail</th>
                         <th>Tipo</th>
-                        <th>Nível</th>
+                        <th>ID EMP2</th>
+                        <th>Nivel</th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -39,6 +47,7 @@
                             <th>{{ $user->nome }}</th>
                             <td >{{ $user->email }}</td>
                             <th>{{ $user->tipo }}</th>
+                            <th>{{ $user->id_emp2 }}</th>
                             <th>{{ $user->nivel }}</th>
 
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
@@ -67,17 +76,12 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $users->onEachSide(0)->links() }} 
         </div>
+        {{ $users->onEachSide(0)->links() }} 
     </div>
 </div>
 
-<a href="{{ route('user.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a>
+
 
 @endsection
 

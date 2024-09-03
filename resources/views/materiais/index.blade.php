@@ -17,20 +17,26 @@
                     </button>
                 </div>
             </form>
+
+            <a href="{{ route('materiais.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>Cadastrar</h5>
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>  
+            </a> 
         </div> 
 
         <div class="card-body"> 
             <table>
                 <thead>
                     <tr class="titulos">
-                        <th>ID</th>
-                        <th>Empresa 1</th>
-                        <th>Empresa 2</th>
+                        <th>ID Materiais</th>
+                        <th>Descrição</th>
                         <th>Unidade</th>
                         <th>Custo</th>
                         <th>Valor</th>
-                        <th>Usuario</th>
-                        <th>Descrição</th>
+                        <th>ID EMP2</th>
+                        <th>ID Users</th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -39,14 +45,12 @@
                     @forelse ($materiais as $material)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th>{{ $material->id }}</th>
-                            <th>{{ $material->id_emp1 }}</th>
-                            <td >{{ $material->id_emp2 }}</td>
-                            <th>{{ $material->unidade }}</th>
-                            <th>{{ $material->custo }}</th>
-                            <th>{{ $material->valor }}</th>
-                            <th>{{ $material->id_users }}</th>
                             <th>{{ $material->descricao }}</th>
-
+                            <th>{{ $material->unidade }}</th>
+                            <td >{{ $material->custo }}</td>
+                            <th>{{ $material->valor }}</th>
+                            <th>{{ $material->id_emp2 }}</th>
+                            <th>{{ $material->id_users }}</th>
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" id="acoes">
 
                                 <a href="{{ route('materiais.view', ['materiais' => $material->id]) }}" class="btnIcons">
@@ -72,17 +76,12 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $materiais->onEachSide(0)->links() }} 
         </div>
+        {{ $materiais->onEachSide(0)->links() }} 
     </div>
 </div>
 
-<a href="{{ route('materiais.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a> 
+
         
 
 

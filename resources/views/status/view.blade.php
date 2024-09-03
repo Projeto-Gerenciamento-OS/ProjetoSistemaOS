@@ -43,18 +43,13 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Nome: </span>
-                    <p class="col-6">{{ $status->nome}}</p>
-                </div>
-                
-                <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Empresa 1: </span>
-                    <p class="col-6">{{ $status->emp1 }}</p>
-                </div>
-                
-                <div class='visualizacaoDados row'>
                     <span class="col-6 col-lg-4">Empresa 2: </span>
-                    <p class="col-6">{{ $status->emp2 }}</p>
+                    <p class="col-6">{{ $status->id_emp2 }}</p>
+                </div>
+                
+                <div class='visualizacaoDados row'>
+                    <span class="col-6 col-lg-4">id_users: </span>
+                    <p class="col-6">{{ $status->id_users }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
@@ -63,7 +58,7 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Nome: </span>
+                    <span class="col-6 col-lg-4">Descricao: </span>
                     <p class="col-6">{{ $status->descricao}}</p>
                 </div>
 

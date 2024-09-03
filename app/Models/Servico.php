@@ -12,14 +12,15 @@ class Servico extends Model
     protected $table ='servico';
 
     protected $fillable=[
-        'id_emp2',
-        'id_users',
-        'nome', 
-        'tempo', 
+        'nome',
+        'tempo',
         'valor', 
-        'custo',
+        'custo', 
         'obs', 
         'recorrente',
-        'intervalo',     
+        'intervalo', 
+        'id_emp2',
+        'id_os1',     
+        'id_users',     
         ];
 }

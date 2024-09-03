@@ -171,7 +171,7 @@ class Os1Controller extends Controller
             Log::info('Os1 não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Os1 não excluído!');
+            return redirect()->route('os1.index')->with('error', 'Os1 não excluído!');
         }
     }
 }

@@ -70,9 +70,9 @@
                     </div>
                     
                     <div class="">
-                        <label for="logradouro" class="form-label">Logradouro:</label>
-                        <input type="text" name="logradouro" id="logradouro" class="form-control" placeholder="Endereço"
-                            value="{{ old('logradouro',$emp2->logradouro) }}">              
+                        <label for="endereco" class="form-label">Endereço:</label>
+                        <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço"
+                            value="{{ old('endereco',$emp2->endereco) }}">              
                     </div>
         
                     <div class="">
@@ -137,7 +137,7 @@
                 <a  class="btnCadastrar">
                     <button type="submit">
                         <h5>Salvar</h5>
-                        <i class="fa-solid fa-bookmark"></i>
+                         
                     </button>  
                 </a>
             </form>

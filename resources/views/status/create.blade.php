@@ -32,8 +32,22 @@
                         <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
                         value="{{ old('descricao') }}">
                     </div>
+                </div>
 
-                    
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">id_emp2</label>
+                        <input type="text" name="id_emp2" id="id_emp2"  placeholder="Digite aqui..."
+                        value="{{ old('id_emp2') }}">
+                        <div id="color-picker"></div>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="id_users" class="form-label">id_users</label>
+                        <input type="text" name="id_users" id="id_users"  placeholder="id_users completa"
+                        value="{{ old('id_users') }}">
+                    </div>
                 </div>
 
                 <a  class="btnCadastrar ">

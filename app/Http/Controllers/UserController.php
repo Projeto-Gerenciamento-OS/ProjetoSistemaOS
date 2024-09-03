@@ -66,7 +66,7 @@ class UserController extends Controller
                 'email' => $request->email,
                 'password' => $request->password,
                 'tipo' => $request->tipo,
-                'id_emp2' => $request->id_emp2
+                'id_emp2' => $request->id_emp2,
             ]);
 
             //cadastrar um papel para o usuario
@@ -227,7 +227,7 @@ class UserController extends Controller
             Log::info('Usuário não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
+            return redirect()->route('user.index')->with('error', 'Usuário não excluído!');
         }
     }
 

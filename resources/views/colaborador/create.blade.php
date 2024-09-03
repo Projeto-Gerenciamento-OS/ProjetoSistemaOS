@@ -20,45 +20,49 @@
                 @csrf
                 @method('POST')
 
-
-
                 <div class="col-6 col-lg-6">
+
                     <div class="mb-3">
-                        <label for="id" class="form-label">ID</label>
-                        <input type="number" name="id" id="id" class="form-control" placeholder="id" value="{{ old('id') }}">              
+                        <label for="nome" class="form-label">nome</label>
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="nome" value="{{ old('nome') }}">              
                     </div>
             
                     <div class="mb-3">
-                        <label for="nome" class="form-label"> Nome</label>
-                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" value="{{ old('nome') }}">              
+                        <label for="fone" class="form-label"> fone</label>
+                        <input type="text" name="fone" id="fone" class="form-control" placeholder="fone" value="{{ old('fone') }}">              
                     </div>
                     
                     <div class="mb-3">
-                        <label for="fone" class="form-label"> Telefone</label>
-                        <input type="text" name="fone" id="fone" class="form-control" placeholder="Telfone" value="{{ old('fone') }}">              
+                        <label for="telefone" class="form-label"> Telefone</label>
+                        <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telfone" value="{{ old('telefone') }}">              
                     </div>
                     
+                    <div class="mb-3">
+                        <label for="login_id" class="form-label">ID Login</label>
+                        <input type="number" name="login_id" id="login_id" class="form-control" placeholder="Login_id" value="{{ old('login_id') }}">              
+                    </div>
                 </div>
+                
                 <div class="col-6 col-lg-6">
                     
                     <div class="mb-3">
-                        <label for="id_emp1" class="form-label">ID Empresa1</label>
-                        <input type="number" name="id_emp1" id="id_emp1" class="form-control" placeholder="Empresa1" value="{{ old('id_emp1') }}">              
+                        <label for="empresa1_id" class="form-label">ID Empresa1</label>
+                        <input type="number" name="empresa1_id" id="empresa1_id" class="form-control" placeholder="Empresa1" value="{{ old('empresa1_id') }}">              
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="empresa2_id" class="form-label">ID Empresa2</label>
+                        <input type="number" name="empresa2_id" id="empresa2_id" class="form-control" placeholder="Empresa2" value="{{ old('empresa2_id') }}">              
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">ID Empresa2</label>
-                        <input type="number" name="id_emp2" id="id_emp2" class="form-control" placeholder="Empresa2" value="{{ old('id_emp2') }}">              
+                        <label for="setor_id" class="form-label">ID Setor</label>
+                        <input type="number" name="setor_id" id="setor_id" class="form-control" placeholder="setor" value="{{ old('setor_id') }}">              
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_setor" class="form-label">ID Setor</label>
-                        <input type="number" name="id_setor" id="id_setor" class="form-control" placeholder="setor" value="{{ old('id_setor') }}">              
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="id_turno" class="form-label">ID Turno</label>
-                        <input type="number" name="id_turno" id="id_turno" class="form-control" placeholder="Turno" value="{{ old('id_turno') }}">              
+                        <label for="turno_id" class="form-label">ID Turno</label>
+                        <input type="number" name="turno_id" id="turno_id" class="form-control" placeholder="Turno" value="{{ old('turno_id') }}">              
                     </div>
                 </div>
 

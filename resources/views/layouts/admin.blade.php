@@ -66,9 +66,9 @@
                                 </div>
                             </a>
                             <div class="collapse" id="collapseLayoutsEmp" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">
-                                    <a class="nav-link" href="{{route('emp1.index') }}">Empresa</a>
-                                    <a class="nav-link" href="{{route('emp2.index') }}">Empresas Afiliadas</a>
+                                <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">                         
+                                    <a class="nav-link" href="{{ route('emp1.index') }}">Empresa 1</a>
+                                    <a class="nav-link" href="{{ route('emp2.index') }}">Empresa 2</a>
     
                                 </nav>
                             </div>
@@ -107,8 +107,10 @@
                                     <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">
                                         <a class="nav-link" href="{{route('servico.index') }}">Serviços Gerais</a>
                                         <a class="nav-link" href="{{route('materiais.index') }}">Materiais</a>
-                                        <a class="nav-link" href="{{route('custos_gerais.index') }}">Custo Geral</a>
+                                        <a class="nav-link" href="{{route('custos.index') }}">Custo Geral</a>
                                         <a class="nav-link" href="{{route('status.index') }}">Status</a>
+                                        <a class="nav-link" href="{{route('turno.index') }}">Turno</a>
+                                        <a class="nav-link" href="{{route('setor.index') }}">Setor</a>
                                     </nav>
                                 </div>
                         </li>

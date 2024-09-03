@@ -48,7 +48,7 @@ class TurnoController extends Controller
                 'retorno' => $request->retorno,
                 'termino' => $request->termino,
                 'id_emp2' => $request->id_emp2,
-                'id_users_turno' => $request->id_users_turno,
+                'id_users' => $request->id_users,
             ]);
 
            
@@ -98,7 +98,7 @@ class TurnoController extends Controller
                 'retorno' => $request->retorno,
                 'termino' => $request->termino,
                 'id_emp2' => $request->id_emp2,
-                'id_users_turno' => $request->id_users_turno,
+                'id_users' => $request->id_users,
             ]);
 
         
@@ -140,7 +140,7 @@ class TurnoController extends Controller
             Log::info('Turno não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
+            return redirect()->route('turno.index')->with('error', 'Usuário não excluído!');
         }
     }
 }

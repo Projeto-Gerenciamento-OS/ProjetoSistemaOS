@@ -18,7 +18,13 @@
                     </button>
                 </div>
             </form>
-            
+
+            <a href="{{ route('custos.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>Cadastrar</h5>
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>  
+            </a> 
         </div> 
         
         <div class="card-body"> 
@@ -26,11 +32,10 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>ID EMP1</th>
                         <th>ID EMP2</th>
-                        <th>Percentual</th>
-                        <th>Usuarios</th>
+                        <th>ID Users</th>
                         <th>Descrição</th>
+                        <th>Percentual</th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -39,8 +44,8 @@
                 @forelse ($custos as $custo)
                     <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                         <th>{{ $custo->id }}</th>
-                        <th>{{ $custo->id_emp1 }}</th>
-                        <td >{{ $custo->id_emp2 }}</td>
+                        <th>{{ $custo->id_emp2 }}</th>
+                        <th>{{ $custo->id_users }}</th>
                         <th>{{ $custo->percentual }}</th>
                         <th>{{ $custo->id_users }}</th>
                         <th>{{ $custo->descricao }}</th>
@@ -71,14 +76,10 @@
             </table>
             {{ $custos->onEachSide(0)->links() }} 
         </div>
+        {{ $custos->onEachSide(0)->links() }} 
     </div>
 </div>
-<a href="{{ route('custos.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a> 
+
         
 
 @endsection

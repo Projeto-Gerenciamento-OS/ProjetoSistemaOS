@@ -17,6 +17,13 @@
                 </div>
             </form>
 
+            <a href="{{ route('emp2.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>Cadastrar</h5>
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>  
+            </a>    
+
         </div>
       
         <div class="card-body"> 
@@ -31,10 +38,10 @@
                         <th>CNPJ</th>
                         <th>Endereço</th>
                         <th>Número</th>
-                        <th>Complemento</th>
                         <th>Bairro</th>
                         <th>Cidade</th>                 
                         <th>uf</th>
+                        <th>CEP</th>
                         <th>Telefone 1</th>
                         <th>Telefone 2</th>
                         <th>Plano</th>
@@ -52,12 +59,12 @@
                             <th>{{ $empres->razao }}</th>
                             <th>{{ $empres->fantasia }}</th>
                             <th>{{ $empres->cpnj }}</th>
-                            <th>{{ $empres->endereço }}</th>
+                            <th>{{ $empres->endereco }}</th>
                             <th>{{ $empres->numero }}</th>
-                            <th>{{ $empres->complemento }}</th>
                             <th>{{ $empres->bairro }}</th>
                             <th>{{ $empres->cidade }}</th>
                             <th>{{ $empres->uf }}</th>
+                            <th>{{ $empres->cep }}</th>
                             <th>{{ $empres->fone1 }}</th>
                             <th>{{ $empres->fone2 }}</th>
                             <th>{{ $empres->plano }}</th>
@@ -90,17 +97,11 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $emp2->onEachSide(0)->links() }} 
         </div>
+        {{ $emp2->onEachSide(0)->links() }} 
     </div>
 </div>
-
-<a href="{{ route('emp2.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a>                                                                                                                                                               
+                                                                                                                                                               
 
 
 @endsection

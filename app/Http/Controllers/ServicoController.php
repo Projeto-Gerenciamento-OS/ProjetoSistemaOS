@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Servico;
 use App\Http\Requests\ServicoRequest;
-
 use Illuminate\Http\Request;
 use Exception;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +16,7 @@ class ServicoController extends Controller
     public function index(Request $request)
     {
         // Recuperar os registros do banco dados
-        $servicos= Servico::when($request->has('nome'), function ($Query) use ($request){
+        $servico= Servico::when($request->has('nome'), function ($Query) use ($request){
             $Query->where('nome', 'like', '%' . $request->nome . '%');
         })
         
@@ -26,11 +25,11 @@ class ServicoController extends Controller
         ->withQueryString();
 
         //Carregar a View
-        return view('servicos.index', ['servicos', 'servicos'=> $servicos,'nome'=>$request->nome]);
+        return view('servico.index', ['servico', 'servico'=> $servico,'nome'=>$request->nome]);
     }
 
     public function create(){
-        return view('servicos.create', ['menu' => 'servicos']);
+        return view('servico.create', ['servico']);
     }
 
     public function store(ServicoRequest $request){
@@ -44,47 +43,50 @@ class ServicoController extends Controller
         try {
 
             // Cadastrar no banco de dados na tabela servicos
-            $servicos = Servico::create([
+            $servico = Servico::create([
                 'nome' => $request->nome,
-                'nome' => $request->tempo,
+                'tempo' => $request->tempo,
                 'valor' => $request->valor,
+                'custo' => $request->custo,
                 'obs' => $request->obs,
                 'recorrente' => $request->recorrente,
-                'custo' => $request->custo,
                 'intervalo' => $request->intervalo,
+                'id_emp2' => $request->id_emp2,
+                'id_os1' => $request->id_os1,
+                'id_users' => $request->id_users,
             ]);
 
             // Salvar log
-            Log::info('Serviço cadastrado.', ['id' => $servicos->id, $servicos]);
+            Log::info('Serviço cadastrado.', ['id' => $servico->id, $servico]);
 
             // Operação é concluída com êxito
             DB::commit();
 
             // Redirecionar o servicos, enviar a mensagem de sucesso
-            return redirect()->route('servicos.index', ['servicos' => $servicos->id])->with('success', 'servicos cadastrado com sucesso!');
+            return redirect()->route('servico.index', ['servico' => $servico->id])->with('success', 'servicos cadastrado com sucesso!');
         } catch (Exception $e) {
 
             // Salvar log
-            Log::info('servicos não cadastrada.', ['error' => $e->getMessage()]);
+            Log::info('servico não cadastrada.', ['error' => $e->getMessage()]);
 
             // Operação não é concluída com êxito
             DB::rollBack();
 
-            // Redirecionar o servicos, enviar a mensagem de erro
-            return back()->withInput()->with('error', 'servicos não cadastrada!');
+            // Redirecionar o servico, enviar a mensagem de erro
+            return back()->withInput()->with('error', 'servico não cadastrada!');
         }
     }
 
-    public function view(Servico $servicos){
+    public function view(Servico $servico){
         //Carrega a View
-        return view( 'servicos.view', ['menu'=>'servicos', 'servicos' => $servicos]);
+        return view( 'servico.view', ['servico', 'servico' => $servico]);
     }
-    
-    public function edit(Servico $servicos){
-        return view('servicos.edit', ['menu' => 'servicos', 'servicos' => $servicos]);
+ 
+    public function edit(Servico $servico){
+        return view('servico.edit', [ 'servico', 'servico' => $servico]);
     }
 
-    public function update(ServicoRequest $request, Servico $servicos){
+    public function update(ServicoRequest $request, Servico $servico){
         // Validar o formulário
         $request->validated();
 
@@ -94,24 +96,27 @@ class ServicoController extends Controller
         try {
 
             // Editar as informações do registro no banco de dados
-            $servicos->update([
+            $servico->update([
                 'nome' => $request->nome,
-                'nome' => $request->tempo,
+                'tempo' => $request->tempo,
                 'valor' => $request->valor,
+                'custo' => $request->custo,
                 'obs' => $request->obs,
                 'recorrente' => $request->recorrente,
-                'custo' => $request->custo,
                 'intervalo' => $request->intervalo,
+                'id_emp2' => $request->id_emp2,
+                'id_os1' => $request->id_os1,
+                'id_users' => $request->id_users,
             ]);
 
             // Salvar log
-            Log::info('Serviço editado.', ['id' => $servicos->id]);
+            Log::info('Serviço editado.', ['id' => $servico->id]);
 
             // Operação é concluída com êxito
             DB::commit();
 
             // Redirecionar o usuário, enviar a mensagem de sucesso
-            return redirect()->route('servicos.view', ['servicos' => $request->servicos])->with('success', 'Serviço editado com sucesso!');
+            return redirect()->route('servico.view', ['servico' => $request->servico])->with('success', 'Serviço editado com sucesso!');
         } catch (Exception $e) {
 
             // Salvar log
@@ -125,23 +130,23 @@ class ServicoController extends Controller
         }
     }
 
-    public function delete(Servico $servicos){
+    public function delete(Servico $servico){
         try {
             // Excluir o registro do banco de dados
-            $servicos->delete();
+            $servico->delete();
 
             // Salvar log
-            Log::info('servicos excluído.', ['id' => $servicos->id]);
+            Log::info('servicos excluído.', ['id' => $servico->id]);
 
             // Redirecionar o usuário, enviar a mensagem de sucesso
-            return redirect()->route('servicos.index')->with('success', 'serviço excluído com sucesso!');
+            return redirect()->route('servico.index')->with('success', 'serviço excluído com sucesso!');
         } catch (Exception $e) {
 
             // Salvar log
             Log::info('serviço não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
+            return redirect()->route('servico.index')->with('error', 'Usuário não excluído!');
         }
     }
 

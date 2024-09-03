@@ -5,12 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class emp1 extends Model
+class Emp1 extends Model
 {
+
     use HasFactory;
 
     //proteger a tabela para não deixar no plural
     protected $table = 'emp1';
+
+    protected $primarykey ='id_emp1';
 
     protected $fillable = ['descricao'];
 
