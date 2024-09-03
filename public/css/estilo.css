@@ -307,6 +307,7 @@ body {
         }
 
         .card-body {
+            margin: auto;
             display: flex;
             background-color: rgba(233, 233, 233, 0.293);
             flex-direction: column;
@@ -361,7 +362,7 @@ body {
                 display:flex;
                 flex-direction: column;
                 overflow: auto;
-                
+                margin: auto;
                 input{
                     border: 0.2px solid rgba(0, 0, 0, 0.300);
                     padding:0.5rem 0;
