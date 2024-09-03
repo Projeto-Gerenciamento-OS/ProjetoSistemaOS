@@ -206,6 +206,8 @@ Route::get('/edit-cli/{cli}',[CliController::class, 'edit'])->name('cli.edit');
 Route::put('/update-cli/{cli}',[CliController::class, 'update'])->name('cli.update');
 Route::delete('/delete-cli/{cli}', [CliController::class, 'delete'])->name('cli.delete');
 
+//OSs
+Route::get('/os',[OSsController::class, 'index'])->name('os.index');
 //OS 1
 
 Route::get('/os1',[Os1Controller::class, 'index'])->name('os1.index');
