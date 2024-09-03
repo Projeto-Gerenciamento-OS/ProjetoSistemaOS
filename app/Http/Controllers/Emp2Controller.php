@@ -140,8 +140,8 @@ class Emp2Controller extends Controller
             // Operação é concluída com êxito
             DB::commit();
 
-             // Salvar log
-             Log::info('Empresa editada.', [ 'emp2' => $emp2->id]);
+            // Salvar log
+            Log::info('Empresa editada.', [ 'emp2' => $emp2->id]);
 
 
             // Redirecionar o usuário, enviar a mensagem de sucesso
@@ -160,27 +160,27 @@ class Emp2Controller extends Controller
         }
     }
 
-     // Excluir o empresa do banco de dados
-     public function delete(Emp2 $emp2)
-     {
-         try {
-             // Excluir o registro do banco de dados
-             $emp2->delete();
- 
-             // Salvar log
-             Log::info('Empresa excluído.', ['id' => $emp2->id]);
- 
-             // Redirecionar o usuário, enviar a mensagem de sucesso
-             return redirect()->route('emp2.index')->with('success', 'Empresa excluído com sucesso!');
-         } catch (Exception $e) {
- 
-             // Salvar log
-             Log::info('Empresa não excluído.', ['error' => $e->getMessage()]);
- 
-             // Redirecionar o usuário, enviar a mensagem de erro
-             return redirect()->route('emp2.index')->with('error', 'Empresa não excluído!');
-         }
-     }
+    // Excluir o empresa do banco de dados
+    public function delete(Emp2 $emp2)
+    {
+        try {
+            // Excluir o registro do banco de dados
+            $emp2->delete();
+
+            // Salvar log
+            Log::info('Empresa excluído.', ['id' => $emp2->id]);
+
+            // Redirecionar o usuário, enviar a mensagem de sucesso
+            return redirect()->route('emp2.index')->with('success', 'Empresa excluído com sucesso!');
+        } catch (Exception $e) {
+
+            // Salvar log
+            Log::info('Empresa não excluído.', ['error' => $e->getMessage()]);
+
+            // Redirecionar o usuário, enviar a mensagem de erro
+            return redirect()->route('emp2.index')->with('error', 'Empresa não excluído!');
+        }
+    }
 
 
 }

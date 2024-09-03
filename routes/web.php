@@ -14,6 +14,7 @@ use App\Http\Controllers\CustosController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\TurnoController;
 use App\Http\Controllers\SetorController;
+use App\Http\Controllers\CliController;
 use App\Http\Controllers\Os1Controller;
 use App\Http\Controllers\Os2Controller;
 use App\Http\Controllers\Os3Controller;
@@ -194,6 +195,15 @@ Route::post('/store-setor',[SetorController::class, 'store'])->name('setor.store
 Route::get('/edit-setor/{setor}',[SetorController::class, 'edit'])->name('setor.edit');
 Route::put('/update-setor/{setor}',[SetorController::class, 'update'])->name('setor.update');
 Route::delete('/delete-setor/{setor}', [SetorController::class, 'delete'])->name('setor.delete');
+
+//Cliente
+Route::get('/cli',[CliController::class, 'index'])->name('cli.index');
+Route::get('/view-cli/{cli}',[CliController::class, 'view'])->name('cli.view');
+Route::get('/create-cli',[CliController::class, 'create'])->name('cli.create');
+Route::post('/store-cli',[CliController::class, 'store'])->name('cli.store');
+Route::get('/edit-cli/{cli}',[CliController::class, 'edit'])->name('cli.edit');
+Route::put('/update-cli/{cli}',[CliController::class, 'update'])->name('cli.update');
+Route::delete('/delete-cli/{cli}', [CliController::class, 'delete'])->name('cli.delete');
 
 //OS 1
 
