@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends ('layouts.admin')
 
 @section('content')
 
@@ -372,7 +372,9 @@
 </div>
 
     
-@endsection@extends('layouts.admin')
+@endsection
+
+@extends('layouts.admin')
 
 @section('content')
 
