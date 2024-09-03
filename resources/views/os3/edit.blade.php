@@ -2,13 +2,12 @@
 
 @section('content')
 
-
 <div class="container-fluid px-4 data-container"  >
         <div class="card mb-4 cardCorLista " >
             <div  class="cardHeaderAsociados card-header">
                 <h2 class="mt-3">Edição</h2>
                 <span class="ms-auto d-flex  flex-row gap-2">
-                    <a href="{{ route('os3.index') }}" class="btn  ">
+                    <a href="{{ route('os.index') }}" class="btn  ">
                         <span class="listar-texto">Listar</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
@@ -25,7 +24,7 @@
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                             <span class="listar-texto">Apagar</span>
                             <i class="fa-solid fa-trash"></i>
-                     </button>
+                        </button>
                     </form>
 
                 </span>
@@ -38,64 +37,64 @@
                     @csrf
                     @method('PUT')
 
-                   <div class="col-6 col-lg-6 ">
+                    <div class="col-6 col-lg-6 ">
                         <div class="mb-3">
-                            <label for="id_emp1_os3" >ID EMP1 </label>
-                            <input type="number" name="id_emp1_os3" id="id_emp1_os3" 
-                                placeholder=" Data" value="{{ old('id_emp1_os3', $os3->id_emp1_os3) }}">
-                        </div>
-                        <div class="mb-3">
-                            <label for="id_os1_os3" class="form-label">ID OS1 </label>
-                            <input type="number" name="id_os1_os3" id="id_os1_os3"  placeholder=" Digite o id_os1_os3"
-                                value="{{ old('id_os1_os3', $os3->id_os1_os3 ) }}">
-                        </div>
-                       
-                        
-                        <div class="mb-3">
-                            <label for="id_emp2_os3" class="form-label">ID EMP2 </label>
-                            <input type="number" name="id_emp2_os3" id="id_emp2_os3" 
-                                placeholder=" Digite a id_emp2_os3" value="{{ old('id_emp2_os3', $os3->id_emp2_os3) }}">
+                            <label for="qtde" class="form-label">qtde</label>
+                            <input type="text" name="qtde" id="qtde" 
+                                placeholder=" Data" value="{{ old('qtde', $os3->qtde) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="id_material" class="form-label">ID Material </label>
-                            <input type="number"  name="id_material" id="id_material"   required 
-                            value="{{ old('id_material', $os3->id_material) }}">
+                            <label for="vunit" class="form-label">vunit</label>
+                            <input type="text" name="vunit" id="vunit"  placeholder=" Digite o vunit"
+                                value="{{ old('vunit', $os3->vunit ) }}">
                         </div>
 
+                        <div class="mb-3">
+                            <label for="vtotal" class="form-label">vtotal</label>
+                            <input type="text" name="vtotal" id="vtotal"  placeholder=" Digite o vtotal"
+                                value="{{ old('vtotal', $os3->vtotal ) }}">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cunit" class="form-label">cunit</label>
+                            <input type="text" name="cunit" id="cunit"  placeholder=" Digite o cunit"
+                                value="{{ old('cunit', $os3->cunit ) }}">
+                        </div>
                     </div>
 
-                    <div class="col-6 col-lg-6 mt-2">
+                    <div class="col-6 col-lg-6 ">
                         <div class="mb-3">
-                            <label for="valorUnitario_os3" class="form-label">Valor Unitário</label>
-                            <input type="text"  name="valorUnitario_os3" id="valorUnitario_os3"   required
-                            value="{{ old('valorUnitario_os3', $os3->valorUnitario_os3) }}">
+                            <label for="ctotal" class="form-label">ctotal</label>
+                            <input type="text"  name="ctotal" id="ctotal"   required
+                            value="{{ old('ctotal', $os3->ctotal) }}">
                         </div> 
 
                         <div class="mb-3">
-                            <label for="valorTotal_os3" class="form-label">Valor Total</label>
-                            <input type="text"  name="valorTotal_os3" id="valorTotal_os3"   required
-                            value="{{ old('valorTotal_os3', $os3->valorTotal_os3) }}">
+                            <label for="id_emp2" class="form-label">id_emp2</label>
+                            <input type="text"  name="id_emp2" id="id_emp2"   required
+                            value="{{ old('id_emp2', $os3->id_emp2) }}">
                         </div> 
 
                         <div class="mb-3">
-                            <label for="custoTotal_os3" class="form-label">Custo Total</label>
-                            <input type="text"  name="custoTotal_os3" id="custoTotal_os3"   required
-                            value="{{ old('custoTotal_os3', $os3->custoTotal_os3) }}">
+                            <label for="id_os1" class="form-label">id_os1</label>
+                            <input type="text"  name="id_os1" id="id_os1"   required
+                            value="{{ old('id_os1', $os3->id_os1) }}">
                         </div>  
-                       
 
+                        <div class="mb-3">
+                            <label for="id_materiais" class="form-label">id_materiais</label>
+                            <input type="text"  name="id_materiais" id="id_materiais"   required
+                            value="{{ old('id_materiais', $os3->id_materiais) }}">
+                        </div>  
                     </div>         
 
                     <a  class="btnCadastrar">
                         <button type="submit">
                             <h5>Salvar</h5>
-                             
                         </button>  
                     </a>
-
                 </form>
-
             </div>
         </div>
     </div>

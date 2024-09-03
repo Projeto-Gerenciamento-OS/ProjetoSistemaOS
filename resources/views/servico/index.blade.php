@@ -4,7 +4,7 @@
 
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista" >
-        {{-- <div class="card-header">
+        <div class="card-header">
             <h1>Serviços Gerais</h1>
             
             <form action="{{ route('servico.index') }}">
@@ -24,7 +24,7 @@
                     <i class="fa-solid fa-angle-right"></i>
                 </button>  
             </a>
-        </div>  --}}
+        </div> 
 
         <div class="card-body"> 
             <table >
