@@ -5,7 +5,7 @@
 <div class="container-fluid px-4 data-container">
     <div class="card mb-4 cardCorLista" >
         <div class="card-header">
-            <h1>cliente</h1>
+            <h1>Cliente</h1>
 
             <form action="{{ route('cli.index') }}">
                 <div class="pesquisar">

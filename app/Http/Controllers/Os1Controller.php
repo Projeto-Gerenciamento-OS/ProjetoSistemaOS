@@ -52,16 +52,15 @@ class Os1Controller extends Controller
 
             // Cadastrar no banco de dados na tabela usuários
             $os1 = Os1::create([
-                'os1' => $os1,
+                // 'os1' => $os1,
                 'id_status' => $request->id_status,
                 'id_users' => $request->id_users,
-                'id_emp1' => $request->id_emp1,
                 'id_emp2' => $request->id_emp2,
-                'datacad' => $datacad,
+                'datacad' =>$request-> datacad,
                 'dhi' => $request->dhi,
-                'dhf' => $dhf,
+                'dhf' => $request->dhf,
                 'obs' => $request->obs,
-                'vtotal' => $vtotal,
+                'vtotal' =>$request-> vtotal,
                 'ctotal' => $request->ctotal,
                 'cindireto' => $request->cindireto,
                 'vresultado' => $request->vresultado,
@@ -116,17 +115,15 @@ class Os1Controller extends Controller
         try {
 
             // Editar as informações do registro no banco de dados
-            $os1->update([
-                'os1' => $os1,
+            $os1->update([      
                 'id_status' => $request->id_status,
                 'id_users' => $request->id_users,
-                'id_emp1' => $request->id_emp1,
                 'id_emp2' => $request->id_emp2,
-                'datacad' => $datacad,
+                'datacad' =>$request-> datacad,
                 'dhi' => $request->dhi,
-                'dhf' => $dhf,
+                'dhf' => $request->dhf,
                 'obs' => $request->obs,
-                'vtotal' => $vtotal,
+                'vtotal' =>$request-> vtotal,
                 'ctotal' => $request->ctotal,
                 'cindireto' => $request->cindireto,
                 'vresultado' => $request->vresultado,

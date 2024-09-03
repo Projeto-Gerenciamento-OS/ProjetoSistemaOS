@@ -69,10 +69,22 @@
                                 <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">                         
                                     <a class="nav-link" href="{{ route('emp1.index') }}">Empresa 1</a>
                                     <a class="nav-link" href="{{ route('emp2.index') }}">Empresa 2</a>
-                                    <a class="nav-link" href="{{route('cli.index') }}">Cliente</a>
+                                
                                 </nav>
                             </div>
                             {{-- @endcan --}}
+                        </li>
+
+                        <li>
+                            <a @class(['nav-link', 'active' => isset($menu) && $menu =='cli']) href="{{route('cli.index') }}">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fa-solid fa-chalkboard-user fa-2x"></i>
+                                </div>
+    
+                                <span class="nav-text">
+                                    Cliente
+                                </span>
+                            </a>
                         </li>
                         
                         
@@ -87,6 +99,9 @@
                                 </span>
                             </a>
                         </li>
+
+
+                  
                         
                         <li>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
