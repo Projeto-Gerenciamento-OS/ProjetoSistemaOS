@@ -77,7 +77,7 @@ class ColaboradorController extends Controller
             Log::info('Colaborador cadastrado.', [ 'id' => $colaborador->id]);
 
             // Redirecionar para colaborador, enviar a mensagem de sucesso
-            return redirect()->route('colaborador.index', ['colaborador'=>$colaborador->id])->with("success","Colaborador cadastrado com sucesso");
+            return redirect()->route('colaborador.view', ['colaborador'=>$colaborador->id])->with("success","Colaborador cadastrado com sucesso");
 
         } catch (Exception $e) {
 

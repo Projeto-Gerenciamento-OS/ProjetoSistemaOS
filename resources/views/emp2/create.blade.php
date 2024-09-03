@@ -21,7 +21,7 @@
                 @method('POST')
 
                         <!-- Coluna 1 -->
-                        <div class="col-lg-4">
+                        <div class="col-6 col-lg-6">   
                             <div class="mb-3">
                                 <label for="id_emp1" class="form-label">ID EMP1:</label>
                                 <input type="number" name="id_emp1" id="id_emp1" class="form-control" placeholder="Código Empresa 1" value="{{ old('id_emp1') }}">
@@ -50,7 +50,7 @@
 
                         <!-- Coluna 2 -->
 
-                        <div class="col-lg-4">
+                        <div class="col-6 col-lg-6">   
                             <div class="mb-3">
                                 <label for="razao" class="form-label">Razão:</label>
                                 <input type="text" name="razao" id="razao" class="form-control" placeholder="Razão Social" value="{{ old('razao') }}">
@@ -74,17 +74,18 @@
                                 <label for="fone2" class="form-label">Telefone 2:</label>
                                 <input type="text" name="fone2" id="fone2" class="form-control" placeholder="Telefone 2" value="{{ old('fone2') }}">
                             </div>
+                            
+                            
+                        </div>
+                        
+                        <!-- Coluna 3 -->
+                        <div class="col-6 col-lg-6">   
 
                             <div class="mb-3">
                                 <label for="uf" class="form-label">UF:</label>
                                 <input type="text" name="uf" id="uf" class="form-control" placeholder="UF" value="{{ old('uf') }}">
                             </div>
 
-
-                        </div>
-
-                        <!-- Coluna 3 -->
-                        <div class="col-lg-4">
                             <div class="mb-3">
                                 <label for="cnpj" class="form-label">CNPJ:</label>
                                 <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="CNPJ" value="{{ old('cnpj') }}">

@@ -32,18 +32,13 @@
             <table>
                 <thead>
                     <tr class="titulos">    
-                        <th  >ID</th>
-                        <th>Empresa1</th>
-                        <th>Empresa2</th>
-                        <th>Setor</th>
-                        <th>Turno</th>
-                        <th>Login</th>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Empresa2</th>
-                        <th>Usuario</th>
-                        <th>Turno</th>
-                        <th>Setor</th>
+                        <th>ID</th>
+                        <th>nome</th>
+                        <th>fone</th>
+                        <th>id_emp2</th>
+                        <th>id_users</th>
+                        <th>id_turno</th>
+                        <th>id_setor</th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -54,13 +49,12 @@
                     @forelse ($colaborador as $colab)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th>{{ $colab->id }}</th>   
-                            <th>{{ $colab->empresa1_id}}</th>           
-                            <th>{{ $colab->empresa2_id}}</th>  
-                            <th>{{ $colab->setor_id}}</th>  
-                            <th>{{ $colab->turno_id}}</th>  
-                            <th>{{ $colab->login_id}}</th>  
-                            <th>{{ $colab->nome}}</th>  
-                            <th>{{ $colab->telefone}}</th>  
+                            <th>{{ $colab->nome}}</th>           
+                            <th>{{ $colab->fone}}</th>  
+                            <th>{{ $colab->id_emp2}}</th>  
+                            <th>{{ $colab->id_users}}</th>  
+                            <th>{{ $colab->id_turno}}</th>  
+                            <th>{{ $colab->id_setor}}</th>  
                             
                             <td class="acoes d-md-flex flex-row gap-2 justify-content-center pt-8">
 

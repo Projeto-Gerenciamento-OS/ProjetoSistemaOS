@@ -58,7 +58,7 @@
                             <th>{{ $empres->id_emp1 }}</th>
                             <th>{{ $empres->razao }}</th>
                             <th>{{ $empres->fantasia }}</th>
-                            <th>{{ $empres->cpnj }}</th>
+                            <th>{{ $empres->cnpj }}</th>
                             <th>{{ $empres->endereco }}</th>
                             <th>{{ $empres->numero }}</th>
                             <th>{{ $empres->bairro }}</th>
