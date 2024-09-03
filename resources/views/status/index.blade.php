@@ -31,10 +31,10 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>Empresa 2</th>
-                        <th>Usuario</th>
-                        <th>Cor</th>
-                        <th>Descrição</th>
+                        <th>id_emp2</th>
+                        <th>id_users</th>
+                        <th>cor</th>
+                        <th>descricao</th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -42,7 +42,7 @@
                 <tbody>
                     @forelse ($status as $statu)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
-                            <th  >{{ $statu->id }}</th>
+                            <th>{{ $statu->id }}</th>
                             <th>{{ $statu->id_emp2 }}</th>
                             <th>{{ $statu->id_users }}</th>
                             <th>{{ $statu->cor }}</th>

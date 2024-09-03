@@ -55,13 +55,13 @@
 
                 <div class="col-6 mt-2 gap-3">
                     <div class="col-12">
-                        <label for="cor" class="form-label">Cor</label>
+                        <label for="cor" class="form-label">cor</label>
                         <input type="text" name="cor" id="cor" 
                             placeholder="Digite aqui..." value="{{ old('cor', $status->cor) }}">
                     </div>
 
                     <div class="col-12">
-                        <label for="descricao" class="form-label">Descricao </label>
+                        <label for="descricao" class="form-label">descricao </label>
                         <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
                             value="{{ old('descricao', $status->descricao) }}">
                     </div>
