@@ -170,43 +170,24 @@ Route::delete('/delete-custos/{custos}', [CustosController::class, 'delete'])->n
 //Status
 
 Route::get('/status',[StatusController::class, 'index'])->name('status.index');
-//Visualizar empresa
 Route::get('/view-status/{status}',[StatusController::class, 'view'])->name('status.view');
-
-//carrega o cadastrar empresa
 Route::get('/create-status',[StatusController::class, 'create'])->name('status.create');
-//recebe o cadastrar empresa
 Route::post('/store-status',[StatusController::class, 'store'])->name('status.store');
-//carrega o editar  empresa
 Route::get('/edit-status/{status}',[StatusController::class, 'edit'])->name('status.edit');
-
-//recebe o editar empresa
 Route::put('/update-status/{status}',[StatusController::class, 'update'])->name('status.update');
-
-//deleta empresa
 Route::delete('/delete-status/{status}', [StatusController::class, 'delete'])->name('status.delete');
 
 //Turno
-
 Route::get('/turno',[TurnoController::class, 'index'])->name('turno.index');
-//Visualizar empresa
 Route::get('/view-turno/{turno}',[TurnoController::class, 'view'])->name('turno.view');
-
-//carrega o cadastrar empresa
 Route::get('/create-turno',[TurnoController::class, 'create'])->name('turno.create');
-//recebe o cadastrar empresa
 Route::post('/store-turno',[TurnoController::class, 'store'])->name('turno.store');
-//carrega o editar  empresa
 Route::get('/edit-turno/{turno}',[TurnoController::class, 'edit'])->name('turno.edit');
-
-//recebe o editar empresa
 Route::put('/update-turno/{turno}',[TurnoController::class, 'update'])->name('turno.update');
-
-//deleta empresa
 Route::delete('/delete-turno/{turno}', [TurnoController::class, 'delete'])->name('turno.delete');
 
-//Turno
 
+//Turno
 Route::get('/setor',[SetorController::class, 'index'])->name('setor.index');
 //Visualizar empresa
 Route::get('/view-setor/{setor}',[SetorController::class, 'view'])->name('setor.view');

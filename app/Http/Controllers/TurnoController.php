@@ -48,7 +48,7 @@ class TurnoController extends Controller
                 'retorno' => $request->retorno,
                 'termino' => $request->termino,
                 'id_emp2' => $request->id_emp2,
-                'id_users_turno' => $request->id_users_turno,
+                'id_users' => $request->id_users,
             ]);
 
            
@@ -98,7 +98,7 @@ class TurnoController extends Controller
                 'retorno' => $request->retorno,
                 'termino' => $request->termino,
                 'id_emp2' => $request->id_emp2,
-                'id_users_turno' => $request->id_users_turno,
+                'id_users' => $request->id_users,
             ]);
 
         

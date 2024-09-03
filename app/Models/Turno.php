@@ -16,7 +16,6 @@ class Turno extends Model
         'nome',
         'inicio',
         'pausa',
-        'inicio',
         'retorno',
         'termino',
         'id_emp2',
