@@ -28,11 +28,11 @@ class SetorController extends Controller
     }
 
 
-     public function create() {
+    public function create() {
         return view('setor.create', ['menu' => 'setor']);
-     }
+    }
 
-     public function store(SetorRequest $request) {
+    public function store(SetorRequest $request) {
 
         $request->validated();
 
@@ -40,20 +40,20 @@ class SetorController extends Controller
 
         try {
 
-          
+        
             $setor =Setor::create([
                 'descricao' => $request->descricao,
                 'id_emp2' => $request->id_emp2,
-                'id_users_setor' => $request->id_users_setor,
+                'id_users' => $request->id_users,
             ]);
 
-           
+        
             Log::info('Setor cadastrado', ['id' => $setor->id, $setor]);
 
-          
+        
             DB::commit();
 
-         
+        
             return redirect()->route('setor.index', ['setor' => $setor->id])->with('success', 'Setor cadastrado com sucesso!');
 
         } catch (Exception $e) {
@@ -61,17 +61,17 @@ class SetorController extends Controller
         
             Log::info('Setor não cadastrado.', ['error' => $e->getMessage()]);
 
-          
+        
             DB::rollBack();
 
-         
+        
             return back()->withInput()->with('error', 'Setor não cadastrado!');
         }
 
-     }
+    }
 
-     public function view(Setor $setor){
-      
+    public function view(Setor $setor){
+    
         return view( 'setor.view', ['menu'=>'setor', 'setor' => $setor]);
     }
     
@@ -80,19 +80,17 @@ class SetorController extends Controller
     }
 
     public function update(SetorRequest $request, Setor $setor){
-   
+
         $request->validated();
 
-  
+
         DB::beginTransaction();
 
         try {
             $setor->update([
-
                 'descricao' => $request->descricao,
                 'id_emp2' => $request->id_emp2,
-                'id_users_setor' => $request->id_users_setor,
-
+                'id_users' => $request->id_users,
             ]);
 
         
@@ -101,7 +99,7 @@ class SetorController extends Controller
 
             DB::commit();
 
-         
+        
             return redirect()->route('setor.view', ['setor' => $setor->id])->with('success', 'Setor editado com sucesso!');
 
         } catch (Exception $e) {
@@ -112,7 +110,7 @@ class SetorController extends Controller
             // Operação não é concluída com êxito
             DB::rollBack();
 
-     
+    
             return back()->withInput()->with('error', 'Setor não editado!');
         }
     }

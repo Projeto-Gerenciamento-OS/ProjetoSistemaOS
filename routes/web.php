@@ -186,23 +186,13 @@ Route::get('/edit-turno/{turno}',[TurnoController::class, 'edit'])->name('turno.
 Route::put('/update-turno/{turno}',[TurnoController::class, 'update'])->name('turno.update');
 Route::delete('/delete-turno/{turno}', [TurnoController::class, 'delete'])->name('turno.delete');
 
-
-//Turno
+//Setor
 Route::get('/setor',[SetorController::class, 'index'])->name('setor.index');
-//Visualizar empresa
 Route::get('/view-setor/{setor}',[SetorController::class, 'view'])->name('setor.view');
-
-//carrega o cadastrar empresa
 Route::get('/create-setor',[SetorController::class, 'create'])->name('setor.create');
-//recebe o cadastrar empresa
 Route::post('/store-setor',[SetorController::class, 'store'])->name('setor.store');
-//carrega o editar  empresa
-
 Route::get('/edit-setor/{setor}',[SetorController::class, 'edit'])->name('setor.edit');
-//recebe o editar empresa
-
 Route::put('/update-setor/{setor}',[SetorController::class, 'update'])->name('setor.update');
-//deleta empresa
 Route::delete('/delete-setor/{setor}', [SetorController::class, 'delete'])->name('setor.delete');
 
 //OS 1
