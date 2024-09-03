@@ -67,4 +67,17 @@ class OSsController extends Controller
             'id_emp1_os4'=>$request->id_emp1_os4
         ]);
     }
+    
+    public function view(os $os,os1 $os1,os2 $os2,os3 $os3, os4 $os4){
+
+        //Carrega a View
+        return view('os1.view','os2.view' ,'os3.view','os4.view',
+        [
+        'os', 'os' => $os,
+        'os1', 'os1' => $os1,
+        'os2', 'os2' => $os2,
+        'os3', 'os3' => $os3,
+        'os4', 'os4' => $os4,
+        ]);
+    }
 }

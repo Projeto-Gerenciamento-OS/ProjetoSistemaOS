@@ -208,6 +208,7 @@ Route::delete('/delete-cli/{cli}', [CliController::class, 'delete'])->name('cli.
 
 //OSs
 Route::get('/os',[OSsController::class, 'index'])->name('os.index');
+Route::get('/view-os/{os}',[OSsController::class, 'view'])->name('os.view');
 //OS 1
 
 Route::get('/os1',[Os1Controller::class, 'index'])->name('os1.index');

@@ -383,6 +383,9 @@
 
 <div class="container-fluid data-container os-container">
 
+    {{-- <a href="{{ route('os.view', ['os' => $os->id]) }}" class='btnIcons'>
+        <i class="fa-regular fa-eye "></i>
+    </a> --}}
 <div class="accordion" id="accordionOSs">
 
     <div class="accordion-item">

@@ -45,28 +45,28 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Nome: </span>
+                    <span class="col-4">NOME: </span>
                     <p class="col-5">{{ $users->nome}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">E-mail: </span>
+                    <span class="col-4">EMAIL: </span>
                     <p class="col-8">{{ $users->email }}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Tipo: </span>
+                    <span class="col-4">TIPO: </span>
                     <p class="col-5">{{ $users->tipo }}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Tipo: </span>
+                    <span class="col-4">EMPRESA 2: </span>
                     <p class="col-5">{{ $users->id_emp2 }}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Nivel: </span>
-                    {{-- <p class="col-5">{{ $users->nivel }}</p> --}}
+                    <span class="col-4">NÍVEL: </span>
+                  
                     <p class="col-5">
                         {{--Visualizando o tipo de permissão do usurio--}}
                         @forelse($users->getRoleNames() as $role)

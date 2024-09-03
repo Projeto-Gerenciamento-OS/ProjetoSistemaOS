@@ -31,12 +31,11 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Tipo</th>
-                        <th>ID EMP2</th>
-                        <th>Nivel</th>
-                        <th class="text-center">Ações</th>
+                        <th>NOME</th>
+                        <th>EMAIL</th>
+                        <th>TIPO</th>
+                        <th>EMPRESA 2</th>
+                        <th class="text-center">AÇÕES</th>
                     </tr>
                 </thead>
 
@@ -47,8 +46,7 @@
                             <th>{{ $user->nome }}</th>
                             <td >{{ $user->email }}</td>
                             <th>{{ $user->tipo }}</th>
-                            <th>{{ $user->id_emp2 }}</th>
-                            <th>{{ $user->nivel }}</th>
+                            <th>{{ $user->id_emp2 }}</th>        
 
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
 

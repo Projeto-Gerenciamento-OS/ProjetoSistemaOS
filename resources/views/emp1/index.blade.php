@@ -33,10 +33,10 @@
 
                 <thead>
                     <tr class="titulos">
-                        <th  >ID</th>
-                        <th>Descrição</th>
+                        <th>ID</th>
+                        <th>DESCRIÇÃO</th>
                     
-                        <th class="text-center">Ações</th>
+                        <th class="text-center">AÇÕES</th>
                     </tr>
                 </thead>
 
