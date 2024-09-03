@@ -17,53 +17,56 @@
                 @csrf
                 @method('POST')
                 <div class="col-6 col-lg-6">
+
                     <div class="mb-3">
-                        <label for="id_emp1" class="form-label">id_emp1 </label>
-                        <input type="number" name="id_emp1" id="id_emp1"  placeholder=" Digite o id_emp1"
-                            value="{{ old('id_emp1') }}">
-                    </div>
-                    <div class="mb-3">
-                        <label for="id_emp1" class="form-label">ID EMP1</label>
-                        <input type="number" name="id_emp1" id="id_emp1" 
-                            placeholder=" Digite a data cadastrada" value="{{ old('id_emp1') }}">
+                        <label for="qtde" class="form-label">qtde </label>
+                        <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                            value="{{ old('qtde') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">ID EMP2 </label>
-                        <input type="number" name="id_emp2" id="id_emp2" 
-                            placeholder=" Digite a id_emp2" value="{{ old('id_emp2') }}">
+                        <label for="vunit" class="form-label">vunit</label>
+                        <input type="text" name="vunit" id="vunit" 
+                            placeholder=" Digite a data cadastrada" value="{{ old('vunit') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="vunit" class="form-label">Valor Unitário</label>
-                        <input type="text"  name="vunit" id="vunit"   required>
+                        <label for="vtotal" class="form-label">vtotal </label>
+                        <input type="text" name="vtotal" id="vtotal" 
+                            placeholder=" Digite a vtotal" value="{{ old('vtotal') }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cunit" class="form-label">cunit</label>
+                        <input type="text"  name="cunit" id="cunit"   required>
                     </div> 
-                    
                 </div>
+
                 <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
-                        <label for="vtotal" class="form-label">Valor Total</label>
-                        <input type="text"  name="vtotal" id="vtotal"   required>
+                        <label for="ctotal" class="form-label">ctotal</label>
+                        <input type="text"  name="ctotal" id="ctotal"   required>
                     </div> 
+
                     <div class="mb-3">
-                        <label for="cunit" class="form-label">Custo unitário</label>
-                        <input type="text"  name="cunit" id="cunit"   required>
+                        <label for="id_emp2" class="form-label">id_emp2</label>
+                        <input type="text"  name="id_emp2" id="id_emp2"   required>
                     </div> 
                     
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">id_emp2 </label>
-                        <input type="number"  name="id_emp2" id="id_emp2"   required >
+                        <label for="id_os1" class="form-label">id_os1</label>
+                        <input type="text"  name="id_os1" id="id_os1"   required>
+                    </div> 
+                    
+                    <div class="mb-3">
+                        <label for="id_servico" class="form-label">id_servico </label>
+                        <input type="text"  name="id_servico" id="id_servico"   required >
                     </div>
 
                     <div class="mb-3">
-                        <label for="qtde" class="form-label">Quantidade</label>
-                        <input type="text"  name="qtde" id="qtde"   required>
-                    </div> 
-
-                    <div class="mb-3">
-                        <label for="ctotal" class="form-label">Custo Total</label>
-                        <input type="text"  name="ctotal" id="ctotal"   required>
+                        <label for="id_colaborador" class="form-label">id_colaborador</label>
+                        <input type="text"  name="id_colaborador" id="id_colaborador"   required>
                     </div> 
                 </div>         
     

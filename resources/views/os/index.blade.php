@@ -129,14 +129,15 @@
                         <thead>
                             <tr class="titulos">
                                 <th>ID</th>
-                                <th>ID Serviço</th>
-                                <th>ID EMP1</th>
-                                <th>ID EMP2</th>
-                                <th>ID Colaborador</th>
-                                <th>Quantidade</th>
-                                <th>Valor Unitário</th>
-                                <th>Valor Total</th>
-                                <th>Custo Total</th>
+                                <th>id_emp2</th>
+                                <th>id_os1</th>
+                                <th>id_servico</th>
+                                <th>id_colaborador</th>
+                                <th>qtde</th>
+                                <th>vunit</th>
+                                <th>vtotal</th>
+                                <th>cunit</th>
+                                <th>ctotal</th>
                                 <th class="text-center">Ações</th>
                             </tr>
                         </thead>
@@ -145,14 +146,16 @@
                             @forelse ($os2 as $item)
                                 <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                                     <th>{{ $item->id }}</th>
+                                    <th>{{ $item->id_emp2 }}</th>
+                                    <th>{{ $item->id_os1 }}</th>
                                     <th>{{ $item->id_servico }}</th>
-                                    <td >{{ $item->id_emp1_os2 }}</td>
-                                    <th>{{ $item->id_emp2_os2 }}</th>
                                     <th>{{ $item->id_colaborador }}</th>
-                                    <th>{{ $item->quantidade_os2 }}</th>
-                                    <th>{{ $item->valorUnitario_os2 }}</th>
-                                    <th>{{ $item->valorTotal_os2 }}</th>
-                                    <th>{{ $item->custoTotal_os2 }}</th>
+                                    <th>{{ $item->qtde }}</th>
+                                    <th>{{ $item->vunit }}</th>
+                                    <th>{{ $item->vtotal }}</th>
+                                    <th>{{ $item->cunit }}</th>
+                                    <th>{{ $item->ctotal }}</th>
+                                    
                                     <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 
                                         <a href="{{ route('os2.view', ['os2' => $item->id]) }}" class="btnIcons">

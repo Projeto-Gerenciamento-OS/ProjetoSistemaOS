@@ -39,11 +39,8 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $os2->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_emp1: </dt>
-                    <dd class="col-6">{{ $os2->id_emp1}}</dd>
-
                     <dt class="col-6 col-lg-4">qtde: </dt>
-                    <dd class="col-6">{{ $os2->qtde }}</dd>
+                    <dd class="col-6">{{ $os2->qtde}}</dd>
 
                     <dt class="col-6 col-lg-4">vunit: </dt>
                     <dd class="col-6">{{ $os2->vunit }}</dd>
@@ -60,8 +57,8 @@
                     <dt class="col-6 col-lg-4">id_emp2: </dt>
                     <dd class="col-6">{{ $os2->id_emp2 }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_os2: </dt>
-                    <dd class="col-6">{{ $os2->id_os2 }}</dd>
+                    <dt class="col-6 col-lg-4">id_os1: </dt>
+                    <dd class="col-6">{{ $os2->id_os1 }}</dd>
 
                     <dt class="col-6 col-lg-4">id_servico: </dt>
                     <dd class="col-6">{{ $os2->id_servico }}</dd>
