@@ -34,7 +34,7 @@
 
                 <x-alert />
 
-                <form  action="{{ route('cli.update', ['cli' => $cli->id]) }}" method="POST" class="row g-3">
+                <form  action="{{ route('cli.update', ['cli' => $cli->id]) }}" method="POST" class="row  ">
                     @csrf
                     @method('PUT')
                         <div class="col-6 col-lg-6">

@@ -34,7 +34,7 @@
         <div class="card-body">
             <x-alert />
 
-            <form action="{{ route('custos.update', ['custos' => $custos->id]) }}" method="POST" class="row g-3">
+            <form action="{{ route('custos.update', ['custos' => $custos->id]) }}" method="POST" class="row  ">
                 @csrf
                 @method('PUT')
 

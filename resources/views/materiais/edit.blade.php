@@ -34,7 +34,7 @@
 
                 <x-alert />
 
-                <form action="{{ route('materiais.update', ['materiais' => $materiais->id]) }}" method="POST" class="row g-3">
+                <form action="{{ route('materiais.update', ['materiais' => $materiais->id]) }}" method="POST" class="row  ">
                     @csrf
                     @method('PUT')
 

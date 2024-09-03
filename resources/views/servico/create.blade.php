@@ -13,10 +13,9 @@
         </div> 
         
         <div class="card-body"> 
-            <form action="{{ route('servico.store') }}" method="POST" class="row g-3">
+            <form action="{{ route('servico.store') }}" method="POST" class="row  ">
                 @csrf
                 @method('POST')
-             
                 
                 <div class="col-6 col-lg-6">                
                     <div class="mb-3">

@@ -14,7 +14,7 @@
                 <span class="listar-texto">Listar</span></a>
         </div> 
         <div class="card-body"> 
-        <form action="{{ route('custos.store') }}" method="POST" class=" row g-3">
+        <form action="{{ route('custos.store') }}" method="POST" class=" row  ">
                 @csrf
                 @method('POST')
         

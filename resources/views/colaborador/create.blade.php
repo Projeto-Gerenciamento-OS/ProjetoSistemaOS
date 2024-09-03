@@ -16,7 +16,7 @@
         <div class="card-body"> 
             <x-alert />
 
-            <form action="{{ route('colaborador.store') }}" method="POST" class="row g-3">
+            <form action="{{ route('colaborador.store') }}" method="POST" class="row  ">
                 @csrf
                 @method('POST')
 
