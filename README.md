@@ -14,7 +14,7 @@
   2 - php artisan serve
 
 ## Para criar um layout - por comando:
-  php artisan make:view layouts/nome
+  php artisan make:php artisan make:view layouts/nome layouts/nome
 
 ## Para criar um controller - por coamndo:
   php artisan make:controller nome

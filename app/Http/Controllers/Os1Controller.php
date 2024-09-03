@@ -27,7 +27,7 @@ class Os1Controller extends Controller
         ->withQueryString();
 
         //Carregar a View
-        return view('os1.index', ['os1', 'os1'=> $os1,'id_status'=>$request->id_status]);
+        return view('os.index', ['os1', 'os1'=> $os1,'id_status'=>$request->id_status]);
     }
     
     // Carregar o formulário cadastrar novo usuário
@@ -38,20 +38,20 @@ class Os1Controller extends Controller
         return view('os1.create', ['menu' => 'os1']);
     }
 
-     // Cadastrar no banco de dados o novo curso
-     public function store(Os1Request $request)
-     {
- 
-         // Validar o formulário
-         $request->validated();
- 
-         // Marca o ponto inicial de uma transação
-         DB::beginTransaction();
- 
-         try {
- 
-             // Cadastrar no banco de dados na tabela usuários
-             $os1 = Os1::create([
+    // Cadastrar no banco de dados o novo curso
+    public function store(Os1Request $request)
+    {
+
+        // Validar o formulário
+        $request->validated();
+
+        // Marca o ponto inicial de uma transação
+        DB::beginTransaction();
+
+        try {
+
+            // Cadastrar no banco de dados na tabela usuários
+            $os1 = Os1::create([
                 'os1' => $os1,
                 'id_status' => $request->id_status,
                 'id_users' => $request->id_users,
@@ -65,28 +65,28 @@ class Os1Controller extends Controller
                 'ctotal' => $request->ctotal,
                 'cindireto' => $request->cindireto,
                 'vresultado' => $request->vresultado,
-             ]);
- 
-             // Salvar log
-             Log::info('Os1 cadastrado.', ['id' => $os1->id, $os1]);
- 
-             // Operação é concluída com êxito
-             DB::commit();
- 
-             // Redirecionar o Os1, enviar a mensagem de sucesso
-             return redirect()->route('os1.index', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
-         } catch (Exception $e) {
- 
-             // Salvar log
-             Log::info('Os1 não cadastrado.', ['error' => $e->getMessage()]);
- 
-             // Operação não é concluída com êxito
-             DB::rollBack();
- 
-             // Redirecionar o Os1, enviar a mensagem de erro
-             return back()->withInput()->with('error', 'Os1 não cadastrado!');
-         }
-     }
+            ]);
+
+            // Salvar log
+            Log::info('Os1 cadastrado.', ['id' => $os1->id, $os1]);
+
+            // Operação é concluída com êxito
+            DB::commit();
+
+            // Redirecionar o Os1, enviar a mensagem de sucesso
+            return redirect()->route('os.index', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
+        } catch (Exception $e) {
+
+            // Salvar log
+            Log::info('Os1 não cadastrado.', ['error' => $e->getMessage()]);
+
+            // Operação não é concluída com êxito
+            DB::rollBack();
+
+            // Redirecionar o Os1, enviar a mensagem de erro
+            return back()->withInput()->with('error', 'Os1 não cadastrado!');
+        }
+    }
     
     public function view(Os1 $os1)
     {
@@ -95,7 +95,7 @@ class Os1Controller extends Controller
     }
 
     
-     // Carregar o formulário editar usuário
+    // Carregar o formulário editar usuário
     public function edit(Os1 $os1)
     {
 
@@ -154,7 +154,8 @@ class Os1Controller extends Controller
         }
     }
 
-    public function delete(Os1 $os1){
+    public function delete(Os1 $os1)
+    {
         try {
         
             $os1->delete();
@@ -163,7 +164,7 @@ class Os1Controller extends Controller
             Log::info('Os1 excluído.', ['id' => $os1->id]);
 
         
-            return redirect()->route('os1.index')->with('success', 'Os1 excluído com sucesso!');
+            return redirect()->route('os.index')->with('success', 'Os1 excluído com sucesso!');
 
         } catch (Exception $e) {
 
@@ -171,7 +172,7 @@ class Os1Controller extends Controller
             Log::info('Os1 não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('os1.index')->with('error', 'Os1 não excluído!');
+            return redirect()->route('os.index')->with('error', 'Os1 não excluído!');
         }
     }
 }

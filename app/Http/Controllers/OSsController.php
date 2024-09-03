@@ -30,15 +30,13 @@ class OSsController extends Controller
             $Query->where('id_status', 'like', '%' . $request->id_status . '%');
         })
         ->orderBy('created_at')
-        ->paginate(5)
-        ->withQueryString();
+        ->paginate(5);
 
         $os2= Os2::when($request->has('id_servico'), function ($Query) use ($request){
             $Query->where('id_servico', 'like', '%' . $request->id_servico . '%');
         })
         ->orderBy('created_at')
-        ->paginate(5)
-        ->withQueryString();
+        ->paginate(5);
 
         $os3= Os3::when($request->has('id_os1_os3'), function ($Query) use ($request){
             $Query->where('id_os1_os3', 'like', '%' . $request->id_os1_os3 . '%');

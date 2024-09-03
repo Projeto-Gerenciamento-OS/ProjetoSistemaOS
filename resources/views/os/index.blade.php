@@ -9,7 +9,7 @@
     <div class="accordion-item">
         <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs1" aria-expanded="true" aria-controls="collapseOs1">
-                OS 1
+                OS 1 
             </button>
         </h2>
         
@@ -20,7 +20,7 @@
                     
                     <table>
                         
-                        <form action="{{ route('os1.index') }}">
+                        <form action="{{ route('os.index') }}">
                             <div class="pesquisar">
                                 
                                 <input type="text" name="id_status" id="id_status" class="form-control btn-pesquisar" value="{{ $id_status }}" placeholder="Nome da conta" />
@@ -34,15 +34,17 @@
                         <thead>
                             <tr class="titulos"> 
                                 <th>ID</th>
-                                <th>ID EMP1</th>
-                                <th>Data Cadastrada</th>
-                                <th>DHI</th>
-                                <th>DHF</th>
-                                <th>Obs</th>
-                                <th>Valor Total</th>
-                                <th>Custo Total</th>
-                                <th>Custo Indireto</th>
-                                <th>Valor Resultado</th>
+                                <th>id_emp2</th>
+                                <th>id_status</th>
+                                <th>id_users</th>
+                                <th>datacad</th>
+                                <th>dhi</th>
+                                <th>dhf</th>
+                                <th>obs</th>
+                                <th>vtotal</th>
+                                <th>ctotal</th>
+                                <th>cindireto</th>
+                                <th>vresultado</th>
                                 <th class="text-center">Ações</th>
                             </tr>
                         </thead>
@@ -51,11 +53,11 @@
                             @forelse ($os1 as $item)
                                 <tr class='linhaComCoresDiferentes' id='linhaCores_{{ $item->id }}'>
                                     <th>{{ $item->id }}</th>
-                                    <th>{{ $item->id_emp1 }}</th>
                                     <th>{{ $item->id_emp2 }}</th>
                                     <th>{{ $item->id_status }}</th>
                                     <th>{{ $item->id_users }}</th>
-                                    <td>{{ $item->datacad}}</td>
+                                    <th>{{ $item->datacad }}</th>
+                                    <th>{{ $item->datacad}}</th>
                                     <th>{{ $item->dhi }}</th>
                                     <th>{{ $item->dhf }}</th>
                                     <th>{{ $item->obs }}</th>
@@ -113,10 +115,10 @@
                     <x-alert />
 
                     <table>
-                        <form action="{{ route('os2.index') }}">
+                        <form action="{{ route('os.index') }}">
                             <div class="pesquisar">
                                 
-                                <input type="text" name="id_servico" id="id_servico" class="form-control btn-pesquisar" value="{{ $id_servico }}" placeholder="Nome da conta" />
+                                <input type="text" name="id_status" id="id_status" class="form-control btn-pesquisar" value="{{ $id_status }}" placeholder="Nome da conta" />
 
                                 <button  type="submit" class="btn-pesquisar">
                                     <i class="fa-solid fa-magnifying-glass "></i>
@@ -173,7 +175,6 @@
                             
                             @empty
                                 <div class="alert alert-danger " role="alert">Nenhuma OS encontrada!</div>
-                              
                             @endforelse
                 
                         </tbody>
@@ -206,7 +207,7 @@
 
                     <table>
 
-                        <form action="{{ route('os3.index') }}">
+                        <form action="{{ route('os.index') }}">
                             <div class="pesquisar">
                                 
                                 <input type="text" name="id_os1_os3" id="id_os1_os3" class="form-control btn-pesquisar" value="{{ $id_os1_os3 }}" placeholder="Nome da OS 3" />
@@ -263,8 +264,7 @@
                                     </td>
                                 </tr>
                             @empty
-                                <div class="alert alert-danger" role="alert">Nenhuma OS encontrada!</div>
-                               
+                                <div class="alert alert-danger" role="alert">Nenhuma OS encontrada!</div> 
                             @endforelse
                 
                         </tbody>
@@ -297,7 +297,7 @@
                 <div class="card-body" > 
                     <table>
                         
-                        <form action="{{ route('os4.index') }}">
+                        <form action="{{ route('os.index') }}">
                             <div class="pesquisar">
                                 
                                 <input type="text" name="id_emp1_os4" id="id_emp1_os4" class="form-control btn-pesquisar" value="{{ $id_emp1_os4 }}" placeholder="Nome da OS 4" />
