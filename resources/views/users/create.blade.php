@@ -19,54 +19,56 @@
         
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Nome </label>
+                        <label for="nome" class="form-label">NOME </label>
                         <input type="text" name="nome" id="nome"  placeholder="Nome completo"
                         value="{{ old('nome') }}">
                     </div>
             
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">id_emp2 </label>
+                        <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                         <input type="text" name="id_emp2" id="id_emp2"  placeholder="Nome completo"
                         value="{{ old('id_emp2') }}">
                     </div>
             
-                    <div class="mb-3">
-                        <label for="nivel" class="form-label">nivel </label>
+                    {{-- <div class="mb-3">
+                        <label for="nivel" class="form-label">NÍVEL </label>
                         <input type="text" name="nivel" id="nivel"  placeholder="Nome completo"
                         value="{{ old('nivel') }}">
-                    </div>
+                    </div> --}}
 
                     <div class="mb-3">
-                        <label for="email" class="form-label">E-mail </label>
+                        <label for="email" class="form-label">EMAIL </label>
                         <input type="email" name="email" id="email" 
                             placeholder="Melhor e-mail do usuário" value="{{ old('email') }}">
                     </div>
                 </div>  
 
                 <div class="col-6 col-lg-6 ">
+                
+
                     <div class="mb-3">
-                        <label for="password" class="form-label">Senha </label>
+                        <label for="tipo" class="form-label">TIPO </label>
+                        <input type="number" min="1" max="3" name="tipo" id="tipo"   required >
+                    </div>
+
+                    {{-- <div class="mb-3">
+                        <label for="id_emp2" class="form-label">ID EMP2 </label>
+                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"   required >
+                    </div> --}}
+{{-- 
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">id_emp2 </label>
+                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('id_emp2') }}" required >
+                    </div> --}}
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">SENHA </label>
                         <input type="password" name="password" id="password" 
                             placeholder="Senha com no mínimo 6 caracteres" value="{{ old('password') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="tipo" class="form-label">Tipo </label>
-                        <input type="number" min="1" max="3" name="tipo" id="tipo"   required >
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="id_emp2" class="form-label">ID EMP2 </label>
-                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"   required >
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="id_emp2" class="form-label">id_emp2 </label>
-                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('id_emp2') }}" required >
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="roles" class="form-label">Nível </label>
+                        <label for="roles" class="form-label">NÍVEL </label>
                         <select name="roles" class="form-select" id="roles">
                             <option value="">Selecione</option>
                             @forelse($roles as $role)  
