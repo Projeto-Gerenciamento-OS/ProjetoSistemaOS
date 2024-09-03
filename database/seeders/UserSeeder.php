@@ -35,7 +35,7 @@ class UserSeeder extends Seeder
             ]);
 
              //Atribuir o papel para o usuario
-             $superAdmin->assignRole('Super Admin');
+            $superAdmin->assignRole('Super Admin');
         }
 
         

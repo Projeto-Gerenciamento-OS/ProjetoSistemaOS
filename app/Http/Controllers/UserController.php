@@ -42,7 +42,7 @@ class UserController extends Controller
 
 
         //recupera os papeis
-         $roles = Role::pluck('name')->all();
+        $roles = Role::pluck('name')->all();
 
         // Carregar a VIEW
         return view('users.create', ['users','roles'=>$roles]);

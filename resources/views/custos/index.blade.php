@@ -47,6 +47,7 @@
                         <th>{{ $custo->id_emp2 }}</th>
                         <th>{{ $custo->id_users }}</th>
                         <th>{{ $custo->percentual }}</th>
+                        <th>{{ $custo->id_users }}</th>
                         <th>{{ $custo->descricao }}</th>
                         <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 

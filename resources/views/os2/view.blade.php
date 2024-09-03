@@ -8,7 +8,7 @@
             <div class="cardHeaderAsociados card-header">
                 <h1 class="mt-3">Visualização</h1>
                 <span class="ms-auto d-flex  flex-row gap-2">
-                    <a href="{{ route('os2.index') }}" class="btn ">
+                    <a href="{{ route('os.index') }}" class="btn ">
                         <span class="listar-texto">Listar</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
@@ -39,29 +39,35 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $os2->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">ID SERVIÇO: </dt>
-                    <dd class="col-6">{{ $os2->id_servico}}</dd>
+                    <dt class="col-6 col-lg-4">id_emp1: </dt>
+                    <dd class="col-6">{{ $os2->id_emp1}}</dd>
 
-                    <dt class="col-6 col-lg-4">ID EMP1: </dt>
-                    <dd class="col-6">{{ $os2->id_emp1_os2 }}</dd>
+                    <dt class="col-6 col-lg-4">qtde: </dt>
+                    <dd class="col-6">{{ $os2->qtde }}</dd>
 
-                    <dt class="col-6 col-lg-4">ID EMP2: </dt>
-                    <dd class="col-6">{{ $os2->id_emp2_os2 }}</dd>
+                    <dt class="col-6 col-lg-4">vunit: </dt>
+                    <dd class="col-6">{{ $os2->vunit }}</dd>
 
-                    <dt class="col-6 col-lg-4">ID Colaborador: </dt>
+                    <dt class="col-6 col-lg-4">vtotal: </dt>
+                    <dd class="col-6">{{ $os2->vtotal }}</dd>
+
+                    <dt class="col-6 col-lg-4">cunit: </dt>
+                    <dd class="col-6">{{ $os2->cunit }}</dd>
+
+                    <dt class="col-6 col-lg-4">ctotal: </dt>
+                    <dd class="col-6">{{ $os2->ctotal }}</dd>
+
+                    <dt class="col-6 col-lg-4">id_emp2: </dt>
+                    <dd class="col-6">{{ $os2->id_emp2 }}</dd>
+
+                    <dt class="col-6 col-lg-4">id_os2: </dt>
+                    <dd class="col-6">{{ $os2->id_os2 }}</dd>
+
+                    <dt class="col-6 col-lg-4">id_servico: </dt>
+                    <dd class="col-6">{{ $os2->id_servico }}</dd>
+
+                    <dt class="col-6 col-lg-4">id_colaborador: </dt>
                     <dd class="col-6">{{ $os2->id_colaborador }}</dd>
-
-                    <dt class="col-6 col-lg-4">Quantidade: </dt>
-                    <dd class="col-6">{{ $os2->quantidade_os2 }}</dd>
-
-                    <dt class="col-6 col-lg-4">Valor Unitário: </dt>
-                    <dd class="col-6">{{ $os2->valorUnitario_os2 }}</dd>
-
-                    <dt class="col-6 col-lg-4">Valor Total: </dt>
-                    <dd class="col-6">{{ $os2->valorTotal_os2 }}</dd>
-
-                    <dt class="col-6 col-lg-4">Custo Total: </dt>
-                    <dd class="col-6">{{ $os2->custoTotal_os2 }}</dd>
 
                     <dt class="col-6 col-lg-4">Cadastrado: </dt>
                     <dd class="col-6">

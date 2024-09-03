@@ -16,6 +16,7 @@ use App\Http\Controllers\TurnoController;
 use App\Http\Controllers\SetorController;
 use App\Http\Controllers\CliController;
 use App\Http\Controllers\Os1Controller;
+use App\Http\Controllers\OSsController;
 use App\Http\Controllers\Os2Controller;
 use App\Http\Controllers\Os3Controller;
 use App\Http\Controllers\Os4Controller;
