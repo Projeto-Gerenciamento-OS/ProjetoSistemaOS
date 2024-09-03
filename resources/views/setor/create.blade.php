@@ -6,7 +6,7 @@
     <div class="card mb-4 cardCorLista" >
 
         <div class="cardHeaderAsociados card-header">
-            <h1>Turno</h1>
+            <h1>Setor</h1>
             <a href="{{ route('setor.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
                 <span class="listar-texto">Listar</span></a>
@@ -16,10 +16,10 @@
             <form action="{{ route('setor.store') }}" method="POST" class="row g-3">
                 @csrf
                 @method('POST')
-                            
+            
                 <div class="mb-3">
                     <label for="id_emp2" class="form-label">id_emp2 </label>
-                    <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 completo"
+                    <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 "
                     value="{{ old('id_emp2') }}">
                 </div>
 
