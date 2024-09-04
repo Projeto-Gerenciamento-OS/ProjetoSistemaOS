@@ -40,21 +40,6 @@
                 @csrf
                 @method('PUT')
 
-<<<<<<< HEAD
-                <div class="col-3">
-                    <label for="id" class="form-label">ID:</label>
-                    <input type="text" name="id" id="id" 
-                    class="form-control" placeholder="id" readonly value="{{old('id', $emp1->id) }} ">      
-                
-                    <label for="descricao" class="form-label">DESCRIÇÃO:</label>
-                    <input type="text" name="descricao" id="descricao" 
-                    class="form-control" placeholder="descricao" value="{{ old('descricao',$emp1->descricao) }}">    
-                </div> 
-                
-                <a class="btnCadastrarE">
-                    <button type="submit">
-                        <h5>Salvar</h5>                  
-=======
                 <div class="col-6 col-lg-6 ">
                     <div class="mb-3">
                         <label for="id" class="form-label">ID EMPRESA 1:</label>
@@ -71,7 +56,6 @@
                 <a  class="  btnCadastrar">
                     <button type="submit">
                         <h5>SALVAR</h5>
->>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                     </button>  
                 </a>
             </form>

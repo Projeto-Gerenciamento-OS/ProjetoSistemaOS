@@ -9,13 +9,7 @@
 
             <form action="{{ route('emp1.index') }}">
                 <div class="pesquisar">
-<<<<<<< HEAD
-                    
-                    <input type="text" name="descricao" id="descricao" class="form-control btn-pesquisar" value="{{ $descricao }}" placeholder="Pesquisar" />
-
-=======
                     <input type="text" name="descricao" id="descricao" class="form-control btn-pesquisar" value="{{ $descricao }}" placeholder="Nome da conta" />
->>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
                     </button>
