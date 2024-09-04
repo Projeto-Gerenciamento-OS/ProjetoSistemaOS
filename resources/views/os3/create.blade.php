@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_materiais" class="form-label">id_materiais </label>
+                        <label for="id_materiais" class="form-label">ID MATERIAIS</label>
                         <input type="text" name="id_materiais" id="id_materiais"  placeholder=" Digite o id_materiais"
                             value="{{ old('id_materiais') }}">
                     </div>

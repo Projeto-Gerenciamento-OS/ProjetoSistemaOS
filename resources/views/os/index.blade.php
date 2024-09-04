@@ -230,7 +230,7 @@
                                 <th>CUSTO</th>
                                 <th>EMPRESA 2 </th>
                                 <th>ID OS1</th>
-                                <th>id_materiais</th>
+                                <th>ID MATERIAIS</th>
                                 <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>

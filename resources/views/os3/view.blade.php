@@ -60,7 +60,7 @@
                     <dt class="col-6 col-lg-4">id_os1: </dt>
                     <dd class="col-6">{{ $os3->id_os1}}</dd>
 
-                    <dt class="col-6 col-lg-4">id_materiais: </dt>
+                    <dt class="col-6 col-lg-4">ID MATERIAIS:</dt>
                     <dd class="col-6">{{ $os3->id_materiais}}</dd>
 
 
