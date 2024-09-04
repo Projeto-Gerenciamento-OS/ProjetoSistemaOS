@@ -34,9 +34,9 @@
                         <thead>
                             <tr class="titulos"> 
                                 <th>ID</th>
-                                <th>id_emp2</th>
+                                <th>EMPRESA 2 </th>
                                 <th>id_status</th>
-                                <th>id_users</th>
+                                <th>USUÁRIO</th>
                                 <th>datacad</th>
                                 <th>dhi</th>
                                 <th>dhf</th>
@@ -45,7 +45,7 @@
                                 <th>ctotal</th>
                                 <th>cindireto</th>
                                 <th>vresultado</th>
-                                <th class="text-center">Ações</th>
+                                <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
 
@@ -128,7 +128,7 @@
                         <thead>
                             <tr class="titulos">
                                 <th>ID</th>
-                                <th>id_emp2</th>
+                                <th>EMPRESA 2 </th>
                                 <th>id_os1</th>
                                 <th>id_servico</th>
                                 <th>id_colaborador</th>
@@ -137,7 +137,7 @@
                                 <th>vtotal</th>
                                 <th>cunit</th>
                                 <th>ctotal</th>
-                                <th class="text-center">Ações</th>
+                                <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
 
@@ -228,10 +228,10 @@
                                 <th>vtotal</th>
                                 <th>cunit</th>
                                 <th>ctotal</th>
-                                <th>id_emp2</th>
+                                <th>EMPRESA 2 </th>
                                 <th>id_os1</th>
                                 <th>id_materiais</th>
-                                <th class="text-center">Ações</th>
+                                <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
 
@@ -319,8 +319,8 @@
                                 <th>percentual</th>
                                 <th>valor</th>
                                 <th>ativo</th>
-                                <th>id_emp2</th>
-                                <th class="text-center">Ações</th>
+                                <th>EMPRESA 2 </th>
+                                <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -422,7 +422,7 @@
                                 <th>Custo Total</th>
                                 <th>Custo Indireto</th>
                                 <th>Valor Resultado</th>
-                                <th class="text-center">Ações</th>
+                                <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
 
@@ -516,7 +516,7 @@
                                 <th> id_os2 </th>
                                 <th> id_servico </th>
                                 <th> id_colaborador </th>
-                                <th class="text-center">Ações</th>
+                                <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
 
@@ -609,7 +609,7 @@
                                 <th>Valor Unitário</th>
                                 <th>Valor Total</th>
                                 <th>Custo Total</th>
-                                <th class="text-center">Ações</th>
+                                <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
 
@@ -698,7 +698,7 @@
                                 <th>Valor</th>
                                 <th>Ativo</th>
                                 <th>Descrição</th>
-                                <th class="text-center">Ações</th>
+                                <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
                         <tbody>

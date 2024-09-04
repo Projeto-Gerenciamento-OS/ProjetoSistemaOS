@@ -39,7 +39,7 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $cli->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">tipo: </dt>
+                    <dt class="col-6 col-lg-4">TIPO </dt>
                     <dd class="col-6">{{ $cli->tipo}}</dd>
 
                     <dt class="col-6 col-lg-4">cpf_cnpj: </dt>
@@ -84,18 +84,18 @@
                     <dt class="col-6 col-lg-4">obs: </dt>
                     <dd class="col-6">{{ $cli->obs }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_emp2: </dt>
+                    <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
                     <dd class="col-6">{{ $cli->id_emp2 }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_users: </dt>
+                    <dt class="col-6 col-lg-4">USUARIOS:</dt>
                     <dd class="col-6">{{ $cli->id_users }}</dd>
 
-                    <dt class="col-6 col-lg-4">Cadastrado: </dt>
+                    <dt class="col-6 col-lg-4">CADASTRADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($cli->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>
 
-                    <dt class="col-6 col-lg-4">Editado: </dt>
+                    <dt class="col-6 col-lg-4">EDITADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($cli->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>

@@ -31,10 +31,10 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>id_emp2</th>
-                        <th>id_users</th>
+                        <th>EMPRESA 2 </th>
+                        <th>USUÁRIO</th>
                         <th>descricao</th>
-                        <th class="text-center">Ações</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 

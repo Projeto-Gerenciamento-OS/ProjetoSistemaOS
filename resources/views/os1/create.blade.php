@@ -21,7 +21,7 @@
     
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">id_emp2</label>
+                        <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                         <input type="number" name="id_emp2" id="id_emp2"  placeholder=" Digite o id_emp2"
                             value="{{ old('id_emp2') }}">
                     </div>
@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_users" class="form-label">id_users </label>
+                        <label for="id_users" class="form-label">USUÁRIO</label>
                         <input type="text"  name="id_users" id="id_users"  value="{{ old('id_users') }}" >
                     </div>
 

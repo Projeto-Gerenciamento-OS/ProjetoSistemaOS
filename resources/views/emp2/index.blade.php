@@ -47,7 +47,7 @@
                         <th>Plano</th>
                         <th>Qtd de Adm</th>
                         <th>Qtd de Oper</th>                   
-                        <th class="text-center">Ações</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 

@@ -31,17 +31,17 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>nome</th>
+                        <th>NOME</th>
                         <th>tempo</th>
                         <th>valor</th>
                         <th>custo</th>
                         <th>obs</th>
                         <th>recorrente</th>
                         <th>intervalo</th>
-                        <th>id_emp2</th>
+                        <th>EMPRESA 2 </th>
                         <th>id_os1</th>
-                        <th>id_users</th>
-                        <th class="text-center">Ações</th>
+                        <th>USUÁRIO</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 

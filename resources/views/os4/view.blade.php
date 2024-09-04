@@ -52,16 +52,16 @@
                     <dt class="col-6 col-lg-4">ativo: </dt>
                     <dd class="col-6">{{ $os4->ativo }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_emp2: </dt>
+                    <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
                     <dd class="col-6">{{ $os4->id_emp2 }}</dd>
 
 
-                    <dt class="col-6 col-lg-4">Cadastrado: </dt>
+                    <dt class="col-6 col-lg-4">CADASTRADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($os4->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>
 
-                    <dt class="col-6 col-lg-4">Editado: </dt>
+                    <dt class="col-6 col-lg-4">EDITADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($os4->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>

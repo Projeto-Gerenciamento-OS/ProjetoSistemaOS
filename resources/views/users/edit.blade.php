@@ -41,28 +41,27 @@
 
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label class="form-label" for="nome" >NOME: </label>
-                        <input type="text" name="nome" id="nome"  placeholder="Nome completo"
+                        <label class="form-label" for="nome" >NOME </label>
+                        <input type="text" name="nome" id="nome"  placeholder="Digeite o(a) NOME..."
                             value="{{ old('nome', $user->nome) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="email" >EMAIL: </label>
-                        <input type="email" name="email" id="email" 
-                            placeholder="Melhor e-mail do usuário" value="{{ old('email', $user->email) }}">
+                        <label class="form-label" for="email" >EMAIL</label>
+                        <input type="email" name="email" id="email"  placeholder="Digeite o(a) EMAIL..."
+                            value="{{ old('email', $user->email) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="password" >SENHA: </label>
-                        <input type="password" name="password" id="password"  placeholder="Senha com no mínimo 6 caracteres"
-                            value="{{ old('password') }}">
+                        <label class="form-label" for="password" >SENHA</label>
+                        <input type="password" name="password" id="password"   placeholder="Digeite o(a) SENHA...">
                     </div>
                 </div>
 
                 <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
-                        <label for="roles" class="form-label">NÍVEL: </label>
+                        <label for="roles" class="form-label">NÍVEL</label>
                         
                         <select name="roles" class="form-select" id="roles">
                             <option value="">Selecione</option>
@@ -82,12 +81,12 @@
                     </div> 
 
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">EMPRESA 2: </label>
+                        <label for="id_emp2" class="form-label">EMPRESA 2</label>
                         <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('email', $user->id_emp2) }}" >
                     </div>
                     
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">TIPO: </label>
+                        <label for="id_emp2" class="form-label">TIPO</label>
                         <input type="number" min="1" max="3" name="tipo" id="tipo"  value="{{ old('tipo', $user->tipo) }}" >
                     </div>
                 </div>

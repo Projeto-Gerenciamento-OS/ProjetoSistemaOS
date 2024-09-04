@@ -20,12 +20,12 @@
             
                     <div class="col-6 col-lg-6">
                         <div class="mb-3">
-                            <label for="id_emp2" class="form-label">id_emp2</label>
+                            <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                             <input type="text"  name="id_emp2" id="id_emp2"   required>
                         </div> 
 
                         <div class="mb-3">
-                            <label for="id_users" class="form-label">id_users </label>
+                            <label for="id_users" class="form-label">USUÁRIO</label>
                             <input type="text" name="id_users" id="id_users" 
                                 placeholder=" Digite a id_users">
                         </div>

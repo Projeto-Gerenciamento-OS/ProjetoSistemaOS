@@ -44,7 +44,7 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">nome: </span>
+                    <span class="col-6 col-lg-4">NOME: </span>
                     <p class="col-6">{{ $servico->nome}}</p>
                 </div>
                 
@@ -79,7 +79,7 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">id_emp2: </span>
+                    <span class="col-6 col-lg-4">EMPRESA 2: </span>
                     <p class="col-6">{{ $servico->id_emp2}}</p>
                 </div>
                 
@@ -89,19 +89,19 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">id_users: </span>
+                    <span class="col-6 col-lg-4">USUARIOS:</span>
                     <p class="col-6">{{ $servico->id_users}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Cadastrado: </span>
+                    <span class="col-6 col-lg-4">CADASTRADO: </span>
                     <p class="col-6">
                         {{ \Carbon\Carbon::parse($servico->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Editado: </span>
+                    <span class="col-6 col-lg-4">EDITADO: </span>
                     <p class="col-6">
                         {{ \Carbon\Carbon::parse($servico->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>

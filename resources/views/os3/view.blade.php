@@ -54,7 +54,7 @@
                     <dt class="col-6 col-lg-4">ctotal: </dt>
                     <dd class="col-6">{{ $os3->ctotal}}</dd>
 
-                    <dt class="col-6 col-lg-4">id_emp2: </dt>
+                    <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
                     <dd class="col-6">{{ $os3->id_emp2}}</dd>
 
                     <dt class="col-6 col-lg-4">id_os1: </dt>
@@ -64,12 +64,12 @@
                     <dd class="col-6">{{ $os3->id_materiais}}</dd>
 
 
-                    <dt class="col-6 col-lg-4">Cadastrado: </dt>
+                    <dt class="col-6 col-lg-4">CADASTRADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($os3->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>
 
-                    <dt class="col-6 col-lg-4">Editado: </dt>
+                    <dt class="col-6 col-lg-4">EDITADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($os3->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>

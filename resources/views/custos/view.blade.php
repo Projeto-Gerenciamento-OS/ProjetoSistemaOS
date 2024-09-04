@@ -45,18 +45,18 @@
                     <dt class="col-6 col-lg-4">percentual: </dt>
                     <dd class="col-6">{{ $custos->percentual }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_emp2: </dt>
+                    <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
                     <dd class="col-6">{{ $custos->id_emp2 }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_users: </dt>
+                    <dt class="col-6 col-lg-4">USUARIOS:</dt>
                     <dd class="col-6">{{ $custos->id_users }}</dd>
 
-                    <dt class="col-6 col-lg-4">Cadastrado: </dt>
+                    <dt class="col-6 col-lg-4">CADASTRADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($custos->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>
 
-                    <dt class="col-6 col-lg-4">Editado: </dt>
+                    <dt class="col-6 col-lg-4">EDITADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($custos->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>

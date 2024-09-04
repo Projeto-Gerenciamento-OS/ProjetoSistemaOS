@@ -6,7 +6,7 @@
     <div class="card mb-4 cardCorLista" >
 
         <div class="cardHeaderAsociados card-header">
-            <h1>Turno</h1>
+            <h1>TURNO</h1>
             <a href="{{ route('turno.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
                 <span class="listar-texto">LISTAR</span>
@@ -20,7 +20,7 @@
                 
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">NOME </label>
+                        <label for="nome" class="form-label">NOME</label>
                         <input type="text" name="nome" id="nome"  placeholder="Digite o(a) NOME..."
                         value="{{ old('nome') }}">
                     </div>
@@ -40,25 +40,25 @@
                 
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="inicio" class="form-label">INICIO </label>
+                        <label for="inicio" class="form-label">INICIO</label>
                         <input type="time" name="inicio" id="inicio"  placeholder="Digite o(a) INICIO..."
                         value="{{ old('inicio') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="termino" class="form-label">TERMINO </label>
+                        <label for="termino" class="form-label">TERMINO</label>
                         <input type="time" name="termino" id="termino"  placeholder="Digite o(a) TERMINO..."
                         value="{{ old('termino') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="pausa" class="form-label">PAUSA </label>
+                        <label for="pausa" class="form-label">PAUSA</label>
                         <input type="time" name="pausa" id="pausa"  placeholder="Digite o(a) PAUSA..."
                         value="{{ old('inicio') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="retorno" class="form-label">RETORNO </label>
+                        <label for="retorno" class="form-label">RETORNO</label>
                         <input type="time" name="retorno" id="retorno"  placeholder="Digite o(a) RETORNO..."
                         value="{{ old('retorno') }}">
                     </div>

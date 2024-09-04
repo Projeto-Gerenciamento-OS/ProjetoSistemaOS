@@ -23,7 +23,7 @@
                         <!-- Coluna 1 -->
                         <div class="col-lg-3">
                             <div class="mb-3">
-                                <label for="tipo" class="form-label">tipo:</label>
+                                <label for="tipo" class="form-label">TIPO</label>
                                 <input type="text" name="tipo" id="tipo" class="form-control" placeholder="tipo" value="{{ old('tipo') }}">
                             </div>
 
@@ -48,7 +48,7 @@
                             </div>
                             
                             <div class="mb-3">
-                                <label for="id_emp2" class="form-label">id_emp2:</label>
+                                <label for="id_emp2" class="form-label">EMPRESA 2</label>
                                 <input type="text" name="id_emp2" id="id_emp2" class="form-control" placeholder="id_emp2" value="{{ old('id_emp2') }}">
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="id_users" class="form-label">id_users:</label>
+                                <label for="id_users" class="form-label">USUÁRIO</label>
                                 <input type="text" name="id_users" id="id_users" class="form-control" placeholder="id_users" value="{{ old('obs') }}">
                             </div>
 

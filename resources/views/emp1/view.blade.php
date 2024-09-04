@@ -48,14 +48,14 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Cadastrado: </span>
+                    <span class="col-4">CADASTRADO: </span>
                     <p class="col-5">
                         {{ \Carbon\Carbon::parse($emp1->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Editado: </span>
+                    <span class="col-4">EDITADO: </span>
                     <p class="col-5">
                         {{ \Carbon\Carbon::parse($emp1->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>

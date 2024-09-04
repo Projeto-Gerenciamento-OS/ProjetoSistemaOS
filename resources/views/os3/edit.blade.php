@@ -71,7 +71,7 @@
                         </div> 
 
                         <div class="mb-3">
-                            <label for="id_emp2" class="form-label">id_emp2</label>
+                            <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                             <input type="text"  name="id_emp2" id="id_emp2"   required
                             value="{{ old('id_emp2', $os3->id_emp2) }}">
                         </div> 

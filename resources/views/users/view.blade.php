@@ -55,7 +55,7 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">TIPO: </span>
+                    <span class="col-4">TIPO:</span>
                     <p class="col-5">{{ $users->tipo }}</p>
                 </div>
 
@@ -84,14 +84,14 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Cadastrado: </span>
+                    <span class="col-4">CADASTRADO: </span>
                     <p class="col-8">
                         {{ \Carbon\Carbon::parse($users->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Editado: </span>
+                    <span class="col-4">EDITADO: </span>
                     <p class="col-8">
                     {{ \Carbon\Carbon::parse($users->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>

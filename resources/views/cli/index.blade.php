@@ -31,7 +31,7 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th> tipo </th>
+                        <th> TIPO</th>
                         <th> cpf_cnpj </th>
                         <th> razao </th>
                         <th> fantasia </th>
@@ -48,7 +48,7 @@
                         <th> obs </th>
                         <th> id_emp2 </th>
                         <th> id_users </th>
-                        <th class="text-center">Ações</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 

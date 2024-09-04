@@ -39,13 +39,13 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $os1->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_emp2 </dt>
+                    <dt class="col-6 col-lg-4">EMPRESA 2 </dt>
                     <dd class="col-6">{{ $os1->id_emp2}}</dd>
 
                     <dt class="col-6 col-lg-4">id_status</dt>
                     <dd class="col-6">{{ $os1->id_status}}</dd>
 
-                    <dt class="col-6 col-lg-4">id_users </dt>
+                    <dt class="col-6 col-lg-4">USUÁRIO</dt>
                     <dd class="col-6">{{ $os1->id_users}}</dd>
 
                     <dt class="col-6 col-lg-4">datacad</dt>
@@ -72,12 +72,12 @@
                     <dt class="col-6 col-lg-4">vresultado </dt>
                     <dd class="col-6">{{ $os1->vresultado }}</dd>
 
-                    <dt class="col-6 col-lg-4">Cadastrado: </dt>
+                    <dt class="col-6 col-lg-4">CADASTRADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($os1->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>
 
-                    <dt class="col-6 col-lg-4">Editado: </dt>
+                    <dt class="col-6 col-lg-4">EDITADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($os1->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>

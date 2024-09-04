@@ -40,13 +40,13 @@
                 @method('PUT')
 
                 <div class="mb-3">
-                    <label for="id_emp2" >id_emp2: </label>
+                    <label for="id_emp2" >EMPRESA 2</label>
                     <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 completo"
                     value="{{ old('id_emp2', $setor->id_emp2) }}">
                 </div>
 
                 <div class="mb-3">
-                    <label for="id_users" class="form-label">id_users </label>
+                    <label for="id_users" class="form-label">USUÁRIO</label>
                     <input type="text" name="id_users" id="id_users" 
                     placeholder="coloque o id_users" value="{{ old('id_users', $setor->id_users) }}">
                 </div>

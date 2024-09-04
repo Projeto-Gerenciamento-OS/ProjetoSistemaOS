@@ -36,7 +36,7 @@
                         <th>ID</th>
                         <th>DESCRIÇÃO</th>
                     
-                        <th class="text-center">AÇÕES</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 

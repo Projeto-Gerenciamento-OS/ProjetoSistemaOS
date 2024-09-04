@@ -17,7 +17,7 @@
                     <div class="form-floating mb-3">
                         <input type="text" name="name" class="form-control" id="name"
                             placeholder="Digite o nome completo" value="{{ old('name') }}">
-                        <label for="name">Nome</label>
+                        <label for="name">NOME</label>
                     </div>
 
                     <div class="form-floating mb-3">

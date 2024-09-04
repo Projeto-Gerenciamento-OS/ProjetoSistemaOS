@@ -38,58 +38,58 @@
             <form action="{{ route('turno.update', ['turno' => $turno->id]) }}" method="POST" class="row  ">
                 @csrf
                 @method('PUT')
-
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="nome" >nome: </label>
-                        <input type="text" name="nome" id="nome"  placeholder="Nome completo"
-                        value="{{ old('nome', $turno->nome) }}">
+                        <label for="nome" class="form-label" >NOME</label>
+                        <input type="text" name="nome" id="nome"  placeholder="Digeite o(a) NOME..."
+                            value="{{ old('nome', $turno->nome) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">id_emp2 </label>
-                        <input type="text" name="id_emp2" id="id_emp2"  value="{{ old('id_emp2', $turno->id_emp2) }}" >
+                        <label for="id_emp2" class="form-label">EMPRESA 2</label>
+                        <input type="text" name="id_emp2" id="id_emp2"  placeholder="Digeite o(a) EMPRESA 2..."
+                            value="{{ old('id_emp2', $turno->id_emp2) }}" >
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_users" class="form-label">id_users </label>
-                        <input type="text" name="id_users" id="id_users"  value="{{ old('id_users', $turno->id_users) }}" >
+                        <label for="id_users" class="form-label">USUÁRIO</label>
+                        <input type="text" name="id_users" id="id_users"    placeholder="Digeite o(a) USUARIOS..."
+                            value="{{ old('id_users', $turno->id_users) }}" >
                     </div>
                 </div>
 
 
-                <div class="col-6 col-lg-6 mt-2">
+                <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="termino" class="form-label">termino </label>
-                        <input type="time" name="termino" id="termino"  value="{{ old('termino', $turno->termino) }}" >
+                        <label for="termino" class="form-label">TERMINO</label>
+                        <input type="time" name="termino" id="termino"    placeholder="Digeite o(a) TERMINO..."
+                            value="{{ old('termino', $turno->termino) }}" >
                     </div>
 
                     <div class="mb-3">
-                        <label for="inicio" class="form-label">inicio </label>
-                        <input type="time" name="inicio" id="inicio" 
-                        placeholder="coloque o inicio" value="{{ old('inicio', $turno->inicio) }}">
+                        <label for="inicio" class="form-label">INICIO</label>
+                        <input type="time" name="inicio" id="inicio"  placeholder="Digeite o(a) INICIO..."
+                        value="{{ old('inicio', $turno->inicio) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="pausa" class="form-label">pausa </label>
-                        <input type="time" name="pausa" id="pausa" 
-                        placeholder="coloque o pausa" value="{{ old('pausa', $turno->pausa) }}">
+                        <label for="pausa" class="form-label">PAUSA</label>
+                        <input type="time" name="pausa" id="pausa"  placeholder="Digeite o(a) PAUSA..."
+                            value="{{ old('pausa', $turno->pausa) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="retorno" class="form-label">retorno </label>
-                        <input type="time" name="retorno" id="retorno" 
-                        placeholder="coloque o retorno" value="{{ old('retorno', $turno->retorno) }}">
+                        <label for="retorno" class="form-label">RETORNO</label>
+                        <input type="time" name="retorno" id="retorno"  placeholder="Digeite o(a) RETORNO..."
+                            value="{{ old('retorno', $turno->retorno) }}">
                     </div>
                 </div>
                 
                 <a  class=" btnCadastrar">
                     <button type="submit">
                         <h5>Salvar</h5>
-                            
                     </button>  
                 </a>
-
             </form>
         </div>
     </div>

@@ -33,13 +33,13 @@
                 <thead>
                     <tr class="titulos">    
                         <th>ID</th>
-                        <th>nome</th>
+                        <th>NOME</th>
                         <th>fone</th>
-                        <th>id_emp2</th>
-                        <th>id_users</th>
+                        <th>EMPRESA 2 </th>
+                        <th>USUÁRIO</th>
                         <th>id_turno</th>
                         <th>id_setor</th>
-                        <th class="text-center">Ações</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 

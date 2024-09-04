@@ -37,7 +37,7 @@
                         <th>Valor</th>
                         <th>ID EMP2</th>
                         <th>ID Users</th>
-                        <th class="text-center">Ações</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 

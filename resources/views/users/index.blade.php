@@ -5,7 +5,7 @@
 <div class="container-fluid px-4 data-container">
     <div class="card mb-4 cardCorLista" >
         <div class="card-header">
-            <h1>Usuários</h1>
+            <h1>USUÁRIO</h1>
 
             <form action="{{ route('user.index') }}">
                 <div class="pesquisar">
@@ -35,7 +35,7 @@
                         <th>EMAIL</th>
                         <th>TIPO</th>
                         <th>EMPRESA 2</th>
-                        <th class="text-center">AÇÕES</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 
