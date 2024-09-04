@@ -9,7 +9,7 @@
             <h1 class="mt-3">Novo Colaborador</h1>
 
             <a href="{{ route('colaborador.index') }}" class="btn  btn-custom-sm"><i class="fa-solid fa-list"></i>
-            <span class="listar-texto">Listar</span></a>
+            <span class="listar-texto">LISTAR</span></a>
            
         </div>
 
@@ -23,7 +23,7 @@
                 <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
-                        <label for="nome" class="form-label">nome</label>
+                        <label for="nome" class="form-label">NOME</label>
                         <input type="text" name="nome" id="nome" class="form-control" placeholder="nome" value="{{ old('nome') }}">              
                     </div>
             
@@ -41,7 +41,7 @@
                 <div class="col-6 col-lg-6">
                     
                     <div class="mb-3">
-                        <label for="id_users" class="form-label">id_users</label>
+                        <label for="id_users" class="form-label">USUÁRIO</label>
                         <input type="number" name="id_users" id="id_users" class="form-control" placeholder="id_users" value="{{ old('id_users') }}">              
                     </div>
                     

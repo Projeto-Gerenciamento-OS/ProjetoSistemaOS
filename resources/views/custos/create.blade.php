@@ -11,7 +11,7 @@
             <h1>Cadastro de Custos</h1>
             <a href="{{ route('custos.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span></a>
+                <span class="listar-texto">LISTAR</span></a>
         </div> 
         <div class="card-body"> 
         <form action="{{ route('custos.store') }}" method="POST" class=" row  ">
@@ -22,13 +22,13 @@
             <div class="col-12 col-lg-6">
                     
                 <div class="mb-3">
-                    <label for="id_emp2" class="form-label">id_emp2</label>
+                    <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                     <input type="number" name="id_emp2" id="id_emp2" 
                         placeholder=" Digite " value="{{ old('id_emp2') }}">
                 </div>
 
                 <div class="mb-3">
-                    <label for="id_users" class="form-label">id_users </label>
+                    <label for="id_users" class="form-label">USUÁRIO</label>
                     <input type="number" name="id_users" id="id_users" 
                         placeholder=" Digite " value="{{ old('id_users') }}">
                 </div>
@@ -42,7 +42,7 @@
                     </div> 
 
                     <div class="mb-3">
-                        <label for="descricao" class="form-label">descricao</label>
+                        <label for="descricao" class="form-label">DESCRIÇÃO</label>
                         <input type="text" name="descricao" id="descricao" 
                             placeholder=" Digite o descricao" value="{{ old('descricao') }}">
                     </div>

@@ -6,9 +6,10 @@
     <div class="card mb-4 cardCorLista" >
 
         <div class="cardHeaderAsociados card-header">
-            <h1>Usuários</h1>
-            <a href="{{ route('user.index') }}" class="btn"><i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span>
+            <h1>USUÁRIO</h1>
+            <a href="{{ route('user.index') }}" class="btn">
+                <i class="fa-solid fa-list"></i>
+                <span class="listar-texto">LISTAR</span>
             </a>
         </div> 
         
@@ -19,30 +20,33 @@
         
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">NOME </label>
-                        <input type="text" name="nome" id="nome"  placeholder="Nome completo"
+                        <label for="nome" class="form-label">NOME</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digeite o(a) NOME..."
                         value="{{ old('nome') }}">
                     </div>
-            
+                    
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">EMPRESA 2 </label>
-                        <input type="text" name="id_emp2" id="id_emp2"  placeholder="Nome completo"
-                        value="{{ old('id_emp2') }}">
+                        <label for="password" class="form-label">SENHA </label>
+                        <input type="password" name="password" id="password" placeholder="Digeite o(a) SENHA..."
+                            value="{{ old('password') }}">
                     </div>
+<<<<<<< HEAD
             
       
+=======
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
 
                     <div class="mb-3">
                         <label for="email" class="form-label">EMAIL </label>
-                        <input type="email" name="email" id="email" 
-                            placeholder="Melhor e-mail do usuário" value="{{ old('email') }}">
+                        <input type="email" name="email" id="email" placeholder="Digeite o(a) EMAIL..."
+                            value="{{ old('email') }}">
                     </div>
                 </div>  
 
                 <div class="col-6 col-lg-6 ">
                 
-
                     <div class="mb-3">
+<<<<<<< HEAD
                         <label for="tipo" class="form-label">TIPO </label>
                         <input type="number" min="1" max="3" name="tipo" id="tipo"   required >
                     </div>
@@ -53,6 +57,12 @@
                         <input type="password" name="password" id="password" 
                             placeholder="Senha com no mínimo 6 caracteres" value="{{ old('password') }}">
                     </div>
+=======
+                        <label for="id_emp2" class="form-label">EMPRESA 2 </label>
+                        <input type="text" name="id_emp2" id="id_emp2" placeholder="Digeite o(a) EMPRESA 2..."
+                        value="{{ old('id_emp2') }}">
+                    </div>                  
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
 
                     <div class="mb-3">
                         <label for="roles" class="form-label">NÍVEL </label>
@@ -71,6 +81,13 @@
                             @endforelse
                         </select>
                     </div>
+                    
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label">TIPO</label>
+                        <input type="number" min="1" max="3" name="tipo" id="tipo"   
+                        placeholder="TIPO..." value="{{ old('tipo') }}"
+                        required >
+                    </div>  
                 </div>
                 
                 <a  class="btnCadastrar">

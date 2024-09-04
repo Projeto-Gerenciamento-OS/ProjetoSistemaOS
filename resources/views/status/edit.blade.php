@@ -10,12 +10,12 @@
 
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('status.index') }}" class="btn ">
-                    <span class="listar-texto">Listar</span>
+                    <span class="listar-texto">LISTAR</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
 
                 <a href="{{ route('status.view', ['status' => $status->id]) }}" class="btn ">
-                    <span class="listar-texto">Visualizar</span>
+                    <span class="listar-texto">VISUALIZAR</span>
                     <i class="fa-regular fa-eye"></i>
                 </a>
 
@@ -24,7 +24,7 @@
                     @method('delete')
                     <button type="submit" class="btn  btn-sm me-1"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                        <span class="listar-texto">Apagar</span>
+                        <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
                     
                     </button>
@@ -42,13 +42,13 @@
                 <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">id_emp2: </label>
+                        <label for="id_emp2" class="form-label">EMPRESA 2</label>
                         <input type="text" name="id_emp2" id="id_emp2"  placeholder="Nome completo"
                             value="{{ old('id_emp2', $status->id_emp2) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_users" class="form-label">id_users</label>
+                        <label for="id_users" class="form-label">USUÁRIO</label>
                         <input type="number" name="id_users" id="id_users" 
                             placeholder="Digite aqui..." value="{{ old('id_users', $status->id_users) }}">
                     </div>
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="descricao" class="form-label">descricao </label>
+                        <label for="descricao" class="form-label">DESCRIÇÃO</label>
                         <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
                             value="{{ old('descricao', $status->descricao) }}">
                     </div>
@@ -70,7 +70,7 @@
                 
                 <a  class="  btnCadastrar">
                     <button type="submit">
-                        <h5>Salvar</h5>
+                        <h5>SALVAR</h5>
                     </button>  
                 </a>
 

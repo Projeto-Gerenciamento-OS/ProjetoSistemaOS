@@ -10,7 +10,7 @@
             
             <span class="ms-auto d-flex flex-row gap-2">
                 <a href="{{ route('colaborador.index') }}" class="btn ">
-                    <span class="listar-texto">Listar</span>
+                    <span class="listar-texto">LISTAR</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
     
@@ -24,7 +24,7 @@
                     @method('delete')
                     <button type="submit" class="btn  btn-sm me-1"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                        <span class="listar-texto">Apagar</span>
+                        <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
                     
                     </button>
@@ -43,7 +43,11 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
+<<<<<<< HEAD
                     <span class='col-6 col-lg-4'> NOME:</span>
+=======
+                    <span class='col-6 col-lg-4'>NOME</span>
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                     <p class="col-6">{{ $colaborador->nome}}</p>
                 </div>
 
@@ -58,7 +62,11 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
+<<<<<<< HEAD
                     <span class='col-6 col-lg-4'> ID USUÁRIO:</span>
+=======
+                    <span class='col-6 col-lg-4'> USUARIOS:</span>
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                     <p class="col-6">{{ $colaborador->id_users}}</p>
                 </div>
 
@@ -73,14 +81,14 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Cadastrado: </span>
+                    <span class='col-6 col-lg-4'>CADASTRADO:: </span>
                     <p class="col-6">
                         {{ \Carbon\Carbon::parse($colaborador->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Editado: </span>
+                    <span class='col-6 col-lg-4'> EDITADO: </span>
                     <p class="col-6">
                         {{ \Carbon\Carbon::parse($colaborador->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>

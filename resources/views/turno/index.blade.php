@@ -5,7 +5,7 @@
 <div class="container-fluid px-4 data-container">
     <div class="card mb-4 cardCorLista" >
         <div class="card-header">
-            <h1>Turno</h1>
+            <h1>TURNO</h1>
 
             <form action="{{ route('turno.index') }}">
                 <div class="pesquisar">
@@ -20,25 +20,26 @@
 
             <a href="{{ route('turno.create') }}" class="btnCadastrar">
                 <button>
-                    <h5>Cadastrar</h5>
+                    <h5>CADASTRAR</h5>
                     <i class="fa-solid fa-angle-right"></i>
                 </button>  
             </a>
         </div> 
 
         <div class="card-body"> 
+            <x-alert />
             <table >
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>nome</th>
-                        <th>inicio</th>
-                        <th>pausa</th>
-                        <th>retorno</th>
-                        <th>termino</th>
-                        <th>id_emp2</th>
-                        <th>id_users</th>
-                        <th class="text-center">Ações</th>
+                        <th>NOME</th>
+                        <th>INICIO</th>
+                        <th>PAUSA</th>
+                        <th>RETORNO</th>
+                        <th>TERMINO</th>
+                        <th>EMPRESA 2 </th>
+                        <th>USUÁRIO</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 

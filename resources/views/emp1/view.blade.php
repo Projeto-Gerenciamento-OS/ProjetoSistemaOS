@@ -10,7 +10,7 @@
                 
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('emp1.index') }}" class="btn ">
-                    <span class="listar-texto">Listar</span>
+                    <span class="listar-texto">LISTAR</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
     
@@ -24,7 +24,7 @@
                     @method('delete')
                     <button type="submit" class="btn  btn-sm me-1"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                        <span class="listar-texto">Apagar</span>
+                        <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </form>
@@ -43,19 +43,19 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Descrição:</span>
+                    <span class="col-4">DESCRIÇÃO:</span>
                     <p class="col-5">{{ $emp1->descricao}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Cadastrado: </span>
+                    <span class="col-4">CADASTRADO: </span>
                     <p class="col-5">
                         {{ \Carbon\Carbon::parse($emp1->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Editado: </span>
+                    <span class="col-4">EDITADO: </span>
                     <p class="col-5">
                         {{ \Carbon\Carbon::parse($emp1->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>

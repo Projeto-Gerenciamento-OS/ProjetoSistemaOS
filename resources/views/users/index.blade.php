@@ -5,7 +5,7 @@
 <div class="container-fluid px-4 data-container">
     <div class="card mb-4 cardCorLista" >
         <div class="card-header">
-            <h1>Usuários</h1>
+            <h1>USUÁRIO</h1>
 
             <form action="{{ route('user.index') }}">
                 <div class="pesquisar">
@@ -20,13 +20,14 @@
 
             <a href="{{ route('user.create') }}" class="btnCadastrar">
                 <button>
-                    <h5>Cadastrar</h5>
+                    <h5>CADASTRAR</h5>
                     <i class="fa-solid fa-angle-right"></i>
                 </button>  
             </a>
         </div> 
 
         <div class="card-body"> 
+            <x-alert />
             <table >
                 <thead>
                     <tr class="titulos">
@@ -35,7 +36,7 @@
                         <th>EMAIL</th>
                         <th>TIPO</th>
                         <th>EMPRESA 2</th>
-                        <th class="text-center">AÇÕES</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 
@@ -70,7 +71,9 @@
                         </tr>
 
                         @empty
-                        <div class="alert alert-danger" role="alert">Nenhum usuário encontrado!</div>
+                            <div class="alert alert-danger" role="alert">
+                                Nenhum usuário encontrado!
+                            </div>
                     @endforelse
                 </tbody>
             </table>

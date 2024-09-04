@@ -20,7 +20,7 @@
 
             <a href="{{ route('cli.create') }}" class="btnCadastrar">
                 <button>
-                    <h5>Cadastrar</h5>
+                    <h5>CADASTRAR</h5>
                     <i class="fa-solid fa-angle-right"></i>
                 </button>  
             </a>
@@ -31,6 +31,7 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
+<<<<<<< HEAD
                         <th>TIPO</th>
                         <th>CPF/CNPJ</th>
                         <th>RAZÃO</th>
@@ -49,6 +50,26 @@
                         <th>EMPRESA 2</th>
                         <th>ID USUÁRIO</th>
                         <th class="text-center">AÇÕES</th>
+=======
+                        <th> TIPO</th>
+                        <th> cpf_cnpj </th>
+                        <th> RAZÃO</th>
+                        <th> FANTASIA</th>
+                        <th> endereco </th>
+                        <th> numero </th>
+                        <th> complemento </th>
+                        <th> bairro </th>
+                        <th> cidade </th>
+                        <th> uf </th>
+                        <th> email </th>
+                        <th> cep </th>
+                        <th> fone1 </th>
+                        <th> fone2 </th>
+                        <th> obs </th>
+                        <th> id_emp2 </th>
+                        <th> id_users </th>
+                        <th class="text-center">AÇÕES:</th>
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                     </tr>
                 </thead>
 

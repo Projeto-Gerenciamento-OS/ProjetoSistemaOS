@@ -9,7 +9,7 @@
                 <h1 class="mt-3">Visualização</h1>
                 <span class="ms-auto d-flex  flex-row gap-2">
                     <a href="{{ route('os.index') }}" class="btn ">
-                        <span class="listar-texto">Listar</span>
+                        <span class="listar-texto">LISTAR</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
@@ -23,7 +23,7 @@
                         @method('delete')
                         <button type="submit" class="btn  btn-sm me-1"
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                            <span class="listar-texto">Apagar</span>
+                            <span class="listar-texto">APAGAR</span>
                             <i class="fa-solid fa-trash"></i>
                         
                         </button>
@@ -54,7 +54,7 @@
                     <dt class="col-6 col-lg-4">ctotal: </dt>
                     <dd class="col-6">{{ $os3->ctotal}}</dd>
 
-                    <dt class="col-6 col-lg-4">id_emp2: </dt>
+                    <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
                     <dd class="col-6">{{ $os3->id_emp2}}</dd>
 
                     <dt class="col-6 col-lg-4">id_os1: </dt>
@@ -64,12 +64,12 @@
                     <dd class="col-6">{{ $os3->id_materiais}}</dd>
 
 
-                    <dt class="col-6 col-lg-4">Cadastrado: </dt>
+                    <dt class="col-6 col-lg-4">CADASTRADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($os3->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>
 
-                    <dt class="col-6 col-lg-4">Editado: </dt>
+                    <dt class="col-6 col-lg-4">EDITADO: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($os3->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </dd>

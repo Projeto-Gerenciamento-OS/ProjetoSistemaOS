@@ -9,7 +9,7 @@
             <form action="{{ route('emp2.index') }}">
                 <div class="pesquisar">
                     
-                    <input type="text" name="razao" id="cnpj" class="form-control btn-pesquisar" value="{{ $razao }}" placeholder="Pesquisar" />
+                    <input type="text" name="razao" id="cnpj" class="form-control btn-pesquisar" value="{{ $razao }}" placeholder="CNPJ da conta" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
@@ -19,23 +19,30 @@
 
             <a href="{{ route('emp2.create') }}" class="btnCadastrar">
                 <button>
-                    <h5>Cadastrar</h5>
+                    <h5>CADASTRAR</h5>
                     <i class="fa-solid fa-angle-right"></i>
                 </button>  
             </a>    
-
         </div>
       
         <div class="card-body"> 
             <x-alert />
 
             <table>
-                <thead class="p-8">
+                <thead>
                     <tr class="titulos"> 
                         <th>EMPRESA 1</th>
                         <th>RAZÃO</th>
                         <th>FANTASIA</th>
+                        <th>EMPRESA 1</th>
+                        <th>RAZÃO</th>
+                        <th>FANTASIA</th>
                         <th>CNPJ</th>
+                        <th>ENDEREÇO</th>
+                        <th>NÚMERO</th>
+                        <th>BAIRRO</th>
+                        <th>CIDADE</th>                 
+                        <th>UF</th>
                         <th>ENDEREÇO</th>
                         <th>NÚMERO</th>
                         <th>BAIRRO</th>
@@ -52,7 +59,6 @@
                 </thead>
 
                 <tbody>
-
                     @forelse ($emp2 as $empres)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th>{{ $empres->id_emp1 }}</th>
@@ -90,10 +96,10 @@
                             </td>
                         </tr>
 
-                    @empty
-                        <div class="alert alert-danger" role="alert">
-                            Nenhuma empresa encontrada!
-                        </div>
+                        @empty
+                            <div class="alert alert-danger" role="alert">
+                                Nenhuma empresa encontrada!
+                            </div>
                     @endforelse
                 </tbody>
             </table>
@@ -101,7 +107,4 @@
         {{ $emp2->onEachSide(0)->links() }} 
     </div>
 </div>
-                                                                                                                                                               
-
-
 @endsection

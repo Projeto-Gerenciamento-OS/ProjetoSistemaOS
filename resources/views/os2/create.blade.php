@@ -9,7 +9,7 @@
             <h1>Cadastro da Ordem de Serviço 2</h1>
             <a href="{{ route('os.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span></a>
+                <span class="listar-texto">LISTAR</span></a>
         </div> 
 
         <div class="card-body"> 
@@ -50,7 +50,7 @@
                     </div> 
 
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label">id_emp2</label>
+                        <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                         <input type="text"  name="id_emp2" id="id_emp2"   required>
                     </div> 
                     

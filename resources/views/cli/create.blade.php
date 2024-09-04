@@ -8,7 +8,7 @@
             <h1 class="mt-3">Cliente</h1>
 
             <a href="{{ route('cli.index') }}" class="btn "><i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span>
+                <span class="listar-texto">LISTAR</span>
             </a>
 
         </div>
@@ -21,11 +21,43 @@
                 @method('POST')
 
                         <!-- Coluna 1 -->
+<<<<<<< HEAD
                         <div class="col-lg-4">
                             
                             <div class="mb-3">
                                 <label for="id_emp2" class="form-label">EMPRESA 2:</label>
                                 <input type="text" name="id_emp2" id="id_emp2" class="form-control" placeholder="Empresa 2" value="{{ old('id_emp2') }}">
+=======
+                        <div class="col-lg-3">
+                            <div class="mb-3">
+                                <label for="tipo" class="form-label">TIPO</label>
+                                <input type="text" name="tipo" id="tipo" class="form-control" placeholder="tipo" value="{{ old('tipo') }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cpf_cnpj" class="form-label">cpf_cnpj:</label>
+                                <input type="text" name="cpf_cnpj" id="cpf_cnpj" class="form-control" placeholder="cpf_cnpj" value="{{ old('cpf_cnpj') }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="razao" class="form-label">RAZÃO</label>
+                                <input type="text" name="razao" id="razao" class="form-control" placeholder="razao" value="{{ old('razao') }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="fantasia" class="form-label">fantasia:</label>
+                                <input type="text" name="fantasia" id="fantasia" class="form-control" placeholder="fantasia" value="{{ old('fantasia') }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="endereco" class="form-label">endereco:</label>
+                                <input type="text" name="endereco" id="endereco" class="form-control" placeholder="endereco" value="{{ old('endereco') }}">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="id_emp2" class="form-label">EMPRESA 2</label>
+                                <input type="text" name="id_emp2" id="id_emp2" class="form-control" placeholder="id_emp2" value="{{ old('id_emp2') }}">
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                             </div>
 
                             <div class="mb-3">
@@ -63,9 +95,13 @@
                      
                         <!-- Coluna 2 -->
 
+<<<<<<< HEAD
                         <div class="col-lg-2">
 
                           
+=======
+                        <div class="col-lg-3">
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                             <div class="mb-3">
                                 <label for="cep" class="form-label">CEP:</label>
                                 <input type="text" name="cep" id="cep" class="form-control" placeholder="Cep" value="{{ old('cep') }}">
@@ -101,7 +137,11 @@
                         </div>
                         
                         <!-- Coluna 3 -->
+<<<<<<< HEAD
                         <div class="col-lg-4">              
+=======
+                        <div class="col-lg-3">
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
 
                             <div class="mb-3">
                                 <label for="uf" class="form-label">UF:</label>
@@ -129,7 +169,19 @@
                                 <input type="text" name="obs" id="obs" class="form-control" placeholder="Obs" value="{{ old('obs') }}">
                             </div>
 
+<<<<<<< HEAD
                            
+=======
+                            <div class="mb-3">
+                                <label for="obs" class="form-label">obs:</label>
+                                <input type="text" name="obs" id="obs" class="form-control" placeholder="obs" value="{{ old('obs') }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="id_users" class="form-label">USUÁRIO</label>
+                                <input type="text" name="id_users" id="id_users" class="form-control" placeholder="id_users" value="{{ old('obs') }}">
+                            </div>
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
 
                         </div>
 

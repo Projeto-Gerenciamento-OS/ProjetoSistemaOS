@@ -10,12 +10,12 @@
             
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('emp1.index') }}" class="btn  ">
-                <span class="listar-texto">Listar</span>
+                <span class="listar-texto">LISTAR</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
 
                 <a href="{{ route('emp1.view', ['emp1' => $emp1->id]) }}" class=" btn ">
-                <span class="listar-texto">Visualizar</span>
+                <span class="listar-texto">VISUALIZAR</span>
                     <i class="fa-regular fa-eye"></i>
                 </a>
 
@@ -24,7 +24,7 @@
                     @method('delete')
                     <button type="submit" class="btn  btn-sm me-1"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                        <span class="listar-texto">Apagar</span>
+                        <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
                     
                     </button>
@@ -40,6 +40,7 @@
                 @csrf
                 @method('PUT')
 
+<<<<<<< HEAD
                 <div class="col-3">
                     <label for="id" class="form-label">ID:</label>
                     <input type="text" name="id" id="id" 
@@ -53,6 +54,24 @@
                 <a class="btnCadastrarE">
                     <button type="submit">
                         <h5>Salvar</h5>                  
+=======
+                <div class="col-6 col-lg-6 ">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">ID EMPRESA 1:</label>
+                        <input type="text" name="id" id="id" 
+                        class="form-control" placeholder="id" readonly value="{{old('id', $emp1->id) }} ">      
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">DESCRIÇÃO</label>
+                        <input type="text" name="descricao" id="descricao" 
+                        class="form-control" placeholder="descricao" value="{{ old('descricao',$emp1->descricao) }}">    
+                    </div> 
+                </div>
+                <a  class="  btnCadastrar">
+                    <button type="submit">
+                        <h5>SALVAR</h5>
+>>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                     </button>  
                 </a>
             </form>

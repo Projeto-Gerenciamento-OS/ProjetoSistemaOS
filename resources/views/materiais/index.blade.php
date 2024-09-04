@@ -20,7 +20,7 @@
 
             <a href="{{ route('materiais.create') }}" class="btnCadastrar">
                 <button>
-                    <h5>Cadastrar</h5>
+                    <h5>CADASTRAR</h5>
                     <i class="fa-solid fa-angle-right"></i>
                 </button>  
             </a> 
@@ -37,7 +37,7 @@
                         <th>Valor</th>
                         <th>ID EMP2</th>
                         <th>ID Users</th>
-                        <th class="text-center">Ações</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 

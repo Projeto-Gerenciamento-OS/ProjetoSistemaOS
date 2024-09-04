@@ -10,12 +10,12 @@
 
             <span class="ms-auto d-flex  flex-row gap-2 gap-lg-4">
                 <a href="{{ route('emp2.index') }}" class="btn ">
-                    <span class="listar-texto">Listar</span>
+                    <span class="listar-texto">LISTAR</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
                 
                 <a href="{{ route('emp2.view', ['emp2' => $emp2->id]) }}" class=" btn ">
-                    <span class="listar-texto">Visualizar</span>
+                    <span class="listar-texto">VISUALIZAR</span>
                     <i class="fa-regular fa-eye"></i>
                 </a>
                 
@@ -24,7 +24,7 @@
                     @method('delete')
                     <button type="submit" class="btn  btn-sm me-1"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                        <span class="listar-texto">Apagar</span>
+                        <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </form>
@@ -137,7 +137,7 @@
                     
                 <a  class="btnCadastrar">
                     <button type="submit">
-                        <h5>Salvar</h5>
+                        <h5>SALVAR</h5>
                          
                     </button>  
                 </a>
