@@ -46,6 +46,8 @@
                         <th> fone1 </th>
                         <th> fone2 </th>
                         <th> obs </th>
+                        <th> id_emp2 </th>
+                        <th> id_users </th>
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -69,6 +71,8 @@
                             <th>{{ $cliente->fone1 }}</th>
                             <th>{{ $cliente->fone2 }}</th>
                             <th>{{ $cliente->obs }}</th>
+                            <th>{{ $cliente->id_emp2 }}</th>
+                            <th>{{ $cliente->id_users }}</th>
 
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
 

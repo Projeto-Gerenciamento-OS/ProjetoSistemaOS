@@ -79,6 +79,12 @@
                                 <input type="text" name="cep" id="cep"  placeholder=" cep"
                                     value="{{ old('cep', $cli->cep) }}">
                             </div>
+
+                            <div class="mb-3">
+                                <label for="id_emp2" >id_emp2</label>
+                                <input type="text" name="id_emp2" id="id_emp2"  placeholder=" id_emp2"
+                                    value="{{ old('id_emp2', $cli->id_emp2) }}">
+                            </div>
                         
                         </div>
 
@@ -129,6 +135,12 @@
                                 <label for="obs" >obs</label>
                                 <input type="text" name="obs" id="obs"  placeholder=" obs"
                                     value="{{ old('obs', $cli->obs) }}">
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="id_users" >id_users</label>
+                                <input type="text" name="id_users" id="id_users"  placeholder=" id_users"
+                                    value="{{ old('id_users', $cli->id_users) }}">
                             </div>
                         </div>
                         

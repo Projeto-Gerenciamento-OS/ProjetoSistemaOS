@@ -84,6 +84,12 @@
                     <dt class="col-6 col-lg-4">obs: </dt>
                     <dd class="col-6">{{ $cli->obs }}</dd>
 
+                    <dt class="col-6 col-lg-4">id_emp2: </dt>
+                    <dd class="col-6">{{ $cli->id_emp2 }}</dd>
+
+                    <dt class="col-6 col-lg-4">id_users: </dt>
+                    <dd class="col-6">{{ $cli->id_users }}</dd>
+
                     <dt class="col-6 col-lg-4">Cadastrado: </dt>
                     <dd class="col-6">
                         {{ \Carbon\Carbon::parse($cli->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
