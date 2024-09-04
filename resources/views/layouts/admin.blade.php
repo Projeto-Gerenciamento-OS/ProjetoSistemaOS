@@ -77,8 +77,10 @@
 
                         <li>
                             <a @class(['nav-link', 'active' => isset($menu) && $menu =='cli']) href="{{route('cli.index') }}">
+                             
                                 <div class="sb-nav-link-icon">
-                                    <i class="fa-solid fa-chalkboard-user fa-2x"></i>
+                                    {{-- <i class="fa-solid fa-chalkboard-user fa-2x"></i> --}}
+                                    <i class="fa-solid fa-users"></i>
                                 </div>
     
                                 <span class="nav-text">
