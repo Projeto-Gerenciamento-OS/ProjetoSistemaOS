@@ -9,7 +9,7 @@
             <h1>Status</h1>
             <a href="{{ route('status.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span>
+                <span class="listar-texto">LISTAR</span>
             </a>
         </div> 
         

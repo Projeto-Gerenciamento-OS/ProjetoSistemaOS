@@ -9,7 +9,7 @@
             <h1>Cadastro da OS 3</h1>
             <a href="{{ route('os.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span></a>
+                <span class="listar-texto">LISTAR</span></a>
         </div> 
 
         <div class="card-body"> 

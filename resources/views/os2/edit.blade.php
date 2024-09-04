@@ -6,15 +6,15 @@
 <div class="container-fluid px-4 data-container"  >
         <div class="card mb-4 cardCorLista " >
             <div  class="cardHeaderAsociados card-header">
-                <h2 class="mt-3">Edição</h2>
+                <h2 class="mt-3">EDIÇÃO</h2>
                 <span class="ms-auto d-flex flex-row gap-2">
                     <a href="{{ route('os.index') }}" class="btn ">
-                        <span class="listar-texto">Listar</span>
+                        <span class="listar-texto">LISTAR</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
                     <a href="{{ route('os2.view', ['os2' => $os2->id]) }}" class="btn ">
-                        <span class="listar-texto">Visualizar</span>
+                        <span class="listar-texto">VISUALIZAR</span>
                         <i class="fa-regular fa-eye"></i>
                     </a>
 
@@ -23,7 +23,7 @@
                         @method('delete')
                         <button type="submit" class="btn  "
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                            <span class="listar-texto">Apagar</span>
+                            <span class="listar-texto">APAGAR</span>
                             <i class="fa-solid fa-trash"></i>
                     </button>
                     </form>

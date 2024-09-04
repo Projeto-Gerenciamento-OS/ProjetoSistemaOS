@@ -9,11 +9,11 @@
 
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('colaborador.index') }}" class="btn ">
-                    <span class="listar-texto">Listar</span>
+                    <span class="listar-texto">LISTAR</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
                 <a href="{{ route('colaborador.view', ['colaborador' => $colaborador->id]) }}" class=" btn ">
-                    <span class="listar-texto">Visualizar</span>
+                    <span class="listar-texto">VISUALIZAR</span>
                     <i class="fa-regular fa-eye"></i>
                 </a>
                 <form method="POST" action="{{ route('colaborador.delete', ['colaborador' => $colaborador->id]) }}">
@@ -21,7 +21,7 @@
                     @method('delete')
                     <button type="submit" class="btn  btn-sm me-1"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                        <span class="listar-texto">Apagar</span>
+                        <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </form>

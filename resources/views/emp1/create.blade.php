@@ -9,7 +9,7 @@
             <h1 class="mt-3">Nova Empresa 1</h1>
 
             <a href="{{ route('emp1.index') }}" class="btn "><i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span>
+                <span class="listar-texto">LISTAR</span>
             </a>
         </div>
 

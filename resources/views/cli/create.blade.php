@@ -8,7 +8,7 @@
             <h1 class="mt-3">Cliente</h1>
 
             <a href="{{ route('cli.index') }}" class="btn "><i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span>
+                <span class="listar-texto">LISTAR</span>
             </a>
 
         </div>
@@ -21,7 +21,7 @@
                 @method('POST')
 
                         <!-- Coluna 1 -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div class="mb-3">
                                 <label for="tipo" class="form-label">tipo:</label>
                                 <input type="text" name="tipo" id="tipo" class="form-control" placeholder="tipo" value="{{ old('tipo') }}">
@@ -55,7 +55,7 @@
 
                         <!-- Coluna 2 -->
 
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="mb-3">
                                 <label for="numero" class="form-label">numero:</label>
                                 <input type="text" name="numero" id="numero" class="form-control" placeholder="numero" value="{{ old('numero') }}">
@@ -83,7 +83,7 @@
                         </div>
                         
                         <!-- Coluna 3 -->
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
 
                             <div class="mb-3">
                                 <label for="email" class="form-label">email:</label>

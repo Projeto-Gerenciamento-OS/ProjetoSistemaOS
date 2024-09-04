@@ -7,7 +7,7 @@
         <div  class="cardHeaderAsociados card-header">
             <h1>Cadastro da Ordem de Serviço 4</h1>
             <a href="{{ route('os.index') }}" class="btn btn-primary
-                <span class="listar-texto">Listar</span></a>
+                <span class="listar-texto">LISTAR</span></a>
         </div> 
         <div class="card-body"> 
         <form action="{{ route('os4.store') }}" method="POST" class="row  ">

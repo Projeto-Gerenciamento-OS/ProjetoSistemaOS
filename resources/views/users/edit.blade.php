@@ -6,16 +6,16 @@
     <div class="card mb-4 cardCorLista  ">
         
         <div class="cardHeaderAsociados card-header"  >
-            <h2 class="mt-3">Edição</h2>
+            <h2 class="mt-3">EDIÇÃO</h2>
 
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('user.index') }}" class="btn ">
-                    <span class="listar-texto">Listar</span>
+                    <span class="listar-texto">LISTAR</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
 
                 <a href="{{ route('user.view', ['user' => $user->id]) }}" class="btn ">
-                    <span class="listar-texto">Visualizar</span>
+                    <span class="listar-texto">VISUALIZAR</span>
                     <i class="fa-regular fa-eye"></i>
                 </a>
 
@@ -24,7 +24,7 @@
                     @method('delete')
                     <button type="submit" class="btn   btn-sm me-1"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                        <span class="listar-texto">Apagar</span>
+                        <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
                     
                     </button>
@@ -57,24 +57,9 @@
                         <input type="password" name="password" id="password"  placeholder="Senha com no mínimo 6 caracteres"
                             value="{{ old('password') }}">
                     </div>
-
-                    <div class="mb-3">
-                        <label for="id_emp2" class="form-label">TIPO: </label>
-                        <input type="number" min="1" max="3" name="tipo" id="tipo"  value="{{ old('tipo', $user->tipo) }}" >
-                    </div>
                 </div>
 
                 <div class="col-6 col-lg-6">
-
-                    <div class="mb-3">
-                        <label for="id_emp2" class="form-label">EMPRESA 2: </label>
-                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('email', $user->id_emp2) }}" >
-                    </div>
-{{-- 
-                    <div class="mb-3">
-                        <label for="id_emp2" class="form-label">id_emp2: </label>
-                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('id_emp2', $user->id_emp2) }}" >
-                    </div> --}}
 
                     <div class="mb-3">
                         <label for="roles" class="form-label">NÍVEL: </label>
@@ -95,6 +80,16 @@
                             @endforelse
                         </select>
                     </div> 
+
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">EMPRESA 2: </label>
+                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('email', $user->id_emp2) }}" >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">TIPO: </label>
+                        <input type="number" min="1" max="3" name="tipo" id="tipo"  value="{{ old('tipo', $user->tipo) }}" >
+                    </div>
                 </div>
 
     

@@ -11,7 +11,7 @@
             <h1>Cadastro de Custos</h1>
             <a href="{{ route('custos.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span></a>
+                <span class="listar-texto">LISTAR</span></a>
         </div> 
         <div class="card-body"> 
         <form action="{{ route('custos.store') }}" method="POST" class=" row  ">

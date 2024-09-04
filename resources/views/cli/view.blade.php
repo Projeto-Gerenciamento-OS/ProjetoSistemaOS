@@ -9,7 +9,7 @@
                 <h1 class="mt-3">Visualização</h1>
                 <span class="ms-auto d-flex  flex-row gap-2">
                     <a href="{{ route('cli.index') }}" class="btn ">
-                        <span class="listar-texto">Listar</span>
+                        <span class="listar-texto">LISTAR</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
@@ -23,7 +23,7 @@
                         @method('delete')
                         <button type="submit" class="btn  btn-sm me-1"
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                            <span class="listar-texto">Apagar</span>
+                            <span class="listar-texto">APAGAR</span>
                             <i class="fa-solid fa-trash"></i>
                         
                         </button>

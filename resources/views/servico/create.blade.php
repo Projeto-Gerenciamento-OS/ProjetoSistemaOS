@@ -9,7 +9,7 @@
             <h1>Serviços Gerais</h1>
             <a href="{{ route('servico.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
-                <span class="listar-texto">Listar</span></a>
+                <span class="listar-texto">LISTAR</span></a>
         </div> 
         
         <div class="card-body"> 

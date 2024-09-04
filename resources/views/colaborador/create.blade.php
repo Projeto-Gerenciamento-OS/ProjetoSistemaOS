@@ -9,7 +9,7 @@
             <h1 class="mt-3">Novo Colaborador</h1>
 
             <a href="{{ route('colaborador.index') }}" class="btn  btn-custom-sm"><i class="fa-solid fa-list"></i>
-            <span class="listar-texto">Listar</span></a>
+            <span class="listar-texto">LISTAR</span></a>
            
         </div>
 
