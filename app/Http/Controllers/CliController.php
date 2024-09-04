@@ -69,6 +69,7 @@ class CliController extends Controller
                 'fone2' => $request->fone2,
                 'obs'=>$request->obs,
                 'id_emp2'=>$request->id_emp2,
+                'id_users'=>$request->id_users,
             ]);
 
             // // Salvar log
@@ -132,6 +133,7 @@ class CliController extends Controller
                 'fone2' => $request->fone2,
                 'obs'=>$request->obs,
                 'id_emp2'=>$request->id_emp2,
+                'id_users'=>$request->id_users,
             ]);
 
             // Salvar log

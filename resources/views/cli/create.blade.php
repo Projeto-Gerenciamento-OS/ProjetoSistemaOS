@@ -46,6 +46,11 @@
                                 <label for="endereco" class="form-label">endereco:</label>
                                 <input type="text" name="endereco" id="endereco" class="form-control" placeholder="endereco" value="{{ old('endereco') }}">
                             </div>
+                            
+                            <div class="mb-3">
+                                <label for="id_emp2" class="form-label">id_emp2:</label>
+                                <input type="text" name="id_emp2" id="id_emp2" class="form-control" placeholder="id_emp2" value="{{ old('id_emp2') }}">
+                            </div>
                         </div>
 
                         <!-- Coluna 2 -->
@@ -74,11 +79,6 @@
                             <div class="mb-3">
                                 <label for="uf" class="form-label">uf:</label>
                                 <input type="text" name="uf" id="uf" class="form-control" placeholder="uf" value="{{ old('uf') }}">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="id_emp2" class="form-label">id_emp2:</label>
-                                <input type="text" name="id_emp2" id="id_emp2" class="form-control" placeholder="id_emp2" value="{{ old('id_emp2') }}">
                             </div>
                         </div>
                         
@@ -110,9 +110,12 @@
                                 <input type="text" name="obs" id="obs" class="form-control" placeholder="obs" value="{{ old('obs') }}">
                             </div>
 
-                        </div>
-               
+                            <div class="mb-3">
+                                <label for="id_users" class="form-label">id_users:</label>
+                                <input type="text" name="id_users" id="id_users" class="form-control" placeholder="id_users" value="{{ old('obs') }}">
+                            </div>
 
+                        </div>
                 <a  class="btnCadastrar ">
                     <button type="submit">
                         <h5>Concluir</h5>
