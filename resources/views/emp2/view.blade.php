@@ -4,7 +4,6 @@
 
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
-        
         <div class="cardHeaderAsociados card-header"  >
             <h2 class="mt-3">Visualizar</h2>
         
@@ -32,8 +31,9 @@
             </span>
         </div>
 
-        <div class="card-body ">
+        <div class="card-body" >
             <x-alert />
+            <div class="row">
 
                 <div class="col-12 col-lg-4 " id="marginVisualizar-empresa">
                     <div class="visualizacaoDados row">
@@ -62,6 +62,55 @@
                         <p class="col-6">{{ $emp2->cep }}</p>
                     </div>
 
+                <div class="visualizacaoDados row">
+                    <span class="col-4">FANTASIA: </span>
+                    <p class="col-5">{{ $emp2->fantasia }}</p>
+                </div>
+                
+                <div class="visualizacaoDados row">
+                    <span class="col-4">QANTID ADIMIN: </span>
+                    <p class="col-5">{{ $emp2->qtdeadm }}</p>
+                </div>
+                
+                <div class="visualizacaoDados row">
+                    <span class="col-4">QUANT OPER: </span>
+                    <p class="col-5">{{ $emp2->qtdeoper }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">UF: </span>
+                    <p class="col-5">{{ $emp2->uf }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">CIDADE: </span>
+                    <p class="col-5">{{ $emp2->cidade }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">BAIRRO: </span>
+                    <p class="col-5">{{ $emp2->bairro }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">ENDEREÇO: </span>
+                    <p class="col-5">{{ $emp2->endereco }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">PLANO: </span>
+                    <p class="col-5">{{ $emp2->plano }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">CEP: </span>
+                    <p class="col-5">{{ $emp2->cep }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">NÚMERO: </span>
+                    <p class="col-5">{{ $emp2->numero }}</p>
+                </div>
                     <div class="visualizacaoDados row">
                         <span class="col-6">ENDEREÇO: </span>
                         <p class="col-6">{{ $emp2->endereco }}</p>
@@ -113,20 +162,20 @@
                         <p class="col-6">{{ $emp2->qtdeoper }}</p>
                     </div>
 
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">EDITADO: </span>
-                        <p class="col-6">
-                            {{ \Carbon\Carbon::parse($emp2->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
-                        </p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">CADASTRADO: </span>
-                        <p class="col-6">
-                            {{ \Carbon\Carbon::parse($emp2->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
-                        </p>
-                    </div>
+                <div class="visualizacaoDados row">
+                    <span class="col-4">EDITADO: </span>
+                    <p class="col-5">
+                        {{ \Carbon\Carbon::parse($emp2->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
+                    </p>
                 </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">CADASTRADO: </span>
+                    <p class="col-5">
+                        {{ \Carbon\Carbon::parse($emp2->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

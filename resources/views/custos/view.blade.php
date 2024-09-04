@@ -6,7 +6,7 @@
     <div class="card mb-4 cardCorLista" id='visualizacaoCustos'>
         
         <div class="cardHeaderAsociados card-header"  >
-                <h2 class="mt-3">Visualização</h2>
+                <h2 class="mt-3">VISUALIZAR</h2>
                 <span class="ms-auto d-flex  flex-row gap-2">
                     <a href="{{ route('custos.index') }}" class="btn ">
                         <span class="listar-texto">LISTAR</span>

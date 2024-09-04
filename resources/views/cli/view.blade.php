@@ -6,7 +6,11 @@
 <div class="container-fluid px-4 data-container" >
         <div class="card mb-4 cardCorLista "  >
             <div class="cardHeaderAsociados card-header">
+<<<<<<< HEAD
                 <h1 class="mt-3">Visualizar</h1>
+=======
+                <h1 class="mt-3">VISUALIZAR</h1>
+>>>>>>> 44685e4bee914a7ee6c66832db8059cc21ad3dbc
                 <span class="ms-auto d-flex  flex-row gap-2">
                     <a href="{{ route('cli.index') }}" class="btn ">
                         <span class="listar-texto">LISTAR</span>
