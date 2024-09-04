@@ -9,7 +9,7 @@
             <form action="{{ route('emp2.index') }}">
                 <div class="pesquisar">
                     
-                    <input type="text" name="razao" id="cnpj" class="form-control btn-pesquisar" value="{{ $razao }}" placeholder="CNPJ da conta" />
+                    <input type="text" name="razao" id="cnpj" class="form-control btn-pesquisar" value="{{ $razao }}" placeholder="Pesquisar" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
@@ -32,22 +32,22 @@
             <table>
                 <thead class="p-8">
                     <tr class="titulos"> 
-                        <th>id_emp1</th>
-                        <th>Razão</th>
-                        <th>Fantasia</th>
+                        <th>EMPRESA 1</th>
+                        <th>RAZÃO</th>
+                        <th>FANTASIA</th>
                         <th>CNPJ</th>
-                        <th>Endereço</th>
-                        <th>Número</th>
-                        <th>Bairro</th>
-                        <th>Cidade</th>                 
-                        <th>uf</th>
+                        <th>ENDEREÇO</th>
+                        <th>NÚMERO</th>
+                        <th>BAIRRO</th>
+                        <th>CIDADE</th>                 
+                        <th>UF</th>
                         <th>CEP</th>
-                        <th>Telefone 1</th>
-                        <th>Telefone 2</th>
-                        <th>Plano</th>
-                        <th>Qtd de Adm</th>
-                        <th>Qtd de Oper</th>                   
-                        <th class="text-center">Ações</th>
+                        <th>TELEFONE 1</th>
+                        <th>TELEFONE 2</th>
+                        <th>PLANO</th>
+                        <th>QUANT ADM</th>
+                        <th>QUANT OPER</th>                   
+                        <th class="text-center">AÇÕES</th>
                     </tr>
                 </thead>
 

@@ -10,7 +10,7 @@
             <form action="{{ route('user.index') }}">
                 <div class="pesquisar">
                     
-                    <input type="text" name="nome" id="nome" class=" btn-pesquisar" value="{{ $nome }}" placeholder="Nome da conta" />
+                    <input type="text" name="nome" id="nome" class=" btn-pesquisar" value="{{ $nome }}" placeholder="Pesquisar" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
@@ -78,8 +78,6 @@
         {{ $users->onEachSide(0)->links() }} 
     </div>
 </div>
-
-
 
 @endsection
 

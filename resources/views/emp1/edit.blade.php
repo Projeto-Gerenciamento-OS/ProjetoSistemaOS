@@ -6,7 +6,7 @@
     <div class="card mb-4 cardCorLista ">
         
         <div class="cardHeaderAsociados card-header"  >
-            <h2 class="mt-3">Editar Empresa 1</h2>
+            <h2 class="mt-3">Editar</h2>
             
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('emp1.index') }}" class="btn  ">
@@ -40,20 +40,19 @@
                 @csrf
                 @method('PUT')
 
-                <div class="col-12">
-                    <label for="id" class="form-label">ID Empresa 1:</label>
+                <div class="col-3">
+                    <label for="id" class="form-label">ID:</label>
                     <input type="text" name="id" id="id" 
                     class="form-control" placeholder="id" readonly value="{{old('id', $emp1->id) }} ">      
-                    
-                    <label for="descricao" class="form-label">Descrição:</label>
+                
+                    <label for="descricao" class="form-label">DESCRIÇÃO:</label>
                     <input type="text" name="descricao" id="descricao" 
                     class="form-control" placeholder="descricao" value="{{ old('descricao',$emp1->descricao) }}">    
                 </div> 
                 
-                <a  class="  btnCadastrar">
+                <a class="btnCadastrarE">
                     <button type="submit">
-                        <h5>Salvar</h5>
-                         
+                        <h5>Salvar</h5>                  
                     </button>  
                 </a>
             </form>

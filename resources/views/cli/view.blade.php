@@ -6,7 +6,7 @@
 <div class="container-fluid px-4 data-container" >
         <div class="card mb-4 cardCorLista "  >
             <div class="cardHeaderAsociados card-header">
-                <h1 class="mt-3">Visualização</h1>
+                <h1 class="mt-3">Visualizar</h1>
                 <span class="ms-auto d-flex  flex-row gap-2">
                     <a href="{{ route('cli.index') }}" class="btn ">
                         <span class="listar-texto">Listar</span>
@@ -39,55 +39,55 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $cli->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">tipo: </dt>
+                    <dt class="col-6 col-lg-4">TIPO: </dt>
                     <dd class="col-6">{{ $cli->tipo}}</dd>
 
-                    <dt class="col-6 col-lg-4">cpf_cnpj: </dt>
+                    <dt class="col-6 col-lg-4">CPF/CNPJ: </dt>
                     <dd class="col-6">{{ $cli->cpf_cnpj }}</dd>
 
-                    <dt class="col-6 col-lg-4">razao: </dt>
+                    <dt class="col-6 col-lg-4">RAZÃO: </dt>
                     <dd class="col-6">{{ $cli->razao }}</dd>
 
-                    <dt class="col-6 col-lg-4">fantasia: </dt>
+                    <dt class="col-6 col-lg-4">FATANSIA: </dt>
                     <dd class="col-6">{{ $cli->fantasia }}</dd>
 
-                    <dt class="col-6 col-lg-4">endereco: </dt>
+                    <dt class="col-6 col-lg-4">ENDEREÇO: </dt>
                     <dd class="col-6">{{ $cli->endereco }}</dd>
 
-                    <dt class="col-6 col-lg-4">numero: </dt>
+                    <dt class="col-6 col-lg-4">NÚMERO: </dt>
                     <dd class="col-6">{{ $cli->numero }}</dd>
 
-                    <dt class="col-6 col-lg-4">complemento: </dt>
+                    <dt class="col-6 col-lg-4">COMPLEMENTO: </dt>
                     <dd class="col-6">{{ $cli->complemento }}</dd>
 
-                    <dt class="col-6 col-lg-4">bairro: </dt>
+                    <dt class="col-6 col-lg-4">BAIRRO: </dt>
                     <dd class="col-6">{{ $cli->bairro }}</dd>
 
-                    <dt class="col-6 col-lg-4">cidade: </dt>
+                    <dt class="col-6 col-lg-4">CIDADE: </dt>
                     <dd class="col-6">{{ $cli->cidade }}</dd>
 
-                    <dt class="col-6 col-lg-4">uf: </dt>
+                    <dt class="col-6 col-lg-4">UF: </dt>
                     <dd class="col-6">{{ $cli->uf }}</dd>
 
-                    <dt class="col-6 col-lg-4">email: </dt>
+                    <dt class="col-6 col-lg-4">EMAIL: </dt>
                     <dd class="col-6">{{ $cli->email }}</dd>
 
-                    <dt class="col-6 col-lg-4">cep: </dt>
+                    <dt class="col-6 col-lg-4">CEP: </dt>
                     <dd class="col-6">{{ $cli->cep }}</dd>
 
-                    <dt class="col-6 col-lg-4">fone1: </dt>
+                    <dt class="col-6 col-lg-4">TELEFONE 1: </dt>
                     <dd class="col-6">{{ $cli->fone1 }}</dd>
 
-                    <dt class="col-6 col-lg-4">fone2: </dt>
+                    <dt class="col-6 col-lg-4">TELEFONE 2: </dt>
                     <dd class="col-6">{{ $cli->fone2 }}</dd>
 
-                    <dt class="col-6 col-lg-4">obs: </dt>
+                    <dt class="col-6 col-lg-4">OBS: </dt>
                     <dd class="col-6">{{ $cli->obs }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_emp2: </dt>
+                    <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
                     <dd class="col-6">{{ $cli->id_emp2 }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_users: </dt>
+                    <dt class="col-6 col-lg-4">ID USUÁRIO: </dt>
                     <dd class="col-6">{{ $cli->id_users }}</dd>
 
                     <dt class="col-6 col-lg-4">Cadastrado: </dt>
@@ -104,8 +104,4 @@
             </div>
         </div>
     </div>
-
-
-
-
 @endsection

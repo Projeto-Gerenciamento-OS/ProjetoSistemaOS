@@ -6,7 +6,7 @@
     <div class="card mb-4 cardCorLista ">
         
         <div class="cardHeaderAsociados card-header"  >
-            <h1 class="mt-3">Visualização</h1>
+            <h1 class="mt-3">Visualizar</h1>
             
             <span class="ms-auto d-flex flex-row gap-2">
                 <a href="{{ route('colaborador.index') }}" class="btn ">
@@ -43,32 +43,32 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> nome:</span>
+                    <span class='col-6 col-lg-4'> NOME:</span>
                     <p class="col-6">{{ $colaborador->nome}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> fone:</span>
+                    <span class='col-6 col-lg-4'> TELEFONE:</span>
                     <p class="col-6">{{ $colaborador->fone}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> id_emp2:</span>
+                    <span class='col-6 col-lg-4'> EMPRESA 2:</span>
                     <p class="col-6">{{ $colaborador->id_emp2}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> id_users:</span>
+                    <span class='col-6 col-lg-4'> ID USUÁRIO:</span>
                     <p class="col-6">{{ $colaborador->id_users}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> id_turno:</span>
+                    <span class='col-6 col-lg-4'> ID TURNO:</span>
                     <p class="col-6">{{ $colaborador->id_turno}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> id_setor:</span>
+                    <span class='col-6 col-lg-4'> ID SETOR:</span>
                     <p class="col-6">{{ $colaborador->id_setor}}</p>
                 </div>
 

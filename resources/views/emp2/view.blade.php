@@ -6,7 +6,7 @@
     <div class="card mb-4 cardCorLista ">
         
         <div class="cardHeaderAsociados card-header"  >
-            <h2 class="mt-3">Detalhes Empresa 2</h2>
+            <h2 class="mt-3">Visualizar</h2>
         
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('emp2.index') }}" class="btn ">
@@ -37,28 +37,24 @@
 
                 <div class="col-12 col-lg-4 " id="marginVisualizar-empresa">
                     <div class="visualizacaoDados row">
-                        <span class="col-6">ID: </span>
+                        <span class="col-6">EMPRESA 1: </span>
                         <p class="col-6">{{ $emp2->id_emp1 }}</p>
                     </div>
 
                     <div class="visualizacaoDados row">
-                        <span class="col-6">CNPJ: </span>
-                        <p class="col-6">{{ $emp2->cnpj }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Endereço: </span>
-                        <p class="col-6">{{ $emp2->endereco }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Razão Social: </span>
+                        <span class="col-6">RAZÃO: </span>
                         <p class="col-6">{{ $emp2->razao }}</p>
                     </div>
 
                     <div class="visualizacaoDados row">
-                        <span class="col-6">Fantasia: </span>
+                        <span class="col-6">FANTASIA: </span>
                         <p class="col-6">{{ $emp2->fantasia }}</p>
+                    </div>
+
+
+                    <div class="visualizacaoDados row">
+                        <span class="col-6">CNPJ: </span>
+                        <p class="col-6">{{ $emp2->cnpj }}</p>
                     </div>
 
                     <div class="visualizacaoDados row">
@@ -67,32 +63,22 @@
                     </div>
 
                     <div class="visualizacaoDados row">
-                        <span class="col-6">Telefone 2: </span>
-                        <p class="col-6">{{ $emp2->fone2 }}</p>
+                        <span class="col-6">ENDEREÇO: </span>
+                        <p class="col-6">{{ $emp2->endereco }}</p>
                     </div>
 
                     <div class="visualizacaoDados row">
-                        <span class="col-6">Plano: </span>
-                        <p class="col-6">{{ $emp2->plano }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Quant Admin: </span>
-                        <p class="col-6">{{ $emp2->qtdeadm }}</p>
-                    </div>
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Número: </span>
+                        <span class="col-6">NÚMERO: </span>
                         <p class="col-6">{{ $emp2->numero }}</p>
                     </div>
-                    
+
                     <div class="visualizacaoDados row">
-                        <span class="col-6">Bairro: </span>
+                        <span class="col-6">BAIRRO: </span>
                         <p class="col-6">{{ $emp2->bairro }}</p>
                     </div>
                     
                     <div class="visualizacaoDados row">
-                        <span class="col-6">Cidade: </span>
+                        <span class="col-6">CIDADE: </span>
                         <p class="col-6">{{ $emp2->cidade }}</p>
                     </div>
                     
@@ -100,15 +86,30 @@
                         <span class="col-6">UF: </span>
                         <p class="col-6">{{ $emp2->uf }}</p>
                     </div>
-                    
-                    
+                  
+                       
                     <div class="visualizacaoDados row">
-                        <span class="col-6">Telefone 1: </span>
+                        <span class="col-6">TELEFONE 1: </span>
                         <p class="col-6">{{ $emp2->fone1 }}</p>
+                    </div>      
+
+                    <div class="visualizacaoDados row">
+                        <span class="col-6">TELEFONE 2: </span>
+                        <p class="col-6">{{ $emp2->fone2 }}</p>
+                    </div>
+
+                    <div class="visualizacaoDados row">
+                        <span class="col-6">PLANO: </span>
+                        <p class="col-6">{{ $emp2->plano }}</p>
+                    </div>
+
+                    <div class="visualizacaoDados row">
+                        <span class="col-6">QUANT ADM: </span>
+                        <p class="col-6">{{ $emp2->qtdeadm }}</p>
                     </div>
                     
                     <div class="visualizacaoDados row">
-                        <span class="col-6">Quant Oper: </span>
+                        <span class="col-6">QUANT OPER: </span>
                         <p class="col-6">{{ $emp2->qtdeoper }}</p>
                     </div>
 

@@ -7,7 +7,7 @@
        
         
         <div class="cardHeaderAsociados card-header"  >
-            <h1 class="mt-3">Visualização</h1>
+            <h1 class="mt-3">Visualizar</h1>
             
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('user.index') }}" class="btn ">

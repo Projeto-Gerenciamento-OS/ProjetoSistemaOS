@@ -6,7 +6,7 @@
     <div class="card mb-4 cardCorLista ">
         
         <div class="cardHeaderAsociados card-header"  >
-            <h1 class="mt-1">Detalhes Empresa 1</h1>
+            <h1 class="mt-1">Visualizar</h1>
                 
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('emp1.index') }}" class="btn ">

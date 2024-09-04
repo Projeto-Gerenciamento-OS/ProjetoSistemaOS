@@ -10,7 +10,7 @@
             <form action="{{ route('colaborador.index') }}">
                 <div class="pesquisar">
                     
-                    <input type="text" name="nome" id="nome" class="form-control btn-pesquisar" value="{{ $nome }}" placeholder="Nome da conta" />
+                    <input type="text" name="nome" id="nome" class="form-control btn-pesquisar" value="{{ $nome }}" placeholder="Pesquisar" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
@@ -33,13 +33,13 @@
                 <thead>
                     <tr class="titulos">    
                         <th>ID</th>
-                        <th>nome</th>
-                        <th>fone</th>
-                        <th>id_emp2</th>
-                        <th>id_users</th>
-                        <th>id_turno</th>
-                        <th>id_setor</th>
-                        <th class="text-center">Ações</th>
+                        <th>NOME</th>
+                        <th>TELEFONE</th>
+                        <th>EMPRESA 2</th>
+                        <th>ID USUÁRIO</th>
+                        <th>ID TURNO</th>
+                        <th>ID SETOR</th>
+                        <th class="text-center">AÇÕES</th>
                     </tr>
                 </thead>
 

@@ -30,11 +30,7 @@
                         value="{{ old('id_emp2') }}">
                     </div>
             
-                    {{-- <div class="mb-3">
-                        <label for="nivel" class="form-label">NÍVEL </label>
-                        <input type="text" name="nivel" id="nivel"  placeholder="Nome completo"
-                        value="{{ old('nivel') }}">
-                    </div> --}}
+      
 
                     <div class="mb-3">
                         <label for="email" class="form-label">EMAIL </label>
@@ -51,15 +47,6 @@
                         <input type="number" min="1" max="3" name="tipo" id="tipo"   required >
                     </div>
 
-                    {{-- <div class="mb-3">
-                        <label for="id_emp2" class="form-label">ID EMP2 </label>
-                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"   required >
-                    </div> --}}
-{{-- 
-                    <div class="mb-3">
-                        <label for="id_emp2" class="form-label">id_emp2 </label>
-                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('id_emp2') }}" required >
-                    </div> --}}
 
                     <div class="mb-3">
                         <label for="password" class="form-label">SENHA </label>
@@ -96,15 +83,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 @endsection
 

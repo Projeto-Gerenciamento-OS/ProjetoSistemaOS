@@ -10,7 +10,7 @@
             <form action="{{ route('cli.index') }}">
                 <div class="pesquisar">
                     
-                    <input type="text" name="razao" id="razao" class=" btn-pesquisar" value="{{ $razao }}" placeholder="Nome da conta" />
+                    <input type="text" name="razao" id="razao" class=" btn-pesquisar" value="{{ $razao }}" placeholder="Pesquisar" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
@@ -31,24 +31,24 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th> tipo </th>
-                        <th> cpf_cnpj </th>
-                        <th> razao </th>
-                        <th> fantasia </th>
-                        <th> endereco </th>
-                        <th> numero </th>
-                        <th> complemento </th>
-                        <th> bairro </th>
-                        <th> cidade </th>
-                        <th> uf </th>
-                        <th> email </th>
-                        <th> cep </th>
-                        <th> fone1 </th>
-                        <th> fone2 </th>
-                        <th> obs </th>
-                        <th> id_emp2 </th>
-                        <th> id_users </th>
-                        <th class="text-center">Ações</th>
+                        <th>TIPO</th>
+                        <th>CPF/CNPJ</th>
+                        <th>RAZÃO</th>
+                        <th>FANTASIA</th>
+                        <th>ENDEREÇO</th>
+                        <th>NÚMERO</th>
+                        <th>COMPLEMENTO</th>
+                        <th>BAIRRO</th>
+                        <th>CIDADE</th>
+                        <th>UF</th>
+                        <th>EMAIL</th>
+                        <th>CEP</th>
+                        <th>TELEFONE 1</th>
+                        <th>TELEFONE 2</th>
+                        <th>OBS</th>
+                        <th>EMPRESA 2</th>
+                        <th>ID USUÁRIO</th>
+                        <th class="text-center">AÇÕES</th>
                     </tr>
                 </thead>
 
