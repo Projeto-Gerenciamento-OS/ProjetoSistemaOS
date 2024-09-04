@@ -6,7 +6,7 @@
     <div class="card mb-4 cardCorLista ">
         
         <div class="cardHeaderAsociados card-header"  >
-            <h2 class="mt-3">Edição</h2>
+            <h2 class="mt-3">EDITAR</h2>
 
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('status.index') }}" class="btn ">
@@ -41,7 +41,7 @@
 
                 <div class="col-6 gap-3">
                     <div class="col-12">
-                        <label for="id_emp2" >id_emp2: </label>
+                        <label for="id_emp2" class="form-label">id_emp2: </label>
                         <input type="text" name="id_emp2" id="id_emp2"  placeholder="Nome completo"
                             value="{{ old('id_emp2', $status->id_emp2) }}">
                     </div>
