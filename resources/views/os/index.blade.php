@@ -57,7 +57,6 @@
                                     <th>{{ $item->id_status }}</th>
                                     <th>{{ $item->id_users }}</th>
                                     <th>{{ $item->datacad }}</th>
-                                    <th>{{ $item->datacad}}</th>
                                     <th>{{ $item->dhi }}</th>
                                     <th>{{ $item->dhf }}</th>
                                     <th>{{ $item->obs }}</th>
