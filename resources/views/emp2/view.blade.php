@@ -4,9 +4,8 @@
 
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
-        
         <div class="cardHeaderAsociados card-header"  >
-            <h2 class="mt-3">Detalhes Empresa 2</h2>
+            <h1 class="mt-3">VISUALIZAR</h1>
         
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('emp2.index') }}" class="btn ">
@@ -32,100 +31,105 @@
             </span>
         </div>
 
-        <div class="card-body ">
+        <div class="card-body" >
             <x-alert />
+            <div class="row">
 
-                <div class="col-12 col-lg-4 " id="marginVisualizar-empresa">
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">ID: </span>
-                        <p class="col-6">{{ $emp2->id_emp1 }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">CNPJ: </span>
-                        <p class="col-6">{{ $emp2->cnpj }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Endereço: </span>
-                        <p class="col-6">{{ $emp2->endereco }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Razão Social: </span>
-                        <p class="col-6">{{ $emp2->razao }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Fantasia: </span>
-                        <p class="col-6">{{ $emp2->fantasia }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">CEP: </span>
-                        <p class="col-6">{{ $emp2->cep }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Telefone 2: </span>
-                        <p class="col-6">{{ $emp2->fone2 }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Plano: </span>
-                        <p class="col-6">{{ $emp2->plano }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Quant Admin: </span>
-                        <p class="col-6">{{ $emp2->qtdeadm }}</p>
-                    </div>
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Número: </span>
-                        <p class="col-6">{{ $emp2->numero }}</p>
-                    </div>
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Bairro: </span>
-                        <p class="col-6">{{ $emp2->bairro }}</p>
-                    </div>
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Cidade: </span>
-                        <p class="col-6">{{ $emp2->cidade }}</p>
-                    </div>
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">UF: </span>
-                        <p class="col-6">{{ $emp2->uf }}</p>
-                    </div>
-                    
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Telefone 1: </span>
-                        <p class="col-6">{{ $emp2->fone1 }}</p>
-                    </div>
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">Quant Oper: </span>
-                        <p class="col-6">{{ $emp2->qtdeoper }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">EDITADO: </span>
-                        <p class="col-6">
-                            {{ \Carbon\Carbon::parse($emp2->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
-                        </p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">CADASTRADO: </span>
-                        <p class="col-6">
-                            {{ \Carbon\Carbon::parse($emp2->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
-                        </p>
-                    </div>
+                <div class="visualizacaoDados row">
+                    <span class="col-4">ID: </span>
+                    <p class="col-5">{{ $emp2->id }}</p>
                 </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">EMPRESA 1: </span>
+                    <p class="col-5">{{ $emp2->id_emp1 }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">CNPJ: </span>
+                    <p class="col-5">{{ $emp2->cnpj }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">TELEFONE 1: </span>
+                    <p class="col-5">{{ $emp2->fone1 }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">TELEFONE 2: </span>
+                    <p class="col-5">{{ $emp2->fone2 }}</p>
+                </div>
+                
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">RAZÃO SOCIAL: </span>
+                    <p class="col-5">{{ $emp2->razao }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">FANTASIA: </span>
+                    <p class="col-5">{{ $emp2->fantasia }}</p>
+                </div>
+                
+                <div class="visualizacaoDados row">
+                    <span class="col-4">QANTID ADIMIN: </span>
+                    <p class="col-5">{{ $emp2->qtdeadm }}</p>
+                </div>
+                
+                <div class="visualizacaoDados row">
+                    <span class="col-4">QUANT OPER: </span>
+                    <p class="col-5">{{ $emp2->qtdeoper }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">UF: </span>
+                    <p class="col-5">{{ $emp2->uf }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">CIDADE: </span>
+                    <p class="col-5">{{ $emp2->cidade }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">BAIRRO: </span>
+                    <p class="col-5">{{ $emp2->bairro }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">ENDEREÇO: </span>
+                    <p class="col-5">{{ $emp2->endereco }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">PLANO: </span>
+                    <p class="col-5">{{ $emp2->plano }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">CEP: </span>
+                    <p class="col-5">{{ $emp2->cep }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">NÚMERO: </span>
+                    <p class="col-5">{{ $emp2->numero }}</p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">EDITADO: </span>
+                    <p class="col-5">
+                        {{ \Carbon\Carbon::parse($emp2->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
+                    </p>
+                </div>
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">CADASTRADO: </span>
+                    <p class="col-5">
+                        {{ \Carbon\Carbon::parse($emp2->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

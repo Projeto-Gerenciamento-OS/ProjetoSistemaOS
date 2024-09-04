@@ -4,10 +4,8 @@
 
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
-       
-        
         <div class="cardHeaderAsociados card-header"  >
-            <h1 class="mt-3">Visualização</h1>
+            <h1 class="mt-3">VISUALIZAR</h1>
             
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('user.index') }}" class="btn ">
@@ -27,16 +25,13 @@
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
-                    
                     </button>
                 </form>
             </span>
         </div> 
 
         <div class="card-body" >
-
             <x-alert />
-
             <div class="row">
 
                 <div class='visualizacaoDados row'>

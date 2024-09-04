@@ -33,11 +33,17 @@
 
         <div class="card-body">
             <x-alert />
-
             <form action="{{ route('emp2.update', ['emp2' => $emp2->id]) }}" method="POST" class="row  "  id="marginEditar-empresa" >
-
                 @csrf
                 @method('PUT')
+
+                <div class="col-6 col-lg-6">
+                    <div class="mb-3">
+                        <label class="form-label" for="id_emp1" >EMPRESA 1</label>
+                        <input type="text" name="id_emp1" id="id_emp1"  placeholder="Digeite o(a) EMPRESA 1..."
+                            value="{{ old('id_emp1', $emp2->id_emp1) }}">
+                    </div>
+                </div>
 
                 <div class="col-6 col-lg-6">   
                     <div class="mb-3">
