@@ -39,28 +39,29 @@
                 @csrf
                 @method('PUT')
 
-                <div class="col-6 gap-3">
-                    <div class="col-12">
+                <div class="col-6 col-lg-6">
+
+                    <div class="mb-3">
                         <label for="id_emp2" class="form-label">id_emp2: </label>
                         <input type="text" name="id_emp2" id="id_emp2"  placeholder="Nome completo"
                             value="{{ old('id_emp2', $status->id_emp2) }}">
                     </div>
 
-                    <div class="col-12">
+                    <div class="mb-3">
                         <label for="id_users" class="form-label">id_users</label>
                         <input type="number" name="id_users" id="id_users" 
                             placeholder="Digite aqui..." value="{{ old('id_users', $status->id_users) }}">
                     </div>
                 </div>
 
-                <div class="col-6 mt-2 gap-3">
-                    <div class="col-12">
+                <div class="col-6 col-lg-6">
+                    <div class="mb-3">
                         <label for="cor" class="form-label">cor</label>
                         <input type="text" name="cor" id="cor" 
                             placeholder="Digite aqui..." value="{{ old('cor', $status->cor) }}">
                     </div>
 
-                    <div class="col-12">
+                    <div class="mb-3">
                         <label for="descricao" class="form-label">descricao </label>
                         <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
                             value="{{ old('descricao', $status->descricao) }}">
@@ -70,7 +71,6 @@
                 <a  class="  btnCadastrar">
                     <button type="submit">
                         <h5>Salvar</h5>
-                         
                     </button>  
                 </a>
 
