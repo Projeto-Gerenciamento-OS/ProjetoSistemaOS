@@ -31,6 +31,7 @@
             <table>
                 <thead>
                     <tr class="titulos"> 
+                        <th>ID</th>
                         <th>EMPRESA 1</th>
                         <th>RAZÃO</th>
                         <th>FANTASIA</th>
@@ -53,6 +54,7 @@
                 <tbody>
                     @forelse ($emp2 as $empres)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
+                            <th>{{ $empres->id }}</th>
                             <th>{{ $empres->id_emp1 }}</th>
                             <th>{{ $empres->razao }}</th>
                             <th>{{ $empres->fantasia }}</th>
