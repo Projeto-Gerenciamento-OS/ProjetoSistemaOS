@@ -33,8 +33,8 @@
                         <th>ID</th>
                         <th> TIPO</th>
                         <th> cpf_cnpj </th>
-                        <th> razao </th>
-                        <th> fantasia </th>
+                        <th> RAZÃO</th>
+                        <th> FANTASIA</th>
                         <th> endereco </th>
                         <th> numero </th>
                         <th> complemento </th>

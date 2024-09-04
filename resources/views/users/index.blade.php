@@ -27,6 +27,7 @@
         </div> 
 
         <div class="card-body"> 
+            <x-alert />
             <table >
                 <thead>
                     <tr class="titulos">
@@ -70,7 +71,9 @@
                         </tr>
 
                         @empty
-                        <div class="alert alert-danger" role="alert">Nenhum usuário encontrado!</div>
+                            <div class="alert alert-danger" role="alert">
+                                Nenhum usuário encontrado!
+                            </div>
                     @endforelse
                 </tbody>
             </table>

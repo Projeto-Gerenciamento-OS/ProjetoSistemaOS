@@ -8,9 +8,7 @@
             <h1 class="mt-3">Empresa 2</h1>
             <form action="{{ route('emp2.index') }}">
                 <div class="pesquisar">
-                    
                     <input type="text" name="razao" id="cnpj" class="form-control btn-pesquisar" value="{{ $razao }}" placeholder="CNPJ da conta" />
-
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
                     </button>
@@ -23,36 +21,34 @@
                     <i class="fa-solid fa-angle-right"></i>
                 </button>  
             </a>    
-
         </div>
       
         <div class="card-body"> 
             <x-alert />
 
             <table>
-                <thead class="p-8">
+                <thead>
                     <tr class="titulos"> 
-                        <th>id_emp1</th>
-                        <th>Razão</th>
-                        <th>Fantasia</th>
+                        <th>EMPRESA 1</th>
+                        <th>RAZÃO</th>
+                        <th>FANTASIA</th>
                         <th>CNPJ</th>
-                        <th>Endereço</th>
-                        <th>Número</th>
-                        <th>Bairro</th>
-                        <th>Cidade</th>                 
-                        <th>uf</th>
+                        <th>ENDEREÇO</th>
+                        <th>NÚMERO</th>
+                        <th>BAIRRO</th>
+                        <th>CIDADE</th>                 
+                        <th>UF</th>
                         <th>CEP</th>
-                        <th>Telefone 1</th>
-                        <th>Telefone 2</th>
-                        <th>Plano</th>
-                        <th>Qtd de Adm</th>
-                        <th>Qtd de Oper</th>                   
+                        <th>TELEFONE 1</th>
+                        <th>TELEFONE 2</th>
+                        <th>PLANO</th>
+                        <th>QTD DE ADM</th>
+                        <th>QTD DE OPER</th>                   
                         <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 
                 <tbody>
-
                     @forelse ($emp2 as $empres)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th>{{ $empres->id_emp1 }}</th>
@@ -90,10 +86,10 @@
                             </td>
                         </tr>
 
-                    @empty
-                        <div class="alert alert-danger" role="alert">
-                            Nenhuma empresa encontrada!
-                        </div>
+                        @empty
+                            <div class="alert alert-danger" role="alert">
+                                Nenhuma empresa encontrada!
+                            </div>
                     @endforelse
                 </tbody>
             </table>
@@ -101,7 +97,4 @@
         {{ $emp2->onEachSide(0)->links() }} 
     </div>
 </div>
-                                                                                                                                                               
-
-
 @endsection

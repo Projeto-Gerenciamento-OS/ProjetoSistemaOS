@@ -24,6 +24,7 @@
             </a>
         </div>
         <div class="card-body"> 
+            <x-alert />
             <table>
                 <thead>
                     <tr class="titulos">

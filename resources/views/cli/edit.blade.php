@@ -51,13 +51,13 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="razao" >razao</label>
+                                <label for="razao" >RAZÃO</label>
                                 <input type="text" name="razao" id="razao"  placeholder=" razao"
                                     value="{{ old('razao', $cli->razao) }}">
                             </div>
 
                             <div class="mb-3">
-                                <label for="fantasia" >fantasia</label>
+                                <label for="fantasia" >FANTASIA</label>
                                 <input type="text" name="fantasia" id="fantasia"  placeholder=" fantasia"
                                     value="{{ old('fantasia', $cli->fantasia) }}">
                             </div>
