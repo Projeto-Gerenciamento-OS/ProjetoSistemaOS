@@ -34,20 +34,12 @@
                         <th>EMPRESA 1</th>
                         <th>RAZÃO</th>
                         <th>FANTASIA</th>
-                        <th>EMPRESA 1</th>
-                        <th>RAZÃO</th>
-                        <th>FANTASIA</th>
                         <th>CNPJ</th>
                         <th>ENDEREÇO</th>
                         <th>NÚMERO</th>
                         <th>BAIRRO</th>
                         <th>CIDADE</th>                 
-                        <th>UF</th>
-                        <th>ENDEREÇO</th>
-                        <th>NÚMERO</th>
-                        <th>BAIRRO</th>
-                        <th>CIDADE</th>                 
-                        <th>UF</th>
+                        <th>UF</th>         
                         <th>CEP</th>
                         <th>TELEFONE 1</th>
                         <th>TELEFONE 2</th>

@@ -35,66 +35,66 @@
             <x-alert />
             <div class="row">
 
-                <div class="col-12 col-lg-4 " id="marginVisualizar-empresa">
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">EMPRESA 1: </span>
-                        <p class="col-6">{{ $emp2->id_emp1 }}</p>
-                    </div>
+                <div class="visualizacaoDados row">
+                    <span class="col-4">EMPRESA 1: </span>
+                    <p class="col-5">{{ $emp2->id_emp1 }}</p>
+                </div>
 
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">RAZÃO: </span>
-                        <p class="col-6">{{ $emp2->razao }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">FANTASIA: </span>
-                        <p class="col-6">{{ $emp2->fantasia }}</p>
-                    </div>
-
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">CNPJ: </span>
-                        <p class="col-6">{{ $emp2->cnpj }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">CEP: </span>
-                        <p class="col-6">{{ $emp2->cep }}</p>
-                    </div>
+                <div class="visualizacaoDados row">
+                    <span class="col-4">RAZÃO: </span>
+                    <p class="col-5">{{ $emp2->razao }}</p>
+                </div>
 
                 <div class="visualizacaoDados row">
                     <span class="col-4">FANTASIA: </span>
                     <p class="col-5">{{ $emp2->fantasia }}</p>
                 </div>
-                
+
+
                 <div class="visualizacaoDados row">
-                    <span class="col-4">QANTID ADIMIN: </span>
-                    <p class="col-5">{{ $emp2->qtdeadm }}</p>
-                </div>
-                
-                <div class="visualizacaoDados row">
-                    <span class="col-4">QUANT OPER: </span>
-                    <p class="col-5">{{ $emp2->qtdeoper }}</p>
+                    <span class="col-4">CNPJ: </span>
+                    <p class="col-5">{{ $emp2->cnpj }}</p>
                 </div>
 
                 <div class="visualizacaoDados row">
-                    <span class="col-4">UF: </span>
-                    <p class="col-5">{{ $emp2->uf }}</p>
+                    <span class="col-4">CEP: </span>
+                    <p class="col-5">{{ $emp2->cep }}</p>
+                </div>
+
+            
+                <div class="visualizacaoDados row">
+                    <span class="col-4">ENDEREÇO: </span>
+                    <p class="col-5">{{ $emp2->endereco }}</p>
                 </div>
 
                 <div class="visualizacaoDados row">
-                    <span class="col-4">CIDADE: </span>
-                    <p class="col-5">{{ $emp2->cidade }}</p>
+                    <span class="col-4">NÚMERO: </span>
+                    <p class="col-5">{{ $emp2->numero }}</p>
                 </div>
 
                 <div class="visualizacaoDados row">
                     <span class="col-4">BAIRRO: </span>
                     <p class="col-5">{{ $emp2->bairro }}</p>
                 </div>
+                
+                <div class="visualizacaoDados row">
+                    <span class="col-4">CIDADE: </span>
+                    <p class="col-5">{{ $emp2->cidade }}</p>
+                </div>
+                
+                <div class="visualizacaoDados row">
+                    <span class="col-4">UF: </span>
+                    <p class="col-5">{{ $emp2->uf }}</p>
+                </div>
 
                 <div class="visualizacaoDados row">
-                    <span class="col-4">ENDEREÇO: </span>
-                    <p class="col-5">{{ $emp2->endereco }}</p>
+                    <span class="col-4">TELEFONE 1: </span>
+                    <p class="col-5">{{ $emp2->fone1 }}</p>
+                </div>      
+
+                <div class="visualizacaoDados row">
+                    <span class="col-4">TELEFONE 2: </span>
+                    <p class="col-5">{{ $emp2->fone2 }}</p>
                 </div>
 
                 <div class="visualizacaoDados row">
@@ -103,64 +103,14 @@
                 </div>
 
                 <div class="visualizacaoDados row">
-                    <span class="col-4">CEP: </span>
-                    <p class="col-5">{{ $emp2->cep }}</p>
+                    <span class="col-4">QUANT ADM: </span>
+                    <p class="col-5">{{ $emp2->qtdeadm }}</p>
                 </div>
-
+                
                 <div class="visualizacaoDados row">
-                    <span class="col-4">NÚMERO: </span>
-                    <p class="col-5">{{ $emp2->numero }}</p>
+                    <span class="col-4">QUANT OPER: </span>
+                    <p class="col-5">{{ $emp2->qtdeoper }}</p>
                 </div>
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">ENDEREÇO: </span>
-                        <p class="col-6">{{ $emp2->endereco }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">NÚMERO: </span>
-                        <p class="col-6">{{ $emp2->numero }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">BAIRRO: </span>
-                        <p class="col-6">{{ $emp2->bairro }}</p>
-                    </div>
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">CIDADE: </span>
-                        <p class="col-6">{{ $emp2->cidade }}</p>
-                    </div>
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">UF: </span>
-                        <p class="col-6">{{ $emp2->uf }}</p>
-                    </div>
-                  
-                       
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">TELEFONE 1: </span>
-                        <p class="col-6">{{ $emp2->fone1 }}</p>
-                    </div>      
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">TELEFONE 2: </span>
-                        <p class="col-6">{{ $emp2->fone2 }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">PLANO: </span>
-                        <p class="col-6">{{ $emp2->plano }}</p>
-                    </div>
-
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">QUANT ADM: </span>
-                        <p class="col-6">{{ $emp2->qtdeadm }}</p>
-                    </div>
-                    
-                    <div class="visualizacaoDados row">
-                        <span class="col-6">QUANT OPER: </span>
-                        <p class="col-6">{{ $emp2->qtdeoper }}</p>
-                    </div>
 
                 <div class="visualizacaoDados row">
                     <span class="col-4">EDITADO: </span>
