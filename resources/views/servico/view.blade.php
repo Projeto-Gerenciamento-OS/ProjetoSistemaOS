@@ -84,7 +84,7 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">id_os1: </span>
+                    <span class="col-6 col-lg-4">ID OS 1:</span>
                     <p class="col-6">{{ $servico->id_os1}}</p>
                 </div>
                 

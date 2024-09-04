@@ -45,7 +45,7 @@
                     <dt class="col-6 col-lg-4">VALOR UNITARIO:</dt>
                     <dd class="col-6">{{ $os2->vunit }}</dd>
 
-                    <dt class="col-6 col-lg-4">vtotal: </dt>
+                    <dt class="col-6 col-lg-4">VALOR TOTAL:</dt>
                     <dd class="col-6">{{ $os2->vtotal }}</dd>
 
                     <dt class="col-6 col-lg-4">CUSTO UNITARIO:</dt>
@@ -57,7 +57,7 @@
                     <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
                     <dd class="col-6">{{ $os2->id_emp2 }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_os1: </dt>
+                    <dt class="col-6 col-lg-4">ID OS 1:</dt>
                     <dd class="col-6">{{ $os2->id_os1 }}</dd>
 
                     <dt class="col-6 col-lg-4">ID SERVIÇO:</dt>
