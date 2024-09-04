@@ -6,11 +6,7 @@
     <div class="card mb-4 cardCorLista ">
         
         <div class="cardHeaderAsociados card-header"  >
-<<<<<<< HEAD
             <h1 class="mt-3">Visualizar</h1>
-=======
-            <h1 class="mt-3">VISUALIZAR</h1>
->>>>>>> 44685e4bee914a7ee6c66832db8059cc21ad3dbc
             
             <span class="ms-auto d-flex flex-row gap-2">
                 <a href="{{ route('colaborador.index') }}" class="btn ">
@@ -47,11 +43,7 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-<<<<<<< HEAD
                     <span class='col-6 col-lg-4'> NOME:</span>
-=======
-                    <span class='col-6 col-lg-4'>NOME</span>
->>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                     <p class="col-6">{{ $colaborador->nome}}</p>
                 </div>
 
@@ -66,11 +58,7 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-<<<<<<< HEAD
                     <span class='col-6 col-lg-4'> ID USUÁRIO:</span>
-=======
-                    <span class='col-6 col-lg-4'> USUARIOS:</span>
->>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                     <p class="col-6">{{ $colaborador->id_users}}</p>
                 </div>
 

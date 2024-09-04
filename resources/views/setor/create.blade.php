@@ -17,20 +17,22 @@
                 @csrf
                 @method('POST')
             
-                <div class="mb-3">
-                    <label for="id_emp2" class="form-label">EMPRESA 2 </label>
-                    <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 "
-                    value="{{ old('id_emp2') }}">
-                </div>
+                <div class="col-6 col-lg-6 ">
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">EMPRESA 2 </label>
+                        <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 "
+                        value="{{ old('id_emp2') }}">
+                    </div>
 
-                <div class="mb-3">
-                    <label for="id_users" class="form-label">USUÁRIO</label>
-                    <input type="text" name="id_users" id="id_users"   required >
-                </div>
+                    <div class="mb-3">
+                        <label for="id_users" class="form-label">USUÁRIO</label>
+                        <input type="text" name="id_users" id="id_users"   required >
+                    </div>
 
-                <div class="mb-3">
-                    <label for="descricao" class="form-label">DESCRIÇÃO</label>
-                    <input type="text" name="descricao" id="descricao"   required >
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">DESCRIÇÃO</label>
+                        <input type="text" name="descricao" id="descricao"   required >
+                    </div>
                 </div>
 
                     

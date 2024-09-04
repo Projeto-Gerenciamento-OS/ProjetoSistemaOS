@@ -34,21 +34,12 @@
                     <tr class="titulos">    
                         <th>ID</th>
                         <th>NOME</th>
-<<<<<<< HEAD
                         <th>TELEFONE</th>
                         <th>EMPRESA 2</th>
                         <th>ID USUÁRIO</th>
                         <th>ID TURNO</th>
                         <th>ID SETOR</th>
                         <th class="text-center">AÇÕES</th>
-=======
-                        <th>fone</th>
-                        <th>EMPRESA 2 </th>
-                        <th>USUÁRIO</th>
-                        <th>id_turno</th>
-                        <th>id_setor</th>
-                        <th class="text-center">AÇÕES:</th>
->>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
                     </tr>
                 </thead>
 
