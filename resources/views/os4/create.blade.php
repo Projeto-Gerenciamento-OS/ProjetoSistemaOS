@@ -4,7 +4,7 @@
 
 <div class="container-fluid px-4 data-container" >
     <div class="card mb-4 cardCorLista " >
-        <div  class="cardHeaderAsociados card-header">
+        <div  class="  card-header">
             <h1>Cadastro da Ordem de Serviço 4</h1>
             <a href="{{ route('os.index') }}" class="btn btn-primary
                 <span class="listar-texto">LISTAR</span></a>
@@ -23,13 +23,13 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="percentual" class="form-label">percentual </label>
+                        <label for="percentual" class="form-label"> PERCENTUAL</label>
                         <input type="text" name="percentual" id="percentual"  placeholder=" Digite o percentual"
                             value="{{ old('percentual') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="valor" class="form-label">valor </label>
+                        <label for="valor" class="form-label">VALOR</label>
                         <input type="text" name="valor" id="valor"  placeholder=" Digite o valor"
                             value="{{ old('valor') }}">
                     </div>

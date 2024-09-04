@@ -5,7 +5,7 @@
 
 <div class="container-fluid px-4 data-container" >
         <div class="card mb-4 cardCorLista "  >
-            <div class="cardHeaderAsociados card-header">
+            <div class="  card-header">
                 <h1 class="mt-3">Visualizar</h1>
                 <span class="ms-auto d-flex  flex-row gap-2">
                     <a href="{{ route('cli.index') }}" class="btn ">
@@ -81,13 +81,13 @@
                     <dt class="col-6 col-lg-4">TELEFONE 2: </dt>
                     <dd class="col-6">{{ $cli->fone2 }}</dd>
 
-                    <dt class="col-6 col-lg-4">OBS: </dt>
+                    <dt class="col-6 col-lg-4">OBS:</dt>
                     <dd class="col-6">{{ $cli->obs }}</dd>
 
                     <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
                     <dd class="col-6">{{ $cli->id_emp2 }}</dd>
 
-                    <dt class="col-6 col-lg-4">ID USUÁRIO: </dt>
+                    <dt class="col-6 col-lg-4">USUÁRIO</dt>
                     <dd class="col-6">{{ $cli->id_users }}</dd>
 
                     <dt class="col-6 col-lg-4">CADASTRADO: </dt>

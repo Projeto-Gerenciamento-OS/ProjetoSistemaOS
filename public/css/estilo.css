@@ -228,6 +228,35 @@ body {
                 color: #FFFF;
                 text-align: center;
             }
+            
+            span{
+                display:inline;
+            }
+
+            @media (max-width: 700px) {
+
+                a{
+                    width:30px;
+                    height:30px;
+                    span {
+                        display: none; 
+                    }
+                }
+
+                
+                form {
+
+
+                    button {
+                        width:30px;
+                        height:30px;
+                    } 
+                }
+
+                h1{
+                    font-size:1.3rem;
+                }
+            }        
     
             .pesquisar {
                 display:flex;
@@ -258,51 +287,6 @@ body {
             }
         }
         
-        .cardHeaderAsociados{
-            display: flex;
-            width: 100%;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between ;
-            padding: .8rem 2rem;
-            background-color: var(--cor-azul-1);
-            border-radius: 5px 5px 0px 0px;
-            gap: 20px; 
-
-            h2{
-                color:#FFFF;
-            }
-            
-            .listar-texto{
-                display:inline;
-            }
-
-            @media (max-width: 600px) {
-
-                a{
-                    width:30px;
-                    height:30px;
-                }
-
-                .listar-texto {
-                    display: none; 
-                }
-                
-                form {
-
-
-                    button {
-                        width:30px;
-                        height:30px;
-                    } 
-                }
-
-                h1{
-                    font-size:1.3rem;
-                }
-            }         
-            
-        }
 
         .card-body {
             margin: auto;

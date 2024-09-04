@@ -5,7 +5,7 @@
 
 <div class="container-fluid px-4 data-container"  >
         <div class="card mb-4 cardCorLista " >
-            <div  class="cardHeaderAsociados card-header">
+            <div  class="  card-header">
                 <h2 class="mt-3">EDIÇÃO</h2>
                 <span class="ms-auto d-flex flex-row gap-2">
                     <a href="{{ route('cli.index') }}" class="btn ">
@@ -47,7 +47,7 @@
                                 </div>
     
                                 <div class="mb-3">
-                                    <label for="id_users" class="form-label">ID USUÁRIO:</label>
+                                    <label for="id_users" class="form-label">USUÁRIO</label>
                                     <input type="text" name="id_users" id="id_users" class="form-control" placeholder="Id Usuário" value="{{ old('id_users', $cli->id_users) }}">
                                 </div>
     
@@ -134,7 +134,7 @@
                                 </div>
     
                                 <div class="mb-3">
-                                    <label for="obs" class="form-label">OBS:</label>
+                                    <label for="obs" class="form-label">OBS</label>
                                     <input type="text" name="obs" id="obs" class="form-control" placeholder="Obs" value="{{ old('obs', $cli->obs) }}">
                                 </div>
                             </div>

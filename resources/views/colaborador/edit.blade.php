@@ -4,7 +4,7 @@
 
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
-        <div class="cardHeaderAsociados card-header"  >
+        <div class="  card-header"  >
             <h2 class="mt-3">EDIÇÃO</h2>
 
             <span class="ms-auto d-flex  flex-row gap-2">
@@ -59,18 +59,18 @@
 
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label class="form-label"  for="id_users" class="form-label">ID USUÁRIO:</label>
+                        <label class="form-label"  for="id_users" class="form-label">USUÁRIO</label>
                         <input type="number" name="id_users" id="id_users" placeholder="id_users" value="{{ old('id_users',$colaborador->id_users) }}">              
                     </div>
         
         
                     <div class="mb-3">
-                        <label class="form-label"  for="id_turno" class="form-label">ID TURNO:</label>
+                        <label class="form-label"  for="id_turno" class="form-label">TURNO</label>
                         <input type="number" name="id_turno" id="id_turno" placeholder="id_turno" value="{{ old('id_turno',$colaborador->id_turno) }}">              
                     </div>
         
                     <div class="mb-3">
-                        <label class="form-label"  for="id_setor" class="form-label">ID SETOR:</label>
+                        <label class="form-label"  for="id_setor" class="form-label">SETOR</label>
                         <input type="number" name="id_setor" id="id_setor" placeholder="id_setor" value="{{ old('id_setor',$colaborador->id_setor) }}">              
                     </div>
 

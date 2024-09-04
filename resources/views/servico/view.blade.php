@@ -5,7 +5,7 @@
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
         
-        <div class="cardHeaderAsociados card-header"  >
+        <div class="  card-header"  >
             <h1 class="mt-3">VISUALIZAR</h1>
             
             <span class="ms-auto d-flex  flex-row gap-2">
@@ -54,17 +54,17 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">valor: </span>
+                    <span class="col-6 col-lg-4">VALOR:</span>
                     <p class="col-6">{{ $servico->valor }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">custo: </span>
+                    <span class="col-6 col-lg-4">CUSTO:</span>
                     <p class="col-6">{{ $servico->custo }}</p>
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">obs: </span>
+                    <span class="col-6 col-lg-4">OBS:</span>
                     <p class="col-6">{{ $servico->obs}}</p>
                 </div>
                 

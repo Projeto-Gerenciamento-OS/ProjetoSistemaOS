@@ -5,7 +5,7 @@
 
 <div class="container-fluid px-4 data-container" >
         <div class="card mb-4 cardCorLista "  >
-            <div class="cardHeaderAsociados card-header">
+            <div class="  card-header">
                 <h1 class="mt-3">VISUALIZAR</h1>
                 <span class="ms-auto d-flex  flex-row gap-2">
                     <a href="{{ route('os.index') }}" class="btn ">

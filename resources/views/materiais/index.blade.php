@@ -30,13 +30,13 @@
             <table>
                 <thead>
                     <tr class="titulos">
-                        <th>ID Materiais</th>
-                        <th>Descrição</th>
-                        <th>Unidade</th>
-                        <th>Custo</th>
-                        <th>Valor</th>
-                        <th>ID EMP2</th>
-                        <th>ID Users</th>
+                        <th> ID MATERIAIS</th>
+                        <th>DESCRIÇÃO</th>
+                        <th>UNIDADE</th>
+                        <th>CUSTO</th>
+                        <th>VALOR</th>
+                        <th>EMPRESA 2</th>
+                        <th>USUÁRIO</th>
                         <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>

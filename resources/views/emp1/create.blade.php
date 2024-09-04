@@ -3,12 +3,12 @@
 @section('content')
 
 <div class="container-fluid data-container">
-    <div class="card mb-4 cardCorLista " >
-
-        <div class="cardHeaderAsociados card-header">
+    <div class="card mb-4 cardCorLista" >
+        <div class="card-header">
             <h1 class="mt-3">Nova Empresa 1</h1>
 
-            <a href="{{ route('emp1.index') }}" class="btn "><i class="fa-solid fa-list"></i>
+            <a href="{{ route('emp1.index') }}" class="btn ">
+                <i class="fa-solid fa-list"></i>
                 <span class="listar-texto">LISTAR</span>
             </a>
         </div>

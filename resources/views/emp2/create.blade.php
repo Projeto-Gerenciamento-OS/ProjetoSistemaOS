@@ -4,7 +4,7 @@
 
 <div class="container-fluid data-container">
     <div class="card mb-3 cardCorLista "  >
-        <div class="cardHeaderAsociados card-header">
+        <div class="  card-header">
             <h1 class="mt-3">Nova Empresa 2</h1>
 
             <a href="{{ route('emp2.index') }}" class="btn "><i class="fa-solid fa-list"></i>

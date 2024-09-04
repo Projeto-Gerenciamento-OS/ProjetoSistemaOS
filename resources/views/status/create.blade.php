@@ -5,7 +5,7 @@
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista" >
 
-        <div class="cardHeaderAsociados card-header">
+        <div class="  card-header">
             <h1>Status</h1>
             <a href="{{ route('status.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
@@ -20,7 +20,7 @@
 
                 <div class="col-6">
                     <div class="mb-3">
-                        <label for="cor" class="form-label">cor</label>
+                        <label for="cor" class="form-label"> COR</label>
                         <input type="text" name="cor" id="cor"  placeholder="Digite aqui..."
                         value="{{ old('cor') }}">
                         <div id="color-picker"></div>

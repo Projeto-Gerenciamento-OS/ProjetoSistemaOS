@@ -6,7 +6,7 @@
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista" >
 
-        <div class="cardHeaderAsociados card-header">
+        <div class="  card-header">
             <h1>Cadastro de Materiais</h1>
             <a href="{{ route('materiais.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
@@ -39,17 +39,17 @@
 
                     <div class="col-6 col-lg-6">
                         <div class="mb-3">
-                            <label for="unidade" class="form-label">unidade </label>
+                            <label for="unidade" class="form-label">UNIDADE</label>
                             <input type="text"  name="unidade" id="unidade"   required >
                         </div>
 
                         <div class="mb-3">
-                            <label for="custo" class="form-label">custo </label>
+                            <label for="custo" class="form-label">CUSTO</label>
                             <input type="text"  name="custo" id="custo"   required >
                         </div>
 
                         <div class="mb-3">
-                            <label for="valor" class="form-label">valor </label>
+                            <label for="valor" class="form-label">VALOR</label>
                             <input type="text"  name="valor" id="valor"   required >
                         </div>
                     </div>

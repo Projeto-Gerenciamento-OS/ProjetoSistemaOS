@@ -5,7 +5,7 @@
 
 <div class="container-fluid px-4 data-container"  >
         <div class="card mb-4 cardCorLista " >
-            <div  class="cardHeaderAsociados card-header">
+            <div  class="  card-header">
                 <h2 class="mt-3">EDIÇÃO</h2>
                 <span class="ms-auto d-flex flex-row gap-2">
                     <a href="{{ route('os.index') }}" class="btn ">
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="vtotal" >vtotal</label>
+                            <label for="vtotal" >VALOR TOTAL</label>
                             <input type="text" name="vtotal" id="vtotal"  placeholder=" vtotal"
                                 value="{{ old('vtotal', $os2->vtotal) }}">
                         </div>
@@ -78,7 +78,7 @@
 
                     <div class="col-6 col-lg-6">
                         <div class="mb-3">
-                            <label for="id_os1" >id_os1</label>
+                            <label for="id_os1" >ID OS1</label>
                             <input type="text" name="id_os1" id="id_os1"  placeholder=" id_os1"
                                 value="{{ old('id_os1', $os2->id_os1) }}">
                         </div>

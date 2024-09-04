@@ -36,9 +36,9 @@
                         <th>NOME</th>
                         <th>TELEFONE</th>
                         <th>EMPRESA 2</th>
-                        <th>ID USUÁRIO</th>
-                        <th>ID TURNO</th>
-                        <th>ID SETOR</th>
+                        <th>USUÁRIO</th>
+                        <th>TURNO</th>
+                        <th>SETOR</th>
                         <th class="text-center">AÇÕES</th>
                     </tr>
                 </thead>

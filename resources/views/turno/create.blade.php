@@ -5,7 +5,7 @@
 <div class="container-fluid px-4 data-container">
     <div class="card mb-4 cardCorLista" >
 
-        <div class="cardHeaderAsociados card-header">
+        <div class="  card-header">
             <h1>TURNO</h1>
             <a href="{{ route('turno.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>

@@ -33,7 +33,7 @@
                     <tr class="titulos">
                         <th>ID</th>
                         <th>DESCRIÇÃO</th>
-                        <th>percentual</th>
+                        <th> PERCENTUAL</th>
                         <th>EMPRESA 2 </th>
                         <th>USUÁRIO</th>
                         <th class="text-center">AÇÕES:</th>

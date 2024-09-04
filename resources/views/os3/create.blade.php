@@ -5,7 +5,7 @@
    
 <div class="container-fluid px-4  data-container" >
     <div class="card mb-4 cardCorLista " >
-        <div  class="cardHeaderAsociados card-header">
+        <div  class="  card-header">
             <h1>Cadastro da OS 3</h1>
             <a href="{{ route('os.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="vtotal" class="form-label">vtotal </label>
+                        <label for="vtotal" class="form-label">VALOR TOTAL</label>
                         <input type="text" name="vtotal" id="vtotal"  placeholder=" Digite o vtotal"
                             value="{{ old('vtotal') }}">
                     </div>
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_os1" class="form-label">id_os1 </label>
+                        <label for="id_os1" class="form-label">ID OS1</label>
                         <input type="text" name="id_os1" id="id_os1"  placeholder=" Digite o id_os1"
                             value="{{ old('id_os1') }}">
                     </div>

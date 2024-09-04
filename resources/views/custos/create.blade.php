@@ -7,7 +7,7 @@
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista ">
 
-        <div class="cardHeaderAsociados card-header">
+        <div class="  card-header">
             <h1>Cadastro de Custos</h1>
             <a href="{{ route('custos.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
@@ -37,7 +37,7 @@
                 <div class="col-12 col-lg-6">
                  
                     <div class="mb-3">
-                        <label for="percentual" class="form-label">percentual</label>
+                        <label for="percentual" class="form-label"> PERCENTUAL</label>
                         <input type="text"  name="percentual" id="percentual"   required>
                     </div> 
 

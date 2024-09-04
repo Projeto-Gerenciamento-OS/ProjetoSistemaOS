@@ -35,13 +35,13 @@
                             <tr class="titulos"> 
                                 <th>ID</th>
                                 <th>EMPRESA 2 </th>
-                                <th>id_status</th>
+                                <th>STATUS</th>
                                 <th>USUÁRIO</th>
-                                <th>datacad</th>
-                                <th>dhi</th>
-                                <th>dhf</th>
-                                <th>obs</th>
-                                <th>vtotal</th>
+                                <th>DATA</th>
+                                <th>INICIO</th>
+                                <th>FINAL</th>
+                                <th>OBS</th>
+                                <th>VALOR TOTAL</th>
                                 <th>ctotal</th>
                                 <th>cindireto</th>
                                 <th>vresultado</th>
@@ -129,12 +129,12 @@
                             <tr class="titulos">
                                 <th>ID</th>
                                 <th>EMPRESA 2 </th>
-                                <th>id_os1</th>
+                                <th>ID OS1</th>
                                 <th>id_servico</th>
                                 <th>id_colaborador</th>
                                 <th>qtde</th>
                                 <th>vunit</th>
-                                <th>vtotal</th>
+                                <th>VALOR TOTAL</th>
                                 <th>cunit</th>
                                 <th>ctotal</th>
                                 <th class="text-center">AÇÕES:</th>
@@ -225,11 +225,11 @@
                                 <th>ID</th>
                                 <th>qtde</th>
                                 <th>vunit</th>
-                                <th>vtotal</th>
+                                <th>VALOR TOTAL</th>
                                 <th>cunit</th>
                                 <th>ctotal</th>
                                 <th>EMPRESA 2 </th>
-                                <th>id_os1</th>
+                                <th>ID OS1</th>
                                 <th>id_materiais</th>
                                 <th class="text-center">AÇÕES:</th>
                             </tr>
@@ -316,8 +316,8 @@
                             <tr class="titulos">
                                 <th>ID</th>
                                 <th>DESCRIÇÃO</th>
-                                <th>percentual</th>
-                                <th>valor</th>
+                                <th> PERCENTUAL</th>
+                                <th>VALOR</th>
                                 <th>ativo</th>
                                 <th>EMPRESA 2 </th>
                                 <th class="text-center">AÇÕES:</th>
@@ -414,10 +414,10 @@
                             <tr class="titulos"> 
                                 <th>ID</th>
                                 <th>ID EMP1</th>
-                                <th>Data Cadastrada</th>
-                                <th>DHI</th>
-                                <th>DHF</th>
-                                <th>Obs</th>
+                                <th>DATA</th>
+                                <th>INICIO</th>
+                                <th>FINAL</th>
+                                <th>OBS</th>
                                 <th>Valor Total</th>
                                 <th>Custo Total</th>
                                 <th>Custo Indireto</th>
@@ -509,10 +509,10 @@
                                 <th> id_emp1 </th>
                                 <td> qtde </td>
                                 <th> vunit </th>
-                                <th> vtotal </th>
+                                <th> VALOR TOTAL</th>
                                 <th> cunit </th>
                                 <th> ctotal </th>
-                                <th> id_emp2 </th>
+                                <th> EMPRESA 2</th>
                                 <th> id_os2 </th>
                                 <th> id_servico </th>
                                 <th> id_colaborador </th>
@@ -604,7 +604,7 @@
                                 <th>ID</th>
                                 <th>ID OS1</th>
                                 <th>ID EMP1</th>
-                                <th>ID EMP2</th>
+                                <th>EMPRESA 2</th>
                                 <th>ID Material</th>
                                 <th>Valor Unitário</th>
                                 <th>Valor Total</th>
@@ -694,10 +694,10 @@
                             <tr class="titulos">
                                 <th>ID</th>
                                 <th>ID EMP1</th>
-                                <th>Percentual</th>
-                                <th>Valor</th>
+                                <th> PERCENTUAL</th>
+                                <th>VALOR</th>
                                 <th>Ativo</th>
-                                <th>Descrição</th>
+                                <th>DESCRIÇÃO</th>
                                 <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>

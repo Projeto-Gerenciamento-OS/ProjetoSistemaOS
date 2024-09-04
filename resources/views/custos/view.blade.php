@@ -5,7 +5,7 @@
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista" id='visualizacaoCustos'>
         
-        <div class="cardHeaderAsociados card-header"  >
+        <div class="  card-header"  >
                 <h2 class="mt-3">VISUALIZAR</h2>
                 <span class="ms-auto d-flex  flex-row gap-2">
                     <a href="{{ route('custos.index') }}" class="btn ">
@@ -39,10 +39,10 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $custos->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">DESCRIÇÃO: </dt>
+                    <dt class="col-6 col-lg-4">DESCRIÇÃO:</dt>
                     <dd class="col-6">{{ $custos->descricao }}</dd>
 
-                    <dt class="col-6 col-lg-4">percentual: </dt>
+                    <dt class="col-6 col-lg-4"> PERCENTUAL:</dt>
                     <dd class="col-6">{{ $custos->percentual }}</dd>
 
                     <dt class="col-6 col-lg-4">EMPRESA 2: </dt>

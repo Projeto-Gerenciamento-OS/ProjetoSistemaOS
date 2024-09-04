@@ -5,7 +5,7 @@
 <div class="container-fluid  data-container" >
     <div class="card mb-4 cardCorLista " >
 
-        <div class="cardHeaderAsociados card-header">
+        <div class="  card-header">
                 <h2 class="mt-3">EDIÇÃO</h2>
                 <span class="ms-auto d-flex  flex-row gap-2">
                     <a href="{{ route('materiais.index') }}" class="btn "> 
@@ -45,13 +45,13 @@
                         </div> 
 
                         <div class="mb-3">
-                            <label for="unidade" >Unidade: </label>
+                            <label for="unidade" >UNIDADE</label>
                             <input type="text" name="unidade" id="unidade"  placeholder=" Digite a unidade"
                                 value="{{ old('unidade', $materiais->unidade) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="custo" >Custo: </label>
+                            <label for="custo" >CUSTO</label>
                             <input type="text" name="custo" id="custo" 
                                 placeholder=" Melhor e-mail do usuário" value="{{ old('custo', $materiais->custo) }}">
                         </div>
@@ -59,7 +59,7 @@
 
                     <div class="col-6 col-lg-6">
                         <div class="mb-3">
-                            <label for="valor" class="form-label">Valor: </label>
+                            <label for="valor" class="form-label">VALOR</label>
                             <input type="text"  name="valor" id="valor"  value="{{ old('valor', $materiais->valor) }}" >
                         </div>
 
@@ -70,7 +70,7 @@
                         </div>
                         
                         <div class="mb-3">
-                            <label for="id_users" >ID Users: </label>
+                            <label for="id_users" >USUÁRIO</label>
                             <input type="text" name="id_users" id="id_users"  placeholder="id_users "
                                 value="{{ old('id_users', $materiais->id_users) }}">
                         </div>

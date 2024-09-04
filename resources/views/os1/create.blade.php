@@ -5,7 +5,7 @@
 
 <div class="container-fluid px-4 data-container" >
     <div class="card mb-4 cardCorLista" >
-        <div  class="cardHeaderAsociados card-header">
+        <div  class="  card-header">
             <h1>Cadastro da Ordem de Serviço 1</h1>
             <a href="{{ route('os.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>
@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_status" class="form-label">id_status: </label>
+                        <label for="id_status" class="form-label">STATUS</label>
                         <input type="text"  name="id_status" id="id_status"  value="{{ old('id_status') }}" >
                     </div>
 
@@ -37,17 +37,17 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="datacad" class="form-label">datacad</label>
+                        <label for="datacad" class="form-label">DATA</label>
                         <input type="date"  name="datacad" id="datacad"  value="{{ old('datacad') }}" >
                     </div>
 
                     <div class="mb-3">
-                        <label for="dhi" class="form-label">dhi </label>
+                        <label for="dhi" class="form-label">INICIO</label>
                         <input type="time"  name="dhi" id="dhi"  value="{{ old('dhi') }}" >
                     </div>
 
                     <div class="mb-3">
-                        <label for="dhf" class="form-label">dhf </label>
+                        <label for="dhf" class="form-label">FINAL</label>
                         <input type="time"  name="dhf" id="dhf"  value="{{ old('dhf') }}" >
                     </div>
                 </div>
@@ -55,13 +55,13 @@
                 <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
-                        <label for="obs" class="form-label"> obs</label>
+                        <label for="obs" class="form-label"> OBS</label>
                         <input type="text" name="obs" id="obs" 
                             value="{{ old('obs') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="vtotal" class="form-label">vtotal</label>
+                        <label for="vtotal" class="form-label">VALOR TOTAL</label>
                         <input type="text" name="vtotal" id="vtotal"
                             value="{{ old('vtotal') }}">
                     </div>

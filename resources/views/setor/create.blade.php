@@ -5,7 +5,7 @@
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista" >
 
-        <div class="cardHeaderAsociados card-header">
+        <div class="  card-header">
             <h1>Setor</h1>
             <a href="{{ route('setor.index') }}" class="btn ">
                 <i class="fa-solid fa-list"></i>

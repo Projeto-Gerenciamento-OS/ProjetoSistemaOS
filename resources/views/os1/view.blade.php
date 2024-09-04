@@ -5,7 +5,7 @@
 
 <div class="container-fluid px-4 data-container" >
         <div class="card mb-4 cardCorLista "  >
-            <div class="cardHeaderAsociados card-header">
+            <div class="  card-header">
                 <h1 class="mt-3">VISUALIZAR</h1>
                 <span class="ms-auto d-flex  flex-row gap-1">
                     <a href="{{ route('os.index') }}" class="btn ">
@@ -42,25 +42,25 @@
                     <dt class="col-6 col-lg-4">EMPRESA 2 </dt>
                     <dd class="col-6">{{ $os1->id_emp2}}</dd>
 
-                    <dt class="col-6 col-lg-4">id_status</dt>
+                    <dt class="col-6 col-lg-4">STATUS:</dt>
                     <dd class="col-6">{{ $os1->id_status}}</dd>
 
                     <dt class="col-6 col-lg-4">USUÁRIO</dt>
                     <dd class="col-6">{{ $os1->id_users}}</dd>
 
-                    <dt class="col-6 col-lg-4">datacad</dt>
+                    <dt class="col-6 col-lg-4">DATA:</dt>
                     <dd class="col-6">{{ $os1->datacad}}</dd>
 
-                    <dt class="col-6 col-lg-4">dhi </dt>
+                    <dt class="col-6 col-lg-4">INICIO:</dt>
                     <dd class="col-6">{{ $os1->dhi }}</dd>
 
-                    <dt class="col-6 col-lg-4">dhf </dt>
+                    <dt class="col-6 col-lg-4">FINAL</dt>
                     <dd class="col-6">{{ $os1->dhf }}</dd>
 
-                    <dt class="col-6 col-lg-4">obs </dt>
+                    <dt class="col-6 col-lg-4">OBS:</dt>
                     <dd class="col-6">{{ $os1->obs }}</dd>
 
-                    <dt class="col-6 col-lg-4">vtotal </dt>
+                    <dt class="col-6 col-lg-4">VALOR TOTAL</dt>
                     <dd class="col-6">{{ $os1->vtotal }}</dd>
 
                     <dt class="col-6 col-lg-4">ctotal </dt>

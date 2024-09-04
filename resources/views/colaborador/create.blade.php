@@ -5,7 +5,7 @@
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista">
         
-        <div class="cardHeaderAsociados card-header">
+        <div class="  card-header">
             <h1 class="mt-3">Novo Colaborador</h1>
 
             <a href="{{ route('colaborador.index') }}" class="btn  btn-custom-sm"><i class="fa-solid fa-list"></i>
@@ -28,12 +28,12 @@
                     </div>
             
                     <div class="mb-3">
-                        <label for="fone" class="form-label"> fone</label>
+                        <label for="fone" class="form-label"> TELEFONE</label>
                         <input type="text" name="fone" id="fone" class="form-control" placeholder="fone" value="{{ old('fone') }}">              
                     </div>
                     
                     <div class="mb-3">
-                        <label for="id_emp2" class="form-label"> id_emp2</label>
+                        <label for="id_emp2" class="form-label"> EMPRESA 2</label>
                         <input type="number" name="id_emp2" id="id_emp2" class="form-control" placeholder="id_emp2" value="{{ old('id_emp2') }}">              
                     </div>
                 </div>
@@ -46,12 +46,12 @@
                     </div>
                     
                     <div class="mb-3">
-                        <label for="id_turno" class="form-label">id_turno</label>
+                        <label for="id_turno" class="form-label">TURNO</label>
                         <input type="number" name="id_turno" id="id_turno" class="form-control" placeholder="id_turno" value="{{ old('id_turno') }}">              
                     </div>
                     
                     <div class="mb-3">
-                        <label for="id_setor" class="form-label">id_setor</label>
+                        <label for="id_setor" class="form-label">SETOR</label>
                         <input type="number" name="id_setor" id="id_setor" class="form-control" placeholder="id_setor" value="{{ old('id_setor') }}">              
                     </div>
                 </div>

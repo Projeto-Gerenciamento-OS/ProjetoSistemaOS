@@ -47,7 +47,7 @@
                         <th>TELEFONE 2</th>
                         <th>OBS</th>
                         <th>EMPRESA 2</th>
-                        <th>ID USUÁRIO</th>
+                        <th>USUÁRIO</th>
                         <th class="text-center">AÇÕES</th>
                     </tr>
                 </thead>

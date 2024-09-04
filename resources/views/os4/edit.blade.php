@@ -5,7 +5,7 @@
 
 <div class="container-fluid px-4 data-container"  >
         <div class="card mb-4 cardCorLista " >
-            <div  class="cardHeaderAsociados card-header">
+            <div  class="  card-header">
                 <h2 class="mt-3">EDIÇÃO</h2>
                 <span class="ms-auto d-flex flex-row gap-2">
                     <a href="{{ route('os.index') }}" class="btn  ">
@@ -40,19 +40,19 @@
                     <div class="col-6 col-lg-6">
 
                         <div class="mb-3">
-                            <label for="descricao" class="form-label" >DESCRIÇÃO </label>
+                            <label for="descricao" class="form-label" >DESCRIÇÃO</label>
                             <input type="text" name="descricao" id="descricao"  placeholder="Digite aqui "
                                 value="{{ old('descricao', $os4->descricao) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="percentual" class="form-label"  >percentual </label>
+                            <label for="percentual" class="form-label"  > PERCENTUAL</label>
                             <input type="text" name="percentual" id="percentual" 
                                 placeholder=" Data" value="{{ old('percentual', $os4->percentual) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="valor"  class="form-label" >valor </label>
+                            <label for="valor"  class="form-label" >VALOR</label>
                             <input type="text" name="valor" id="valor"  placeholder=" valor"
                                 value="{{ old('valor', $os4->valor) }}">
                         </div>

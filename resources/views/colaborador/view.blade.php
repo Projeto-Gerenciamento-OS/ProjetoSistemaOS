@@ -5,7 +5,7 @@
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
         
-        <div class="cardHeaderAsociados card-header"  >
+        <div class="  card-header"  >
             <h1 class="mt-3">Visualizar</h1>
             
             <span class="ms-auto d-flex flex-row gap-2">
@@ -58,17 +58,17 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> ID USUÁRIO:</span>
+                    <span class='col-6 col-lg-4'> USUÁRIO</span>
                     <p class="col-6">{{ $colaborador->id_users}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> ID TURNO:</span>
+                    <span class='col-6 col-lg-4'> TURNO:</span>
                     <p class="col-6">{{ $colaborador->id_turno}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> ID SETOR:</span>
+                    <span class='col-6 col-lg-4'> SETOR:</span>
                     <p class="col-6">{{ $colaborador->id_setor}}</p>
                 </div>
 

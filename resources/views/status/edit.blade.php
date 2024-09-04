@@ -5,7 +5,7 @@
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
         
-        <div class="cardHeaderAsociados card-header"  >
+        <div class="  card-header"  >
             <h2 class="mt-3">EDIÇÃO</h2>
 
             <span class="ms-auto d-flex  flex-row gap-2">
@@ -56,7 +56,7 @@
 
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="cor" class="form-label">cor</label>
+                        <label for="cor" class="form-label"> COR</label>
                         <input type="text" name="cor" id="cor" 
                             placeholder="Digite aqui..." value="{{ old('cor', $status->cor) }}">
                     </div>

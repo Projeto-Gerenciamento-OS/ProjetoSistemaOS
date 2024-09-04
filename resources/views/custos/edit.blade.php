@@ -4,7 +4,7 @@
 <div class="container-fluid px-4 data-container " >
     <div class="card mb-4 cardCorLista ">
         
-        <div class="cardHeaderAsociados card-header"  >
+        <div class="  card-header"  >
             <h2 class="mt-3">EDIÇÃO</h2>
             
             <span class="ms-auto d-flex  flex-row gap-2">
@@ -40,13 +40,13 @@
 
                 <div class="col-6 col-lg-6">
                     <div class="mb-3">
-                        <label for="descricao" class="form-label" >DESCRIÇÃO </label>
+                        <label for="descricao" class="form-label" >DESCRIÇÃO</label>
                         <input type="text" name="descricao" id="descricao"  placeholder="descricao"
                             value="{{ old('descricao', $custos->descricao) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="percentual" class="form-label">percentual</label>
+                        <label for="percentual" class="form-label"> PERCENTUAL</label>
                         <input type="number" name="percentual" id="percentual" 
                             placeholder="Digite aqui o numero..." value="{{ old('percentual', $custos->percentual) }}">
                     </div>

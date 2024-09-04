@@ -32,14 +32,14 @@
                     <tr class="titulos">
                         <th>ID</th>
                         <th>NOME</th>
-                        <th>tempo</th>
-                        <th>valor</th>
-                        <th>custo</th>
-                        <th>obs</th>
-                        <th>recorrente</th>
-                        <th>intervalo</th>
+                        <th>TEMPO</th>
+                        <th>VALOR</th>
+                        <th>CUSTO</th>
+                        <th>OBS</th>
+                        <th>RECORRENTE</th>
+                        <th>INTERVALO</th>
                         <th>EMPRESA 2 </th>
-                        <th>id_os1</th>
+                        <th>ID OS1</th>
                         <th>USUÁRIO</th>
                         <th class="text-center">AÇÕES:</th>
                     </tr>

@@ -5,7 +5,7 @@
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
         
-        <div class="cardHeaderAsociados card-header"  >
+        <div class="  card-header"  >
             <h2 class="mt-3">EDIÇÃO</h2>
 
             <span class="ms-auto d-flex  flex-row gap-2">
@@ -39,22 +39,24 @@
                 @csrf
                 @method('PUT')
 
-                <div class="mb-3">
-                    <label for="id_emp2" >EMPRESA 2</label>
-                    <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 completo"
-                    value="{{ old('id_emp2', $setor->id_emp2) }}">
-                </div>
+                <div class="col-6 col-lg-6 ">
+                    <div class="mb-3">
+                        <label for="id_emp2" >EMPRESA 2</label>
+                        <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 completo"
+                        value="{{ old('id_emp2', $setor->id_emp2) }}">
+                    </div>
 
-                <div class="mb-3">
-                    <label for="id_users" class="form-label">USUÁRIO</label>
-                    <input type="text" name="id_users" id="id_users" 
-                    placeholder="coloque o id_users" value="{{ old('id_users', $setor->id_users) }}">
-                </div>
+                    <div class="mb-3">
+                        <label for="id_users" class="form-label">USUÁRIO</label>
+                        <input type="text" name="id_users" id="id_users" 
+                        placeholder="coloque o id_users" value="{{ old('id_users', $setor->id_users) }}">
+                    </div>
 
-                <div class="mb-3">
-                    <label for="descricao" class="form-label">DESCRIÇÃO</label>
-                    <input type="text" name="descricao" id="descricao" 
-                    placeholder="coloque o descricao" value="{{ old('descricao', $setor->descricao) }}">
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">DESCRIÇÃO</label>
+                        <input type="text" name="descricao" id="descricao" 
+                        placeholder="coloque o descricao" value="{{ old('descricao', $setor->descricao) }}">
+                    </div>
                 </div>
                 
                 <a  class=" btnCadastrar">
