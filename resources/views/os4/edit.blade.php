@@ -61,7 +61,7 @@
 
                     <div class="col-6 col-lg-6">
                         <div class="mb-3">
-                            <label for="ativo" class="form-label"  >ativo </label>
+                            <label for="ativo" class="form-label"  >ATIVO</label>
                             <input type="text" name="ativo" id="ativo"  placeholder=" ativo"
                                 value="{{ old('ativo', $os4->ativo) }}">
                         </div>

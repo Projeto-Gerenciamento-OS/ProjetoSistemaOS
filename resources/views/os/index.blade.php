@@ -318,7 +318,7 @@
                                 <th>DESCRIÇÃO</th>
                                 <th> PERCENTUAL</th>
                                 <th>VALOR</th>
-                                <th>ativo</th>
+                                <th>ATIVO</th>
                                 <th>EMPRESA 2 </th>
                                 <th class="text-center">AÇÕES:</th>
                             </tr>
@@ -696,7 +696,7 @@
                                 <th>ID EMP1</th>
                                 <th> PERCENTUAL</th>
                                 <th>VALOR</th>
-                                <th>Ativo</th>
+                                <th>ATIVO</th>
                                 <th>DESCRIÇÃO</th>
                                 <th class="text-center">AÇÕES:</th>
                             </tr>

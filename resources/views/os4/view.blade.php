@@ -49,7 +49,7 @@
                     <dt class="col-6 col-lg-4">VALOR:</dt>
                     <dd class="col-6">{{ $os4->valor }}</dd>
 
-                    <dt class="col-6 col-lg-4">ativo: </dt>
+                    <dt class="col-6 col-lg-4">ATIVO:</dt>
                     <dd class="col-6">{{ $os4->ativo }}</dd>
 
                     <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
