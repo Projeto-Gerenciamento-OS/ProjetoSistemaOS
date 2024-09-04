@@ -54,7 +54,7 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">descricao: </span>
+                    <span class="col-6 col-lg-4">DESCRIÇÃO: </span>
                     <p class="col-6">{{ $setor->descricao }}</p>
                 </div>
                 

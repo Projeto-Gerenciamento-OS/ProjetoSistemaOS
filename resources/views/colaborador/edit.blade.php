@@ -78,7 +78,7 @@
                 
                 <a  class="btnCadastrar">
                     <button type="submit">
-                        <h5>Salvar</h5>
+                        <h5>SALVAR</h5>
                     </button>  
                 </a>
             </form>

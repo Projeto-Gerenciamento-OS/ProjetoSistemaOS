@@ -9,9 +9,7 @@
 
             <form action="{{ route('emp1.index') }}">
                 <div class="pesquisar">
-                    
                     <input type="text" name="descricao" id="descricao" class="form-control btn-pesquisar" value="{{ $descricao }}" placeholder="Nome da conta" />
-
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
                     </button>
@@ -26,11 +24,7 @@
             </a>
         </div>
         <div class="card-body"> 
-            
-     
-
             <table>
-
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
@@ -44,16 +38,14 @@
                     @forelse ($emp1 as $empres)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
                             <th  >{{ $empres->id}}</th>   
-                            
                             <th>{{ $empres->descricao}}</th>     
                             
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8"> 
-
-                         
                                 <a href="{{ route('emp1.view', ['emp1' => $empres->id]) }}" class="btnIcons">
                                     {{-- {{ dd($emp1)}} --}}
                                     <i class="fa-regular fa-eye"></i> 
                                 </a>
+
                                 <a href="{{ route('emp1.edit', ['emp1' => $empres->id]) }}"
                                     class="btnIcons">
                                     <i class="fa-solid fa-pen"></i> 
@@ -70,7 +62,6 @@
 
                             </td>
                             
-                             
                         </tr>
                     @empty
                         <div class="alert alert-danger" role="alert">

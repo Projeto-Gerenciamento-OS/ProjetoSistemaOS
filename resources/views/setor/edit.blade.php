@@ -52,14 +52,14 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="descricao" class="form-label">descricao </label>
+                    <label for="descricao" class="form-label">DESCRIÇÃO</label>
                     <input type="text" name="descricao" id="descricao" 
                     placeholder="coloque o descricao" value="{{ old('descricao', $setor->descricao) }}">
                 </div>
                 
                 <a  class=" btnCadastrar">
                     <button type="submit">
-                        <h5>Salvar</h5>
+                        <h5>SALVAR</h5>
                     </button>  
                 </a>
 

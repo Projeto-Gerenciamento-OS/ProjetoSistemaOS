@@ -39,7 +39,7 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $custos->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">descricao: </dt>
+                    <dt class="col-6 col-lg-4">DESCRIÇÃO: </dt>
                     <dd class="col-6">{{ $custos->descricao }}</dd>
 
                     <dt class="col-6 col-lg-4">percentual: </dt>

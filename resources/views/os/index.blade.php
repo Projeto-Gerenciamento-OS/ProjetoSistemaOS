@@ -315,7 +315,7 @@
                         <thead>
                             <tr class="titulos">
                                 <th>ID</th>
-                                <th>descricao</th>
+                                <th>DESCRIÇÃO</th>
                                 <th>percentual</th>
                                 <th>valor</th>
                                 <th>ativo</th>

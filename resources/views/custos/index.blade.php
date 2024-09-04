@@ -32,7 +32,7 @@
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>descricao</th>
+                        <th>DESCRIÇÃO</th>
                         <th>percentual</th>
                         <th>EMPRESA 2 </th>
                         <th>USUÁRIO</th>

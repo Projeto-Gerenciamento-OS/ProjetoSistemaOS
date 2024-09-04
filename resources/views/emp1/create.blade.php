@@ -21,12 +21,13 @@
                 @csrf
                 @method('POST')
         
-                <div class="col-12">
-                    <label for="descricao" class="form-label">Descrição:</label>
-                    <input class="col-12 " type="text" name="descricao" id="descricao" class="form-control" 
-                        value="{{ old('descricao') }}">              
+                <div class="col-6 col-lg-6 ">
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">DESCRIÇÃO</label>
+                        <input class="col-12 " type="text" name="descricao" id="descricao" class="form-control" 
+                            value="{{ old('descricao') }}">              
+                    </div>
                 </div>
-                
                 <a  class="btnCadastrar ">
                     <button type="submit">
                         <h5>Concluir</h5>

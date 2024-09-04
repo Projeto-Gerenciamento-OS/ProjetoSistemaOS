@@ -43,7 +43,7 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class="col-4">Descrição:</span>
+                    <span class="col-4">DESCRIÇÃO:</span>
                     <p class="col-5">{{ $emp1->descricao}}</p>
                 </div>
 

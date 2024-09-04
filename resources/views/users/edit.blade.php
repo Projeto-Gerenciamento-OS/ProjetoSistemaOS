@@ -82,19 +82,19 @@
 
                     <div class="mb-3">
                         <label for="id_emp2" class="form-label">EMPRESA 2</label>
-                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  value="{{ old('email', $user->id_emp2) }}" >
+                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  placeholder="EMPRESA 2..." value="{{ old('email', $user->id_emp2) }}" >
                     </div>
                     
                     <div class="mb-3">
                         <label for="id_emp2" class="form-label">TIPO</label>
-                        <input type="number" min="1" max="3" name="tipo" id="tipo"  value="{{ old('tipo', $user->tipo) }}" >
+                        <input type="number" min="1" max="3" name="tipo" id="tipo"  placeholder="TIPO..." value="{{ old('tipo', $user->tipo) }}" >
                     </div>
                 </div>
 
     
                 <a  class="btnCadastrar">
                     <button type="submit">
-                        <h5>Salvar</h5>
+                        <h5>SALVAR</h5>
                          
                     </button>  
                 </a>

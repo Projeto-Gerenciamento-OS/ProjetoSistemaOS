@@ -42,7 +42,7 @@
                     </div> 
 
                     <div class="mb-3">
-                        <label for="descricao" class="form-label">descricao</label>
+                        <label for="descricao" class="form-label">DESCRIÇÃO</label>
                         <input type="text" name="descricao" id="descricao" 
                             placeholder=" Digite o descricao" value="{{ old('descricao') }}">
                     </div>

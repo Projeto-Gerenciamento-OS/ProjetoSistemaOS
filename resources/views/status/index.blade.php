@@ -34,7 +34,7 @@
                         <th>EMPRESA 2 </th>
                         <th>USUÁRIO</th>
                         <th>cor</th>
-                        <th>descricao</th>
+                        <th>DESCRIÇÃO</th>
                         <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>

@@ -58,7 +58,7 @@
                 </div>
                 
                 <div class='visualizacaoDados row'>
-                    <span class="col-6 col-lg-4">Descricao: </span>
+                    <span class="col-6 col-lg-4">DESCRIÇÃO: </span>
                     <p class="col-6">{{ $status->descricao}}</p>
                 </div>
 
