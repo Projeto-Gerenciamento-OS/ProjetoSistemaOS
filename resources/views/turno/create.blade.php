@@ -25,19 +25,18 @@
                         value="{{ old('nome') }}">
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 ">
                         <label for="inicio" class="form-label">inicio </label>
                         <input type="time" name="inicio" id="inicio"   required >
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 ">
                         <label for="pausa" class="form-label">pausa </label>
                         <input type="time" name="pausa" id="pausa"   required >
                     </div>
                 </div>
 
-                <div class="col-6 col-lg-6">          
-                      
+                <div class="col-6 col-lg-6">   
                     <div class="mb-3">
                         <label for="retorno" class="form-label">retorno </label>
                         <input type="time"  name="retorno" id="retorno"   required>

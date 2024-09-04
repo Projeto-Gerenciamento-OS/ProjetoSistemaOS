@@ -29,7 +29,7 @@
 
                             <div class="mb-3">
                                 <label for="cpf_cnpj" class="form-label">cpf_cnpj:</label>
-                                <input type="text" name="cpf_cnpj" id="cpf_cnpj" class="form-control" placeholder="razao" value="{{ old('cpf_cnpj') }}">
+                                <input type="text" name="cpf_cnpj" id="cpf_cnpj" class="form-control" placeholder="cpf_cnpj" value="{{ old('cpf_cnpj') }}">
                             </div>
 
                             <div class="mb-3">
@@ -73,7 +73,12 @@
 
                             <div class="mb-3">
                                 <label for="uf" class="form-label">uf:</label>
-                                <input type="text" name="uf" id="uf" class="form-control" placeholder="Telefone 2" value="{{ old('uf') }}">
+                                <input type="text" name="uf" id="uf" class="form-control" placeholder="uf" value="{{ old('uf') }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="id_emp2" class="form-label">id_emp2:</label>
+                                <input type="text" name="id_emp2" id="id_emp2" class="form-control" placeholder="id_emp2" value="{{ old('id_emp2') }}">
                             </div>
                         </div>
                         
@@ -97,12 +102,12 @@
 
                             <div class="mb-3">
                                 <label for="fone2" class="form-label">fone2:</label>
-                                <input type="text" name="fone2" id="fone2" class="form-control" placeholder="Cep" value="{{ old('fone2') }}">
+                                <input type="text" name="fone2" id="fone2" class="form-control" placeholder="fone2" value="{{ old('fone2') }}">
                             </div>
 
                             <div class="mb-3">
                                 <label for="obs" class="form-label">obs:</label>
-                                <input type="text" name="obs" id="obs" class="form-control" placeholder="Cep" value="{{ old('obs') }}">
+                                <input type="text" name="obs" id="obs" class="form-control" placeholder="obs" value="{{ old('obs') }}">
                             </div>
 
                         </div>
