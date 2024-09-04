@@ -14,7 +14,7 @@
                     </a>
 
                     <a href="{{ route('os2.edit', ['os2' => $os2->id]) }}" class="btn  btn-sm me-1">
-                        <span class="listar-texto">Editar</span>
+                        <span class="listar-texto">EDIÇÃO</span>
                         <i class="fa-solid fa-pen"></i>
                     </a>
 

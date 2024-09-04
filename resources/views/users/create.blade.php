@@ -30,11 +30,6 @@
                         <input type="password" name="password" id="password" placeholder="Digeite o(a) SENHA..."
                             value="{{ old('password') }}">
                     </div>
-<<<<<<< HEAD
-            
-      
-=======
->>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
 
                     <div class="mb-3">
                         <label for="email" class="form-label">EMAIL </label>
@@ -46,23 +41,10 @@
                 <div class="col-6 col-lg-6 ">
                 
                     <div class="mb-3">
-<<<<<<< HEAD
-                        <label for="tipo" class="form-label">TIPO </label>
-                        <input type="number" min="1" max="3" name="tipo" id="tipo"   required >
-                    </div>
-
-
-                    <div class="mb-3">
-                        <label for="password" class="form-label">SENHA </label>
-                        <input type="password" name="password" id="password" 
-                            placeholder="Senha com no mínimo 6 caracteres" value="{{ old('password') }}">
-                    </div>
-=======
                         <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                         <input type="text" name="id_emp2" id="id_emp2" placeholder="Digeite o(a) EMPRESA 2..."
                         value="{{ old('id_emp2') }}">
                     </div>                  
->>>>>>> 2357e32af0673e37979a2053f6b6656ca4d66f24
 
                     <div class="mb-3">
                         <label for="roles" class="form-label">NÍVEL </label>

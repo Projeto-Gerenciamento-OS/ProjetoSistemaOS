@@ -15,7 +15,7 @@
                 </a>
     
                 <a href="{{ route('status.edit', ['status' => $status->id]) }}" class="btn btn-sm me-1">
-                    <span class="listar-texto">Editar</span>
+                    <span class="listar-texto">EDIÇÃO</span>
                     <i class="fa-solid fa-pen"></i>
                 </a>
     

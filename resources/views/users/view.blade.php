@@ -5,11 +5,7 @@
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
         <div class="cardHeaderAsociados card-header"  >
-<<<<<<< HEAD
-            <h1 class="mt-3">Visualizar</h1>
-=======
             <h1 class="mt-3">VISUALIZAR</h1>
->>>>>>> 44685e4bee914a7ee6c66832db8059cc21ad3dbc
             
             <span class="ms-auto d-flex  flex-row gap-2">
                 <a href="{{ route('user.index') }}" class="btn ">
@@ -18,7 +14,7 @@
                 </a>
     
                 <a href="{{ route('user.edit', ['user' => $users->id]) }}" class="btn  btn-sm me-1">
-                    <span class="listar-texto">Editar</span>
+                    <span class="listar-texto">EDIÇÃO</span>
                     <i class="fa-solid fa-pen"></i>
                 </a>
     
@@ -65,7 +61,6 @@
 
                 <div class='visualizacaoDados row'>
                     <span class="col-4">NÍVEL: </span>
-                  
                     <p class="col-5">
                         {{--Visualizando o tipo de permissão do usurio--}}
                         @forelse($users->getRoleNames() as $role)
