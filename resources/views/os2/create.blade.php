@@ -19,25 +19,25 @@
                 <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
-                        <label for="qtde" class="form-label">qtde </label>
+                        <label for="qtde" class="form-label">QUANTIDADE</label>
                         <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
                             value="{{ old('qtde') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="vunit" class="form-label">vunit</label>
+                        <label for="vunit" class="form-label">VALOR UNI.</label>
                         <input type="text" name="vunit" id="vunit" 
                             placeholder=" Digite a DATA" value="{{ old('vunit') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="vtotal" class="form-label">VALOR TOTAL</label>
+                        <label for="vtotal" class="form-label">VALOR</label>
                         <input type="text" name="vtotal" id="vtotal" 
                             placeholder=" Digite a vtotal" value="{{ old('vtotal') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="cunit" class="form-label">cunit</label>
+                        <label for="cunit" class="form-label">CUSTO UNI.</label>
                         <input type="text"  name="cunit" id="cunit"   required>
                     </div> 
                 </div>
@@ -45,7 +45,7 @@
                 <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
-                        <label for="ctotal" class="form-label">ctotal</label>
+                        <label for="ctotal" class="form-label">CUSTO</label>
                         <input type="text"  name="ctotal" id="ctotal"   required>
                     </div> 
 
@@ -60,12 +60,12 @@
                     </div> 
                     
                     <div class="mb-3">
-                        <label for="id_servico" class="form-label">id_servico </label>
+                        <label for="id_servico" class="form-label">ID SERVIÇO</label>
                         <input type="text"  name="id_servico" id="id_servico"   required >
                     </div>
 
                     <div class="mb-3">
-                        <label for="id_colaborador" class="form-label">id_colaborador</label>
+                        <label for="id_colaborador" class="form-label">COLABORADOR</label>
                         <input type="text"  name="id_colaborador" id="id_colaborador"   required>
                     </div> 
                 </div>         

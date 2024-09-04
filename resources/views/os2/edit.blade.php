@@ -40,31 +40,31 @@
                 
                     <div class="col-6 col-lg-6">
                         <div class="mb-3">
-                            <label for="qtde">qtde </label>
+                            <label for="qtde">QUANTIDADE</label>
                             <input type="text" name="qtde" id="qtde"  placeholder="Digite aqui "
                                 value="{{ old('qtde', $os2->qtde) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="vunit" >vunit</label>
+                            <label for="vunit" >VALOR UNI.</label>
                             <input type="text" name="vunit" id="vunit" 
                                 placeholder=" Digite aqui" value="{{ old('vunit', $os2->vunit) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="vtotal" >VALOR TOTAL</label>
+                            <label for="vtotal" >VALOR</label>
                             <input type="text" name="vtotal" id="vtotal"  placeholder=" vtotal"
                                 value="{{ old('vtotal', $os2->vtotal) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="cunit" >cunit </label>
+                            <label for="cunit" >CUSTO UNI.</label>
                             <input type="text" name="cunit" id="cunit" 
                                 placeholder=" Digite aqui" value="{{ old('cunit', $os2->cunit) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="ctotal" >ctotal</label>
+                            <label for="ctotal" >CUSTO</label>
                             <input type="text" name="ctotal" id="ctotal"  placeholder=" ctotal"
                                 value="{{ old('ctotal', $os2->ctotal) }}">
                         </div>
@@ -84,13 +84,13 @@
                         </div>
                     
                         <div class="mb-3">
-                            <label for="id_servico" >id_servico </label>
+                            <label for="id_servico" >ID SERVIÇO</label>
                             <input type="text" name="id_servico" id="id_servico" 
                                 placeholder=" Digite aqui" value="{{ old('id_servico', $os2->id_servico) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="id_colaborador" >id_colaborador</label>
+                            <label for="id_colaborador" >COLABORADOR</label>
                             <input type="text" name="id_colaborador" id="id_colaborador"  placeholder=" id_colaborador"
                                 value="{{ old('id_colaborador', $os2->id_colaborador) }}">
                         </div>

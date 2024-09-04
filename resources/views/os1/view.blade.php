@@ -60,16 +60,16 @@
                     <dt class="col-6 col-lg-4">OBS:</dt>
                     <dd class="col-6">{{ $os1->obs }}</dd>
 
-                    <dt class="col-6 col-lg-4">VALOR TOTAL</dt>
+                    <dt class="col-6 col-lg-4">VALOR</dt>
                     <dd class="col-6">{{ $os1->vtotal }}</dd>
 
-                    <dt class="col-6 col-lg-4">ctotal </dt>
+                    <dt class="col-6 col-lg-4">CUSTO TOTAL:</dt>
                     <dd class="col-6">{{ $os1->ctotal }}</dd>
 
-                    <dt class="col-6 col-lg-4">cindireto </dt>
+                    <dt class="col-6 col-lg-4">CUSTO INDIRETO:</dt>
                     <dd class="col-6">{{ $os1->cindireto }}</dd>
 
-                    <dt class="col-6 col-lg-4">vresultado </dt>
+                    <dt class="col-6 col-lg-4">RESULTADO:</dt>
                     <dd class="col-6">{{ $os1->vresultado }}</dd>
 
                     <dt class="col-6 col-lg-4">CADASTRADO: </dt>

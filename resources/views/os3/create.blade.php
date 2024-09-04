@@ -20,25 +20,25 @@
                 <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
-                        <label for="qtde" class="form-label">qtde </label>
+                        <label for="qtde" class="form-label">QUANTIDADE</label>
                         <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
                             value="{{ old('qtde') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="vunit" class="form-label">vunit </label>
+                        <label for="vunit" class="form-label">VALOR UNI.</label>
                         <input type="text" name="vunit" id="vunit"  placeholder=" Digite o vunit"
                             value="{{ old('vunit') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="vtotal" class="form-label">VALOR TOTAL</label>
+                        <label for="vtotal" class="form-label">VALOR</label>
                         <input type="text" name="vtotal" id="vtotal"  placeholder=" Digite o vtotal"
                             value="{{ old('vtotal') }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="cunit" class="form-label">cunit </label>
+                        <label for="cunit" class="form-label">CUSTO UNI.</label>
                         <input type="text" name="cunit" id="cunit"  placeholder=" Digite o cunit"
                             value="{{ old('cunit') }}">
                     </div>
@@ -48,7 +48,7 @@
                 <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
-                        <label for="ctotal" class="form-label">ctotal </label>
+                        <label for="ctotal" class="form-label">CUSTO</label>
                         <input type="text" name="ctotal" id="ctotal"  placeholder=" Digite o ctotal"
                             value="{{ old('ctotal') }}">
                     </div>

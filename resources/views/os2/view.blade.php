@@ -39,19 +39,19 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $os2->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">qtde: </dt>
+                    <dt class="col-6 col-lg-4">QUANTIDADE:</dt>
                     <dd class="col-6">{{ $os2->qtde}}</dd>
 
-                    <dt class="col-6 col-lg-4">vunit: </dt>
+                    <dt class="col-6 col-lg-4">VALOR UNITARIO:</dt>
                     <dd class="col-6">{{ $os2->vunit }}</dd>
 
                     <dt class="col-6 col-lg-4">vtotal: </dt>
                     <dd class="col-6">{{ $os2->vtotal }}</dd>
 
-                    <dt class="col-6 col-lg-4">cunit: </dt>
+                    <dt class="col-6 col-lg-4">CUSTO UNITARIO:</dt>
                     <dd class="col-6">{{ $os2->cunit }}</dd>
 
-                    <dt class="col-6 col-lg-4">ctotal: </dt>
+                    <dt class="col-6 col-lg-4">CUSTO</dt>
                     <dd class="col-6">{{ $os2->ctotal }}</dd>
 
                     <dt class="col-6 col-lg-4">EMPRESA 2: </dt>
@@ -60,10 +60,10 @@
                     <dt class="col-6 col-lg-4">id_os1: </dt>
                     <dd class="col-6">{{ $os2->id_os1 }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_servico: </dt>
+                    <dt class="col-6 col-lg-4">ID SERVIÇO:</dt>
                     <dd class="col-6">{{ $os2->id_servico }}</dd>
 
-                    <dt class="col-6 col-lg-4">id_colaborador: </dt>
+                    <dt class="col-6 col-lg-4">COLABORADOR:</dt>
                     <dd class="col-6">{{ $os2->id_colaborador }}</dd>
 
                     <dt class="col-6 col-lg-4">CADASTRADO: </dt>

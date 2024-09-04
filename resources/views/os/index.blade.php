@@ -41,10 +41,10 @@
                                 <th>INICIO</th>
                                 <th>FINAL</th>
                                 <th>OBS</th>
-                                <th>VALOR TOTAL</th>
-                                <th>ctotal</th>
-                                <th>cindireto</th>
-                                <th>vresultado</th>
+                                <th>VALOR</th>
+                                <th>CUSTO</th>
+                                <th>CUSTO INDIRETO</th>
+                                <th>RESULTADO</th>
                                 <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
@@ -130,13 +130,13 @@
                                 <th>ID</th>
                                 <th>EMPRESA 2 </th>
                                 <th>ID OS1</th>
-                                <th>id_servico</th>
-                                <th>id_colaborador</th>
-                                <th>qtde</th>
-                                <th>vunit</th>
-                                <th>VALOR TOTAL</th>
-                                <th>cunit</th>
-                                <th>ctotal</th>
+                                <th>ID SERVIÇO</th>
+                                <th>COLABORADOR</th>
+                                <th>QUANTIDADE</th>
+                                <th>VALOR UNI.</th>
+                                <th>VALOR</th>
+                                <th>CUSTO UNI.</th>
+                                <th>CUSTO</th>
                                 <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>
@@ -223,11 +223,11 @@
                         <thead>
                             <tr class="titulos">
                                 <th>ID</th>
-                                <th>qtde</th>
-                                <th>vunit</th>
-                                <th>VALOR TOTAL</th>
-                                <th>cunit</th>
-                                <th>ctotal</th>
+                                <th>QUANTIDADE</th>
+                                <th>VALOR UNI.</th>
+                                <th>VALOR</th>
+                                <th>CUSTO UNI.</th>
+                                <th>CUSTO</th>
                                 <th>EMPRESA 2 </th>
                                 <th>ID OS1</th>
                                 <th>id_materiais</th>
@@ -418,8 +418,8 @@
                                 <th>INICIO</th>
                                 <th>FINAL</th>
                                 <th>OBS</th>
-                                <th>Valor Total</th>
-                                <th>Custo Total</th>
+                                <th>VALOR</th>
+                                <th>CUSTO</th>
                                 <th>Custo Indireto</th>
                                 <th>Valor Resultado</th>
                                 <th class="text-center">AÇÕES:</th>
@@ -507,14 +507,14 @@
                             <tr class="titulos">
                                 <th> id </th>
                                 <th> id_emp1 </th>
-                                <td> qtde </td>
-                                <th> vunit </th>
-                                <th> VALOR TOTAL</th>
-                                <th> cunit </th>
-                                <th> ctotal </th>
+                                <td> QUANTIDADE</td>
+                                <th> VALOR UNI.</th>
+                                <th> VALOR</th>
+                                <th> CUSTO UNI.</th>
+                                <th> CUSTO</th>
                                 <th> EMPRESA 2</th>
                                 <th> id_os2 </th>
-                                <th> id_servico </th>
+                                <th> ID SERVIÇO</th>
                                 <th> id_colaborador </th>
                                 <th class="text-center">AÇÕES:</th>
                             </tr>
@@ -607,8 +607,8 @@
                                 <th>EMPRESA 2</th>
                                 <th>ID Material</th>
                                 <th>Valor Unitário</th>
-                                <th>Valor Total</th>
-                                <th>Custo Total</th>
+                                <th>VALOR</th>
+                                <th>CUSTO</th>
                                 <th class="text-center">AÇÕES:</th>
                             </tr>
                         </thead>

@@ -39,19 +39,19 @@
                     <dt class="col-6 col-lg-4">ID: </dt>
                     <dd class="col-6">{{ $os3->id }}</dd>
 
-                    <dt class="col-6 col-lg-4">qtde: </dt>
+                    <dt class="col-6 col-lg-4">QUANTIDADE:</dt>
                     <dd class="col-6">{{ $os3->qtde}}</dd>
 
-                    <dt class="col-6 col-lg-4">vunit: </dt>
+                    <dt class="col-6 col-lg-4">VALOR UNITARIO:</dt>
                     <dd class="col-6">{{ $os3->vunit}}</dd>
 
                     <dt class="col-6 col-lg-4">vtotal: </dt>
                     <dd class="col-6">{{ $os3->vtotal}}</dd>
 
-                    <dt class="col-6 col-lg-4">cunit: </dt>
+                    <dt class="col-6 col-lg-4">CUSTO UNITARIO:</dt>
                     <dd class="col-6">{{ $os3->cunit}}</dd>
 
-                    <dt class="col-6 col-lg-4">ctotal: </dt>
+                    <dt class="col-6 col-lg-4">CUSTO</dt>
                     <dd class="col-6">{{ $os3->ctotal}}</dd>
 
                     <dt class="col-6 col-lg-4">EMPRESA 2: </dt>

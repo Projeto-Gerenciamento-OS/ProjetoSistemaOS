@@ -80,24 +80,24 @@
                         </div>
     
                         <div class="mb-3">
-                            <label for="vtotal" class="form-label">VALOR TOTAL</label>
+                            <label for="vtotal" class="form-label">VALOR</label>
                             <input type="text"  name="vtotal" id="vtotal"  value="{{ old('vtotal', $os1->vtotal) }}" >
                         </div>
 
                         <div class="mb-3">
-                            <label for="ctotal"  class="form-label">ctotal: </label>
+                            <label for="ctotal"  class="form-label">CUSTO</label>
                             <input type="text" name="ctotal" id="ctotal"  placeholder=" ctotal"
                                 value="{{ old('ctotal', $os1->ctotal) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="cindireto"  class="form-label">cindireto: </label>
+                            <label for="cindireto"  class="form-label">CUSTO INDIRETO</label>
                             <input type="text" name="cindireto" id="cindireto"  placeholder=" cindireto"
                                 value="{{ old('cindireto', $os1->cindireto) }}">
                         </div>
 
                         <div class="mb-3">
-                            <label for="vresultado" class="form-label">vresultado </label>
+                            <label for="vresultado" class="form-label">RESULTADO</label>
                             <input type="text"  name="vresultado" id="vresultado"  value="{{ old('vresultado', $os1->vresultado) }}" >
                         </div>
                     </div>
