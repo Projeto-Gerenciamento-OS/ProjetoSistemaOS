@@ -29,6 +29,8 @@ class Cli extends Model
         'fone1',
         'fone2',
         'obs',
+        'id_emp2',
+        
         
     ];
 }
