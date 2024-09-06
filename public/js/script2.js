@@ -31,3 +31,8 @@ const trs = document.querySelectorAll(".linhaComCoresDiferentes");
         tr.style.backgroundColor = "rgba(255,255,255,10%)";
     }
 });
+const menu = document.getElementById('open_btn')
+
+menu.addEventListener('click', function () {
+    document.getElementById('sidebar').classList.toggle('open-sidebar');
+});
