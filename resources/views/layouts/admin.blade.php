@@ -18,7 +18,7 @@
         <div id="sidebar_content">
             
             <div id="user">
-            <img src="{{ asset('img/logo.png') }}" id="user_avatar"  alt="Logo da empresa">
+                <img src="{{ asset('img/logo.png') }}" id="user_avatar"  alt="Logo da empresa" />
     
                 <p id="user_infos">
                     <span class="item-description">

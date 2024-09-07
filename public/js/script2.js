@@ -34,5 +34,5 @@ const trs = document.querySelectorAll(".linhaComCoresDiferentes");
 const menu = document.getElementById('open_btn')
 
 menu.addEventListener('click', function () {
-    document.getElementById('sidebar').classList.toggle('open-sidebar');
+document.getElementById('sidebar').classList.toggle('open-sidebar');
 });
