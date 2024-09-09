@@ -75,7 +75,7 @@
                 <a  class="btnCadastrar">
                     <button type="submit">
                         <h5>CONCLUIR</h5>
-                        <i class="fa-solid fa-angle-right"></i>
+                        <i class="fa-solid fa-plus"></i>
                     </button>  
                 </a>
             </form>

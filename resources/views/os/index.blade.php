@@ -90,7 +90,7 @@
                         <a href="{{ route('os1.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
-                                <i class="fa-solid fa-angle-right"></i>
+                                <i class="fa-solid fa-plus"></i>
                             </button>  
                         </a>   
                     </table>
@@ -183,7 +183,7 @@
                         <a href="{{ route('os2.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
-                                <i class="fa-solid fa-angle-right"></i>
+                                <i class="fa-solid fa-plus"></i>
                             </button>  
                         </a>  
                     </table>
@@ -276,7 +276,7 @@
                         <a href="{{ route('os3.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
-                                <i class="fa-solid fa-angle-right"></i>
+                                <i class="fa-solid fa-plus"></i>
                             </button>  
                         </a> 
                     </table>
@@ -361,7 +361,7 @@
                         <a href="{{ route('os4.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
-                                <i class="fa-solid fa-angle-right"></i>
+                                <i class="fa-solid fa-plus"></i>
                             </button>  
                         </a> 
                     </table>
@@ -468,7 +468,7 @@
                         <a href="{{ route('os1.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
-                                <i class="fa-solid fa-angle-right"></i>
+                                <i class="fa-solid fa-plus"></i>
                             </button>  
                         </a>   
                     </table>
@@ -562,7 +562,7 @@
                         <a href="{{ route('os2.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
-                                <i class="fa-solid fa-angle-right"></i>
+                                <i class="fa-solid fa-plus"></i>
                             </button>  
                         </a>  
                     </table>
@@ -654,7 +654,7 @@
                         <a href="{{ route('os3.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
-                                <i class="fa-solid fa-angle-right"></i>
+                                <i class="fa-solid fa-plus"></i>
                             </button>  
                         </a> 
                     </table>
@@ -739,7 +739,7 @@
                         <a href="{{ route('os4.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
-                                <i class="fa-solid fa-angle-right"></i>
+                                <i class="fa-solid fa-plus"></i>
                             </button>  
                         </a> 
                     </table>

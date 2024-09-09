@@ -17,18 +17,9 @@
     <nav id="sidebar" class=''>
         <div id="sidebar_content">
             
-            <div id="user">
-                <img src="{{ asset('img/logo.png') }}" id="user_avatar"  alt="Logo da empresa" />
-    
-                <p id="user_infos">
-                    <span class="item-description">
-                        Fulano de Tal
-                    </span>
-                    <span class="item-description">
-                        Lorem Ipsum
-                    </span>
-                </p>
-            </div>
+            <a href="{{('dashboard')}}" class="nav-logo">
+                <img src="{{ asset('img/logo.png') }}" alt="Logo da empresa">
+            </a>
     
             <ul id="side_items">
                 <li class="side-item">
@@ -110,7 +101,7 @@
                     </a>
                 
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais d-flex flex-col">
+                        <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">
                             <a class="nav-link" href="{{route('servico.index') }}">Serviços Gerais</a>
                             <a class="nav-link" href="{{route('materiais.index') }}">Materiais</a>
                             <a class="nav-link" href="{{route('custos.index') }}">Custo Geral</a>

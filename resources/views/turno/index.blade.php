@@ -10,7 +10,7 @@
             <form action="{{ route('turno.index') }}">
                 <div class="pesquisar">
                     
-                    <input type="text" name="nome" id="nome" class=" btn-pesquisar" value="{{ $nome }}" placeholder="Nome da conta" />
+                    <input type="text" name="nome" id="nome" class="  form-control btn-pesquisar" value"{{ $nome }}" placeholder="Nome da conta" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
@@ -21,7 +21,7 @@
             <a href="{{ route('turno.create') }}" class="btnCadastrar">
                 <button>
                     <h5>CADASTRAR</h5>
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i class="fa-solid fa-plus"></i>
                 </button>  
             </a>
         </div> 

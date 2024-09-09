@@ -32,11 +32,10 @@
             </div>
             <div class="card-body ">
                 <x-alert />
-                <form action="{{ route('os1.update', ['os1' => $os1->id]) }}" method="POST" class="row  " id="marginEditar-os1">
+                <form action="{{ route('os1.update', ['os1' => $os1->id]) }}" method="POST" class="row  ">
 
                     @csrf
                     @method('PUT')
-              
                     <div class="col-12 col-lg-6" >
                         <div class="mb-3">
                             <label for="id_emp2" class="form-label" >EMPRESA 2 </label>
