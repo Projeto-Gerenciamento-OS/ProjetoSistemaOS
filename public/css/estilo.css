@@ -121,6 +121,45 @@ body {
 
         }
     }
+
+    .sb-sidenav-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right:0.5rem;
+        gap: .4rem;
+        width: 100%;
+        
+        .small {
+            color: black;
+            font-family: var(--font-family-menu);
+        }    
+    }
+
+    #collapseLayouts, #collapseLayoutsEmp {
+        margin: 0 auto;
+        padding: 0rem;
+        width: 70%;
+        
+        nav {
+            margin: 0 auto;
+            width: 100%;
+        }
+        a {
+            font-weight: bold;
+            color: var(--cor-azul-1);
+
+            &:hover {
+                color: #0095ff;
+            }
+        }
+        
+        .fundo-nav-cadastros-gerais {
+            display:inline-block;
+            background-color: var(--cor-cinza-claro);
+            border-radius: 5px;
+        }
+    }   
     
     
     #logout {
@@ -181,7 +220,6 @@ body {
         }
         
         .side-item a {
-            border: 1px solid red;
             justify-content: flex-start;
             gap: 14px;
         }

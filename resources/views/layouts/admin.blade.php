@@ -167,15 +167,14 @@
             </button>
         </div>
 
-        <div id="logout ">
-            <button id="logout_btn" class="side-item">
-                <a @class(['nav-link']) href="{{route('login.delete') }}">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <span class="item-description">
-                        Sair
-                    </span>
-                </a>
-            </button>
+        <div class="sb-sidenav-footer">
+            <span class="small">User:</span>
+            <span>
+
+                @if (auth()->check())
+                {{ auth()->user()->nome}}
+                @endif
+            </span>
         </div>
     </nav>
 
