@@ -101,7 +101,7 @@ body {
                 
                 &.active {
                     background-color: #4f46e5;
-            
+                    
                     a {
                         color: #e3e9f7;
                     }
@@ -113,9 +113,16 @@ body {
             }
         }
     }
+    
+    .collapse, .collapsing {
+        nav {
+            display: flex;
+            flex-direction: column;
 
-
-
+        }
+    }
+    
+    
     #logout {
         border-top: 1px solid #e3e9f7;
         padding: 12px;
@@ -160,7 +167,7 @@ body {
         transition: width .6s;
         height: 0px;
     }
-
+    
     #sidebar.open-sidebar {
         min-width: 15%;
         
@@ -174,6 +181,7 @@ body {
         }
         
         .side-item a {
+            border: 1px solid red;
             justify-content: flex-start;
             gap: 14px;
         }

@@ -109,16 +109,16 @@
                         </div>
                     </a>
                 
-                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais d-flex flex-col">
-                                <a class="nav-link" href="{{route('servico.index') }}">Serviços Gerais</a>
-                                <a class="nav-link" href="{{route('materiais.index') }}">Materiais</a>
-                                <a class="nav-link" href="{{route('custos.index') }}">Custo Geral</a>
-                                <a class="nav-link" href="{{route('status.index') }}">Status</a>
-                                <a class="nav-link" href="{{route('turno.index') }}">Turno</a>
-                                <a class="nav-link" href="{{route('setor.index') }}">Setor</a>
-                            </nav>
-                        </div>
+                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais d-flex flex-col">
+                            <a class="nav-link" href="{{route('servico.index') }}">Serviços Gerais</a>
+                            <a class="nav-link" href="{{route('materiais.index') }}">Materiais</a>
+                            <a class="nav-link" href="{{route('custos.index') }}">Custo Geral</a>
+                            <a class="nav-link" href="{{route('status.index') }}">Status</a>
+                            <a class="nav-link" href="{{route('turno.index') }}">Turno</a>
+                            <a class="nav-link" href="{{route('setor.index') }}">Setor</a>
+                        </nav>
+                    </div>
                 </li>
 
                 <li class="side-item">

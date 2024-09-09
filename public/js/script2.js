@@ -31,8 +31,18 @@ const trs = document.querySelectorAll(".linhaComCoresDiferentes");
         tr.style.backgroundColor = "rgba(255,255,255,10%)";
     }
 });
+
 const menu = document.getElementById('open_btn')
+const collapse = document.getElementsByClassName('collapse')
 
 menu.addEventListener('click', function () {
 document.getElementById('sidebar').classList.toggle('open-sidebar');
+
+if (collapse[0].classList.contains('show')) {
+    collapse[0].classList.remove('show')
+}
+else if (collapse[1].classList.contains('show')) {
+    collapse[1].classList.remove('show')
+}
+
 });
