@@ -5,7 +5,6 @@
     text-decoration: none !important;
     list-style: none !important;
     font-family: 'Roboto';
-    border: 1px solid red;
 }
 
 :root {
@@ -259,7 +258,7 @@ body {
                     justify-content: center;
                     align-items: center;
                     gap: .8rem ;
-                    background: rgb(148, 45, 45);
+                    background: rgb(255, 255, 255);
                     padding: .8rem 1rem;
                     border-radius: 5px;
                     font-weight: 600;
@@ -360,7 +359,6 @@ body {
                     'pesquisa pesquisa';
                 
                 h1 {
-                    border: 3px solid green;
                     grid-area: nome;
                 }
 
