@@ -215,7 +215,6 @@ body {
     }
 }
 
-
 /* Estilo - COMEÇO / INDEX/EMPRESA */
 .data-container {
     width:100%;
@@ -666,6 +665,16 @@ body {
     }
 }
 
+.osBody {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+    border: 1px solid rgba(139, 139, 139, 0.548);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0;
+}
 .btn {
     display: flex;
     justify-content: center;
