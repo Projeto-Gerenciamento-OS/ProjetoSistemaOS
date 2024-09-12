@@ -89,11 +89,15 @@ class Os1Controller extends Controller
     
     public function view(Os1 $os1)
     {
-        //Carrega a View
-        return view( 'os1.view', ['menu'=>'os1', 'os1' => $os1]);
+        $oss1 = Os1::with(['os2', 'os3', 'os4'])->find($os1->id);
+
+        if ($oss1) {
+            return view('os1.view', ['menu' => 'os1', 'os1' => $oss1]);
+        } else {
+            return redirect()->route('os.index')->with('error', 'Os1 não encontrado.');
+        }
     }
 
-    
     // Carregar o formulário editar usuário
     public function edit(Os1 $os1)
     {

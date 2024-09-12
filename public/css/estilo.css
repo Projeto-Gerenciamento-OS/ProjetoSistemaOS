@@ -357,7 +357,7 @@ body {
 
             .card-header {
                 display: grid;
-                grid-template-columns: minmax(auto-fit, 1fr);
+                grid-template-columns: minmax(auto-fill, 1fr);
             
                 grid-template-areas: 
                     'nome cadastro'

@@ -16,5 +16,10 @@ class Os4 extends Model
         'valor', 
         'ativo', 
         'id_emp2',
-        ];
+    ];
+
+    public function os1()
+    {
+        return $this->belongsTo(Os1::class, 'id_os1');
+    }
 }
