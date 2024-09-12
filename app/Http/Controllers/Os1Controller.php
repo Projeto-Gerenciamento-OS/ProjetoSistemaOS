@@ -101,25 +101,26 @@ class Os1Controller extends Controller
     // Carregar o formulário editar usuário
     public function edit(Os1 $os1)
     {
+        $os1 = Os1::with(['os2', 'os3', 'os4'])->find($os1->id);
 
-        // Carregar a VIEW
-        return view('os1.edit', ['menu' => 'os1', 'os1' => $os1]);
+        if ($os1) {
+            return view('os1.edit', ['menu' => 'os1', 'os1' => $os1]);
+        } else {
+            return redirect()->route('os.index')->with('error', 'Os1 não encontrado.');
+        }
     }
 
-    // Editar no banco de dados o usuário
-    public function update(Os1Request $request, Os1  $os1)
+    public function update(Os1Request $request, Os1 $os1)
     {
-
         // Validar o formulário
         $request->validated();
-
+    
         // Marca o ponto inicial de uma transação
         DB::beginTransaction();
-
+    
         try {
-
-            // Editar as informações do registro no banco de dados
-            $os1->update([      
+            // Atualizar Os1
+            $os1->update([
                 'id_status' => $request->id_status,
                 'id_users' => $request->id_users,
                 'id_emp2' => $request->id_emp2,
@@ -132,29 +133,66 @@ class Os1Controller extends Controller
                 'cindireto' => $request->cindireto,
                 'vresultado' => $request->vresultado,
             ]);
-
-            // Salvar log
-            Log::info('Os1 editado.', ['id' => $os1->id]);
-
+    
+            // Atualizar Os2
+            foreach ($request->os2 as $id => $data) {
+                $os2 = Os2::find($id);
+                if ($os2) { 
+                    $os2->update([
+                        'qtde' => $request->qtde,
+                        'vunit' => $request->vunit,
+                        'vtotal' => $request->vtotal,
+                        'cunit' => $request->cunit,
+                        'ctotal' => $request->ctotal,
+                        'id_emp2' => $request->id_emp2,
+                        'id_os1' => $request->id_os1,
+                        'id_servico' => $request->id_servico,
+                        'id_colaborador' => $request->id_colaborador,
+                    ]);
+                }
+            }
+    
+            // Atualizar Os3
+            foreach ($request->os3 as $id => $data) {
+                $os3 = Os3::find($id);
+                if ($os3) {
+                    $os3->update([
+                        'qtde' => $request->qtde,
+                        'vunit' => $request->vunit,
+                        'vtotal' => $request->vtotal,
+                        'cunit' => $request->cunit,
+                        'ctotal' => $request->ctotal,
+                        'id_emp2' => $request->id_emp2,
+                        'id_os1' => $request->id_os1,
+                        'id_materiais' => $request->id_materiais,
+                    ]);
+                }
+            }
+    
+            // Atualizar Os4
+            foreach ($request->os4 as $id => $data) {
+                $os4 = Os4::find($id);
+                if ($os4) {
+                    $os4->update([
+                        'descricao' => $request->descricao,
+                        'percentual' => $request->percentual,
+                        'valor' => $request->valor,
+                        'ativo' => $request->ativo,
+                        'id_emp2' => $request->id_emp2,
+                    ]);
+                }
+            }
+    
             // Operação é concluída com êxito
             DB::commit();
-
-            // Redirecionar o Os1, enviar a mensagem de sucesso
-            return redirect()->route('os1.view', ['os1' => $os1->id])->with('success', 'Os1 editado com sucesso!');
-            
+    
+            return redirect()->route('os.index', ['os1' => $os1->id])->with('success', 'Os1 editado com sucesso!');
         } catch (Exception $e) {
-
-            // Salvar log
-            Log::info('Os1 não editado.', ['error' => $e->getMessage()]);
-
             // Operação não é concluída com êxito
             DB::rollBack();
-
-            // Redirecionar o Os1, enviar a mensagem de erro
-            return back()->withInput()->with('error', 'Os1 não editado!');
+            return back()->withInput()->with('error', 'Erro ao editar Os1!');
         }
     }
-
     public function delete(Os1 $os1)
     {
         try {
