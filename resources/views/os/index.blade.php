@@ -158,7 +158,7 @@
                                     
                                     <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 
-                                        <a href="{{ route('os2.view', ['os2' => $item->id]) }}" class="btnIcons">
+                                        <a href="{{ route('os2.edit', ['os2' => $item->id]) }}" class="btnIcons">
                                             <i class="fa-regular fa-eye"></i>
                                         </a>
 
@@ -181,15 +181,15 @@
                             @endforelse
                 
                         </tbody>
-                        <a href="{{ route('os2.create') }}" class="btnCadastrar-os">
+                        <a href="{{ route('os1.os2.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
                                 <i class="fa-solid fa-plus"></i>
                             </button>  
                         </a>  
                     </table>
-                    {{ $os2->onEachSide(0)->links() }}
                 </div>
+                {{ $os2->onEachSide(0)->links() }} 
             </div>
 
         </div>
@@ -274,7 +274,7 @@
                 
                         </tbody>
 
-                        <a href="{{ route('os3.create') }}" class="btnCadastrar-os">
+                        <a href="{{ route('os1.os3.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
                                 <i class="fa-solid fa-plus"></i>
@@ -372,7 +372,6 @@
         </div>
     </div>
 
-     
 </div>   
 </div> 
 

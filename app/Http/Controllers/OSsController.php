@@ -22,7 +22,8 @@ class OSsController extends Controller
         })
         ->orderBy('created_at')
         ->paginate(5);
-
+        $os1->load(['os2', 'os3']);
+        
         $os2 = Os2::when($request->has('id_servico'), function ($query) use ($request) {
             $query->where('id_servico', 'like', '%' . $request->id_servico . '%');
         })
@@ -44,7 +45,7 @@ class OSsController extends Controller
         ->withQueryString();
 
         //Carregar a View
-        return view('os.index', [
+        return view('os.index', ([
             'os1' => $os1,
             'id_status' => $request->id_status,
             
@@ -56,6 +57,6 @@ class OSsController extends Controller
             
             'os4' => $os4,
             'id_emp1_os4' => $request->id_emp1_os4
-        ]);
+        ]));
     }
 }

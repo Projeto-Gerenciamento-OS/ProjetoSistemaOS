@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 const trs = document.querySelectorAll(".linhaComCoresDiferentes");
 
-  trs.forEach((tr, index) => {
+trs.forEach((tr, index) => {
     if ((index + 1) % 2 === 0) {
         tr.style.backgroundColor = "rgba(26, 59, 122, 15%)";
     } else {
@@ -44,5 +44,4 @@ if (collapse[0].classList.contains('show')) {
 else if (collapse[1].classList.contains('show')) {
     collapse[1].classList.remove('show')
 }
-
 });

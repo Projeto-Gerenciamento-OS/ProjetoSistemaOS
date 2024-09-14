@@ -29,7 +29,7 @@
                 @method('PUT')
 
                 <!-- Campos de OS1 -->
-                <div class='osBody'>
+                <div class=''>
                     <h2>OS1 Relacionadas</h2>
                     
                     <div class="mb-3">
@@ -96,9 +96,11 @@
 
                 <!-- Campos de OS2 -->
                 @foreach($os1->os2 as $os2) 
-                    <div class='osBody'>
+                <form action="{{ route('os1.update', ['os1' => $os1-> id]) }}" method="POST" class='osBody'>
+                    <div class=''>
 
                         <h2>OS2 Relacionadas</h2>
+                        
                         <div class="mb-3">
                             <label for="qtde">QUANTIDADE</label>
                             <input type="text" name="qtde" id="qtde"  placeholder="Digite aqui "
@@ -153,11 +155,13 @@
                                 value="{{ old('id_colaborador', $os2->id_colaborador) }}">
                         </div>
                     </div>
+                </form>
                 @endforeach
 
                 <!-- Campos de OS3 -->
                 @foreach($os1->os3 as $os3)
-                    <div class='osBody'>
+                <form action="{{ route('os1.update', ['os1' => $os1-> id]) }}" method="POST" class='osBody'>
+                    <div class=''>
                         <h2>OS3 Relacionadas</h2>
                         <div class="mb-3">
                             <label for="qtde" class="form-label">QUANTIDADE</label>
@@ -207,11 +211,13 @@
                             value="{{ old('id_materiais', $os3->id_materiais) }}">
                         </div>  
                     </div>
+                </form>
                 @endforeach
 
                 <!-- Campos de OS4 -->
                 @foreach($os1->os4 as $os4)
-                    <div class='osBody'>
+                <form action="{{ route('os1.update', ['os1' => $os1-> id]) }}" method="POST" class='osBody'>
+                    <div class=''>
                         <h2>OS4 Relacionadas</h2>
                         
                         <div class="mb-3">
@@ -238,12 +244,12 @@
                                 value="{{ old('ativo', $os4->ativo) }}">
                         </div>
             
-
                         <div class="mb-3">
                             <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                             <input type="text"  name="id_emp2" id="id_emp2"  value="{{ old('id_emp2', $os4->id_emp2) }}" >
                         </div>
                     </div>
+                </form>
                 <!-- Adicione outros campos de OS4 conforme necessário -->
                 @endforeach
 

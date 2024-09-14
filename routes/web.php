@@ -41,53 +41,33 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 // Usuários
 Route::get('/index-user', [UserController::class, 'index'])->name('user.index');
-//visualizar usuario
 Route::get('/view-user/{user}', [UserController::class, 'view'])->name('user.view');
-//carrega o cadastrar usuario
 Route::get('/create-user', [UserController::class, 'create'])->name('user.create');
-//recebe  o cadastro usuario
 Route::post('/store-user', [UserController::class, 'store'])->name('user.store');
-//carrega o editar usuario
 Route::get('/edit-user/{user}', [UserController::class, 'edit'])->name('user.edit');
-//recebe o editar usuario
 Route::put('/update-user/{user}', [UserController::class, 'update'])->name('user.update');
-//carregar o editar usuario 
 Route::get('/edit-user-password/{user}', [UserController::class, 'editPassword'])->name('user.edit-password');
-//recebe o editar usuario
 Route::put('/update-user-password/{user}', [UserController::class, 'updatePassword'])->name('user.update-password');
-//deleta usuario
 Route::delete('/delete-user/{user}', [UserController::class, 'delete'])->name('user.delete');
 
 
 //Empresa
 Route::get('/emp2',[Emp2Controller::class, 'index'])->name('emp2.index');
-//Visualizar empresa
 Route::get('/view-emp2/{emp2}', [Emp2Controller::class, 'view'])->name('emp2.view');
-//carrega o cadastrar empresa
 Route::get('/create-emp2', [Emp2Controller::class, 'create'])->name('emp2.create');
-//recebe o cadastrar empresa
 Route::post('/store-emp2', [Emp2Controller::class, 'store'])->name('emp2.store');
-//carrega o editar  empresa
 Route::get('/edit-emp2/{emp2}', [Emp2Controller::class, 'edit'])->name('emp2.edit');
-//recebe o editar empresa
 Route::put('/update-emp2/{emp2}', [Emp2Controller::class, 'update'])->name('emp2.update');
-//deleta empresa
 Route::delete('/delete-emp2/{emp2}', [Emp2Controller::class, 'delete'])->name('emp2.delete');
 
 
 //Empresa1
 Route::get('/emp1', [Emp1Controller::class, 'index'])->name('emp1.index');
-//Visualizar empresa
 Route::get('/view-emp1/{emp1}', [Emp1Controller::class, 'view'])->name('emp1.view');
-//carrega o cadastrar empresa
 Route::get('/create-emp1', [Emp1Controller::class, 'create'])->name('emp1.create');
-//recebe o cadastrar empresa
 Route::post('/store-emp1', [Emp1Controller::class, 'store'])->name('emp1.store');
-//carrega o editar  empresa
 Route::get('/edit-emp1/{emp1}', [Emp1Controller::class, 'edit'])->name('emp1.edit');
-//recebe o editar empresa
 Route::put('/update-emp1/{emp1}', [Emp1Controller::class, 'update'])->name('emp1.update');
-//deleta empresa
 Route::delete('/delete-emp1/{emp1}', [Emp1Controller::class, 'delete'])->name('emp1.delete');
 
 
@@ -95,79 +75,43 @@ Route::delete('/delete-emp1/{emp1}', [Emp1Controller::class, 'delete'])->name('e
 
 //Colaborador
 Route::get('/colaborador',[ColaboradorController::class, 'index'])->name('colaborador.index');
-//Visualizar empresa
 Route::get('/view-colaborador/{colaborador}',[ColaboradorController::class, 'view'])->name('colaborador.view');
-//carrega o cadastrar empresa
 Route::get('/create-colaborador',[ColaboradorController::class, 'create'])->name('colaborador.create');
-//recebe o cadastrar empresa
 Route::post('/store-colaborador',[ColaboradorController::class, 'store'])->name('colaborador.store');
-//carrega o editar  empresa
 Route::get('/edit-colaborador/{colaborador}',[ColaboradorController::class, 'edit'])->name('colaborador.edit');
-
-//recebe o editar empresa
 Route::put('/update-colaborador/{colaborador}',[ColaboradorController::class, 'update'])->name('colaborador.update');
-
-//deleta empresa
 Route::delete('/delete-colaborador/{colaborador}', [ColaboradorController::class, 'delete'])->name('colaborador.delete');
 
 
 //Serviços Gerais
 Route::get('/servico', [ServicoController::class, 'index'])->name('servico.index');
-//Visualizar empresa
 Route::get('/view-servico/{servico}',[ServicoController::class, 'view'])->name('servico.view');
-
-//carrega o cadastrar empresa
 Route::get('/create-servico',[ServicoController::class, 'create'])->name('servico.create');
-//recebe o cadastrar empresa
 Route::post('/store-servico',[ServicoController::class, 'store'])->name('servico.store');
-//carrega o editar  empresa
 Route::get('/edit-servico/{servico}',[ServicoController::class, 'edit'])->name('servico.edit');
-
-//recebe o editar empresa
 Route::put('/update-servico/{servico}',[ServicoController::class, 'update'])->name('servico.update');
-
-//deleta empresa
 Route::delete('/delete-servico/{servico}', [ServicoController::class, 'delete'])->name('servico.delete');
 
 
 //Materiais
 Route::get('/materiais',[MateriaisController::class, 'index'])->name('materiais.index');
-//Visualizar empresa
 Route::get('/view-materiais/{materiais}',[MateriaisController::class, 'view'])->name('materiais.view');
-
-//carrega o cadastrar empresa
 Route::get('/create-materiais',[MateriaisController::class, 'create'])->name('materiais.create');
-//recebe o cadastrar empresa
 Route::post('/store-materiais',[MateriaisController::class, 'store'])->name('materiais.store');
-//carrega o editar  empresa
-
 Route::get('/edit-materiais/{materiais}',[MateriaisController::class, 'edit'])->name('materiais.edit');
-//recebe o editar empresa
 Route::put('/update-materiais/{materiais}',[MateriaisController::class, 'update'])->name('materiais.update');
 
 //deleta empresa
 Route::delete('/delete-materiais/{materiais}', [MateriaisController::class, 'delete'])->name('materiais.delete');
 
-
 //Custo Geral
-
 Route::get('/custos',[CustosController::class, 'index'])->name('custos.index');
-//Visualizar empresa
 Route::get('/view-custos/{custos}',[CustosController::class, 'view'])->name('custos.view');
-
-//carrega o cadastrar empresa
 Route::get('/create-custos',[CustosController::class, 'create'])->name('custos.create');
-//recebe o cadastrar empresa
 Route::post('/store-custos',[CustosController::class, 'store'])->name('custos.store');
-//carrega o editar  empresa
 Route::get('/edit-custos/{custos}',[CustosController::class, 'edit'])->name('custos.edit');
-
-//recebe o editar empresa
 Route::put('/update-custos/{custos}',[CustosController::class, 'update'])->name('custos.update');
-
-//deleta empresa
 Route::delete('/delete-custos/{custos}', [CustosController::class, 'delete'])->name('custos.delete');
-
 
 //Status
 
@@ -209,88 +153,79 @@ Route::delete('/delete-cli/{cli}', [CliController::class, 'delete'])->name('cli.
 //OSs
 Route::get('/os',[OSsController::class, 'index'])->name('os.index');
 
-//OS 1
-Route::get('/os1',[Os1Controller::class, 'index'])->name('os1.index');
+Route::prefix('os1')->name('os1.')->group(function () {
 
-Route::get('/view-os1/{os1}',[Os1Controller::class, 'view'])->name('os1.view');
+  Route::get('/', [Os1Controller::class, 'index'])->name('index');
+  Route::get('/create', [Os1Controller::class, 'create'])->name('create');
+  Route::post('/store', [Os1Controller::class, 'store'])->name('store');
+  Route::get('/view/{os1}', [Os1Controller::class, 'view'])->name('view');
+  Route::get('/edit/{os1}', [Os1Controller::class, 'edit'])->name('edit');
+  Route::put('/update/{os1}', [Os1Controller::class, 'update'])->name('update');
+  Route::delete('/{os1}', [Os1Controller::class, 'delete'])->name('delete');
 
-Route::get('/create-os1',[Os1Controller::class, 'create'])->name('os1.create');
+  // Rotas para OS2 dentro de OS1
+  Route::prefix('/os2')->name('os2.')->group(function () {
 
-Route::post('/store-os1',[Os1Controller::class, 'store'])->name('os1.store');
+      Route::get('/create', [Os2Controller::class, 'create'])->name('create');
+      Route::post('/store', [Os2Controller::class, 'store'])->name('store');
+      Route::get('/{os2}/edit', [Os2Controller::class, 'edit'])->name('edit');
+      Route::put('/{os2}', [Os2Controller::class, 'update'])->name('update');
+      Route::delete('/{os2}', [Os2Controller::class, 'delete'])->name('delete');
+  });
+  
+  // Rotas para OS3 dentro de OS1
+  Route::prefix('/os3')->name('os3.')->group(function () {
+      Route::get('/create', [Os3Controller::class, 'create'])->name('create');
+      Route::post('/store', [Os3Controller::class, 'store'])->name('store');
+      Route::get('/{os3}/edit', [Os3Controller::class, 'edit'])->name('edit');
+      Route::put('/{os3}', [Os3Controller::class, 'update'])->name('update');
+      Route::delete('/{os3}', [Os3Controller::class, 'delete'])->name('delete');
+  });
+  
+  // Rotas para OS3 dentro de OS1
+  Route::prefix('/os4')->name('os4.')->group(function () {
+      Route::get('/create', [Os4Controller::class, 'create'])->name('create');
+      Route::post('/store', [Os4Controller::class, 'store'])->name('store');
+      Route::get('/{os4}/edit', [Os4Controller::class, 'edit'])->name('edit');
+      Route::put('/{os4}', [Os4Controller::class, 'update'])->name('update');
+      Route::delete('/{os4}', [Os3Controller::class, 'delete'])->name('delete');
+  });
+});
 
-Route::get('/edit-os1/{os1}',[Os1Controller::class, 'edit'])->name('os1.edit');
+// //OS 2
 
-Route::put('/update-os1/{os1}',[Os1Controller::class, 'update'])->name('os1.update');
-
-Route::delete('/delete-os1/{os1}', [Os1Controller::class, 'delete'])->name('os1.delete');
-
-//OS 2
-
-Route::get('/os2',[Os2Controller::class, 'index'])->name('os2.index');
-
-Route::get('/view-os2/{os2}',[Os2Controller::class, 'view'])->name('os2.view');
-
-Route::get('/create-os2',[Os2Controller::class, 'create'])->name('os2.create');
-
-Route::post('/store-os2',[Os2Controller::class, 'store'])->name('os2.store');
-
+// Route::get('/view-os2/{os2}',[Os2Controller::class, 'view'])->name('os2.edit');
 Route::get('/edit-os2/{os2}',[Os2Controller::class, 'edit'])->name('os2.edit');
-
 Route::put('/update-os2/{os2}',[Os2Controller::class, 'update'])->name('os2.update');
-
 Route::delete('/delete-os2/{os2}', [Os2Controller::class, 'delete'])->name('os2.delete');
-//OS 3
+//OS 
 
 Route::get('/os3',[Os3Controller::class, 'index'])->name('os3.index');
-
 Route::get('/view-os3/{os3}',[Os3Controller::class, 'view'])->name('os3.view');
-
 Route::get('/create-os3',[Os3Controller::class, 'create'])->name('os3.create');
-
-Route::post('/store-os3',[Os3Controller::class, 'store'])->name('os3.store');
-
+Route::post('/store-os3',[Os3Controller::class, 'store'])->name('os1.os3.store');
 Route::get('/edit-os3/{os3}',[Os3Controller::class, 'edit'])->name('os3.edit');
-
 Route::put('/update-os3/{os3}',[Os3Controller::class, 'update'])->name('os3.update');
-
-Route::delete('/delete-os3/{os3}', [Os3Controller::class, 'delete'])->name('os3.delete');
-//OS 2
+Route::delete('/delete-os3/{os3}', [Os3Controller::class, 'delete'])->name('os3.delete');//OS 2
 
 Route::get('/os4',[Os4Controller::class, 'index'])->name('os4.index');
-
 Route::get('/view-os4/{os4}',[Os4Controller::class, 'view'])->name('os4.view');
-
 Route::get('/create-os4',[Os4Controller::class, 'create'])->name('os4.create');
-
 Route::post('/store-os4',[Os4Controller::class, 'store'])->name('os4.store');
-
 Route::get('/edit-os4/{os4}',[Os4Controller::class, 'edit'])->name('os4.edit');
-
 Route::put('/update-os4/{os4}',[Os4Controller::class, 'update'])->name('os4.update');
-
 Route::delete('/delete-os4/{os4}', [Os4Controller::class, 'delete'])->name('os4.delete');
 
-
 //Agenda
-
 Route::get('/agenda',[AgendaController::class, 'index'])->name('agenda.index');
-
 Route::get('/view-agenda/{agenda}',[AgendaController::class, 'view'])->name('agenda.view');
-
 Route::get('/create-agenda',[AgendaController::class, 'create'])->name('agenda.create');
-
 Route::post('/store-agenda',[AgendaController::class, 'store'])->name('agenda.store');
-
 Route::get('/edit-agenda/{agenda}',[AgendaController::class, 'edit'])->name('agenda.edit');
-
 Route::put('/update-agenda/{agenda}',[AgendaController::class, 'update'])->name('agenda.update');
-
 Route::delete('/delete-agenda/{agenda}', [AgendaController::class, 'delete'])->name('agenda.delete');
 
 
-
 // Linha do tempo
-//visualizar linha do tempo
 Route::get('/index-timeline', [TimelineController::class, 'index'])->name('timeline.index');
-
 });

@@ -13,7 +13,7 @@
         </div> 
 
         <div class="card-body"> 
-        <form action="{{ route('os2.store') }}" method="POST" class="row  ">
+        <form action="{{ route('os1.os1.os2.store') }}" method="POST" class="row  ">
                 @csrf
                 @method('POST')
                 <div class="col-6 col-lg-6">
