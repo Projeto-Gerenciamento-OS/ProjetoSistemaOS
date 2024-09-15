@@ -224,33 +224,33 @@
                     @method('PUT')
 
                     <div class="mb-3">
-                        <label for="descricao" class="form-label">DESCRIÇÃO</label>
-                        <input type="text" name="descricao" id="descricao"  placeholder=" Digite o descricao"
-                            value="{{ old('descricao') }}">
+                        <label for="descricao" class="form-label" >DESCRIÇÃO</label>
+                        <input type="text" name="descricao" id="descricao"  placeholder="Digite aqui "
+                            value="{{ old('descricao', $os4->descricao) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="percentual" class="form-label"> PERCENTUAL</label>
-                        <input type="text" name="percentual" id="percentual"  placeholder=" Digite o percentual"
-                            value="{{ old('percentual') }}">
+                        <label for="percentual" class="form-label"  > PERCENTUAL</label>
+                        <input type="text" name="percentual" id="percentual" 
+                            placeholder=" Data" value="{{ old('percentual', $os4->percentual) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="valor" class="form-label">VALOR</label>
-                        <input type="text" name="valor" id="valor"  placeholder=" Digite o valor"
-                            value="{{ old('valor') }}">
+                        <label for="valor"  class="form-label" >VALOR</label>
+                        <input type="text" name="valor" id="valor"  placeholder=" valor"
+                            value="{{ old('valor', $os4->valor) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="ativo" class="form-label">ATIVO</label>
-                        <input type="text" name="ativo" id="ativo"  placeholder=" Digite o ativo"
-                            value="{{ old('ativo') }}">
+                        <label for="ativo" class="form-label"  >ATIVO</label>
+                        <input type="text" name="ativo" id="ativo"  placeholder=" ativo"
+                            value="{{ old('ativo', $os4->ativo) }}">
                     </div>
+        
 
                     <div class="mb-3">
                         <label for="id_emp2" class="form-label">EMPRESA 2 </label>
-                        <input type="text" name="id_emp2" id="id_emp2"  placeholder=" Digite o id_emp2"
-                            value="{{ old('id_emp2') }}">
+                        <input type="text"  name="id_emp2" id="id_emp2"  value="{{ old('id_emp2', $os4->id_emp2) }}" >
                     </div>
             
                     <a  class="btnCadastrar">
