@@ -33,4 +33,9 @@ class User extends Authenticatable
             'password' => 'hashed', // hashed - é um tipo de criptografia
         ];
     }
+
+    public function agenda()
+    {
+        return $this->hasMany(Agenda::class, 'calendar_id', 'id');
+    }
 }

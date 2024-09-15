@@ -20,6 +20,7 @@ use App\Http\Controllers\OSsController;
 use App\Http\Controllers\Os2Controller;
 use App\Http\Controllers\Os3Controller;
 use App\Http\Controllers\Os4Controller;
+use App\Http\Controllers\FullCalenderController;
 
 
 
@@ -196,15 +197,12 @@ Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete')
 
 
 //Agenda
-Route::get('/agenda',[AgendaController::class, 'index'])->name('agenda.index');
-Route::get('/view-agenda/{agenda}',[AgendaController::class, 'view'])->name('agenda.view');
-Route::get('/create-agenda',[AgendaController::class, 'create'])->name('agenda.create');
-Route::post('/store-agenda',[AgendaController::class, 'store'])->name('agenda.store');
-Route::get('/edit-agenda/{agenda}',[AgendaController::class, 'edit'])->name('agenda.edit');
-Route::put('/update-agenda/{agenda}',[AgendaController::class, 'update'])->name('agenda.update');
-Route::delete('/delete-agenda/{agenda}', [AgendaController::class, 'delete'])->name('agenda.delete');
 
+Route::get('/fullcalender', [FullCalenderController::class, 'index'])->name('fullcalender.index');
+Route::post('/fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+  
 
 // Linha do tempo
 Route::get('/index-timeline', [TimelineController::class, 'index'])->name('timeline.index');
 });
+
