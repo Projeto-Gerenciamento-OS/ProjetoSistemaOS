@@ -138,18 +138,16 @@
                     </a>
                 </li>
 
-                        <li>
-                         
-                            <a class="nav-link" href="{{route('fullcalender.index')}}">
-                                <div class="sb-nav-link-icon">  
-                                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                                </div>
-    
-                                <span class="nav-text">
-                                    Agenda
-                                </span>
-                            </a>
-                        </li>
+                <li class="side-item">
+                    <a @class(['nav-link', 'active' => isset($menu) && $menu =='os']) href="{{route('fullcalender.index') }}">
+                        <i class="fa-solid fa-calendar"></i>
+                        
+                        <span class="nav-text item-description">
+                            Agenda
+                        </span>
+                    </a>
+                </li>
+     
 
                 <li class="side-item">
                     <a @class(['nav-link', 'active' => isset($menu) && $menu =='timeline']) href="{{route('timeline.index') }}">
