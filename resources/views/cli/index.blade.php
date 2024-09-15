@@ -10,7 +10,7 @@
             <form action="{{ route('cli.index') }}">
                 <div class="pesquisar">
                     
-                    <input type="text" name="razao" id="razao" class=" btn-pesquisar" value="{{ $razao }}" placeholder="Pesquisar" />
+                    <input type="text" name="razao" id="razao" class="  form-control btn-pesquisar" value"{{ $razao }}" placeholder="Pesquisar" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
@@ -21,7 +21,7 @@
             <a href="{{ route('cli.create') }}" class="btnCadastrar">
                 <button>
                     <h5>CADASTRAR</h5>
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i class="fa-solid fa-plus"></i>
                 </button>  
             </a>
         </div> 
@@ -103,6 +103,7 @@
         </div>
         {{ $cli->onEachSide(0)->links() }} 
     </div>
+
 </div>
 
 

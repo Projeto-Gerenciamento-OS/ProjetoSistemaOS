@@ -13,7 +13,7 @@
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('os2.view', ['os2' => $os2->id]) }}" class="btn ">
+                    <a href="{{ route('os2.edit', ['os2' => $os2->id]) }}" class="btn ">
                         <span class="listar-texto">VISUALIZAR</span>
                         <i class="fa-regular fa-eye"></i>
                     </a>

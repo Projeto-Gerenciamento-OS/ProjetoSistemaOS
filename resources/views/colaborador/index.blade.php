@@ -9,7 +9,6 @@
 
             <form action="{{ route('colaborador.index') }}">
                 <div class="pesquisar">
-                    
                     <input type="text" name="nome" id="nome" class="form-control btn-pesquisar" value="{{ $nome }}" placeholder="Pesquisar" />
 
                     <button  type="submit" class="btn-pesquisar">
@@ -21,7 +20,7 @@
             <a href="{{ route('colaborador.create') }}" class="btnCadastrar">
                 <button>
                     <h5>CADASTRAR</h5>
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i class="fa-solid fa-plus"></i>
                 </button>  
             </a>
             

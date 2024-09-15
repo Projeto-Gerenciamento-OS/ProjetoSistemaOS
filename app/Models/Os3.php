@@ -19,5 +19,10 @@ class Os3 extends Model
         'id_emp2', 
         'id_os1',
         'id_materiais', 
-        ];
+    ];
+    
+    public function os1()
+    {
+        return $this->belongsTo(Os1::class, 'id_os1');
+    }
 }

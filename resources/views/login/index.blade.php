@@ -31,7 +31,7 @@
 
             <div class="botoes">
                 <button class="botao-entrar" type='submit'><span>Entrar</span></button>
-                <button class="seta-icon" type='submit'><i class="fa-solid fa-angle-right"></i></button>
+                <button class="seta-icon" type='submit'><i class="fa-solid fa-plus"></i></button>
             </div>
         </div>
     </div>

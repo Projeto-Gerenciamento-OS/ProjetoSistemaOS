@@ -20,7 +20,7 @@
             <a href="{{ route('emp2.create') }}" class="btnCadastrar">
                 <button>
                     <h5>CADASTRAR</h5>
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i class="fa-solid fa-plus"></i>
                 </button>  
             </a>    
         </div>

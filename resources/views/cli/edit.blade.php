@@ -5,10 +5,11 @@
 
 <div class="container-fluid px-4 data-container"  >
         <div class="card mb-4 cardCorLista " >
-            <div  class="  card-header">
+            <div  class="card-header">
                 <h2 class="mt-3">EDIÇÃO</h2>
                 <span class="ms-auto d-flex flex-row gap-2">
-                    <a href="{{ route('cli.index') }}" class="btn ">
+                    
+                <a href="{{ route('cli.index') }}" class="btn ">
                         <span class="listar-texto">LISTAR</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>

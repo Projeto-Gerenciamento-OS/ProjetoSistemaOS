@@ -29,132 +29,114 @@
     <title>Sistema OS</title>
 </head>
 <body>
+    
+    <nav id="sidebar" class=''>
+        <div id="sidebar_content">
+            
+            <a href="{{('dashboard')}}" class="nav-logo">
+                <img src="{{ asset('img/logo.png') }}" alt="Logo da empresa">
+            </a>
+    
+            <ul id="side_items">
+                <li class="side-item">
+                    <a @class(['nav-link', 'active' => isset($menu) && $menu =='dashboard']) href="{{route('dashboard.index') }}" >
+                        <i class="fas fa-tachometer-alt "></i>
+                        
+                        <span class="nav-text item-description">
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item">
+                    @can('index-user')
+                        <a @class(['nav-link', 'active' => isset($menu) && $menu =='user']) href="{{ route('user.index')}}">
+                            <i class="fa-solid fa-user"></i>
+                            
+                            <span class="nav-text item-description">
+                                Usuarios
+                            </span>
+                        </a>
+                    @endcan
+                </li>
+    
+                <li class="side-item">
+                    @can('empresas','empresa')
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsEmp" aria-expanded="false" aria-controls="collapseLayoutsEmp">
+                        <i class="fa-solid fa-chalkboard-user "></i>
+                        
+                        <span class="nav-text item-description">
+                            Empresas
+                        </span>
 
-    <main class="layoutAdmin">
-        <div class="layoutSidenav_nav">
-            <nav id='navContainerGeral' class="sb-sidenav accordion sb-sidenav-five " id="sidenavAccordion">
-                <a href="{{('dashboard')}}" class="nav-logo">
-                    <img src="{{ asset('img/logo.png') }}" alt="Logo da empresa">
-                </a>
+                        <div class="sb-sidenav-collapse-arrow mx-1">
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </a>
+
+                    <div class="collapse" id="collapseLayoutsEmp" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">                         
+                            <a class="nav-link" href="{{ route('emp1.index') }}">Empresa 1</a>
+                            <a class="nav-link" href="{{ route('emp2.index') }}">Empresa 2</a>
+                        </nav>
+                    </div>
+                    @endcan
+                </li>
+    
+                <li class="side-item">
+                    <a @class(['nav-link', 'active' => isset($menu) && $menu =='cli']) href="{{route('cli.index') }}">
+                        <i class="fa-solid fa-users"></i>
+                        
+                        <span class="nav-text item-description">
+                            Cliente
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item">
+                    <a @class(['nav-link', 'active' => isset($menu) && $menu =='coloaborador']) href="{{route('colaborador.index') }}">
+                        <i class="fa-solid fa-chalkboard-user "></i>
+                        
+                        <span class="nav-text item-description">
+                            Colaborador
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                        <i class="fas fa-columns "></i>
+
+                        <span class="nav-text item-description">
+                            Cadastro Gerais
+                        </span>
+
+                        <div class="sb-sidenav-collapse-arrow mx-1">
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </a>
                 
-                <div class="sb-sidenav-menu">
-                    <ul class="nav">
-                        <li>
-                            <a @class(['nav-link', 'active' => isset($menu) && $menu =='dashboard']) href="{{route('dashboard.index') }}" >
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-tachometer-alt fa-2x"></i>
-                                </div>
+                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">
+                            <a class="nav-link" href="{{route('servico.index') }}">Serviços Gerais</a>
+                            <a class="nav-link" href="{{route('materiais.index') }}">Materiais</a>
+                            <a class="nav-link" href="{{route('custos.index') }}">Custo Geral</a>
+                            <a class="nav-link" href="{{route('status.index') }}">Status</a>
+                            <a class="nav-link" href="{{route('turno.index') }}">Turno</a>
+                            <a class="nav-link" href="{{route('setor.index') }}">Setor</a>
+                        </nav>
+                    </div>
+                </li>
 
-                                <span class="nav-text">
-                                    Dashboard
-                                </span>
-                            </a>
-                        </li>
+                <li class="side-item">
+                    <a @class(['nav-link', 'active' => isset($menu) && $menu =='os']) href="{{route('os.index') }}">
+                        <i class="fa-solid fa-box-open"></i>
                         
-
-                        <li>
-                            {{-- @can('index-user') --}}
-                                <a @class(['nav-link', 'active' => isset($menu) && $menu =='user']) href="{{ route('user.index')}}">
-                                    <div class="sb-nav-link-icon">
-                                        <i class="fa-solid fa-chalkboard-user fa-2x"></i>
-                                    </div>
-        
-                                    <span class="nav-text">
-                                        Usuarios
-                                    </span>
-                                </a>
-                            {{-- @endcan --}}
-                        </li>
-                        
-                        <li>
-                            {{-- @can('empresas','empresa') --}}
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsEmp" aria-expanded="false" aria-controls="collapseLayoutsEmp">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fa-solid fa-chalkboard-user fa-2x"></i>
-                                </div>
-    
-                                <span class="nav-text">
-                                    Empresas
-                                </span>
-    
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            <div class="collapse" id="collapseLayoutsEmp" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">                         
-                                    <a class="nav-link" href="{{ route('emp1.index') }}">Empresa 1</a>
-                                    <a class="nav-link" href="{{ route('emp2.index') }}">Empresa 2</a>
-                                
-                                </nav>
-                            </div>
-                            {{-- @endcan --}}
-                        </li>
-
-                        <li>
-                            <a @class(['nav-link', 'active' => isset($menu) && $menu =='cli']) href="{{route('cli.index') }}">
-                             
-                                <div class="sb-nav-link-icon">
-                                    {{-- <i class="fa-solid fa-chalkboard-user fa-2x"></i> --}}
-                                    <i class="fa-solid fa-users"></i>
-                                </div>
-    
-                                <span class="nav-text">
-                                    Cliente
-                                </span>
-                            </a>
-                        </li>
-                        
-                        
-                        <li>
-                            <a @class(['nav-link', 'active' => isset($menu) && $menu =='coloaborador']) href="{{route('colaborador.index') }}">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fa-solid fa-chalkboard-user fa-2x"></i>
-                                </div>
-    
-                                <span class="nav-text">
-                                    Colaborador
-                                </span>
-                            </a>
-                        </li>
-
-
-                  
-                        
-                        <li>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-columns fa-2x"></i>
-                                </div>
-    
-                                <span class="nav-text">
-                                    Cadastro Gerais
-                                </span>
-    
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                        
-                                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                    <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">
-                                        <a class="nav-link" href="{{route('servico.index') }}">Serviços Gerais</a>
-                                        <a class="nav-link" href="{{route('materiais.index') }}">Materiais</a>
-                                        <a class="nav-link" href="{{route('custos.index') }}">Custo Geral</a>
-                                        <a class="nav-link" href="{{route('status.index') }}">Status</a>
-                                        <a class="nav-link" href="{{route('turno.index') }}">Turno</a>
-                                        <a class="nav-link" href="{{route('setor.index') }}">Setor</a>
-                                    </nav>
-                                </div>
-                        </li>
-
-                        <li>
-                            <a class="nav-link" href="{{route('os.index')}}">
-                                <div class="sb-nav-link-icon">  <i class="fa-solid fa-box-open"></i></div>
-                                        
-                                Ordem de Serviço
-                            </a>
-                        </li>
+                        <span class="nav-text item-description">
+                            Ordem de Serviço
+                        </span>
+                    </a>
+                </li>
 
                         <li>
                          
@@ -169,52 +151,48 @@
                             </a>
                         </li>
 
-                        <li>
-                            <a class="nav-link" href="{{route('timeline.index')}}">
-                                <div class="sb-nav-link-icon">  
-                                    <i class="fa-solid fa-chart-line fa-2x"></i>
-                                </div>
-                                
-                                <span class="nav-text">
-                                    Linha do tempo
-                                </span>
-                            </a>
-                        </li>
+                <li class="side-item">
+                    <a @class(['nav-link', 'active' => isset($menu) && $menu =='timeline']) href="{{route('timeline.index') }}">
+                            <i class="fa-solid fa-chart-line "></i>
                         
-                        <li>
-                            <a class="nav-link" href="{{route('login.delete')}}">
-                                <div class="sb-nav-link-icon">  
-                                    <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
-                                </div>
+                        <span class="nav-text item-description">
+                            Linha do tempo
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item">
+                    <a @class(['nav-link']) href="{{route('login.delete') }}">
+                            <i class="fa-solid fa-arrow-right-from-bracket "></i>
+
+                        <span class="nav-text item-description">
+                            Sair
+                        </span>
+                    </a>
+                </li>
+            </ul>
     
-                                <span class="nav-text">
-                                    Sair
-                                </span>
-                            </a>
-                        </li>
-    
-                    </ul>
-
-                </div>
-
-                <div class="sb-sidenav-footer">
-                    <span class="small">User:</span>
-                    <span>
-
-                        @if (auth()->check())
-                        {{ auth()->user()->nome}}
-                        @endif
-                    </span>
-                </div>
-            </nav>
+            <button id="open_btn">
+                <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
 
-        <div class="layoutSidenav_content">
-            <div class='mainConteudo'>
-                @yield('content')
-            </div>
+        <div class="sb-sidenav-footer">
+            <span class="small">User:</span>
+            <span>
+
+                @if (auth()->check())
+                {{ auth()->user()->nome}}
+                @endif
+            </span>
         </div>
-    </main>
+    </nav>
+
+    <div class="layoutSidenav_content">
+        <div class='mainConteudo'>
+            @yield('content')
+        </div>
+    </div>
 
 
 
@@ -230,6 +208,6 @@
 
 
 
-    
+
 </body>
 </html>

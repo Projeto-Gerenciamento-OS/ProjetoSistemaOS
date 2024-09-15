@@ -42,15 +42,12 @@ class Os2Controller extends Controller
     public function store(Os2Request $request)
     {
 
-        // Validar o formulário
         $request->validated();
 
-        // Marca o ponto inicial de uma transação
         DB::beginTransaction();
-
+        
         try {
-
-            // Cadastrar no banco de dados na tabela usuários
+            
             $os2 = Os2::create([
                 'qtde' => $request->qtde,
                 'vunit' => $request->vunit,
@@ -62,32 +59,26 @@ class Os2Controller extends Controller
                 'id_servico' => $request->id_servico,
                 'id_colaborador' => $request->id_colaborador,
             ]);
-
-            // Salvar log
+            
             Log::info('Os2 cadastrado.', ['id' => $os2->id, $os2]);
-
-            // Operação é concluída com êxito
+            
             DB::commit();
-
-            // Redirecionar o Os2, enviar a mensagem de sucesso
-            return redirect()->route('os.index', ['os2' => $os2->id])->with('success', 'Os2 cadastrado com sucesso!');
+            
+            return redirect()->route('os.index', $os2)->with('success', 'Os2 criada com sucesso!');
+            // return redirect()->route('os.index', ['os2' => $os2->id])->with('success', 'Os2 cadastrado com sucesso!');
         } catch (Exception $e) {
 
-            // Salvar log
             Log::info('Os2 não cadastrado.', ['error' => $e->getMessage()]);
 
-            // Operação não é concluída com êxito
             DB::rollBack();
 
-            // Redirecionar o Os2, enviar a mensagem de erro
             return back()->withInput()->with('error', 'Os2 não cadastrado!');
         }
     }
     
     public function view(Os2 $os2)
     {
-        //Carrega a View
-        return view( 'os2.view', ['menu'=>'os2', 'os2' => $os2]);
+        return view( 'os1.edit', ['menu'=>'os2', 'os2' => $os2]);
     }
 
     
@@ -131,7 +122,7 @@ class Os2Controller extends Controller
             DB::commit();
 
             // Redirecionar o Os2, enviar a mensagem de sucesso
-            return redirect()->route('os2.view', ['os2' => $os2->id])->with('success', 'Os2 editado com sucesso!');
+            return redirect()->route('os2.edit', ['os2' => $os2->id])->with('success', 'Os2 editado com sucesso!');
             
         } catch (Exception $e) {
 
