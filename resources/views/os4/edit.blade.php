@@ -13,12 +13,12 @@
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('os4.view', ['os4' => $os4->id]) }}" class="btn  ">
+                    <a href="{{ route('os1.os4.view', ['os4' => $os4->id]) }}" class="btn  ">
                         <span class="listar-texto">VISUALIZAR</span>
                         <i class="fa-regular fa-eye"></i>
                     </a>
 
-                    <form method="POST" action="{{ route('os4.delete', ['os4' => $os4->id]) }}">
+                    <form method="POST" action="{{ route('os1.os4.delete', ['os4' => $os4->id]) }}">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn  "
@@ -33,7 +33,7 @@
 
                 <x-alert />
 
-                <form action="{{ route('os4.update', ['os4' => $os4->id]) }}" method="POST" class="row  ">
+                <form action="{{ route('os1.os4.update', ['os4' => $os4->id]) }}" method="POST" class="row  ">
                     @csrf
                     @method('PUT')
 

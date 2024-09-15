@@ -10,7 +10,7 @@
                 <span class="listar-texto">LISTAR</span></a>
         </div> 
         <div class="card-body"> 
-        <form action="{{ route('os4.store') }}" method="POST" class="row  ">
+        <form action="{{ route('os1.os4.store') }}" method="POST" class="row  ">
                 @csrf
                 @method('POST')
 

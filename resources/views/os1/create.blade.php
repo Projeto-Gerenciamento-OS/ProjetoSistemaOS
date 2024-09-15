@@ -63,7 +63,7 @@
                     
                     <div class="">
                         <label for="ctotal" class="form-label">CUSTO</label>
-                        <input type="text"  name="ctotal" id="ctotal"   required >
+                        <input type="text"  name="ctotal" id="ctotal"   required value="{{ old('ctotal') }}">
                     </div>
                     
                     <div class="">
@@ -135,11 +135,11 @@
                 </div> 
     
                 <a  class="btnCadastrar">
-                <button type="submit">
-                    <h5>CONCLUIR</h5>
-                    <i class="fa-solid fa-angle-right"></i>
-                </button>  
-            </a>
+                    <button type="submit">
+                        <h5>CONCLUIR</h5>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>  
+                </a>
             </form>
 
             <form action="{{ route('os1.os3.store') }}" method="POST" class="osBody  ">
@@ -201,8 +201,47 @@
                 </a>
             </form> 
 
+            <form action="{{ route('os1.os4.store') }}" method="POST" class="osBody  ">
+                @csrf
+                @method('POST')
 
-                
+                <div class="mb-3">
+                    <label for="descricao" class="form-label">DESCRIÇÃO</label>
+                    <input type="text" name="descricao" id="descricao"  placeholder=" Digite o descricao"
+                        value="{{ old('descricao') }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="percentual" class="form-label"> PERCENTUAL</label>
+                    <input type="text" name="percentual" id="percentual"  placeholder=" Digite o percentual"
+                        value="{{ old('percentual') }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="valor" class="form-label">VALOR</label>
+                    <input type="text" name="valor" id="valor"  placeholder=" Digite o valor"
+                        value="{{ old('valor') }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="ativo" class="form-label">ATIVO</label>
+                    <input type="text" name="ativo" id="ativo"  placeholder=" Digite o ativo"
+                        value="{{ old('ativo') }}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_emp2" class="form-label">EMPRESA 2 </label>
+                    <input type="text" name="id_emp2" id="id_emp2"  placeholder=" Digite o id_emp2"
+                        value="{{ old('id_emp2') }}">
+                </div>
+        
+                <a  class="btnCadastrar">
+                    <button type="submit">
+                        <h5>CONCLUIR</h5>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>  
+                </a>
+            </form>                
         </div>
     </div>
 </div>

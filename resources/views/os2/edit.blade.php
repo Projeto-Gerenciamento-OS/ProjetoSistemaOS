@@ -13,12 +13,12 @@
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('os2.edit', ['os2' => $os2->id]) }}" class="btn ">
+                    <a href="{{ route('os1.os2.edit', ['os2' => $os2->id]) }}" class="btn ">
                         <span class="listar-texto">VISUALIZAR</span>
                         <i class="fa-regular fa-eye"></i>
                     </a>
 
-                    <form method="POST" action="{{ route('os2.delete', ['os2' => $os2->id]) }}">
+                    <form method="POST" action="{{ route('os1.os2.delete', ['os2' => $os2->id]) }}">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn  "
@@ -34,7 +34,7 @@
 
                 <x-alert />
 
-                <form  action="{{ route('os2.update', ['os2' => $os2->id]) }}" method="POST" class="row  ">
+                <form  action="{{ route('os1.os2.update', ['os2' => $os2->id]) }}" method="POST" class="row  ">
                     @csrf
                     @method('PUT')
                 

@@ -12,12 +12,12 @@
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('os3.view', ['os3' => $os3->id]) }}" class="btn  ">
+                    <a href="{{ route('os1.os3.view', ['os3' => $os3->id]) }}" class="btn  ">
                         <span class="listar-texto">VISUALIZAR</span>
                         <i class="fa-regular fa-eye"></i>
                     </a>
 
-                    <form method="POST" action="{{ route('os3.delete', ['os3' => $os3->id]) }}">
+                    <form method="POST" action="{{ route('os1.os3.delete', ['os3' => $os3->id]) }}">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn  "

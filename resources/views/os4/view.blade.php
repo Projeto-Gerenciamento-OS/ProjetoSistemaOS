@@ -13,13 +13,13 @@
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('os4.edit', ['os4' => $os4->id]) }}" class="btn  btn-sm me-1">
+                    <a href="{{ route('os1.os4.edit', ['os4' => $os4->id]) }}" class="btn  btn-sm me-1">
                         <span class="listar-texto">EDIÇÃO</span>
                         <i class="fa-solid fa-pen"></i>
                     </a>
 
 
-                    <form method="POST" action="{{ route('os4.delete', ['os4' => $os4->id]) }}">
+                    <form method="POST" action="{{ route('os1.os4.delete', ['os4' => $os4->id]) }}">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn  btn-sm me-1"

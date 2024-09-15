@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Os1;
 use App\Models\Os2;
 use App\Models\Os3;
+use App\Models\Os4;
 use App\Http\Requests\Os1Request;
 use App\Http\Requests\Os2Request;
 use App\Http\Requests\Os3Request;
+use App\Http\Requests\Os4Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Exception;
@@ -60,7 +62,7 @@ class Os1Controller extends Controller
 
             DB::commit();
 
-            return redirect()->route('os1.create2', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
+            return redirect()->route('os.index', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
         } catch (Exception $e) {
 
             Log::info('Os1 não cadastrado.', ['error' => $e->getMessage()]);
@@ -71,77 +73,8 @@ class Os1Controller extends Controller
         }
     }
     
-    public function store2(Os2Request $request){
-
-        $request->validated();
-
-        DB::beginTransaction();
-
-        try {
-
-            $os2 = Os2::create([
-                'qtde' => $request->qtde,
-                'vunit' => $request->vunit,
-                'vtotal' => $request->vtotal,
-                'cunit' => $request->cunit,
-                'ctotal' => $request->ctotal,
-                'id_emp2' => $request->id_emp2,
-                'id_os1' => $request->id_os1,
-                'id_servico' => $request->id_servico,
-                'id_colaborador' => $request->id_colaborador,
-            ]);
-
-            Log::info('Os2 cadastrado.', ['id' => $os2->id, $os2]);
-
-            DB::commit();
-
-            return redirect()->route('os2.create', ['os2' => $os2->id])->with('success', 'Os2 cadastrado com sucesso!');
-        } catch (Exception $e) {
-
-            Log::info('Os2 não cadastrado.', ['error' => $e->getMessage()]);
-
-            DB::rollBack();
-
-            return back()->withInput()->with('error', 'Os2 não cadastrado!');
-        }
-    }
-
-    public function store3(Os3Request $request){
-
-        $request->validated();
-
-        DB::beginTransaction();
-
-        try {
-
-            $os3 = Os3::create([
-                'qtde' => $request->qtde,
-                'vunit' => $request->vunit,
-                'vtotal' => $request->vtotal,
-                'cunit' => $request->cunit,
-                'ctotal' => $request->ctotal,
-                'id_emp2' => $request->id_emp2,
-                'id_os1' => $request->id_os1,
-                'id_materiais' => $request->id_materiais,
-            ]);
-
-            Log::info('Os3 cadastrado.', ['id' => $os3->id, $os3]);
-
-            DB::commit();
-
-            return redirect()->route('os3.create', ['os3' => $os3->id])->with('success', 'Os3 cadastrado com sucesso!');
-        } catch (Exception $e) {
-
-            Log::info('Os3 não cadastrado.', ['error' => $e->getMessage()]);
-
-            DB::rollBack();
-
-            return back()->withInput()->with('error', 'Os3 não cadastrado!');
-        }
-    }
-
     public function view(Os1 $os1){
-        $os1->load(['os2', 'os3']);
+        $os1->load(['os2', 'os3', 'os4']);
         return view('os1.edit', compact('os1'));
     }
 
@@ -150,7 +83,7 @@ class Os1Controller extends Controller
         return view('os1.edit', compact('os1'));
     }
 
-    public function update(Os1Request $request, Os1 $os1){
+    public function update(Os1Request $request, Os1 $os1, Os2 $os2, Os3 $os3, Os4 $os4){
         $request->validated();
     
         DB::beginTransaction();
@@ -170,57 +103,67 @@ class Os1Controller extends Controller
                 'vresultado' => $request->vresultado,
             ]);
     
-            foreach ($request->os2 as $id => $data) {
-                $os2 = Os2::find($id);
-                if ($os2) { 
-                    $os2->update([
-                        'qtde' => $request->qtde,
-                        'vunit' => $request->vunit,
-                        'vtotal' => $request->vtotal,
-                        'cunit' => $request->cunit,
-                        'ctotal' => $request->ctotal,
-                        'id_emp2' => $request->id_emp2,
-                        'id_os1' => $request->id_os1,
-                        'id_servico' => $request->id_servico,
-                        'id_colaborador' => $request->id_colaborador,
-                    ]);
+            if (is_array($request->os2) || is_object($request->os2)) {
+                foreach ($request->os2 as $id => $data) {
+                    $os2 = Os2::find($id);
+                    if ($os2) { 
+                        $os2->update([
+                            'qtde' => $request->qtde,
+                            'vunit' => $request->vunit,
+                            'vtotal' => $request->vtotal,
+                            'cunit' => $request->cunit,
+                            'ctotal' => $request->ctotal,
+                            'id_emp2' => $request->id_emp2,
+                            'id_os1' => $request->id_os1,
+                            'id_servico' => $request->id_servico,
+                            'id_colaborador' => $request->id_colaborador,
+                        ]);
+                    }
                 }
             }
     
-            foreach ($request->os3 as $id => $data) {
-                $os3 = Os3::find($id);
-                if ($os3) {
-                    $os3->update([
-                        'qtde' => $request->qtde,
-                        'vunit' => $request->vunit,
-                        'vtotal' => $request->vtotal,
-                        'cunit' => $request->cunit,
-                        'ctotal' => $request->ctotal,
-                        'id_emp2' => $request->id_emp2,
-                        'id_os1' => $request->id_os1,
-                        'id_materiais' => $request->id_materiais,
-                    ]);
+            if (is_array($request->os3) || is_object($request->os3)) {
+                foreach ($request->os3 as $id => $data) {
+                    $os3 = Os3::find($id);
+                    if ($os3) {
+                        $os3->update([
+                            'qtde' => $request->qtde,
+                            'vunit' => $request->vunit,
+                            'vtotal' => $request->vtotal,
+                            'cunit' => $request->cunit,
+                            'ctotal' => $request->ctotal,
+                            'id_emp2' => $request->id_emp2,
+                            'id_os1' => $request->id_os1,
+                            'id_materiais' => $request->id_materiais,
+                        ]);
+                    }
                 }
             }
     
-            foreach ($request->os4 as $id => $data) {
-                $os4 = Os4::find($id);
-                if ($os4) {
-                    $os4->update([
-                        'descricao' => $request->descricao,
-                        'percentual' => $request->percentual,
-                        'valor' => $request->valor,
-                        'ativo' => $request->ativo,
-                        'id_emp2' => $request->id_emp2,
-                    ]);
+            if (is_array($request->os4) || is_object($request->os4)) {
+                foreach ($request->os4 as $id => $data) {
+                    $os4 = Os4::find($id);
+                    if ($os4) {
+                        $os4->update([
+                            'descricao' => $request->descricao,
+                            'percentual' => $request->percentual,
+                            'valor' => $request->valor,
+                            'ativo' => $request->ativo,
+                            'id_emp2' => $request->id_emp2,
+                        ]);
+                    }
                 }
             }
+
     
+            Log::info('Os1 editado.', ['id' => $os1->id]);
+
             DB::commit();
     
             return redirect()->route('os.index', ['os1' => $os1->id])->with('success', 'Os1 editado com sucesso!');
         } catch (Exception $e) {
             DB::rollBack();
+            Log::info('os1 não cadastrado.', ['error' => $e->getMessage()]);
             return back()->withInput()->with('error', 'Erro ao editar Os1!');
         }
     }

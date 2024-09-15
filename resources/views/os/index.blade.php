@@ -8,12 +8,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs1" aria-expanded="true" aria-controls="collapseOs1">
+            <button class="accordion-button" type="button" data-bs-toggle="" data-bs-target="#collapseOs1" aria-expanded="true" aria-controls="collapseOs1">
                 OS 1
             </button>
         </h2>
         
-        <div id="collapseOs1" class="accordion-collapse collapse show" data-bs-parent="#accordionOSs">
+        <div id="collapseOs1" class="accordion-  show" data-bs-parent="#accordionOSs">
             <div class="card mb-4 cardCorLista ">
                 <div class="card-body" > 
                     <x-alert />
@@ -103,12 +103,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs2" aria-expanded="false" aria-controls="collapseOs2">
+            <button class="accordion-button " type="button" data-bs-toggle="" data-bs-target="#collapseOs2" aria-expanded="false" aria-controls="collapseOs2">
                 OS 2
             </button>
         </h2>
 
-        <div id="collapseOs2" class="accordion-collapse collapse" data-bs-parent="#accordionOSs">
+        <div id="collapseOs2" class="accordion- " data-bs-parent="#accordionOSs">
 
             <div class="card mb-4 cardCorLista ">
                 <div class="card-body" > 
@@ -158,15 +158,15 @@
                                     
                                     <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 
-                                        <a href="{{ route('os2.edit', ['os2' => $item->id]) }}" class="btnIcons">
+                                        <a href="{{ route('os1.os2.edit', ['os2' => $item->id]) }}" class="btnIcons">
                                             <i class="fa-regular fa-eye"></i>
                                         </a>
 
-                                        <a href="{{ route('os2.edit', ['os2' => $item->id]) }}" class="btnIcons">
+                                        <a href="{{ route('os1.os2.edit', ['os2' => $item->id]) }}" class="btnIcons">
                                             <i class="fa-solid fa-pen"></i>
                                         </a>
 
-                                        <form method="POST" action="{{ route('os2.delete', ['os2' => $item->id]) }}">
+                                        <form method="POST" action="{{ route('os1.os2.delete', ['os2' => $item->id]) }}">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" onclick="return confirm('Tem certeza que deseja apagar este registro?')" class="btn-apagar btnIcons">
@@ -197,12 +197,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs3" aria-expanded="false" aria-controls="collapseOs3">
+            <button class="accordion-button " type="button" data-bs-toggle="" data-bs-target="#collapseOs3" aria-expanded="false" aria-controls="collapseOs3">
                 OS 3
             </button>
         </h2>
 
-        <div id="collapseOs3" class="accordion-collapse collapse" data-bs-parent="#accordionOSs">
+        <div id="collapseOs3" class="accordion- " data-bs-parent="#accordionOSs">
             <div class="card mb-4 cardCorLista ">
                 
                 <div class="card-body" > 
@@ -251,15 +251,15 @@
                                     
                                     <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 
-                                        <a href="{{ route('os3.view', ['os3' => $item->id]) }}" class="btnIcons">
+                                        <a href="{{ route('os1.os3.view', ['os3' => $item->id]) }}" class="btnIcons">
                                             <i class="fa-regular fa-eye"></i>
                                         </a>
 
-                                        <a href="{{ route('os3.edit', ['os3' => $item->id]) }}" class="btnIcons">
+                                        <a href="{{ route('os1.os3.edit', ['os3' => $item->id]) }}" class="btnIcons">
                                             <i class="fa-solid fa-pen"></i>
                                         </a>
 
-                                        <form method="POST" action="{{ route('os3.delete', ['os3' => $item->id]) }}">
+                                        <form method="POST" action="{{ route('os1.os3.delete', ['os3' => $item->id]) }}">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" onclick="return confirm('Tem certeza que deseja apagar este registro?')" class="btn-apagar btnIcons">
@@ -291,12 +291,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs4" aria-expanded="false" aria-controls="collapseOs4">
+            <button class="accordion-button " type="button" data-bs-toggle="" data-bs-target="#collapseOs4" aria-expanded="false" aria-controls="collapseOs4">
                 OS 4
             </button>
         </h2>
 
-        <div id="collapseOs4" class="accordion-collapse collapse" data-bs-parent="#accordionOSs">
+        <div id="collapseOs4" class="accordion- " data-bs-parent="#accordionOSs">
             <div class="card mb-4 cardCorLista ">
                 
                 <div class="card-body" > 
@@ -336,15 +336,15 @@
                                     
                                     <td class="d-md-flex flex-row gap-2 justify-content-center pt-8" >
 
-                                        <a href="{{ route('os4.view', ['os4' => $item->id]) }}" class="btnIcons">
+                                        <a href="{{ route('os1.os4.view', ['os4' => $item->id]) }}" class="btnIcons">
                                             <i class="fa-regular fa-eye"></i>
                                         </a>
 
-                                        <a href="{{ route('os4.edit', ['os4' => $item->id]) }}" class="btnIcons">
+                                        <a href="{{ route('os1.os4.edit', ['os4' => $item->id]) }}" class="btnIcons">
                                             <i class="fa-solid fa-pen"></i>
                                         </a>
 
-                                        <form method="POST" action="{{ route('os4.delete', ['os4' => $item->id]) }}">
+                                        <form method="POST" action="{{ route('os1.os4.delete', ['os4' => $item->id]) }}">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" onclick="return confirm('Tem certeza que deseja apagar este registro?')" class="btn-apagar btnIcons">
@@ -359,7 +359,7 @@
                     
                         </tbody>
 
-                        <a href="{{ route('os4.create') }}" class="btnCadastrar-os">
+                        <a href="{{ route('os1.os4.create') }}" class="btnCadastrar-os">
                             <button>
                                 <h5>CADASTRAR</h5>
                                 <i class="fa-solid fa-plus"></i>

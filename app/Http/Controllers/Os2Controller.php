@@ -102,6 +102,7 @@ class Os2Controller extends Controller
 
         try {
 
+
             // Editar as informações do registro no banco de dados
             $os2->update([
                 'qtde' => $request->qtde,
@@ -114,15 +115,15 @@ class Os2Controller extends Controller
                 'id_servico' => $request->id_servico,
                 'id_colaborador' => $request->id_colaborador,
             ]);
-
+            
             // Salvar log
             Log::info('Os2 editado.', ['id' => $os2->id]);
-
+            
             // Operação é concluída com êxito
             DB::commit();
 
             // Redirecionar o Os2, enviar a mensagem de sucesso
-            return redirect()->route('os2.edit', ['os2' => $os2->id])->with('success', 'Os2 editado com sucesso!');
+            return redirect()->route('os1.os2.edit', ['os2' => $os2->id])->with('success', 'Os2 editado com sucesso!');
             
         } catch (Exception $e) {
 

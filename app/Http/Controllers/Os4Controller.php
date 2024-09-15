@@ -35,7 +35,7 @@ class Os4Controller extends Controller
     public function create()
     {
         // Carregar a VIEW
-        return view('os4.create', ['menu' => 'os4']);
+        return view('os1.os4.create', ['menu' => 'os4']);
     }
 
     // Cadastrar no banco de dados o novo curso
@@ -83,7 +83,7 @@ class Os4Controller extends Controller
     public function view(Os4 $os4)
     {
         //Carrega a View
-        return view( 'os4.view', ['menu'=>'os4', 'os4' => $os4]);
+        return view( 'os1.os4.view', ['menu'=>'os4', 'os4' => $os4]);
     }
 
     
@@ -92,7 +92,7 @@ class Os4Controller extends Controller
     {
 
         // Carregar a VIEW
-        return view('os4.edit', ['menu' => 'os4', 'os4' => $os4]);
+        return view('os1.os4.edit', ['menu' => 'os4', 'os4' => $os4]);
     }
 
     // Editar no banco de dados o usuário
@@ -123,7 +123,7 @@ class Os4Controller extends Controller
             DB::commit();
 
             // Redirecionar o Os4, enviar a mensagem de sucesso
-            return redirect()->route('os4.view', ['os4' => $os4->id])->with('success', 'Os4 editado com sucesso!');
+            return redirect()->route('os1.os4.view', ['os4' => $os4->id])->with('success', 'Os4 editado com sucesso!');
             
         } catch (Exception $e) {
 

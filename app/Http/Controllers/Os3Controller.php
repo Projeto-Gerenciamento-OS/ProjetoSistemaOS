@@ -28,7 +28,7 @@ class Os3Controller extends Controller{
 
     public function create(){
     
-        return view('os3.create', ['menu' => 'os3']);
+        return view('os1.os3.create', ['menu' => 'os3']);
     }
     public function store(Os3Request $request)
     {
@@ -58,12 +58,12 @@ class Os3Controller extends Controller{
     
     public function view(Os3 $os3)
     {
-        return view( 'os3.view', ['menu'=>'os3', 'os3' => $os3]);
+        return view( 'os1.os3.view', ['menu'=>'os3', 'os3' => $os3]);
     }
 
     public function edit(Os3 $os3)
     {
-        return view('os3.edit', ['menu' => 'os3', 'os3' => $os3]);
+        return view('os1.os3.edit', ['menu' => 'os3', 'os3' => $os3]);
     }
     public function update(Os3Request $request, Os3  $os3)
     {
@@ -83,7 +83,7 @@ class Os3Controller extends Controller{
             ]);
             Log::info('Os3 editado.', ['id' => $os3->id]);
             DB::commit();
-            return redirect()->route('os3.view', ['os3' => $os3->id])->with('success', 'Os3 editado com sucesso!');
+            return redirect()->route('os1.os3.view', ['os3' => $os3->id])->with('success', 'Os3 editado com sucesso!');
             
         } catch (Exception $e) {
             Log::info('Os3 não editado.', ['error' => $e->getMessage()]);

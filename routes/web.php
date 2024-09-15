@@ -155,66 +155,45 @@ Route::get('/os',[OSsController::class, 'index'])->name('os.index');
 
 Route::prefix('os1')->name('os1.')->group(function () {
 
-  Route::get('/', [Os1Controller::class, 'index'])->name('index');
-  Route::get('/create', [Os1Controller::class, 'create'])->name('create');
-  Route::post('/store', [Os1Controller::class, 'store'])->name('store');
-  Route::get('/view/{os1}', [Os1Controller::class, 'view'])->name('view');
-  Route::get('/edit/{os1}', [Os1Controller::class, 'edit'])->name('edit');
-  Route::put('/update/{os1}', [Os1Controller::class, 'update'])->name('update');
-  Route::delete('/{os1}', [Os1Controller::class, 'delete'])->name('delete');
+Route::get('/', [Os1Controller::class, 'index'])->name('index');
+Route::get('/create', [Os1Controller::class, 'create'])->name('create');
+Route::post('/store', [Os1Controller::class, 'store'])->name('store');
+Route::get('/view/{os1}', [Os1Controller::class, 'view'])->name('view');
+Route::get('/edit/{os1}', [Os1Controller::class, 'edit'])->name('edit');
+Route::put('/update/{os1}', [Os1Controller::class, 'update'])->name('update');
+Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete');
 
-  // Rotas para OS2 dentro de OS1
-  Route::prefix('/os2')->name('os2.')->group(function () {
+// Rotas para OS2 dentro de OS1
+    Route::prefix('/os2')->name('os2.')->group(function () {
+        Route::get('/create', [Os2Controller::class, 'create'])->name('create');
+        Route::get('/view/{os2}',[Os3Controller::class, 'view'])->name('view');
+        Route::post('/store', [Os2Controller::class, 'store'])->name('store');
+        Route::get('/edit/{os2}', [Os2Controller::class, 'edit'])->name('edit');
+        Route::put('/update/{os2}', [Os2Controller::class, 'update'])->name('update');
+        Route::delete('/delete/{os2}', [Os2Controller::class, 'delete'])->name('delete');
+    });
 
-      Route::get('/create', [Os2Controller::class, 'create'])->name('create');
-      Route::post('/store', [Os2Controller::class, 'store'])->name('store');
-      Route::get('/{os2}/edit', [Os2Controller::class, 'edit'])->name('edit');
-      Route::put('/{os2}', [Os2Controller::class, 'update'])->name('update');
-      Route::delete('/{os2}', [Os2Controller::class, 'delete'])->name('delete');
-  });
-  
-  // Rotas para OS3 dentro de OS1
-  Route::prefix('/os3')->name('os3.')->group(function () {
-      Route::get('/create', [Os3Controller::class, 'create'])->name('create');
-      Route::post('/store', [Os3Controller::class, 'store'])->name('store');
-      Route::get('/{os3}/edit', [Os3Controller::class, 'edit'])->name('edit');
-      Route::put('/{os3}', [Os3Controller::class, 'update'])->name('update');
-      Route::delete('/{os3}', [Os3Controller::class, 'delete'])->name('delete');
-  });
-  
-  // Rotas para OS3 dentro de OS1
-  Route::prefix('/os4')->name('os4.')->group(function () {
-      Route::get('/create', [Os4Controller::class, 'create'])->name('create');
-      Route::post('/store', [Os4Controller::class, 'store'])->name('store');
-      Route::get('/{os4}/edit', [Os4Controller::class, 'edit'])->name('edit');
-      Route::put('/{os4}', [Os4Controller::class, 'update'])->name('update');
-      Route::delete('/{os4}', [Os3Controller::class, 'delete'])->name('delete');
-  });
+    // Rotas para OS3 dentro de OS1
+    Route::prefix('/os3')->name('os3.')->group(function () {
+        Route::get('/create', [Os3Controller::class, 'create'])->name('create');
+        Route::get('/view/{os3}',[Os3Controller::class, 'view'])->name('view');
+        Route::post('/store', [Os3Controller::class, 'store'])->name('store');
+        Route::get('/edit/{os3}', [Os3Controller::class, 'edit'])->name('edit');
+        Route::put('/update/{os3}', [Os3Controller::class, 'update'])->name('update');
+        Route::delete('/delete/{os3}', [Os3Controller::class, 'delete'])->name('delete');
+    });
+
+    // Rotas para OS3 dentro de OS1
+    Route::prefix('/os4')->name('os4.')->group(function () {
+        Route::get('/create', [Os4Controller::class, 'create'])->name('create');
+        Route::get('/view/{os4}',[Os3Controller::class, 'view'])->name('view');
+        Route::post('/store', [Os4Controller::class, 'store'])->name('store');
+        Route::get('/{os4}/edit', [Os4Controller::class, 'edit'])->name('edit');
+        Route::put('/{os4}', [Os4Controller::class, 'update'])->name('update');
+        Route::delete('/{os4}', [Os3Controller::class, 'delete'])->name('delete');
+    });
 });
 
-// //OS 2
-
-// Route::get('/view-os2/{os2}',[Os2Controller::class, 'view'])->name('os2.edit');
-Route::get('/edit-os2/{os2}',[Os2Controller::class, 'edit'])->name('os2.edit');
-Route::put('/update-os2/{os2}',[Os2Controller::class, 'update'])->name('os2.update');
-Route::delete('/delete-os2/{os2}', [Os2Controller::class, 'delete'])->name('os2.delete');
-//OS 
-
-Route::get('/os3',[Os3Controller::class, 'index'])->name('os3.index');
-Route::get('/view-os3/{os3}',[Os3Controller::class, 'view'])->name('os3.view');
-Route::get('/create-os3',[Os3Controller::class, 'create'])->name('os3.create');
-Route::post('/store-os3',[Os3Controller::class, 'store'])->name('os1.os3.store');
-Route::get('/edit-os3/{os3}',[Os3Controller::class, 'edit'])->name('os3.edit');
-Route::put('/update-os3/{os3}',[Os3Controller::class, 'update'])->name('os3.update');
-Route::delete('/delete-os3/{os3}', [Os3Controller::class, 'delete'])->name('os3.delete');//OS 2
-
-Route::get('/os4',[Os4Controller::class, 'index'])->name('os4.index');
-Route::get('/view-os4/{os4}',[Os4Controller::class, 'view'])->name('os4.view');
-Route::get('/create-os4',[Os4Controller::class, 'create'])->name('os4.create');
-Route::post('/store-os4',[Os4Controller::class, 'store'])->name('os4.store');
-Route::get('/edit-os4/{os4}',[Os4Controller::class, 'edit'])->name('os4.edit');
-Route::put('/update-os4/{os4}',[Os4Controller::class, 'update'])->name('os4.update');
-Route::delete('/delete-os4/{os4}', [Os4Controller::class, 'delete'])->name('os4.delete');
 
 //Agenda
 Route::get('/agenda',[AgendaController::class, 'index'])->name('agenda.index');
