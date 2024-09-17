@@ -14,11 +14,11 @@
         </div> 
         
         <div class="card-body"> 
-            <form action="{{ route('user.store') }}" method="POST" class="row g-lg-5 g-4">
+            <form action="{{ route('user.store') }}" method="POST">
                 @csrf
                 @method('POST')
         
-                <div class="col-6 col-lg-6">
+                <div class="BodyLayout">
                     <div class="mb-3">
                         <label for="nome" class="form-label">NOME</label>
                         <input type="text" name="nome" id="nome" placeholder="Digeite o(a) NOME..."
@@ -36,10 +36,7 @@
                         <input type="email" name="email" id="email" placeholder="Digeite o(a) EMAIL..."
                             value="{{ old('email') }}">
                     </div>
-                </div>  
-
-                <div class="col-6 col-lg-6 ">
-                
+                    
                     <div class="mb-3">
                         <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                         <input type="text" name="id_emp2" id="id_emp2" placeholder="Digeite o(a) EMPRESA 2..."

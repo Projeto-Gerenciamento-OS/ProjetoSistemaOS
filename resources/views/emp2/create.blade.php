@@ -16,12 +16,13 @@
         <div class="card-body"> 
             <x-alert />
 
-            <form action="{{ route('emp2.store') }}" method="POST" class="row  ">
+            <form action="{{ route('emp2.store') }}" method="POST">
                 @csrf
                 @method('POST')
 
                     <!-- Coluna 1 -->
-                    <div class="col-6 col-lg-6">
+                    <div class="BodyLayout">
+
                         <div class="mb-3">
                             <label for="id_emp1" class="form-label">EMPRESA 1</label>
                             <input type="number" name="id_emp1" id="id_emp1" class="form-control" placeholder="Código Empresa 1" value="{{ old('id_emp1') }}">
@@ -46,11 +47,7 @@
                             <label for="qtdeoper" class="form-label">QUANT DE OPER</label>
                             <input type="number" name="qtdeoper" id="qtdeoper" class="form-control" placeholder="Quantidade Oper" value="{{ old('qtdeoper') }}">
                         </div>
-                    </div>
 
-                    <!-- Coluna 2 -->
-
-                    <div class="col-6 col-lg-6">
                     
                         <div class="mb-3">
                             <label for="cidade" class="form-label">CIDADE</label>
@@ -77,10 +74,6 @@
                             <input type="text" name="uf" id="uf" class="form-control" placeholder="UF" value="{{ old('uf') }}">
                         </div>
 
-                    </div>
-                    
-                    <!-- Coluna 3 -->
-                    <div class="col-6 col-lg-6">
 
                         <div class="mb-3">
                             <label for="cep" class="form-label">CEP</label>
