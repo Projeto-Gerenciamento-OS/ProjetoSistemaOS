@@ -14,11 +14,11 @@
         </div> 
         
         <div class="card-body"> 
-            <form action="{{ route('turno.store') }}" method="POST" class="row g-lg-5 g-4">
+            <form action="{{ route('turno.store') }}" method="POST">
                 @csrf
                 @method('POST')
                 
-                <div class="col-6 col-lg-6">
+                <div class="BodyLayout">
                     <div class="mb-3">
                         <label for="nome" class="form-label">NOME</label>
                         <input type="text" name="nome" id="nome"  placeholder="Digite o(a) NOME..."
@@ -36,9 +36,7 @@
                         <input type="text" name="id_users" id="id_users"  placeholder="Digite o(a) USUARIO..."
                         value="{{ old('id_users') }}">
                     </div>
-                </div>
-                
-                <div class="col-6 col-lg-6">
+                    
                     <div class="mb-3">
                         <label for="inicio" class="form-label">INICIO</label>
                         <input type="time" name="inicio" id="inicio"  placeholder="Digite o(a) INICIO..."

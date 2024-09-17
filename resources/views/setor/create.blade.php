@@ -13,11 +13,11 @@
         </div> 
         
         <div class="card-body"> 
-            <form action="{{ route('setor.store') }}" method="POST" class="row  ">
+            <form action="{{ route('setor.store') }}" method="POST">
                 @csrf
                 @method('POST')
             
-                <div class="col-6 col-lg-6 ">
+                <div class="BodyLayout">
                     <div class="mb-3">
                         <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                         <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 "

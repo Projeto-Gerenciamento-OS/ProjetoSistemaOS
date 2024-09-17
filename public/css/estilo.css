@@ -5,7 +5,6 @@
     text-decoration: none !important;
     list-style: none !important;
     font-family: 'Roboto';
-    
 }
 
 :root {
@@ -76,9 +75,12 @@ body {
             
             .side-item {
                 border-radius: 8px;
-                padding: 14px;
+                padding: 8px 5px;
                 cursor: pointer;
-            
+
+                .nav-link{
+                    padding: .2rem;
+                }
                 a {
                     display: flex;
                     align-items: center;
@@ -383,15 +385,14 @@ body {
         }        
         
         .card-body {
-            margin: auto;
             background-color: rgba(233, 233, 233, 0.293);
             padding: 20px 15px;
             border: none;
             border-radius: 0px 0px 5px 5px;
             width:100%;
             overflow:auto;      
-            margin: auto;
             position: relative;
+            
             
             table {
                 width: 100%;
@@ -428,17 +429,19 @@ body {
             }
 
             form {
-                
-                min-width: 70%;
-                justify-content: center;
-                .col-6 {
-                    width: 30%;
+                .BodyLayout{
+
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            
+                    gap: 20px;
+                    padding: 20px;
+                    border-radius: 5px;
+                    margin: 0;
+                    
+                    width: 100%;
                 }
-                
                 div {
-                    display:inline-flex;
-                    align-items: center;
-                    flex-direction: column;
                     overflow: auto;
                     
                     label {
@@ -676,6 +679,9 @@ body {
     border-radius: 5px;
     margin: 0;
 }
+
+
+
 .btn {
     display: flex;
     justify-content: center;

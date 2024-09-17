@@ -13,11 +13,11 @@
         </div> 
         
         <div class="card-body"> 
-            <form action="{{ route('servico.store') }}" method="POST" class="row  ">
+            <form action="{{ route('servico.store') }}" method="POST">
                 @csrf
                 @method('POST')
                 
-                <div class="col-6 col-lg-6">                
+                <div class="BodyLayout">              
                     <div class="mb-3">
                         <label for="nome" class="form-label">NOME</label>
                         <input type="text" name="nome" id="nome"  placeholder="Nome completo"
@@ -43,10 +43,7 @@
                         <label for="obs" class="form-label">OBS</label>
                         <input type="text" name="obs" id="obs"   required >
                     </div>
-                </div>
-
-                <div class="col-6 col-lg-6">          
-                      
+                    
                     <div class="mb-3">
                         <label for="recorrente" class="form-label">RECORRENTE</label>
                         <input type="text"  name="recorrente" id="recorrente"   required>

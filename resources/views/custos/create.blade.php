@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-   
 <div class="container-fluid data-container">
     <div class="card mb-4 cardCorLista ">
 
@@ -14,28 +12,24 @@
                 <span class="listar-texto">LISTAR</span></a>
         </div> 
         <div class="card-body"> 
-        <form action="{{ route('custos.store') }}" method="POST" class=" row  ">
+            <form action="{{ route('custos.store') }}" method="POST">
                 @csrf
                 @method('POST')
-        
-                
-            <div class="col-12 col-lg-6">
-                    
-                <div class="mb-3">
-                    <label for="id_emp2" class="form-label">EMPRESA 2 </label>
-                    <input type="number" name="id_emp2" id="id_emp2" 
-                        placeholder=" Digite " value="{{ old('id_emp2') }}">
-                </div>
 
-                <div class="mb-3">
-                    <label for="id_users" class="form-label">USUÁRIO</label>
-                    <input type="number" name="id_users" id="id_users" 
-                        placeholder=" Digite " value="{{ old('id_users') }}">
-                </div>
-            </div>
-          
-                <div class="col-12 col-lg-6">
-                 
+                <div class="BodyLayout">
+                    
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">EMPRESA 2 </label>
+                        <input type="number" name="id_emp2" id="id_emp2" 
+                            placeholder=" Digite " value="{{ old('id_emp2') }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="id_users" class="form-label">USUÁRIO</label>
+                        <input type="number" name="id_users" id="id_users" 
+                            placeholder=" Digite " value="{{ old('id_users') }}">
+                    </div>
+
                     <div class="mb-3">
                         <label for="percentual" class="form-label"> PERCENTUAL</label>
                         <input type="text"  name="percentual" id="percentual"   required>
@@ -47,15 +41,14 @@
                             placeholder=" Digite o descricao" value="{{ old('descricao') }}">
                     </div>
                 </div>
-        
                 
-            <a  class="btnCadastrar">
-                <button type="submit">
-                    <h5>CONCLUIR</h5>
-                    <i class="fa-solid fa-angle-right"></i>
-                </button>  
-            </a>
-        </form>
+                <a  class="btnCadastrar">
+                    <button type="submit">
+                        <h5>CONCLUIR</h5>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>  
+                </a>
+            </form>
         
         </div>
     </div>

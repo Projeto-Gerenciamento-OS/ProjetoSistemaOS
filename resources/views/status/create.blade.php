@@ -14,11 +14,11 @@
         </div> 
         
         <div class="card-body"> 
-            <form action="{{ route('status.store') }}" method="POST" class="row  ">
+            <form action="{{ route('status.store') }}" method="POST" >
                 @csrf
                 @method('POST')
 
-                <div class="col-6">
+                <div class="BodyLayout">
                     <div class="mb-3">
                         <label for="cor" class="form-label"> COR</label>
                         <input type="text" name="cor" id="cor"  placeholder="Digite aqui..."
@@ -32,9 +32,7 @@
                         <input type="text" name="descricao" id="descricao"  placeholder="descricao completa"
                         value="{{ old('descricao') }}">
                     </div>
-                </div>
 
-                <div class="col-6">
                     <div class="mb-3">
                         <label for="id_emp2" class="form-label">EMPRESA 2 </label>
                         <input type="text" name="id_emp2" id="id_emp2"  placeholder="Digite aqui..."
