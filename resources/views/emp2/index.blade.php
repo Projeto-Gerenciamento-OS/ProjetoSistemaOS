@@ -24,7 +24,7 @@
                 </button>  
             </a>    
         </div>
-      
+        
         <div class="card-body"> 
             <x-alert />
 

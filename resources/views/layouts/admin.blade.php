@@ -20,7 +20,7 @@
 </head>
 <body>
     
-    <nav id="sidebar" class=''>
+    <nav id="sidebar" class='open-sidebar'>
         <div id="sidebar_content">
             
             <a href="{{('dashboard')}}" class="nav-logo">
