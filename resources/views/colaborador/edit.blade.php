@@ -19,7 +19,7 @@
                 <form method="POST" action="{{ route('colaborador.delete', ['colaborador' => $colaborador->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn  btn-sm me-1"
+                    <button type="submit" class="btn  "
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
@@ -37,7 +37,7 @@
 
 
 
-                <div class="col-6 col-lg-6">
+                <div class="BodyLayout">
     
                     <div class="mb-3">
                         <label class="form-label"  for="nome" class="form-label">NOME:</label>
@@ -55,9 +55,6 @@
                         <input type="text" name="id_emp2" id="id_emp2" placeholder="id_emp2" value="{{ old('id_emp2',$colaborador->id_emp2) }}">              
                     </div>
     
-                </div>
-
-                <div class="col-6 col-lg-6">
                     <div class="mb-3">
                         <label class="form-label"  for="id_users" class="form-label">USUÁRIO</label>
                         <input type="number" name="id_users" id="id_users" placeholder="id_users" value="{{ old('id_users',$colaborador->id_users) }}">              

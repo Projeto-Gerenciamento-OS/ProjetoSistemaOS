@@ -22,7 +22,7 @@
                 <form method="POST" action="{{ route('servico.delete', ['servico' => $servico->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn  btn-sm me-1 "
+                    <button type="submit" class="btn   "
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
@@ -39,7 +39,7 @@
                 @csrf
                 @method('PUT')
 
-                <div class="col-6 col-lg-6">
+                <div class="BodyLayout">
                     <div class="mb-3">
                         <label for="nome" >NOME </label>
                         <input type="text" name="nome" id="nome"  placeholder="Nome completo"
@@ -68,11 +68,7 @@
                         <input type="text" name="obs" id="obs" 
                         placeholder="coloque o obs" value="{{ old('obs', $servico->obs) }}">
                     </div>
-
-                </div>
-
-
-                <div class="col-6 col-lg-6 mt-2">
+                    
                     <div class="mb-3">
                         <label for="recorrente" class="form-label">RECORRENTE</label>
                         <input type="text" name="recorrente" id="recorrente"  value="{{ old('recorrente', $servico->recorrente) }}" >

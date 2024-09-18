@@ -22,7 +22,7 @@
                 <form method="POST" action="{{ route('setor.delete', ['setor' => $setor->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn  btn-sm me-1 "
+                    <button type="submit" class="btn   "
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
@@ -39,7 +39,7 @@
                 @csrf
                 @method('PUT')
 
-                <div class="col-6 col-lg-6 ">
+                <div class="BodyLayout">
                     <div class="mb-3">
                         <label for="id_emp2" >EMPRESA 2</label>
                         <input type="text" name="id_emp2" id="id_emp2"  placeholder="id_emp2 completo"

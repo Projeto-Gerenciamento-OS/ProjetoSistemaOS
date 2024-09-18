@@ -17,7 +17,7 @@
                 @csrf
                 @method('POST')
 
-                <div class="col-6 col-lg-6">
+                <div class="BodyLayout">
 
                     <div class="mb-3">
                         <label for="qtde" class="form-label">QUANTIDADE</label>
@@ -42,10 +42,6 @@
                         <input type="text" name="cunit" id="cunit"  placeholder=" Digite o cunit"
                             value="{{ old('cunit') }}">
                     </div>
-
-                </div>
-
-                <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
                         <label for="ctotal" class="form-label">CUSTO</label>

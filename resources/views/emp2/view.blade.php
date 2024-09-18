@@ -13,7 +13,7 @@
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
     
-                <a href="{{ route('emp2.edit', ['emp2' => $emp2->id]) }}" class="btn  btn-sm me-1">
+                <a href="{{ route('emp2.edit', ['emp2' => $emp2->id]) }}" class="btn  ">
                     <span class="listar-texto">EDIÇÃO</span>
                     <i class="fa-solid fa-pen"></i>
                 </a>
@@ -21,7 +21,7 @@
                 <form method="POST" action="{{ route('emp2.delete', ['emp2' => $emp2->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn  btn-sm me-1"
+                    <button type="submit" class="btn  "
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>

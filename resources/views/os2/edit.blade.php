@@ -38,7 +38,7 @@
                     @csrf
                     @method('PUT')
                 
-                    <div class="col-6 col-lg-6">
+                    <div class="BodyLayout">
                         <div class="mb-3">
                             <label for="qtde">QUANTIDADE</label>
                             <input type="text" name="qtde" id="qtde"  placeholder="Digite aqui "
@@ -74,9 +74,7 @@
                             <input type="text" name="id_emp2" id="id_emp2"  placeholder=" id_emp2"
                                 value="{{ old('id_emp2', $os2->id_emp2) }}">
                         </div>
-                    </div>
-
-                    <div class="col-6 col-lg-6">
+                        
                         <div class="mb-3">
                             <label for="id_os1" >ID OS1</label>
                             <input type="text" name="id_os1" id="id_os1"  placeholder=" id_os1"

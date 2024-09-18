@@ -22,7 +22,7 @@
                 <form method="POST" action="{{ route('emp2.delete', ['emp2' => $emp2->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn  btn-sm me-1"
+                    <button type="submit" class="btn  "
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
@@ -37,7 +37,7 @@
                 @csrf
                 @method('PUT')
 
-                <div class="col-6 col-lg-6">
+                <div class="BodyLayout">
                     <div class="mb-3">
                         <label class="form-label" for="id_emp1" >EMPRESA 1</label>
                         <input type="text" name="id_emp1" id="id_emp1"  placeholder="Digeite o(a) EMPRESA 1..."
@@ -67,10 +67,7 @@
                         <input type="text" name="qtdeoper" id="qtdeoper"  placeholder="Digeite o(a) QUANT DE OPER..."
                             value="{{ old('qtdeoper', $emp2->qtdeoper) }}">
                     </div>
-                </div>
                 
-                <div class="col-6 col-lg-6">   
-
                     <div class="mb-3">
                         <label class="form-label" for="cidade" >CIDADE</label>
                         <input type="text" name="cidade" id="cidade"  placeholder="Digeite o(a) CIDADE..."
@@ -101,10 +98,6 @@
                             value="{{ old('uf', $emp2->uf) }}">
                     </div>
 
-                </div>
-                
-                <div class="col-6 col-lg-6">   
-                    
                     <div class="mb-3">
                         <label class="form-label" for="cep" >CEP</label>
                         <input type="text" name="cep" id="cep"  placeholder="Digeite o(a) CEP..."
@@ -134,7 +127,6 @@
                         <input type="text" name="fantasia" id="fantasia"  placeholder="Digeite o(a) FANTASIA..."
                             value="{{ old('fantasia', $emp2->fantasia) }}">
                     </div>
-        
                 </div>   
                     
                 <a  class="btnCadastrar">

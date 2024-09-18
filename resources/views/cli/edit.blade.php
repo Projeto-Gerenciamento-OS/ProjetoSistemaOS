@@ -14,7 +14,7 @@
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('cli.view', ['cli' => $cli->id]) }}" class="btn ">
+                    <a href="{{ route('cli.view', ['cli' => $cli->id]) }}" class="btn">
                         <span class="listar-texto">VISUALIZAR</span>
                         <i class="fa-regular fa-eye"></i>
                     </a>
@@ -22,7 +22,7 @@
                     <form method="POST" action="{{ route('cli.delete', ['cli' => $cli->id]) }}">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn  "
+                        <button type="submit" class="btn"
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                             <span class="listar-texto">APAGAR</span>
                             <i class="fa-solid fa-trash"></i>
@@ -40,7 +40,7 @@
                     @method('PUT')
     
                             <!-- Coluna 1 -->
-                            <div class="col-lg-4">
+                            <div class="BodyLayout">
                                 
                                 <div class="mb-3">
                                     <label for="id_emp2" class="form-label">EMPRESA 2:</label>
@@ -71,11 +71,7 @@
                                     <label for="cpf_cnpj" class="form-label">CPF/CNPJ:</label>
                                     <input type="text" name="cpf_cnpj" id="cpf_cnpj" class="form-control" placeholder="Cpf/Cnpj" value="{{ old('cpf_cnpj', $cli->cpf_cnpj) }}">
                                 </div>
-                            </div>
-                            <!-- Coluna 2 -->
-    
-                            <div class="col-lg-2">
-    
+
                                 <div class="mb-3">
                                     <label for="cep" class="form-label">CEP:</label>
                                     <input type="text" name="cep" id="cep" class="form-control" placeholder="Cep" value="{{ old('cep', $cli->cep) }}">
@@ -100,19 +96,13 @@
                                 <div class="mb-3">
                                     <label for="bairro" class="form-label">BAIRRO:</label>
                                     <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Bairro" value="{{ old('bairro', $cli->bairro) }}">
-                            </div>
-    
-                            <div class="mb-3">
-                                <label for="cidade" class="form-label">CIDADE:</label>
-                                <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Cidade" value="{{ old('cidade', $cli->cidade) }}">
-                            </div>
-    
-                            
-                            </div>
-                            
-                            <!-- Coluna 3 -->
-                            <div class="col-lg-4">              
-    
+                                </div>
+        
+                                <div class="mb-3">
+                                    <label for="cidade" class="form-label">CIDADE:</label>
+                                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Cidade" value="{{ old('cidade', $cli->cidade) }}">
+                                </div>           
+        
                                 <div class="mb-3">
                                     <label for="uf" class="form-label">UF:</label>
                                     <input type="text" name="uf" id="uf" class="form-control" placeholder="UF" value="{{ old('uf', $cli->uf) }}">
@@ -122,7 +112,6 @@
                                     <label for="email" class="form-label">EMAIL:</label>
                                     <input type="email" name="email" id="email" class="form-control" placeholder="Email" value="{{ old('email', $cli->email) }}">
                                 </div>
-                                
                             
                                 <div class="mb-3">
                                     <label for="fone1" class="form-label">TELEFONE 1:</label>

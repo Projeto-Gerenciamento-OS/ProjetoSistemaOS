@@ -22,7 +22,7 @@
                 <form method="POST" action="{{ route('turno.delete', ['turno' => $turno->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn  btn-sm me-1 "
+                    <button type="submit" class="btn   "
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
@@ -38,7 +38,7 @@
             <form action="{{ route('turno.update', ['turno' => $turno->id]) }}" method="POST" class="row  ">
                 @csrf
                 @method('PUT')
-                <div class="col-6 col-lg-6">
+                <div class="BodyLayout">
                     <div class="mb-3">
                         <label for="nome" class="form-label" >NOME</label>
                         <input type="text" name="nome" id="nome"  placeholder="Digeite o(a) NOME..."
@@ -56,10 +56,7 @@
                         <input type="text" name="id_users" id="id_users"    placeholder="Digeite o(a) USUARIOS..."
                             value="{{ old('id_users', $turno->id_users) }}" >
                     </div>
-                </div>
-
-
-                <div class="col-6 col-lg-6">
+                    
                     <div class="mb-3">
                         <label for="termino" class="form-label">TERMINO</label>
                         <input type="time" name="termino" id="termino"    placeholder="Digeite o(a) TERMINO..."

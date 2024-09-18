@@ -21,7 +21,7 @@
                 @csrf
                 @method('POST')
         
-                <div class="col-6 col-lg-6 ">
+                <div class="">
                     <div class="mb-3">
                         <label for="descricao" class="form-label">DESCRIÇÃO</label>
                         <input class="col-12 " type="text" name="descricao" id="descricao" class="form-control" 

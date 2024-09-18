@@ -22,7 +22,7 @@
                 <form method="POST" action="{{ route('status.delete', ['status' => $status->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn  btn-sm me-1"
+                    <button type="submit" class="btn  "
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
@@ -39,7 +39,7 @@
                 @csrf
                 @method('PUT')
 
-                <div class="col-6 col-lg-6">
+                <div class="BodyLayout">
 
                     <div class="mb-3">
                         <label for="id_emp2" class="form-label">EMPRESA 2</label>
@@ -52,9 +52,7 @@
                         <input type="number" name="id_users" id="id_users" 
                             placeholder="Digite aqui..." value="{{ old('id_users', $status->id_users) }}">
                     </div>
-                </div>
-
-                <div class="col-6 col-lg-6">
+                    
                     <div class="mb-3">
                         <label for="cor" class="form-label"> COR</label>
                         <input type="text" name="cor" id="cor" 

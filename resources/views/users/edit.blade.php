@@ -4,7 +4,6 @@
 
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista  ">
-        
         <div class="  card-header"  >
             <h2 class="mt-3">EDIÇÃO</h2>
 
@@ -22,11 +21,10 @@
                 <form method="POST" action="{{ route('user.delete', ['user' => $user->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn   btn-sm me-1"
+                    <button type="submit" class="btn"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                         <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
-                    
                     </button>
                 </form>
             </span>
@@ -39,7 +37,7 @@
                 @csrf
                 @method('PUT')
 
-                <div class="col-6 col-lg-6">
+                <div class="BodyLayout">
                     <div class="mb-3">
                         <label class="form-label" for="nome" >NOME </label>
                         <input type="text" name="nome" id="nome"  placeholder="Digeite o(a) NOME..."
@@ -56,9 +54,6 @@
                         <label class="form-label" for="password" >SENHA</label>
                         <input type="password" name="password" id="password"   placeholder="Digeite o(a) SENHA...">
                     </div>
-                </div>
-
-                <div class="col-6 col-lg-6">
 
                     <div class="mb-3">
                         <label for="roles" class="form-label">NÍVEL</label>
