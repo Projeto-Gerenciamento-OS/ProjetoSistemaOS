@@ -87,8 +87,6 @@
                             <div class="alert alert-danger" role="alert">Nenhuma OS encontrada!</div>
                         @endforelse
                     </tbody>
-
-                      
                 </table>
             </div>
             {{ $os1->onEachSide(0)->links() }} 

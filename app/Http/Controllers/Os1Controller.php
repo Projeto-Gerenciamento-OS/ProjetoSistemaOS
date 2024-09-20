@@ -62,7 +62,7 @@ class Os1Controller extends Controller
 
             DB::commit();
 
-            return redirect()->route('os.index', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
+            return redirect()->route('os1.create', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
         } catch (Exception $e) {
 
             Log::info('Os1 não cadastrado.', ['error' => $e->getMessage()]);
