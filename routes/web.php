@@ -5,9 +5,11 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TimelineController;
+use App\Http\Controllers\EmpresasController;
 use App\Http\Controllers\Emp2Controller;
 use App\Http\Controllers\Emp1Controller;
 use App\Http\Controllers\ColaboradorController;
+use App\Http\Controllers\CadGeralController;
 use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\MateriaisController;
 use App\Http\Controllers\CustosController;
@@ -51,6 +53,7 @@ Route::get('/edit-user-password/{user}', [UserController::class, 'editPassword']
 Route::put('/update-user-password/{user}', [UserController::class, 'updatePassword'])->name('user.update-password');
 Route::delete('/delete-user/{user}', [UserController::class, 'delete'])->name('user.delete');
 
+Route::get('/empresas',[EmpresasController::class, 'index'])->name('empresas.index');
 
 //Empresa
 Route::get('/emp2',[Emp2Controller::class, 'index'])->name('emp2.index');
@@ -72,8 +75,6 @@ Route::put('/update-emp1/{emp1}', [Emp1Controller::class, 'update'])->name('emp1
 Route::delete('/delete-emp1/{emp1}', [Emp1Controller::class, 'delete'])->name('emp1.delete');
 
 
-
-
 //Colaborador
 Route::get('/colaborador',[ColaboradorController::class, 'index'])->name('colaborador.index');
 Route::get('/view-colaborador/{colaborador}',[ColaboradorController::class, 'view'])->name('colaborador.view');
@@ -83,6 +84,7 @@ Route::get('/edit-colaborador/{colaborador}',[ColaboradorController::class, 'edi
 Route::put('/update-colaborador/{colaborador}',[ColaboradorController::class, 'update'])->name('colaborador.update');
 Route::delete('/delete-colaborador/{colaborador}', [ColaboradorController::class, 'delete'])->name('colaborador.delete');
 
+Route::get('/cadGeral', [CadGeralController::class, 'index'])->name('cadGeral.index');
 
 //Serviços Gerais
 Route::get('/servico', [ServicoController::class, 'index'])->name('servico.index');
@@ -156,15 +158,14 @@ Route::get('/os',[OSsController::class, 'index'])->name('os.index');
 
 Route::prefix('os1')->name('os1.')->group(function () {
 
-Route::get('/', [Os1Controller::class, 'index'])->name('index');
-Route::get('/create', [Os1Controller::class, 'create'])->name('create');
-Route::post('/store', [Os1Controller::class, 'store'])->name('store');
-Route::get('/view/{os1}', [Os1Controller::class, 'view'])->name('view');
-Route::get('/edit/{os1}', [Os1Controller::class, 'edit'])->name('edit');
-Route::put('/update/{os1}', [Os1Controller::class, 'update'])->name('update');
-Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete');
+    Route::get('/', [Os1Controller::class, 'index'])->name('index');
+    Route::get('/create', [Os1Controller::class, 'create'])->name('create');
+    Route::post('/store', [Os1Controller::class, 'store'])->name('store');
+    Route::get('/view/{os1}', [Os1Controller::class, 'view'])->name('view');
+    Route::get('/edit/{os1}', [Os1Controller::class, 'edit'])->name('edit');
+    Route::put('/update/{os1}', [Os1Controller::class, 'update'])->name('update');
+    Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete');
 
-// Rotas para OS2 dentro de OS1
     Route::prefix('/os2')->name('os2.')->group(function () {
         Route::get('/create', [Os2Controller::class, 'create'])->name('create');
         Route::get('/view/{os2}',[Os3Controller::class, 'view'])->name('view');
@@ -174,7 +175,6 @@ Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete')
         Route::delete('/delete/{os2}', [Os2Controller::class, 'delete'])->name('delete');
     });
 
-    // Rotas para OS3 dentro de OS1
     Route::prefix('/os3')->name('os3.')->group(function () {
         Route::get('/create', [Os3Controller::class, 'create'])->name('create');
         Route::get('/view/{os3}',[Os3Controller::class, 'view'])->name('view');
@@ -184,7 +184,6 @@ Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete')
         Route::delete('/delete/{os3}', [Os3Controller::class, 'delete'])->name('delete');
     });
 
-    // Rotas para OS3 dentro de OS1
     Route::prefix('/os4')->name('os4.')->group(function () {
         Route::get('/create', [Os4Controller::class, 'create'])->name('create');
         Route::get('/view/{os4}',[Os3Controller::class, 'view'])->name('view');
@@ -200,7 +199,6 @@ Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete')
 
 Route::get('/fullcalender', [FullCalenderController::class, 'index'])->name('fullcalender.index');
 Route::post('/fullcalenderAjax', [FullCalenderController::class, 'ajax']);
-  
 
 // Linha do tempo
 Route::get('/index-timeline', [TimelineController::class, 'index'])->name('timeline.index');

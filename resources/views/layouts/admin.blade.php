@@ -51,25 +51,14 @@
                 </li>
     
                 <li class="side-item">
-                    @can('empresas','empresa')
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsEmp" aria-expanded="false" aria-controls="collapseLayoutsEmp">
-                        <i class="fa-solid fa-chalkboard-user "></i>
-                        
-                        <span class="nav-text item-description">
-                            Empresas
-                        </span>
-
-                        <div class="sb-sidenav-collapse-arrow mx-1">
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                    </a>
-
-                    <div class="collapse" id="collapseLayoutsEmp" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">                         
-                            <a class="nav-link" href="{{ route('emp1.index') }}">Empresa 1</a>
-                            <a class="nav-link" href="{{ route('emp2.index') }}">Empresa 2</a>
-                        </nav>
-                    </div>
+                    @can('index-user')
+                        <a @class(['nav-link', 'active' => isset($menu) && $menu =='user']) href="{{ route('empresas.index')}}">
+                            <i class="fa-regular fa-building"></i>
+                            
+                            <span class="nav-text item-description">
+                                Empresas
+                            </span>
+                        </a>
                     @endcan
                 </li>
     
@@ -85,7 +74,7 @@
     
                 <li class="side-item">
                     <a @class(['nav-link', 'active' => isset($menu) && $menu =='coloaborador']) href="{{route('colaborador.index') }}">
-                        <i class="fa-solid fa-chalkboard-user "></i>
+                        <i class="fa-solid fa-people-group"></i>
                         
                         <span class="nav-text item-description">
                             Colaborador
@@ -94,28 +83,13 @@
                 </li>
     
                 <li class="side-item">
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <a @class(['nav-link', 'active' => isset($menu) && $menu =='coloaborador']) href="{{route('cadGeral.index') }}">
                         <i class="fas fa-columns "></i>
-
+                        
                         <span class="nav-text item-description">
                             Cadastro Gerais
                         </span>
-
-                        <div class="sb-sidenav-collapse-arrow mx-1">
-                            <i class="fas fa-angle-down"></i>
-                        </div>
                     </a>
-                
-                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav fundo-nav-cadastros-gerais">
-                            <a class="nav-link" href="{{route('servico.index') }}">Serviços Gerais</a>
-                            <a class="nav-link" href="{{route('materiais.index') }}">Materiais</a>
-                            <a class="nav-link" href="{{route('custos.index') }}">Custo Geral</a>
-                            <a class="nav-link" href="{{route('status.index') }}">Status</a>
-                            <a class="nav-link" href="{{route('turno.index') }}">Turno</a>
-                            <a class="nav-link" href="{{route('setor.index') }}">Setor</a>
-                        </nav>
-                    </div>
                 </li>
 
                 <li class="side-item">
@@ -137,7 +111,6 @@
                         </span>
                     </a>
                 </li>
-     
 
                 <li class="side-item">
                     <a @class(['nav-link', 'active' => isset($menu) && $menu =='timeline']) href="{{route('timeline.index') }}">

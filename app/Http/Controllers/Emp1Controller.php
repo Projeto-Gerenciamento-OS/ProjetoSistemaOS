@@ -27,9 +27,7 @@ class Emp1Controller extends Controller
         return view('emp1.index', ['emp1', 'emp1'=> $emp1,'descricao'=>$request->descricao]);    
 
     }
-
-    //mostrar detalhes do usuario(view)
-   
+    
 
     public function view(Emp1 $emp1)
     {
