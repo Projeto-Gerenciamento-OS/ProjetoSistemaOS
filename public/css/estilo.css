@@ -11,14 +11,13 @@
 :root {
     --font-size: 14px;
     --espacoInternoBtn: 6px 10px;
-    --font-color-menu-nav:rgba(36, 59, 122);
-    --font-color-menu-footer:rgb(255, 255, 255);
+    --font-color-menu-nav:#243b7a;
     --font-family-menu:"Open Sans", sans-serif;
     --cor-cinza-claro: rgb(255, 255, 255);
     --cor-azul-1:#2a7cb8;
     --cor-azul-1-hover:#2a7db8d1;
     --cor-border-line:rgba(0, 0, 0, 0.563);
-    --cor-fundo:rgba(233, 233, 233, 0.293);
+    --cor-fundo:#e9e9e94b;
 }
 
 body {
@@ -482,7 +481,7 @@ body {
 .dashboard {
     .BodyLayout{
         display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(180px, 400px));
+        grid-template-columns: repeat(auto-fit, minmax(180px, 2fr));
         gap: 20px;
         padding: 20px;
         border-radius: 5px;
@@ -497,14 +496,24 @@ body {
             border: 0.2px solid rgba(0, 0, 0, 0.300);
             border-radius: 5px;
             align-items: center;    
+            background-color: #a09c9c50;
             
+            svg {
+                font-size: 1.2rem;
+                color: black;
+            }
+
             .dashTexto{
                 align-items: center;
-                color: blue;
-                
-                h1 {
-                    font-size: 1.6rem;
-                }
+                color: black;
+                margin-left: 10px;
+                font-size: 1rem;
+            }
+            
+            &:hover {
+                box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.358);
+                transition: linear .1s;
+                transform: scale(1.02);
             }
         }
         
