@@ -479,6 +479,43 @@ body {
     }
 }
 
+.dashboard {
+    .BodyLayout{
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(180px, 400px));
+        gap: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+
+        .dashCard {
+            padding: var(--espacoInternoBtn);
+            overflow: auto;
+            width: 100%  ;
+            border: 0.2px solid rgba(0, 0, 0, 0.300);
+            border-radius: 5px;
+            align-items: center;    
+            
+            .dashTexto{
+                align-items: center;
+                color: blue;
+                
+                h1 {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        
+        @media screen and (max-width: 736px) {
+            form div{
+                padding: 20px 5%;
+                margin-left: auto;
+            }
+        }
+    }
+}
 .btnCadastrar {
     text-decoration: none;
     display: flex;
