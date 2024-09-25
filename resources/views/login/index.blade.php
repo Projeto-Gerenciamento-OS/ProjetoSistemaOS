@@ -30,7 +30,7 @@
                 <input class="input-dado" type="text" name="email" value="{{old('email')}}">
 
                 <label for="password">Senha</label>
-                <input class="input-dado" type="password" na me="password">
+                <input class="input-dado" type="password" name="password">
             </div>
 
             <div class="botoes">
