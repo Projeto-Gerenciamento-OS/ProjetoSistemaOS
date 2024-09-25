@@ -20,18 +20,21 @@
 
     <div class="container">
         <div class="login-background">
-            <h1>LOGIN</h1>
+            <div class='logo'>
+                <img src="/img/logo - Copia.png" alt="">
+                <h1>LOGIN</h1>
+            </div>
 
             <div class="dados-usuario">
                 <label for="email">E-mail</label>
                 <input class="input-dado" type="text" name="email" value="{{old('email')}}">
+
                 <label for="password">Senha</label>
-                <input class="input-dado" type="password" name="password">
+                <input class="input-dado" type="password" na me="password">
             </div>
 
             <div class="botoes">
                 <button class="botao-entrar" type='submit'><span>Entrar</span></button>
-                <button class="seta-icon" type='submit'><i class="fa-solid fa-plus"></i></button>
             </div>
         </div>
     </div>
