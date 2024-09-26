@@ -13,6 +13,7 @@ use App\Http\Requests\Os3Request;
 use App\Http\Requests\Os4Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Http\JsonResponse;
 use Exception;
 
 
@@ -29,10 +30,56 @@ class Os1Controller extends Controller
         ->paginate(5)
         ->withQueryString();
 
+        if($request->ajax()) {
+   
+            $data = Os1::whereDate('start', '>=', $request->start)
+                      ->whereDate('end',   '<=', $request->end)
+                      ->get(['id', 'title', 'start', 'end']);
+   
+            return response()->json($data);
+
         return view('os.index', ['os1', 'os1'=> $os1,'id_status'=>$request->id_status]);
     }
     
-    
+}
+
+public function ajax(Request $request): JsonResponse
+{
+
+    switch ($request->type) {
+       case 'add':
+          $event = Os1::create([
+              'title' => $request->title,
+              'start' => $request->start,
+              'end' => $request->end,
+          ]);
+
+          return response()->json($event);
+         break;
+
+       case 'update':
+          $event = Os1::find($request->id)->update([
+              'title' => $request->title,
+              'start' => $request->start,
+              'end' => $request->end,
+          ]);
+
+          return response()->json($event);
+         break;
+
+       case 'delete':
+          $event = Os1::find($request->id)->delete();
+
+          return response()->json($event);
+         break;
+         
+       default:
+         # code...
+         break;
+    }
+}
+
+  
     public function create() {
         return view('os1.create', ['menu' => 'os1']);
     }
@@ -49,9 +96,9 @@ class Os1Controller extends Controller
                 'id_users' => $request->id_users,
                 'id_emp2' => $request->id_emp2,
                 'datacad' =>$request-> datacad,
-                'dhi' => $request->dhi,
-                'dhf' => $request->dhf,
-                'obs' => $request->obs,
+                'start' => $request->start,
+                'end' => $request->end,
+                'title' => $request->title,
                 'vtotal' =>$request-> vtotal,
                 'ctotal' => $request->ctotal,
                 'cindireto' => $request->cindireto,
@@ -94,9 +141,9 @@ class Os1Controller extends Controller
                 'id_users' => $request->id_users,
                 'id_emp2' => $request->id_emp2,
                 'datacad' =>$request-> datacad,
-                'dhi' => $request->dhi,
-                'dhf' => $request->dhf,
-                'obs' => $request->obs,
+                'start' => $request->start,
+                'end' => $request->end,
+                'title' => $request->title,
                 'vtotal' =>$request-> vtotal,
                 'ctotal' => $request->ctotal,
                 'cindireto' => $request->cindireto,

@@ -39,19 +39,19 @@
                 </div>
 
                 <div class="">
-                    <label for="dhi" class="form-label">INICIO</label>
-                    <input type="time"  name="dhi" id="dhi"  value="{{ old('dhi') }}" >
+                    <label for="start" class="form-label">INICIO</label>
+                    <input type="time"  name="start" id="start"  value="{{ old('start') }}" >
                 </div>
 
                 <div class="">
-                    <label for="dhf" class="form-label">FINAL</label>
-                    <input type="time"  name="dhf" id="dhf"  value="{{ old('dhf') }}" >
+                    <label for="end" class="form-label">FINAL</label>
+                    <input type="time"  name="end" id="end"  value="{{ old('end') }}" >
                 </div>
 
                 <div class="">
-                    <label for="obs" class="form-label"> OBS</label>
-                    <input type="text" name="obs" id="obs" 
-                        value="{{ old('obs') }}">
+                    <label for="title" class="form-label"> OBS</label>
+                    <input type="text" name="title" id="title" 
+                        value="{{ old('title') }}">
                 </div>
 
                 <div class="">

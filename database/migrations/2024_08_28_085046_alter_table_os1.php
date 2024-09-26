@@ -17,6 +17,7 @@ return new class extends Migration
         $table->foreignId('id_emp2')->constrained('emp2');
         $table->foreignId('id_status')->constrained('status');
         $table->foreignId('id_users')->constrained('users');
+       
     });
 }
 
