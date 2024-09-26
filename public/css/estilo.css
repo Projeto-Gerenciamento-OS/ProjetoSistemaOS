@@ -450,6 +450,7 @@ body {
                     
                     width: 100%;
                 }
+
                 div {
                     overflow: auto;
                     
@@ -489,13 +490,16 @@ body {
         width: 100%;
         justify-content: center;
 
-        .dashCard {
+        .dashCard, .dashExcluir {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             padding: var(--espacoInternoBtn);
             overflow: auto;
-            width: 100%  ;
+            height: 95px;
+            min-width: 184px;
             border: 0.2px solid rgba(0, 0, 0, 0.300);
-            border-radius: 5px;
-            align-items: center;    
+            border-radius: 5px;    
             background-color: #a09c9c50;
             
             svg {
@@ -509,6 +513,16 @@ body {
                 margin-left: 10px;
                 font-size: 1rem;
             }
+
+            .dashInfo {
+                color: black;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid #8a88886c;
+                padding-top: 6px;
+            }
             
             &:hover {
                 box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.358);
@@ -516,15 +530,23 @@ body {
                 transform: scale(1.02);
             }
         }
-        
-        @media screen and (max-width: 736px) {
-            form div{
-                padding: 20px 5%;
-                margin-left: auto;
+
+        .dashExcluir {
+            background-color: #c04747;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            .dashTexto, svg{
+                color: rgb(252, 252, 252);
+                font-size: 1.5rem;
             }
         }
+        
     }
 }
+
 .btnCadastrar {
     text-decoration: none;
     display: flex;
