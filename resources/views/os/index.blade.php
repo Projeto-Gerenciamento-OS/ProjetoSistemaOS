@@ -8,12 +8,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="" data-bs-target="#collapseOs1" aria-expanded="true" aria-controls="collapseOs1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs1" aria-expanded="true" aria-controls="collapseOs1">
                 OS 1
             </button>
         </h2>
         
-        <div id="collapseOs1" class="accordion-  show" data-bs-parent="#accordionOSs">
+        <div id="collapseOs1" class="accordion-collapse collapse show" data-bs-parent="#accordionOSs">
             <div class="card mb-4 cardCorLista ">
                 <div class="card-body" > 
                     <x-alert />
@@ -103,12 +103,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button " type="button" data-bs-toggle="" data-bs-target="#collapseOs2" aria-expanded="false" aria-controls="collapseOs2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs2" aria-expanded="false" aria-controls="collapseOs2">
                 OS 2
             </button>
         </h2>
 
-        <div id="collapseOs2" class="accordion- " data-bs-parent="#accordionOSs">
+        <div id="collapseOs2" class="accordion-collapse collapse " data-bs-parent="#accordionOSs">
 
             <div class="card mb-4 cardCorLista ">
                 <div class="card-body" > 
@@ -191,12 +191,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button " type="button" data-bs-toggle="" data-bs-target="#collapseOs3" aria-expanded="false" aria-controls="collapseOs3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs3" aria-expanded="false" aria-controls="collapseOs3">
                 OS 3
             </button>
         </h2>
 
-        <div id="collapseOs3" class="accordion- " data-bs-parent="#accordionOSs">
+        <div id="collapseOs3" class="accordion-collapse collapse " data-bs-parent="#accordionOSs">
             <div class="card mb-4 cardCorLista ">
                 
                 <div class="card-body" > 
@@ -276,12 +276,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button " type="button" data-bs-toggle="" data-bs-target="#collapseOs4" aria-expanded="false" aria-controls="collapseOs4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs4" aria-expanded="false" aria-controls="collapseOs4">
                 OS 4
             </button>
         </h2>
 
-        <div id="collapseOs4" class="accordion- " data-bs-parent="#accordionOSs">
+        <div id="collapseOs4" class="accordion-collapse collapse " data-bs-parent="#accordionOSs">
             <div class="card mb-4 cardCorLista ">
                 
                 <div class="card-body" > 
