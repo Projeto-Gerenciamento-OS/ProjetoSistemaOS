@@ -14,7 +14,7 @@
         </div> 
 
         <div class="card-body "> 
-            <form action="{{ route('os1.store') }}" method="POST" class=" osBody ">
+            <form action="{{ route('os1.store') }}" method="POST" class="osBody row g-3">
                 @csrf
                 @method('POST')
                     <div class="">
@@ -229,19 +229,8 @@
                         value="{{ old('ativo') }}">
                 </div>
 
-                <div class="mb-3">
-                    <label for="id_emp2" class="form-label">EMPRESA 2 </label>
-                    <input type="text" name="id_emp2" id="id_emp2"  placeholder=" Digite o id_emp2"
-                        value="{{ old('id_emp2') }}">
                 </div>
-        
-                <a  class="btnCadastrar">
-                    <button type="submit">
-                        <h5>CONCLUIR</h5>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>  
-                </a>
-            </form>                
+            </form>       
         </div>
     </div>
 </div>

@@ -683,3 +683,7 @@ body {
     width:90%;
     background-color: black;
 }
+
+.hidden {
+    display: none;
+}
