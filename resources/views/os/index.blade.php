@@ -268,11 +268,9 @@
                 
                         </tbody>
                     </table>
-                    {{ $os3->onEachSide(0)->links() }}
                 </div>
+                {{ $os3->onEachSide(0)->links() }}
             </div>
-                
-            
         </div>
     </div>
 
@@ -346,12 +344,11 @@
                     
                         </tbody>
                     </table>
-                    {{ $os4->onEachSide(0)->links() }} 
                 </div>
+                {{ $os4->onEachSide(0)->links() }}
             </div>
         </div>
     </div>
-
 </div>   
 </div> 
 

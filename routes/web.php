@@ -153,7 +153,6 @@ Route::get('/edit-cli/{cli}',[CliController::class, 'edit'])->name('cli.edit');
 Route::put('/update-cli/{cli}',[CliController::class, 'update'])->name('cli.update');
 Route::delete('/delete-cli/{cli}', [CliController::class, 'delete'])->name('cli.delete');
 
-//OSs
 Route::get('/os',[OSsController::class, 'index'])->name('os.index');
 
 Route::prefix('os1')->name('os1.')->group(function () {
@@ -196,9 +195,6 @@ Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete')
         Route::delete('/{os4}', [Os3Controller::class, 'delete'])->name('delete');
     });
 });
-
-
-
 //Agenda
 
 Route::get('/fullcalender', [FullCalenderController::class, 'index'])->name('fullcalender.index');
