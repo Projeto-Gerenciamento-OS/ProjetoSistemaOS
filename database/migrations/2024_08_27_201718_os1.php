@@ -14,9 +14,8 @@ return new class extends Migration
     {
         Schema::create('os1', function (Blueprint $table) {
             $table->id(); 
-            $table->string('datacad');
-            $table->dateTime('start');
-			$table->dateTime('end');
+            $table->string('start');
+			$table->string('end');
             $table->string('title');
             $table->float('vtotal');
 			$table->float('ctotal');
@@ -25,7 +24,6 @@ return new class extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */

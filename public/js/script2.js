@@ -72,3 +72,22 @@ else if (collapse[1].classList.contains('show')) {
 //     console.log("vai")
 //     os4.classList.remove('d-none')
 // })
+
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('click',   
+ () => {
+    const targetDivId = button.dataset.target;
+    const targetDiv = document.getElementById(targetDivId);   
+
+
+    // Esconde todas as divs
+    const allDivs = document.querySelectorAll('div[id^="div"]');
+    allDivs.forEach(div => div.classList.add('hidden'));
+
+    // Mostra a div clicada
+    targetDiv.classList.remove('hidden');
+  });
+});

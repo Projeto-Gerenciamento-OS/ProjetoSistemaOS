@@ -23,79 +23,34 @@ class Os1Controller extends Controller
 
     public function index(Request $request) {
         $os1= Os1::when($request->has('id_status'), function ($Query) use ($request){
-            $Query->where('id_status', 'like', '%' . $request->id_status . '%');
+            $Query->where('id_status', 'like', '%' . $request->id_status . '%');     
+       
         })
-        
+
         ->orderBy('created_at')
         ->paginate(5)
         ->withQueryString();
 
-        if($request->ajax()) {
-   
-            $data = Os1::whereDate('start', '>=', $request->start)
-                      ->whereDate('end',   '<=', $request->end)
-                      ->get(['id', 'title', 'start', 'end']);
-   
-            return response()->json($data);
-
         return view('os.index', ['os1', 'os1'=> $os1,'id_status'=>$request->id_status]);
     }
     
-}
 
-public function ajax(Request $request): JsonResponse
-{
-
-    switch ($request->type) {
-       case 'add':
-          $event = Os1::create([
-              'title' => $request->title,
-              'start' => $request->start,
-              'end' => $request->end,
-          ]);
-
-          return response()->json($event);
-         break;
-
-       case 'update':
-          $event = Os1::find($request->id)->update([
-              'title' => $request->title,
-              'start' => $request->start,
-              'end' => $request->end,
-          ]);
-
-          return response()->json($event);
-         break;
-
-       case 'delete':
-          $event = Os1::find($request->id)->delete();
-
-          return response()->json($event);
-         break;
-         
-       default:
-         # code...
-         break;
-    }
-}
-
-  
     public function create() {
         return view('os1.create', ['menu' => 'os1']);
     }
 
     public function store(Os1Request $request){
+  
         $request->validated();
-
+        // dd($request->all());
         DB::beginTransaction();
 
         try {
-
+        
             $os1 = Os1::create([
                 'id_status' => $request->id_status,
                 'id_users' => $request->id_users,
                 'id_emp2' => $request->id_emp2,
-                'datacad' =>$request-> datacad,
                 'start' => $request->start,
                 'end' => $request->end,
                 'title' => $request->title,
@@ -105,14 +60,50 @@ public function ajax(Request $request): JsonResponse
                 'vresultado' => $request->vresultado,
             ]);
 
+      
+            $os2 = Os2::create([
+                'qtde' => $request->qtde,
+                'vunit' => $request->vunit,
+                'vtotal' => $request->vtotal,
+                'cunit' => $request->cunit,
+                'ctotal' => $request->ctotal,
+                'id_emp2' => $request->id_emp2,
+                'id_os1' => $request->id_os1,
+                'id_servico' => $request->id_servico,
+                'id_colaborador' => $request->id_colaborador,
+            ]);
+
+            // $os3 = Os3::create([
+            //    'qtde' => $request->qtde,
+            //    'vunit' => $request->vunit,
+            //    'vtotal' => $request->vtotal,
+            //    'cunit' => $request->cunit,
+            //    'ctotal' => $request->ctotal,
+            //    'id_emp2' => $request->id_emp2,
+            //    'id_os1' => $request->id_os1,
+            //    'id_materiais' => $request->id_materiais,
+            // ]);
+
+            // $os4 = Os4::create([
+            //  'descricao' => $request->descricao,
+            //  'percentual' => $request->percentual,
+            //  'valor' => $request->valor,
+            //  'ativo' => $request->ativo,
+            //  'id_emp2' => $request->id_emp2,
+            // ]);
+
+
             Log::info('Os1 cadastrado.', ['id' => $os1->id, $os1]);
+ 
 
             DB::commit();
 
-            return redirect()->route('os1.create', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
-        } catch (Exception $e) {
+            return redirect()->route('os1.index', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
 
+        } catch (Exception $e) {
+               
             Log::info('Os1 não cadastrado.', ['error' => $e->getMessage()]);
+
 
             DB::rollBack();
 
@@ -130,7 +121,7 @@ public function ajax(Request $request): JsonResponse
         return view('os1.edit', compact('os1'));
     }
 
-    public function update(Os1Request $request, Os1 $os1, Os2 $os2, Os3 $os3, Os4 $os4){
+    public function update(Os1Request $request){
         $request->validated();
     
         DB::beginTransaction();
@@ -150,8 +141,7 @@ public function ajax(Request $request): JsonResponse
                 'vresultado' => $request->vresultado,
             ]);
     
-            if (is_array($request->os2) || is_object($request->os2)) {
-                foreach ($request->os2 as $id => $data) {
+         
                     $os2 = Os2::find($id);
                     if ($os2) { 
                         $os2->update([
@@ -166,41 +156,38 @@ public function ajax(Request $request): JsonResponse
                             'id_colaborador' => $request->id_colaborador,
                         ]);
                     }
-                }
-            }
+                
+        
+            //         $os3 = Os3::find($id);
+            //         if ($os3) {
+            //             $os3->update([
+            //                 'qtde' => $request->qtde,
+            //                 'vunit' => $request->vunit,
+            //                 'vtotal' => $request->vtotal,
+            //                 'cunit' => $request->cunit,
+            //                 'ctotal' => $request->ctotal,
+            //                 'id_emp2' => $request->id_emp2,
+            //                 'id_os1' => $request->id_os1,
+            //                 'id_materiais' => $request->id_materiais,
+            //             ]);
+            //         }
+            //     }
+            // }
     
-            if (is_array($request->os3) || is_object($request->os3)) {
-                foreach ($request->os3 as $id => $data) {
-                    $os3 = Os3::find($id);
-                    if ($os3) {
-                        $os3->update([
-                            'qtde' => $request->qtde,
-                            'vunit' => $request->vunit,
-                            'vtotal' => $request->vtotal,
-                            'cunit' => $request->cunit,
-                            'ctotal' => $request->ctotal,
-                            'id_emp2' => $request->id_emp2,
-                            'id_os1' => $request->id_os1,
-                            'id_materiais' => $request->id_materiais,
-                        ]);
-                    }
-                }
-            }
-    
-            if (is_array($request->os4) || is_object($request->os4)) {
-                foreach ($request->os4 as $id => $data) {
-                    $os4 = Os4::find($id);
-                    if ($os4) {
-                        $os4->update([
-                            'descricao' => $request->descricao,
-                            'percentual' => $request->percentual,
-                            'valor' => $request->valor,
-                            'ativo' => $request->ativo,
-                            'id_emp2' => $request->id_emp2,
-                        ]);
-                    }
-                }
-            }
+            // if (is_array($request->os4) || is_object($request->os4)) {
+            //     foreach ($request->os4 as $id => $data) {
+            //         $os4 = Os4::find($id);
+            //         if ($os4) {
+            //             $os4->update([
+            //                 'descricao' => $request->descricao,
+            //                 'percentual' => $request->percentual,
+            //                 'valor' => $request->valor,
+            //                 'ativo' => $request->ativo,
+            //                 'id_emp2' => $request->id_emp2,
+            //             ]);
+            //         }
+            //     }
+            // }
 
     
             Log::info('Os1 editado.', ['id' => $os1->id]);
