@@ -101,7 +101,7 @@
         </div>
     </div>
 
-    <div class="accordion-item">
+    {{-- <div class="accordion-item">
         <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs2" aria-expanded="false" aria-controls="collapseOs2">
                 OS 2
@@ -348,7 +348,7 @@
                 {{ $os4->onEachSide(0)->links() }}
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>   
 </div> 
 

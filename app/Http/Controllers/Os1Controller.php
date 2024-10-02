@@ -62,7 +62,7 @@ class Os1Controller extends Controller
 
             DB::commit();
 
-            return redirect()->route('os.index', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
+            return redirect()->route('os1.create', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
         } catch (Exception $e) {
 
             Log::info('Os1 não cadastrado.', ['error' => $e->getMessage()]);
@@ -103,7 +103,7 @@ class Os1Controller extends Controller
                 'vresultado' => $request->vresultado,
             ]);
     
-            if (is_array($request->os2) || is_object($request->os2)) {
+           if (is_array($request->os2) || is_object($request->os2)) {
                 foreach ($request->os2 as $id => $data) {
                     $os2 = Os2::find($id);
                     if ($os2) { 
