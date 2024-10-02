@@ -15,11 +15,27 @@ class UserSeeder extends Seeder
                 'nome' => 'Wellington',
                 'email' => 'welltecnic@gmail.com',
                 'password' => Hash::make('123456', ['rounds' => 12]),
-                'tipo' => 1,           
+                'tipo' => 1,  
+                'id_emp2' =>1,
+                
             ]);
 
              //Atribuir o papel para o usuario
              $superAdmin->assignRole('Super Admin');
+        }
+
+        if (!User::where('email', 'gustavo@gmail.com')->first()) {
+            $superAdmin= User::create([
+                'nome' => 'gustavo',
+                'email' => 'gustavo@gmail.com',
+                'password' => Hash::make('gustavo@gmail.com', ['rounds' => 12]),
+                'tipo' => 1,  
+                'id_emp2' =>1,
+                
+            ]);
+
+             //Atribuir o papel para o usuario
+            $superAdmin->assignRole('Super Admin');
         }
 
         
@@ -29,6 +45,7 @@ class UserSeeder extends Seeder
                 'email' => 'admin@gmail.com',
                 'password' => Hash::make('123456', ['rounds' => 12]),
                 'tipo' => 1,
+                'id_emp2'=>1,  
                
             ]);
                 //Atribuir o papel para o usuario
@@ -42,6 +59,7 @@ class UserSeeder extends Seeder
                 'email' => 'colaborador@gmail.com',
                 'password' => Hash::make('123456', ['rounds' => 12]),
                 'tipo' => 1,
+                'id_emp2'=>1,  
                
             ]);
             //Atribuir o papel para o usuario

@@ -42,11 +42,12 @@ class MateriaisController extends Controller
 
           
             $materiais = Materiais::create([
-                'nome' => $request->nome,
-                'custo' => $request->custo,
-                'unidade' => $request->unidade,
-                'valor' => $request->valor,
                 'descricao' => $request->descricao,
+                'unidade' => $request->unidade,
+                'custo' => $request->custo,
+                'valor' => $request->valor,
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
             ]);
 
            
@@ -91,11 +92,12 @@ class MateriaisController extends Controller
         try {
             $materiais->update([
 
-                'nome' => $request->nome,
-                'custo' => $request->custo,
+                'descricao' => $request->descricao,
                 'unidade' => $request->unidade,
+                'custo' => $request->custo,
                 'valor' => $request->valor,
-                'descricao' => $request->descricao, 
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
 
             ]);
 
@@ -138,7 +140,7 @@ class MateriaisController extends Controller
             Log::info('Material não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
+            return redirect()->route('materiais.index')->with('error', 'Usuário não excluído!');
         }
     }
 }

@@ -2,22 +2,11 @@
    box-sizing: border-box;
    padding: 0;
    margin: 0;
+   /* border: 1px solid red; */
 }
 
 body {
    min-height: 100vh;
-   &::before {
-       content:'';
-       position:absolute;
-       top:0;
-       right:0;
-       left:0;
-       bottom:0;
-       background: linear-gradient(90deg,  rgba(2, 37, 70, 0.3), rgba(6, 66, 121, 0.3),  rgba(2, 37, 70, 0.3)) 50% 0 / 100% 50% no-repeat,
-               linear-gradient(90deg, rgba(2, 37, 70, 0.3), rgba(193, 77, 38, 0.13), rgba(2, 37, 70, 0.3)) 50% 100% / 100% 50% no-repeat;
-       z-index:-1;
-       filter:blur(100px);
-   }
 }
 
 
@@ -40,7 +29,7 @@ form {
          top:0.5rem;
          
          li {
-            color:#FFFF;
+            color:#0a0a0a;
             font-weight: 500;
          }
       }
@@ -66,20 +55,33 @@ form {
          align-items: center;
          flex-direction: column;
          
-         h1 {
-            color:#000;
+         .logo {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+            /* margin: 10px auto; */
+            color:#000000;
+            position: relative;
+            flex-direction: column;
+            h1 {
+               color:#000000;
+            }
+            
+            img {
+               height: 50px;
+            }
          }
-         
+
          .dados-usuario {
             display:flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            width: 60%;
-            min-width: 230px;
-            height:50%;
-            gap:10px;
-            color:#FFFF;
+            width: 230px;
+            padding: 6% 0 10% 0;
+            gap:20px;
+            color:#000000;
          
             label {
                width: 70%;
@@ -87,8 +89,7 @@ form {
             }
             
             .input-dado {
-               width: 70%;
-               min-width: 200px;
+               width: 200px;
                height: 45px;
                padding: 5px 10px;
                border-radius:5px;
@@ -111,9 +112,8 @@ form {
             min-width: 230px;
             
             .botao-entrar{
-               width: 60%;
-               min-width: 140px;
-               max-width: 160px;
+               width: 100%;
+               width: 200px;
                height: 45px;
                padding: 5px 10px;
                cursor:pointer;
@@ -124,23 +124,6 @@ form {
                font-size: 20px;
             }
             
-            .seta-icon{
-               width: 24%;
-               max-width: 60px;
-               min-width: 25px;
-               height: 45px;
-               padding: 5px 10px;
-               cursor:pointer;
-               border-radius:5px;
-               border:0.2px solid black;
-               background-color: rgba(255,255,255,21%);
-               border:none;
-               box-shadow:0px 3px 6px 1px rgba(0, 0, 0, 0.25);
-               
-               i {
-                  width:20px;
-               }
-            }
          }
       }
    }

@@ -17,7 +17,7 @@
                     <div class="form-floating mb-3">
                         <input type="text" name="name" class="form-control" id="name"
                             placeholder="Digite o nome completo" value="{{ old('name') }}">
-                        <label for="name">Nome</label>
+                        <label for="name">NOME</label>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                        <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary btn-sm">CADASTRAR</button>
                     </div>
 
                 </form>

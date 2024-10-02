@@ -5,26 +5,26 @@
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista ">
         
-        <div class="cardHeaderAsociados card-header"  >
-            <h1 class="mt-3">Visualização</h1>
+        <div class="  card-header"  >
+            <h1 class="mt-3">Visualizar</h1>
             
             <span class="ms-auto d-flex flex-row gap-2">
-                <a href="{{ route('colaborador.index') }}" class="btn btn-primary">
-                    <span class="listar-texto">Listar</span>
+                <a href="{{ route('colaborador.index') }}" class="btn ">
+                    <span class="listar-texto">LISTAR</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
     
-                <a href="{{ route('colaborador.edit', ['colaborador' => $colaborador->id]) }}" class="btn btn-warning btn-sm me-1">
-                    <span class="listar-texto">Editar</span>
+                <a href="{{ route('colaborador.edit', ['colaborador' => $colaborador->id]) }}" class="btn  ">
+                    <span class="listar-texto">EDIÇÃO</span>
                     <i class="fa-solid fa-pen"></i>
                 </a>
     
                 <form method="POST" action="{{ route('colaborador.delete', ['colaborador' => $colaborador->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger btn-sm me-1"
+                    <button type="submit" class="btn  "
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                        <span class="listar-texto">Apagar</span>
+                        <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
                     
                     </button>
@@ -43,49 +43,44 @@
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Empresa1:</span>
-                    <p class="col-6">{{ $colaborador->empresa1_id}}</p>
-                </div>
-
-                <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Empresa2:</span>
-                    <p class="col-6">{{ $colaborador->empresa2_id}}</p>
-                </div>
-
-                <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Setor:</span>
-                    <p class="col-6">{{ $colaborador->setor_id}}</p>
-                </div>
-
-                <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Turno:</span>
-                    <p class="col-6">{{ $colaborador->turno_id}}</p>
-                </div>
-
-                <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Login:</span>
-                    <p class="col-6">{{ $colaborador->login_id}}</p>
-                </div>
-
-                <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Nome:</span>
+                    <span class='col-6 col-lg-4'> NOME:</span>
                     <p class="col-6">{{ $colaborador->nome}}</p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Telefone:</span>
-                    <p class="col-6">{{ $colaborador->telefone}}</p>
+                    <span class='col-6 col-lg-4'> TELEFONE:</span>
+                    <p class="col-6">{{ $colaborador->fone}}</p>
                 </div>
-                
+
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Cadastrado: </span>
+                    <span class='col-6 col-lg-4'> EMPRESA 2:</span>
+                    <p class="col-6">{{ $colaborador->id_emp2}}</p>
+                </div>
+
+                <div class='visualizacaoDados row'>
+                    <span class='col-6 col-lg-4'> USUÁRIO</span>
+                    <p class="col-6">{{ $colaborador->id_users}}</p>
+                </div>
+
+                <div class='visualizacaoDados row'>
+                    <span class='col-6 col-lg-4'> TURNO:</span>
+                    <p class="col-6">{{ $colaborador->id_turno}}</p>
+                </div>
+
+                <div class='visualizacaoDados row'>
+                    <span class='col-6 col-lg-4'> SETOR:</span>
+                    <p class="col-6">{{ $colaborador->id_setor}}</p>
+                </div>
+
+                <div class='visualizacaoDados row'>
+                    <span class='col-6 col-lg-4'>CADASTRADO:: </span>
                     <p class="col-6">
                         {{ \Carbon\Carbon::parse($colaborador->created_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>
                 </div>
 
                 <div class='visualizacaoDados row'>
-                    <span class='col-6 col-lg-4'> Editado: </span>
+                    <span class='col-6 col-lg-4'> EDITADO: </span>
                     <p class="col-6">
                         {{ \Carbon\Carbon::parse($colaborador->updated_at)->tz('America/Sao_Paulo')->format('d/m/Y H:i:s') }}
                     </p>

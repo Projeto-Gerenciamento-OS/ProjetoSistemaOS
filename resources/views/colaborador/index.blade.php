@@ -9,14 +9,20 @@
 
             <form action="{{ route('colaborador.index') }}">
                 <div class="pesquisar">
-                    
-                    <input type="text" name="nome" id="nome" class="form-control btn-pesquisar" value="{{ $nome }}" placeholder="Nome da conta" />
+                    <input type="text" name="nome" id="nome" class="form-control btn-pesquisar" value="{{ $nome }}" placeholder="Pesquisar" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
                     </button>
                 </div>
             </form>
+
+            <a href="{{ route('colaborador.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>CADASTRAR</h5>
+                    <i class="fa-solid fa-plus"></i>
+                </button>  
+            </a>
             
         </div>
 
@@ -25,33 +31,29 @@
             <table>
                 <thead>
                     <tr class="titulos">    
-                        <th  >ID</th>
-                        <th>Empresa1</th>
-                        <th>Empresa2</th>
-                        <th>Setor</th>
-                        <th>Turno</th>
-                        <th>Login</th>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-
-                        <th class="text-center">Ações</th>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>TELEFONE</th>
+                        <th>EMPRESA 2</th>
+                        <th>USUÁRIO</th>
+                        <th>TURNO</th>
+                        <th>SETOR</th>
+                        <th class="text-center">AÇÕES</th>
                     </tr>
                 </thead>
 
                 <tbody>
 
-                     
+                    
                     @forelse ($colaborador as $colab)
                         <tr class='linhaComCoresDiferentes' id='linhaCores_$'>
-                            
                             <th>{{ $colab->id }}</th>   
-                            <th>{{ $colab->empresa1_id}}</th>           
-                            <th>{{ $colab->empresa2_id}}</th>  
-                            <th>{{ $colab->setor_id}}</th>  
-                            <th>{{ $colab->turno_id}}</th>  
-                            <th>{{ $colab->login_id}}</th>  
-                            <th>{{ $colab->nome}}</th>  
-                            <th>{{ $colab->telefone}}</th>  
+                            <th>{{ $colab->nome}}</th>           
+                            <th>{{ $colab->fone}}</th>  
+                            <th>{{ $colab->id_emp2}}</th>  
+                            <th>{{ $colab->id_users}}</th>  
+                            <th>{{ $colab->id_turno}}</th>  
+                            <th>{{ $colab->id_setor}}</th>  
                             
                             <td class="acoes d-md-flex flex-row gap-2 justify-content-center pt-8">
 
@@ -81,16 +83,11 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $colaborador->onEachSide(0)->links() }} 
         </div>
+        {{ $colaborador->onEachSide(0)->links() }} 
     </div>
 </div>
 
-<a href="{{ route('colaborador.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a>
+
 
 @endsection

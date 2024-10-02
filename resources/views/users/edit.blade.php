@@ -4,29 +4,27 @@
 
 <div class="container-fluid data-container ">
     <div class="card mb-4 cardCorLista  ">
-        
-        <div class="cardHeaderAsociados card-header"  >
-            <h2 class="mt-3">Edição</h2>
+        <div class="  card-header"  >
+            <h2 class="mt-3">EDIÇÃO</h2>
 
             <span class="ms-auto d-flex  flex-row gap-2">
-                <a href="{{ route('user.index') }}" class="btn btnIcons btn-primary">
-                    <span class="listar-texto">Listar</span>
+                <a href="{{ route('user.index') }}" class="btn ">
+                    <span class="listar-texto">LISTAR</span>
                     <i class="fa-solid fa-list-ul"></i>
                 </a>
 
-                <a href="{{ route('user.view', ['user' => $user->id]) }}" class="btnIcons btn btn-light">
-                    <span class="listar-texto">Visualizar</span>
+                <a href="{{ route('user.view', ['user' => $user->id]) }}" class="btn ">
+                    <span class="listar-texto">VISUALIZAR</span>
                     <i class="fa-regular fa-eye"></i>
                 </a>
 
                 <form method="POST" action="{{ route('user.delete', ['user' => $user->id]) }}">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger btnIcons btn-sm me-1"
+                    <button type="submit" class="btn"
                         onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                        <span class="listar-texto">Apagar</span>
+                        <span class="listar-texto">APAGAR</span>
                         <i class="fa-solid fa-trash"></i>
-                    
                     </button>
                 </form>
             </span>
@@ -35,65 +33,64 @@
         <div class="card-body">
             <x-alert />
 
-            <form action="{{ route('user.update', ['user' => $user->id]) }}" method="POST" class="row g-3">
+            <form action="{{ route('user.update', ['user' => $user->id]) }}" method="POST" class="row  ">
                 @csrf
                 @method('PUT')
 
-                <div class="col-6">
+                <div class="BodyLayout">
                     <div class="mb-3">
-                        <label for="nome" >Nome: </label>
-                        <input type="text" name="nome" id="nome"  placeholder="Nome completo"
+                        <label class="form-label" for="nome" >NOME </label>
+                        <input type="text" name="nome" id="nome"  placeholder="Digeite o(a) NOME..."
                             value="{{ old('nome', $user->nome) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="email" >E-mail: </label>
-                        <input type="email" name="email" id="email" 
-                            placeholder="Melhor e-mail do usuário" value="{{ old('email', $user->email) }}">
+                        <label class="form-label" for="email" >EMAIL</label>
+                        <input type="email" name="email" id="email"  placeholder="Digeite o(a) EMAIL..."
+                            value="{{ old('email', $user->email) }}">
                     </div>
 
                     <div class="mb-3">
-                        <label for="password" >Senha: </label>
-                        <input type="password" name="password" id="password"  placeholder="Senha com no mínimo 6 caracteres"
-                            value="{{ old('password') }}">
-                    </div>
-                </div>
-
-                <div class="col-6 mt-2 ">
-                    <div class="mb-1">
-                        <label for="tipo" class="form-label">Tipo: </label>
-                        <input type="number" min="1" max="3" name="tipo" id="tipo"  value="{{ old('email', $user->tipo) }}" >
+                        <label class="form-label" for="password" >SENHA</label>
+                        <input type="password" name="password" id="password"   placeholder="Digeite o(a) SENHA...">
                     </div>
 
                     <div class="mb-3">
-                        <label for="roles" class="form-label">Nível: </label>
-                        {{-- <input type="number" min="1" max="3" name="nivel" id="nivel"  value="{{ old('email', $user->nivel) }}" > --}}
+                        <label for="roles" class="form-label">NÍVEL</label>
+                        
                         <select name="roles" class="form-select" id="roles">
-    
                             <option value="">Selecione</option>
-        
-                             @forelse($roles as $role)
-                               
+                            @forelse($roles as $role)
+                            
                                 @if ($role !=" Admin")
                                     <option {{ old('roles', $userRoles) == $role ? 'selected' : '' }} value="{{ $role }}">{{ $role }}</option>
                                 @else
                                     @if (Auth::user()->hasRole('Admin'))
-                                    <option {{ old('roles', $userRoles) == $role ? 'selected' : '' }} value="{{ $role }}">{{ $role }}</option>
-                                @endif
+                                        <option {{ old('roles', $userRoles) == $role ? 'selected' : '' }} value="{{ $role }}">{{ $role }}</option>
+                                    @endif
                                     
                                 @endif
-                             @empty 
-                             @endforelse
-        
-                            </select>
+                                @empty 
+                            @endforelse
+                        </select>
                     </div> 
+
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">EMPRESA 2</label>
+                        <input type="number" min="1" max="3" name="id_emp2" id="id_emp2"  placeholder="EMPRESA 2..." value="{{ old('email', $user->id_emp2) }}" >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="id_emp2" class="form-label">TIPO</label>
+                        <input type="number" min="1" max="3" name="tipo" id="tipo"  placeholder="TIPO..." value="{{ old('tipo', $user->tipo) }}" >
+                    </div>
                 </div>
 
     
-                <a  class=" btnIcons btnCadastrar">
+                <a  class="btnCadastrar">
                     <button type="submit">
-                        <h5>Salvar</h5>
-                        <i class="fa-solid fa-bookmark"></i>
+                        <h5>SALVAR</h5>
+                         
                     </button>  
                 </a>
 

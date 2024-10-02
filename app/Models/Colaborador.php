@@ -11,14 +11,21 @@ class Colaborador extends Model
 
 
      //proteger a tabela para não deixar no plural
-     protected $table = 'colaborador';
+    protected $table = 'colaborador';
 
-     protected $fillable = ['empresa1_id','empresa2_id','setor_id','turno_id','login_id','nome','telefone'];
- 
-    //  //um pai pode ter varios filhos
-    //  public function empresa()
-    //  {
-    //      //cardinalidades
-    //      return $this->hasMany(Empresa::class);
-    //  }
+    protected $fillable = [
+        'nome',
+        'fone',
+        'id_emp2',
+        'id_users',
+        'id_turno',
+        'id_setor'
+    ];
+
+    //um pai pode ter varios filhos
+    public function empresa()
+    {
+        //cardinalidades
+        return $this->hasMany(Empresa::class);
+    }
 }

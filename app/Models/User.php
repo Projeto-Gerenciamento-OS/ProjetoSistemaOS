@@ -18,7 +18,7 @@ class User extends Authenticatable
         'email',
         'password',
         'tipo',
-        
+        'id_emp2'
     ];
 
     protected $hidden = [
@@ -32,5 +32,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed', // hashed - é um tipo de criptografia
         ];
+    }
+
+    public function agenda()
+    {
+        return $this->hasMany(Agenda::class, 'calendar_id', 'id');
     }
 }

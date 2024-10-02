@@ -5,77 +5,74 @@
 
 <div class="container-fluid px-4 data-container"  >
         <div class="card mb-4 cardCorLista " >
-            <div  class="cardHeaderAsociados card-header">
-                <h2 class="mt-3">Edição</h2>
+            <div  class="  card-header">
+                <h2 class="mt-3">EDIÇÃO</h2>
                 <span class="ms-auto d-flex flex-row gap-2">
-                    <a href="{{ route('os4.index') }}" class="btn btn-outline-primary ">
-                        <span class="listar-texto">Listar</span>
+                    <a href="{{ route('os.index') }}" class="btn  ">
+                        <span class="listar-texto">LISTAR</span>
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('os4.view', ['os4' => $os4->id]) }}" class="btn btn-light ">
-                        <span class="listar-texto">Visualizar</span>
+                    <a href="{{ route('os1.os4.view', ['os4' => $os4->id]) }}" class="btn  ">
+                        <span class="listar-texto">VISUALIZAR</span>
                         <i class="fa-regular fa-eye"></i>
                     </a>
 
-                    <form method="POST" action="{{ route('os4.delete', ['os4' => $os4->id]) }}">
+                    <form method="POST" action="{{ route('os1.os4.delete', ['os4' => $os4->id]) }}">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn btn-danger "
+                        <button type="submit" class="btn  "
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
-                            <span class="listar-texto">Apagar</span>
+                            <span class="listar-texto">APAGAR</span>
                             <i class="fa-solid fa-trash"></i>
-                     </button>
+                        </button>
                     </form>
-
                 </span>
             </div>
             <div class="card-body">
 
                 <x-alert />
 
-                <form action="{{ route('os4.update', ['os4' => $os4->id]) }}" method="POST" class="row g-3">
+                <form action="{{ route('os1.os4.update', ['os4' => $os4->id]) }}" method="POST" class="row  ">
                     @csrf
                     @method('PUT')
-                    <div class="col-6 col-lg-6">
-                        <div class="mb-3">
-                            <label for="id_emp1_os4" >ID EMP1: </label>
-                            <input type="number" name="id_emp1_os4" id="id_emp1_os4"  placeholder="Digite aqui "
-                                value="{{ old('id_emp1_os4', $os4->id_emp1_os4) }}">
-                        </div>
+
+                    <div class="BodyLayout">
 
                         <div class="mb-3">
-                            <label for="percentual_os4" >Percentual </label>
-                            <input type="text" name="percentual_os4" id="percentual_os4" 
-                                placeholder=" Data" value="{{ old('percentual_os4', $os4->percentual_os4) }}">
+                            <label for="descricao" class="form-label" >DESCRIÇÃO</label>
+                            <input type="text" name="descricao" id="descricao"  placeholder="Digite aqui "
+                                value="{{ old('descricao', $os4->descricao) }}">
                         </div>
 
-                        <div class="col-12">
-                            <label for="valor_os4" >Valor </label>
-                            <input type="text" name="valor_os4" id="valor_os4"  placeholder=" valor_os4"
-                                value="{{ old('valor_os4', $os4->valor_os4) }}">
+                        <div class="mb-3">
+                            <label for="percentual" class="form-label"  > PERCENTUAL</label>
+                            <input type="text" name="percentual" id="percentual" 
+                                placeholder=" Data" value="{{ old('percentual', $os4->percentual) }}">
                         </div>
 
-                    </div>
-
-                    <div class="col-6 col-lg-6">
-                        <div class="col-12">
-                            <label for="ativo_os4" >Ativo </label>
-                            <input type="text" name="ativo_os4" id="ativo_os4"  placeholder=" ativo_os4"
-                                value="{{ old('ativo_os4', $os4->ativo_os4) }}">
+                        <div class="mb-3">
+                            <label for="valor"  class="form-label" >VALOR</label>
+                            <input type="text" name="valor" id="valor"  placeholder=" valor"
+                                value="{{ old('valor', $os4->valor) }}">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="ativo" class="form-label"  >ATIVO</label>
+                            <input type="text" name="ativo" id="ativo"  placeholder=" ativo"
+                                value="{{ old('ativo', $os4->ativo) }}">
                         </div>
             
 
-                        <div class="col-12">
-                            <label for="descricao_os4" class="form-label">Descrição </label>
-                            <input type="text"  name="descricao_os4" id="descricao_os4"  value="{{ old('descricao_os4', $os4->descricao_os4) }}" >
+                        <div class="mb-3">
+                            <label for="id_emp2" class="form-label">EMPRESA 2 </label>
+                            <input type="text"  name="id_emp2" id="id_emp2"  value="{{ old('id_emp2', $os4->id_emp2) }}" >
                         </div>
                     </div>
                     
                     <a  class="btnCadastrar">
                         <button type="submit">
-                            <h5>Salvar</h5>
-                            <i class="fa-solid fa-bookmark"></i>
+                            <h5>SALVAR</h5>
                         </button>  
                     </a>
 

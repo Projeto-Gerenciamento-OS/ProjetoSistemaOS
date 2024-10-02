@@ -79,3 +79,57 @@
 
   * git push origin nome_da_sua_branch --force
   
+
+
+fazer:
+
+* cliente
+  * seed (talvez) - 
+  * migrate - 
+  * models - 
+  * controller - 
+  * request - 
+  * views- 
+
+* colaborador
+  * seed (talvez) - 
+  * migrate - ok
+  * models - ok
+  * controller - ok
+  * request - ok
+  * views- ok
+
+* custo
+  * seed (talvez) - 
+  * migrate - ok
+  * models - ok
+  * controller - ok 
+  * request - ok
+  * views- 
+
+* materiais
+  * seed (talvez) - 
+  * migrate - ok
+  * models - ok
+  * controller - ok
+  * request - ok
+  * views- ok
+
+* os1
+  * seed (talvez) - 
+  * migrate - ok
+  * models - ok
+  * controller - ok 
+  * request - 
+  * views- ok
+
+* os2
+  * seed (talvez) - 
+  * migrate - ok
+  * models - ok
+  * controller - ok
+  * request - 
+  * views- ok
+
+seed -> migrate -> models -> controller -> request -> views
+ 

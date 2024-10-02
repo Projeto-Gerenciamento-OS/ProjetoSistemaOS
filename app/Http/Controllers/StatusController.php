@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Status;
 use App\Http\Requests\StatusRequest;
-
 use Illuminate\Http\Request;
 use Exception;
 use Illuminate\Support\Facades\DB;
@@ -28,6 +27,7 @@ class StatusController extends Controller
     }
 
     public function create(){
+        
         return view('status.create', ['menu' => 'status']);
     }
 
@@ -43,11 +43,10 @@ class StatusController extends Controller
 
             // Cadastrar no banco de dados na tabela servicoss
             $status = Status::create([
-                'nome' => $request->nome,
-                'emp1' => $request->emp1,
-                'emp2' => $request->emp2,
-                'cor' => $request->cor,
                 'descricao' => $request->descricao,
+                'cor' => $request->cor,
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
             ]);
 
             // Salvar log
@@ -73,11 +72,11 @@ class StatusController extends Controller
 
     public function view(Status $status){
         //Carrega a View
-        return view( 'status.view', ['menu'=>'status', 'status' => $status]);
+        return view( 'status.view', ['status', 'status' => $status]);
     }
     
     public function edit(Status $status){
-        return view('status.edit', ['menu' => 'status', 'status' => $status]);
+        return view('status.edit', ['status', 'status' => $status]);
     }
 
     public function update(StatusRequest $request, Status $status){
@@ -91,11 +90,10 @@ class StatusController extends Controller
 
             // Editar as informações do registro no banco de dados
             $status->update([
-                'nome' => $request->nome,
-                'emp1' => $request->emp1,
-                'emp2' => $request->emp2,
-                'cor' => $request->cor,
                 'descricao' => $request->descricao,
+                'cor' => $request->cor,
+                'id_emp2' => $request->id_emp2,
+                'id_users' => $request->id_users,
             ]);
 
             // Salvar log
@@ -135,7 +133,7 @@ class StatusController extends Controller
             Log::info('status não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
+            return redirect()->route('status.index')->with('error', 'Status não excluído!');
         }
     }
 }

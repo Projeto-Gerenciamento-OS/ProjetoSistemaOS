@@ -34,7 +34,7 @@ class UserController extends Controller
     //mostrar detalhes do usuario(view)
     public function view(User $user){
         //Carrega a View
-        return view( 'users.view', ['menu'=>'users', 'users' => $user]);
+        return view( 'users.view', ['users', 'users' => $user]);
     }
 
     // Carregar o formulário cadastrar novo usuário
@@ -42,10 +42,10 @@ class UserController extends Controller
 
 
         //recupera os papeis
-         $roles = Role::pluck('name')->all();
+        $roles = Role::pluck('name')->all();
 
         // Carregar a VIEW
-        return view('users.create', ['menu' => 'users','roles'=>$roles]);
+        return view('users.create', ['users','roles'=>$roles]);
     }
 
 
@@ -66,7 +66,7 @@ class UserController extends Controller
                 'email' => $request->email,
                 'password' => $request->password,
                 'tipo' => $request->tipo,
-                'nivel' => $request->nivel,
+                'id_emp2' => $request->id_emp2,
             ]);
 
             //cadastrar um papel para o usuario
@@ -108,7 +108,7 @@ class UserController extends Controller
 
 
         // Carregar a VIEW
-        return view('users.edit', ['menu' => 'users', 'user' => $user,'roles'=> $roles, 'userRoles'=>$userRoles]);
+        return view('users.edit', ['users', 'user' => $user,'roles'=> $roles, 'userRoles'=>$userRoles]);
     }
 
     // Editar no banco de dados o usuário
@@ -127,7 +127,7 @@ class UserController extends Controller
                 'email' => $request->email,
                 'password' => $request->password,
                 'tipo' => $request->tipo,
-                'nivel' => $request->nivel,
+                'id_emp2' => $request->id_emp2,
             ]);
 
             //Editar um papel para o usuario
@@ -161,7 +161,7 @@ class UserController extends Controller
     // Carregar o formulário editar senha do usuário
     public function editPassword(User $user){
         // Carregar a VIEW
-        return view('users.editPassword', ['menu' => 'users', 'user' => $user]);
+        return view('users.editPassword', ['users', 'user' => $user]);
     }
      
     // Editar no banco de dados a senha do usuário 
@@ -227,7 +227,7 @@ class UserController extends Controller
             Log::info('Usuário não excluído.', ['error' => $e->getMessage()]);
 
             // Redirecionar o usuário, enviar a mensagem de erro
-            return redirect()->route('course.index')->with('error', 'Usuário não excluído!');
+            return redirect()->route('user.index')->with('error', 'Usuário não excluído!');
         }
     }
 

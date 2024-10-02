@@ -5,30 +5,38 @@
 <div class="container-fluid px-4 data-container">
     <div class="card mb-4 cardCorLista" >
         <div class="card-header">
-            <h1>Usuários</h1>
+            <h1>USUÁRIO</h1>
 
             <form action="{{ route('user.index') }}">
                 <div class="pesquisar">
                     
-                    <input type="text" name="nome" id="nome" class="form-control btn-pesquisar" value="{{ $nome }}" placeholder="Nome da conta" />
+                    <input type="text" name="nome" id="nome" class="  form-control btn-pesquisar" value"{{ $nome }}" placeholder="Pesquisar" />
 
                     <button  type="submit" class="btn-pesquisar">
                         <i class="fa-solid fa-magnifying-glass "></i>
                     </button>
                 </div>
             </form>
+
+            <a href="{{ route('user.create') }}" class="btnCadastrar">
+                <button>
+                    <h5>CADASTRAR</h5>
+                    <i class="fa-solid fa-plus"></i>
+                </button>  
+            </a>
         </div> 
 
         <div class="card-body"> 
+            <x-alert />
             <table >
                 <thead>
                     <tr class="titulos">
                         <th>ID</th>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Tipo</th>
-                        <th>Nível</th>
-                        <th class="text-center">Ações</th>
+                        <th>NOME</th>
+                        <th>EMAIL</th>
+                        <th>TIPO</th>
+                        <th>EMPRESA 2</th>
+                        <th class="text-center">AÇÕES:</th>
                     </tr>
                 </thead>
 
@@ -39,7 +47,7 @@
                             <th>{{ $user->nome }}</th>
                             <td >{{ $user->email }}</td>
                             <th>{{ $user->tipo }}</th>
-                            <th>{{ $user->nivel }}</th>
+                            <th>{{ $user->id_emp2 }}</th>        
 
                             <td class="d-md-flex flex-row gap-2 justify-content-center pt-8">
 
@@ -63,21 +71,16 @@
                         </tr>
 
                         @empty
-                        <div class="alert alert-danger" role="alert">Nenhum usuário encontrado!</div>
+                            <div class="alert alert-danger" role="alert">
+                                Nenhum usuário encontrado!
+                            </div>
                     @endforelse
                 </tbody>
             </table>
-            {{ $users->onEachSide(0)->links() }} 
         </div>
+        {{ $users->onEachSide(0)->links() }} 
     </div>
 </div>
-
-<a href="{{ route('user.create') }}" class="btnCadastrar">
-    <button>
-        <h5>Cadastrar</h5>
-        <i class="fa-solid fa-angle-right"></i>
-    </button>  
-</a>
 
 @endsection
 
