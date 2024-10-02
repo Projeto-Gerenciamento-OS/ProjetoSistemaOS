@@ -13,7 +13,6 @@ use App\Http\Requests\Os3Request;
 use App\Http\Requests\Os4Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Http\JsonResponse;
 use Exception;
 
 
@@ -34,7 +33,7 @@ class Os1Controller extends Controller
         return view('os.index', ['os1', 'os1'=> $os1,'id_status'=>$request->id_status]);
     }
     
-
+    
     public function create() {
         return view('os1.create', ['menu' => 'os1']);
     }
@@ -51,9 +50,10 @@ class Os1Controller extends Controller
                 'id_status' => $request->id_status,
                 'id_users' => $request->id_users,
                 'id_emp2' => $request->id_emp2,
-                'start' => $request->start,
-                'end' => $request->end,
-                'title' => $request->title,
+                'datacad' =>$request-> datacad,
+                'dhi' => $request->dhi,
+                'dhf' => $request->dhf,
+                'obs' => $request->obs,
                 'vtotal' =>$request-> vtotal,
                 'ctotal' => $request->ctotal,
                 'cindireto' => $request->cindireto,
@@ -98,8 +98,7 @@ class Os1Controller extends Controller
 
             DB::commit();
 
-            return redirect()->route('os1.index', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
-
+            return redirect()->route('os.index', ['os1' => $os1->id])->with('success', 'Os1 cadastrado com sucesso!');
         } catch (Exception $e) {
                
             Log::info('Os1 não cadastrado.', ['error' => $e->getMessage()]);
@@ -132,9 +131,9 @@ class Os1Controller extends Controller
                 'id_users' => $request->id_users,
                 'id_emp2' => $request->id_emp2,
                 'datacad' =>$request-> datacad,
-                'start' => $request->start,
-                'end' => $request->end,
-                'title' => $request->title,
+                'dhi' => $request->dhi,
+                'dhf' => $request->dhf,
+                'obs' => $request->obs,
                 'vtotal' =>$request-> vtotal,
                 'ctotal' => $request->ctotal,
                 'cindireto' => $request->cindireto,
@@ -156,39 +155,6 @@ class Os1Controller extends Controller
                             'id_colaborador' => $request->id_colaborador,
                         ]);
                     }
-                
-        
-            //         $os3 = Os3::find($id);
-            //         if ($os3) {
-            //             $os3->update([
-            //                 'qtde' => $request->qtde,
-            //                 'vunit' => $request->vunit,
-            //                 'vtotal' => $request->vtotal,
-            //                 'cunit' => $request->cunit,
-            //                 'ctotal' => $request->ctotal,
-            //                 'id_emp2' => $request->id_emp2,
-            //                 'id_os1' => $request->id_os1,
-            //                 'id_materiais' => $request->id_materiais,
-            //             ]);
-            //         }
-            //     }
-            // }
-    
-            // if (is_array($request->os4) || is_object($request->os4)) {
-            //     foreach ($request->os4 as $id => $data) {
-            //         $os4 = Os4::find($id);
-            //         if ($os4) {
-            //             $os4->update([
-            //                 'descricao' => $request->descricao,
-            //                 'percentual' => $request->percentual,
-            //                 'valor' => $request->valor,
-            //                 'ativo' => $request->ativo,
-            //                 'id_emp2' => $request->id_emp2,
-            //             ]);
-            //         }
-            //     }
-            // }
-
     
             Log::info('Os1 editado.', ['id' => $os1->id]);
 

@@ -13,7 +13,7 @@
                         <i class="fa-solid fa-list-ul"></i>
                     </a>
 
-                    <a href="{{ route('os1.os2.edit', ['os2' => $os2->id]) }}" class="btn  ">
+                    <a href="{{ route('os1.os2.edit', ['os2' => $os2->id]) }}" class="btn  btn-sm me-1">
                         <span class="listar-texto">EDIÇÃO</span>
                         <i class="fa-solid fa-pen"></i>
                     </a>
@@ -21,7 +21,7 @@
                     <form method="POST" action="{{ route('os2.delete', ['os2' => $os2->id]) }}">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn  "
+                        <button type="submit" class="btn  btn-sm me-1"
                             onclick="return confirm('Tem certeza que deseja apagar este registro?')">
                             <span class="listar-texto">APAGAR</span>
                             <i class="fa-solid fa-trash"></i>
