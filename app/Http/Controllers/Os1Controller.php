@@ -155,39 +155,6 @@ class Os1Controller extends Controller
                             'id_colaborador' => $request->id_colaborador,
                         ]);
                     }
-                
-        
-            //         $os3 = Os3::find($id);
-            //         if ($os3) {
-            //             $os3->update([
-            //                 'qtde' => $request->qtde,
-            //                 'vunit' => $request->vunit,
-            //                 'vtotal' => $request->vtotal,
-            //                 'cunit' => $request->cunit,
-            //                 'ctotal' => $request->ctotal,
-            //                 'id_emp2' => $request->id_emp2,
-            //                 'id_os1' => $request->id_os1,
-            //                 'id_materiais' => $request->id_materiais,
-            //             ]);
-            //         }
-            //     }
-            // }
-    
-            // if (is_array($request->os4) || is_object($request->os4)) {
-            //     foreach ($request->os4 as $id => $data) {
-            //         $os4 = Os4::find($id);
-            //         if ($os4) {
-            //             $os4->update([
-            //                 'descricao' => $request->descricao,
-            //                 'percentual' => $request->percentual,
-            //                 'valor' => $request->valor,
-            //                 'ativo' => $request->ativo,
-            //                 'id_emp2' => $request->id_emp2,
-            //             ]);
-            //         }
-            //     }
-            // }
-
     
             Log::info('Os1 editado.', ['id' => $os1->id]);
 
