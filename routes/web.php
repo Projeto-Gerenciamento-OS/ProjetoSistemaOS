@@ -153,19 +153,19 @@ Route::get('/edit-cli/{cli}',[CliController::class, 'edit'])->name('cli.edit');
 Route::put('/update-cli/{cli}',[CliController::class, 'update'])->name('cli.update');
 Route::delete('/delete-cli/{cli}', [CliController::class, 'delete'])->name('cli.delete');
 
-//OSs
 Route::get('/os',[OSsController::class, 'index'])->name('os.index');
 
 Route::prefix('os1')->name('os1.')->group(function () {
 
-    Route::get('/', [Os1Controller::class, 'index'])->name('index');
-    Route::get('/create', [Os1Controller::class, 'create'])->name('create');
-    Route::post('/store', [Os1Controller::class, 'store'])->name('store');
-    Route::get('/view/{os1}', [Os1Controller::class, 'view'])->name('view');
-    Route::get('/edit/{os1}', [Os1Controller::class, 'edit'])->name('edit');
-    Route::put('/update/{os1}', [Os1Controller::class, 'update'])->name('update');
-    Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete');
+Route::get('/', [Os1Controller::class, 'index'])->name('index');
+Route::get('/create', [Os1Controller::class, 'create'])->name('create');
+Route::post('/store', [Os1Controller::class, 'store'])->name('store');
+Route::get('/view/{os1}', [Os1Controller::class, 'view'])->name('view');
+Route::get('/edit/{os1}', [Os1Controller::class, 'edit'])->name('edit');
+Route::put('/update/{os1}', [Os1Controller::class, 'update'])->name('update');
+Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete');
 
+// Rotas para OS2 dentro de OS1
     Route::prefix('/os2')->name('os2.')->group(function () {
         Route::get('/create', [Os2Controller::class, 'create'])->name('create');
         Route::get('/view/{os2}',[Os3Controller::class, 'view'])->name('view');
@@ -175,6 +175,7 @@ Route::prefix('os1')->name('os1.')->group(function () {
         Route::delete('/delete/{os2}', [Os2Controller::class, 'delete'])->name('delete');
     });
 
+    // Rotas para OS3 dentro de OS1
     Route::prefix('/os3')->name('os3.')->group(function () {
         Route::get('/create', [Os3Controller::class, 'create'])->name('create');
         Route::get('/view/{os3}',[Os3Controller::class, 'view'])->name('view');
@@ -184,6 +185,7 @@ Route::prefix('os1')->name('os1.')->group(function () {
         Route::delete('/delete/{os3}', [Os3Controller::class, 'delete'])->name('delete');
     });
 
+    // Rotas para OS3 dentro de OS1
     Route::prefix('/os4')->name('os4.')->group(function () {
         Route::get('/create', [Os4Controller::class, 'create'])->name('create');
         Route::get('/view/{os4}',[Os3Controller::class, 'view'])->name('view');
@@ -193,8 +195,6 @@ Route::prefix('os1')->name('os1.')->group(function () {
         Route::delete('/{os4}', [Os3Controller::class, 'delete'])->name('delete');
     });
 });
-
-
 //Agenda
 
 Route::get('/fullcalender', [FullCalenderController::class, 'index'])->name('fullcalender.index');

@@ -12,12 +12,11 @@ return new class extends Migration
     public function up(): void
     {
       // Alterando a tabela do Os1.
-      Schema::table("os1", function (Blueprint $table) {
+        Schema::table("os1", function (Blueprint $table) {
 
         $table->foreignId('id_emp2')->constrained('emp2');
         $table->foreignId('id_status')->constrained('status');
         $table->foreignId('id_users')->constrained('users');
-       
     });
 }
 

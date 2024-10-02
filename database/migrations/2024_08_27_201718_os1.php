@@ -1,5 +1,5 @@
 
- <?php
+<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,9 +14,10 @@ return new class extends Migration
     {
         Schema::create('os1', function (Blueprint $table) {
             $table->id(); 
-            $table->string('start');
-			$table->string('end');
-            $table->string('title');
+            $table->string('datacad');
+            $table->string('dhi');
+			$table->string('dhf');
+            $table->string('obs');
             $table->float('vtotal');
 			$table->float('ctotal');
 			$table->float('cindireto');
@@ -24,6 +25,7 @@ return new class extends Migration
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      */
