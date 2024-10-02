@@ -45,30 +45,3 @@ else if (collapse[1].classList.contains('show')) {
     collapse[1].classList.remove('show')
 }
 });
-
-
-// const btnOs2 = document.getElementById('idMostrar2')
-// const btnOs3 = document.getElementById('idMostrar3')
-// const btnOs4 = document.getElementById('idMostrar4')
-// const os2 = document.getElementById('os2')
-// const os3 = document.getElementById('os3')
-// const os4 = document.getElementById('os4')
-
-// btnOs2.addEventListener("click", function(event){
-//     event.preventDefault()
-//     console.log("vai")
-//     os2.classList.remove('d-none')
-// })
-
-
-// btnOs3.addEventListener("click", function(event){
-//     event.preventDefault()
-//     console.log("vai")
-//     os3.classList.remove('d-none')
-// })
-
-// btnOs4.addEventListener("click", function(event){
-//     event.preventDefault()
-//     console.log("vai")
-//     os4.classList.remove('d-none')
-// })

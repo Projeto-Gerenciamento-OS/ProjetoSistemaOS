@@ -15,9 +15,9 @@ return new class extends Migration
         Schema::create('os1', function (Blueprint $table) {
             $table->id(); 
             $table->string('datacad');
-            $table->dateTime('start');
-			$table->dateTime('end');
-            $table->string('title');
+            $table->string('dhi');
+			$table->string('dhf');
+            $table->string('obs');
             $table->float('vtotal');
 			$table->float('ctotal');
 			$table->float('cindireto');

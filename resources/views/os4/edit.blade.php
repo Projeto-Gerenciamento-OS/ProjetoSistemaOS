@@ -37,7 +37,7 @@
                     @csrf
                     @method('PUT')
 
-                    <div class="BodyLayout">
+                    <div class="col-6 col-lg-6">
 
                         <div class="mb-3">
                             <label for="descricao" class="form-label" >DESCRIÇÃO</label>
@@ -56,7 +56,10 @@
                             <input type="text" name="valor" id="valor"  placeholder=" valor"
                                 value="{{ old('valor', $os4->valor) }}">
                         </div>
-                        
+
+                    </div>
+
+                    <div class="col-6 col-lg-6">
                         <div class="mb-3">
                             <label for="ativo" class="form-label"  >ATIVO</label>
                             <input type="text" name="ativo" id="ativo"  placeholder=" ativo"
