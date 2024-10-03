@@ -13,7 +13,11 @@
             </a>
         </div> 
 
-        <button id="showFormBtn">Cadastrar Os2</button>
+        <div class="col-12 p-2">
+            <button id="showFormBtn" class="btn btn-primary btn-sm">Cadastrar Os1</button>
+        </div>
+
+       
             {{-- OS-1 --}}
         <div class="card-body" id="hiddenForm" style="display: none;"> 
             <form action="{{ route('os1.store') }}" method="POST" class=" osBody" >
@@ -86,7 +90,10 @@
             </form> 
         </div>
 
-        <button id="showFormBtn1">Cadastrar Os2</button>
+        <div class="col-12 p-2">
+            <button id="showFormBtn1" class="btn btn-primary btn-sm">Cadastrar Os2</button>
+        </div>
+
  
             {{-- OS-2 --}}
          <div class="card-body" id="hiddenForm1" style="display: none;"  >
@@ -151,7 +158,10 @@
                     </form>
          </div>
 
-         <button type="submit" id="showFormBtn2">Cadastrar Os3</button>
+         <div class="col-12 p-2">
+            <button id="showFormBtn2" class="btn btn-primary btn-sm">Cadastrar Os3</button>
+        </div>
+
 
             {{-- OS-3 --}}
         <div class="card-body" id="hiddenForm2" style="display: none;">
@@ -215,7 +225,10 @@
             </form> 
         </div>
 
-        <button type="submit"  id="showFormBtn3">Cadastrar Os4</button>
+        <div class="col-12 p-2">
+            <button id="showFormBtn3" class="btn btn-primary btn-sm">Cadastrar Os4</button>
+        </div>
+
 
         {{-- OS-4 --}}
         <div class="card-body" id="hiddenForm3" style="display: none;">
