@@ -19,16 +19,22 @@
                     <x-alert />
                     
                     <table>
+                       
                         
                         <form action="{{ route('os.index') }}">
-                            <div class="pesquisar">
-                                
-                                <input type="text" name="id_status" id="id_status" class="form-control btn-pesquisar" value="{{ $id_status }}" placeholder="Nome da conta" />
 
-                                <button  type="submit" class="btn-pesquisar">
-                                    <i class="fa-solid fa-magnifying-glass "></i>
-                                </button>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 mt-2">
+                                    <label class="form-label" for="razao"></label>
+                                    <input type="text" name="razao" id="razao" class="form-control " value="{{ $id_status }}"" placeholder="Pesquisar" />
+                                 
+                                </div>
+                                <div class="col-md-6 col-sm-6 mt-2 pt-4 mb-5">
+                                    <button type="submit" class="btn btn-info btn-sm">Pesquisar</button>       
+                                </div>
+            
                             </div>
+                        
                         </form>
                         
                         <thead>
@@ -57,9 +63,9 @@
                                     <th>{{ $item->id_status }}</th>
                                     <th>{{ $item->id_users }}</th>
                                     <th>{{ $item->datacad }}</th>
-                                    <th>{{ $item->dhi }}</th>
-                                    <th>{{ $item->dhf }}</th>
-                                    <th>{{ $item->obs }}</th>
+                                    <th>{{ $item->start }}</th>
+                                    <th>{{ $item->end }}</th>
+                                    <th>{{ $item->title }}</th>
                                     <th>{{ $item->vtotal }}</th>
                                     <th>{{ $item->ctotal }}</th>
                                     <th>{{ $item->cindireto }}</th>

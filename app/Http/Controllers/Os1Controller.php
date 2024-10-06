@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Os1;
+use App\Models\Event;
 use App\Models\Os2;
 use App\Models\Os3;
 use App\Models\Os4;
@@ -21,13 +22,27 @@ class Os1Controller extends Controller
 {
 
     public function index(Request $request) {
+
+
         $os1= Os1::when($request->has('id_status'), function ($Query) use ($request){
             $Query->where('id_status', 'like', '%' . $request->id_status . '%');
         })
+
         
         ->orderBy('created_at')
         ->paginate(5)
         ->withQueryString();
+
+        
+        if($request->ajax()) {
+       
+            $data = Event::whereDate('start', '>=', $request->start)
+                      ->whereDate('end',   '<=', $request->end)
+                      ->get(['id', 'title', 'start', 'end']);
+ 
+            return response()->json($data);
+
+        }
 
         return view('os.index', ['os1', 'os1'=> $os1,'id_status'=>$request->id_status]);
     }
@@ -49,14 +64,18 @@ class Os1Controller extends Controller
                 'id_users' => $request->id_users,
                 'id_emp2' => $request->id_emp2,
                 'datacad' =>$request-> datacad,
-                'dhi' => $request->dhi,
-                'dhf' => $request->dhf,
-                'obs' => $request->obs,
                 'vtotal' =>$request-> vtotal,
                 'ctotal' => $request->ctotal,
                 'cindireto' => $request->cindireto,
                 'vresultado' => $request->vresultado,
             ]);
+
+            $event = Event::create([
+                'start' => $request->start,
+                'end' => $request->end,
+                'title' => $request->title,
+            ]);
+
 
             Log::info('Os1 cadastrado.', ['id' => $os1->id, $os1]);
 

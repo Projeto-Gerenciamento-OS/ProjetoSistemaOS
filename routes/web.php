@@ -195,12 +195,21 @@ Route::delete('/update/{os1}', [Os1Controller::class, 'delete'])->name('delete')
         Route::delete('/{os4}', [Os3Controller::class, 'delete'])->name('delete');
     });
 });
+
 //Agenda
 
-Route::get('/fullcalender', [FullCalenderController::class, 'index'])->name('fullcalender.index');
-Route::post('/fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+Route::controller(FullCalenderController::class)->group(function(){
+    Route::get('/fullcalender', [FullCalenderController::class, 'index'])->name('fullcalender.index');
+    Route::post('/fullcalenderAjax', 'ajax'); 
+});
+
+
+
 
 // Linha do tempo
 Route::get('/index-timeline', [TimelineController::class, 'index'])->name('timeline.index');
 });
+
+
+
 

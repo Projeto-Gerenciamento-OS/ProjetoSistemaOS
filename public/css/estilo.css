@@ -310,12 +310,13 @@ body {
                         padding: var(--espacoInternoBtn);
                     }
                     
-                    .btn-pesquisar {
-                        max-width: 200px;
+                    /* .btn-pesquisar {
+                        width: 100px; */
+                        /* max-width: 200px;
                         border-radius:5px;
                         padding: var(--espacoInternoBtn);
                         border: none;
-                    }
+                    } */
                     
                 }
             }
