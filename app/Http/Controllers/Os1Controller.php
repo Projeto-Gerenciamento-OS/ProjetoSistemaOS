@@ -34,15 +34,15 @@ class Os1Controller extends Controller
         ->withQueryString();
 
         
-        if($request->ajax()) {
+        // if($request->ajax()) {
        
-            $data = Event::whereDate('start', '>=', $request->start)
-                      ->whereDate('end',   '<=', $request->end)
-                      ->get(['id', 'title', 'start', 'end']);
+        //     $data = Event::whereDate('start', '>=', $request->start)
+        //               ->whereDate('end',   '<=', $request->end)
+        //               ->get(['id', 'title', 'start', 'end']);
  
-            return response()->json($data);
+        //     return response()->json($data);
 
-        }
+        // }
 
         return view('os.index', ['os1', 'os1'=> $os1,'id_status'=>$request->id_status]);
     }

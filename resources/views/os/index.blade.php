@@ -26,7 +26,7 @@
                             <div class="row">
                                 <div class="col-md-5 col-sm-5 mt-2">
                                     <label class="form-label" for="razao"></label>
-                                    <input type="text" name="razao" id="razao" class="form-control " value="{{ $id_status }}"" placeholder="Pesquisar" />
+                                    <input type="text" name="razao" id="razao" class="form-control " value="{{ $id_status }}" placeholder="Pesquisar" />
                                  
                                 </div>
                                 <div class="col-md-6 col-sm-6 mt-2 pt-4 mb-5">

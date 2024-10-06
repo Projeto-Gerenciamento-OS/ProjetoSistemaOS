@@ -5,7 +5,7 @@
 <div class="container-fluid px-4 data-container">
     <div class="card mb-4 cardCorLista">
         <div class="card-header">
-            <h1 class="">EDIÇÃO</h1>
+            <h1 class="">Editar</h1>
             <span class="ms-auto d-flex flex-row gap-2">
                 <a href="{{ route('os.index') }}" class="btn">
                     <i class="fa-solid fa-list-ul"></i>
