@@ -1,4 +1,3 @@
-
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -12,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('os1', function (Blueprint $table) {
-            $table->id(); 
-            $table->string('datacad');
-            $table->float('vtotal');
-			$table->float('ctotal');
-			$table->float('cindireto');
-			$table->float('vresultado');
+        Schema::create('events', function (Blueprint $table) {
+            $table->id();    
+            $table->string('title');
+            $table->date('start');
+            $table->date('end');
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('os1');
+        Schema::dropIfExists('events');
     }
 };

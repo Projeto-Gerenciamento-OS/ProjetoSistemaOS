@@ -13,8 +13,14 @@
             </a>
         </div> 
 
-        <div class="card-body "> 
-            <form action="{{ route('os1.store') }}" method="POST" class=" osBody ">
+        <div class="col-12 p-2">
+            <button id="showFormBtn" class="btn btn-primary btn-sm">Cadastrar Os1</button>
+        </div>
+
+       
+            {{-- OS-1 --}}
+        <div class="card-body" id="hiddenForm" style="display: none;"> 
+            <form action="{{ route('os1.store') }}" method="POST" class=" osBody" >
                 @csrf
                 @method('POST')
                     <div class="">
@@ -39,19 +45,19 @@
                     </div>
 
                     <div class="">
-                        <label for="dhi" class="form-label">INICIO</label>
-                        <input type="time"  name="dhi" id="dhi"  value="{{ old('dhi') }}" >
+                        <label for="start" class="form-label">INICIO</label>
+                        <input type="date"  name="start" id="start"  value="{{ old('start') }}" >
                     </div>
 
                     <div class="">
-                        <label for="dhf" class="form-label">FINAL</label>
-                        <input type="time"  name="dhf" id="dhf"  value="{{ old('dhf') }}" >
+                        <label for="end" class="form-label">FINAL</label>
+                        <input type="date"  name="end" id="end"  value="{{ old('end') }}" >
                     </div>
 
                     <div class="">
-                        <label for="obs" class="form-label"> OBS</label>
-                        <input type="text" name="obs" id="obs" 
-                            value="{{ old('obs') }}">
+                        <label for="title" class="form-label"> OBS</label>
+                        <input type="text" name="title" id="title" 
+                            value="{{ old('title') }}">
                     </div>
 
                     <div class="">
@@ -81,68 +87,85 @@
                             <i class="fa-solid fa-angle-right"></i>
                         </button>  
                     </a>
-            </form>
+            </form> 
+        </div>
 
-            <form action="{{ route('os1.os2.store') }}" method="POST" class="osBody">
-                @csrf
-                @method('POST')
-                <div class="mb-3">
-                    <label for="qtde" class="form-label">QUANTIDADE</label>
-                    <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
-                        value="{{ old('qtde') }}">
-                </div>
+        <div class="col-12 p-2">
+            <button id="showFormBtn1" class="btn btn-primary btn-sm">Cadastrar Os2</button>
+        </div>
 
-                <div class="mb-3">
-                    <label for="vunit" class="form-label">VALOR UNI.</label>
-                    <input type="text" name="vunit" id="vunit" 
-                        placeholder=" Digite a DATA" value="{{ old('vunit') }}">
-                </div>
-
-                <div class="mb-3">
-                    <label for="vtotal" class="form-label">VALOR</label>
-                    <input type="text" name="vtotal" id="vtotal" 
-                        placeholder=" Digite a vtotal" value="{{ old('vtotal') }}">
-                </div>
-
-                <div class="mb-3">
-                    <label for="cunit" class="form-label">CUSTO UNI.</label>
-                    <input type="text"  name="cunit" id="cunit"   required>
-                </div> 
-
-                <div class="mb-3">
-                    <label for="ctotal" class="form-label">CUSTO</label>
-                    <input type="text"  name="ctotal" id="ctotal"   required>
-                </div> 
-
-                <div class="mb-3">
-                    <label for="id_emp2" class="form-label">EMPRESA 2 </label>
-                    <input type="text"  name="id_emp2" id="id_emp2"   required>
-                </div> 
+ 
+            {{-- OS-2 --}}
+         <div class="card-body" id="hiddenForm1" style="display: none;"  >
                 
-                <div class="mb-3">
-                    <label for="id_os1" class="form-label">ID OS1</label>
-                    <input type="text"  name="id_os1" id="id_os1"   required>
-                </div> 
-                
-                <div class="mb-3">
-                    <label for="id_servico" class="form-label">ID SERVIÇO</label>
-                    <input type="text"  name="id_servico" id="id_servico"   required >
-                </div>
-
-                <div class="mb-3">
-                    <label for="id_colaborador" class="form-label">COLABORADOR</label>
-                    <input type="text"  name="id_colaborador" id="id_colaborador"   required>
-                </div> 
+                    <form action="{{ route('os1.os2.store') }}" method="POST" class="osBody"   >
+                        @csrf
+                        @method('POST')
+                        <div class="mb-3">
+                            <label for="qtde" class="form-label">QUANTIDADE</label>
+                            <input type="text" name="qtde" id="qtde"  placeholder=" Digite o qtde"
+                                value="{{ old('qtde') }}">
+                        </div>
     
-                <a  class="btnCadastrar">
-                    <button type="submit">
-                        <h5>CONCLUIR</h5>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>  
-                </a>
-            </form>
+                        <div class="mb-3">
+                            <label for="vunit" class="form-label">VALOR UNI.</label>
+                            <input type="text" name="vunit" id="vunit" 
+                                placeholder=" Digite a DATA" value="{{ old('vunit') }}">
+                        </div>
+    
+                        <div class="mb-3">
+                            <label for="vtotal" class="form-label">VALOR</label>
+                            <input type="text" name="vtotal" id="vtotal" 
+                                placeholder=" Digite a vtotal" value="{{ old('vtotal') }}">
+                        </div>
+    
+                        <div class="mb-3">
+                            <label for="cunit" class="form-label">CUSTO UNI.</label>
+                            <input type="text"  name="cunit" id="cunit"   required>
+                        </div> 
+    
+                        <div class="mb-3">
+                            <label for="ctotal" class="form-label">CUSTO</label>
+                            <input type="text"  name="ctotal" id="ctotal"   required>
+                        </div> 
+    
+                        <div class="mb-3">
+                            <label for="id_emp2" class="form-label">EMPRESA 2 </label>
+                            <input type="text"  name="id_emp2" id="id_emp2"   required>
+                        </div> 
+                        
+                        <div class="mb-3">
+                            <label for="id_os1" class="form-label">ID OS1</label>
+                            <input type="text"  name="id_os1" id="id_os1"   required>
+                        </div> 
+                        
+                        <div class="mb-3">
+                            <label for="id_servico" class="form-label">ID SERVIÇO</label>
+                            <input type="text"  name="id_servico" id="id_servico"   required >
+                        </div>
+    
+                        <div class="mb-3">
+                            <label for="id_colaborador" class="form-label">COLABORADOR</label>
+                            <input type="text"  name="id_colaborador" id="id_colaborador"   required>
+                        </div> 
+            
+                        <a  class="btnCadastrar">
+                            <button type="submit">
+                                <h5>CONCLUIR</h5>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>  
+                        </a>
+                    </form>
+         </div>
 
-            <form action="{{ route('os1.os3.store') }}" method="POST" class="osBody  ">
+         <div class="col-12 p-2">
+            <button id="showFormBtn2" class="btn btn-primary btn-sm">Cadastrar Os3</button>
+        </div>
+
+
+            {{-- OS-3 --}}
+        <div class="card-body" id="hiddenForm2" style="display: none;">
+            <form action="{{ route('os1.os3.store') }}" method="POST" class="osBody">
                 @csrf
                 @method('POST')
 
@@ -200,8 +223,16 @@
                     </button>  
                 </a>
             </form> 
+        </div>
 
-            <form action="{{ route('os1.os4.store') }}" method="POST" class="osBody  ">
+        <div class="col-12 p-2">
+            <button id="showFormBtn3" class="btn btn-primary btn-sm">Cadastrar Os4</button>
+        </div>
+
+
+        {{-- OS-4 --}}
+        <div class="card-body" id="hiddenForm3" style="display: none;">
+            <form action="{{ route('os1.os4.store') }}" method="POST" class="osBody" >
                 @csrf
                 @method('POST')
 
@@ -241,10 +272,12 @@
                         <i class="fa-solid fa-angle-right"></i>
                     </button>  
                 </a>
-            </form>                
+            </form>      
+
+        </div>
+
         </div>
     </div>
 </div>
-
 
 @endsection

@@ -6,7 +6,7 @@
 <div class="container-fluid px-4 data-container"  >
         <div class="card mb-4 cardCorLista " >
             <div  class="  card-header">
-                <h2 class="mt-3">EDIÇÃO</h2>
+                <h2 class="mt-3">Editar</h2>
                 <span class="ms-auto d-flex flex-row gap-2">
                     <a href="{{ route('os.index') }}" class="btn ">
                         <span class="listar-texto">LISTAR</span>

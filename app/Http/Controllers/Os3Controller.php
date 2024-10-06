@@ -48,7 +48,8 @@ class Os3Controller extends Controller{
             ]);
             Log::info('Os3 cadastrado.', ['id' => $os3->id, $os3]);
             DB::commit();
-            return redirect()->route('os.index', ['os3' => $os3->id])->with('success', 'Os3 cadastrado com sucesso!');
+            return redirect()->route('os3.create', $os3)->with('success', 'Os3 criada com sucesso!');
+            // return redirect()->route('os3.create', ['os3' => $os3->id])->with('success', 'Os3 cadastrado com sucesso!');
         } catch (Exception $e) {
             Log::info('Os3 não cadastrado.', ['error' => $e->getMessage()]);
             DB::rollBack();

@@ -8,27 +8,33 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="" data-bs-target="#collapseOs1" aria-expanded="true" aria-controls="collapseOs1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs1" aria-expanded="true" aria-controls="collapseOs1">
                 OS 1
             </button>
         </h2>
         
-        <div id="collapseOs1" class="accordion-  show" data-bs-parent="#accordionOSs">
+        <div id="collapseOs1" class="accordion-collapse collapse show" data-bs-parent="#accordionOSs">
             <div class="card mb-4 cardCorLista ">
                 <div class="card-body" > 
                     <x-alert />
                     
                     <table>
+                       
                         
                         <form action="{{ route('os.index') }}">
-                            <div class="pesquisar">
-                                
-                                <input type="text" name="id_status" id="id_status" class="form-control btn-pesquisar" value="{{ $id_status }}" placeholder="Nome da conta" />
 
-                                <button  type="submit" class="btn-pesquisar">
-                                    <i class="fa-solid fa-magnifying-glass "></i>
-                                </button>
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 mt-2">
+                                    <label class="form-label" for="razao"></label>
+                                    <input type="text" name="razao" id="razao" class="form-control " value="{{ $id_status }}" placeholder="Pesquisar" />
+                                 
+                                </div>
+                                <div class="col-md-6 col-sm-6 mt-2 pt-4 mb-5">
+                                    <button type="submit" class="btn btn-info btn-sm">Pesquisar</button>       
+                                </div>
+            
                             </div>
+                        
                         </form>
                         
                         <thead>
@@ -57,9 +63,9 @@
                                     <th>{{ $item->id_status }}</th>
                                     <th>{{ $item->id_users }}</th>
                                     <th>{{ $item->datacad }}</th>
-                                    <th>{{ $item->dhi }}</th>
-                                    <th>{{ $item->dhf }}</th>
-                                    <th>{{ $item->obs }}</th>
+                                    <th>{{ $item->start }}</th>
+                                    <th>{{ $item->end }}</th>
+                                    <th>{{ $item->title }}</th>
                                     <th>{{ $item->vtotal }}</th>
                                     <th>{{ $item->ctotal }}</th>
                                     <th>{{ $item->cindireto }}</th>
@@ -101,14 +107,14 @@
         </div>
     </div>
 
-    <div class="accordion-item">
+    {{-- <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button " type="button" data-bs-toggle="" data-bs-target="#collapseOs2" aria-expanded="false" aria-controls="collapseOs2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs2" aria-expanded="false" aria-controls="collapseOs2">
                 OS 2
             </button>
         </h2>
 
-        <div id="collapseOs2" class="accordion- " data-bs-parent="#accordionOSs">
+        <div id="collapseOs2" class="accordion-collapse collapse " data-bs-parent="#accordionOSs">
 
             <div class="card mb-4 cardCorLista ">
                 <div class="card-body" > 
@@ -191,12 +197,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button " type="button" data-bs-toggle="" data-bs-target="#collapseOs3" aria-expanded="false" aria-controls="collapseOs3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs3" aria-expanded="false" aria-controls="collapseOs3">
                 OS 3
             </button>
         </h2>
 
-        <div id="collapseOs3" class="accordion- " data-bs-parent="#accordionOSs">
+        <div id="collapseOs3" class="accordion-collapse collapse " data-bs-parent="#accordionOSs">
             <div class="card mb-4 cardCorLista ">
                 
                 <div class="card-body" > 
@@ -276,12 +282,12 @@
 
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button " type="button" data-bs-toggle="" data-bs-target="#collapseOs4" aria-expanded="false" aria-controls="collapseOs4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOs4" aria-expanded="false" aria-controls="collapseOs4">
                 OS 4
             </button>
         </h2>
 
-        <div id="collapseOs4" class="accordion- " data-bs-parent="#accordionOSs">
+        <div id="collapseOs4" class="accordion-collapse collapse " data-bs-parent="#accordionOSs">
             <div class="card mb-4 cardCorLista ">
                 
                 <div class="card-body" > 
@@ -348,7 +354,7 @@
                 {{ $os4->onEachSide(0)->links() }}
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>   
 </div> 
 

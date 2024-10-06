@@ -64,7 +64,8 @@ class Os2Controller extends Controller
             
             DB::commit();
             
-            return redirect()->route('os.index', $os2)->with('success', 'Os2 criada com sucesso!');
+            return redirect()->route('os2.create', $os2)->with('success', 'Os2 criada com sucesso!');
+           
             // return redirect()->route('os.index', ['os2' => $os2->id])->with('success', 'Os2 cadastrado com sucesso!');
         } catch (Exception $e) {
 

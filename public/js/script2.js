@@ -45,3 +45,50 @@ else if (collapse[1].classList.contains('show')) {
     collapse[1].classList.remove('show')
 }
 });
+
+
+
+
+document.getElementById('showFormBtn').addEventListener('click', function() {
+    var form = document.getElementById('hiddenForm');
+    if (form.style.display === 'none') {
+        form.style.display = 'block';
+    } else {
+        form.style.display = 'none';
+    }
+    
+});
+
+
+document.getElementById('showFormBtn1').addEventListener('click', function() {
+    var form = document.getElementById('hiddenForm1');
+    if (form.style.display === 'none') {
+        form.style.display = 'block';
+    } else {
+        form.style.display = 'none';
+    }
+    
+});
+
+
+document.getElementById('showFormBtn2').addEventListener('click', function() {
+    var form = document.getElementById('hiddenForm2');
+    if (form.style.display === 'none') {
+        form.style.display = 'block';
+    } else {
+        form.style.display = 'none';
+    }
+    
+});
+
+
+document.getElementById('showFormBtn3').addEventListener('click', function() {
+    var form = document.getElementById('hiddenForm3');
+    if (form.style.display === 'none') {
+        form.style.display = 'block';
+    } else {
+        form.style.display = 'none';
+    }
+    
+});
+
