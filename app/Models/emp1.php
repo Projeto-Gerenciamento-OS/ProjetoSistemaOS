@@ -13,7 +13,6 @@ class Emp1 extends Model
     //proteger a tabela para não deixar no plural
     protected $table = 'emp1';
 
-    protected $primarykey ='id_emp1';
 
     protected $fillable = ['descricao'];
 
